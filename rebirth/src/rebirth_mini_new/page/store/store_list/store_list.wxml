@@ -1,0 +1,15 @@
+<view catchtouchmove="ture" class="mask flexccc" wx:if="{{fullLoading}}">
+  <image class="loadinggif" src="../../../static/img/loading.gif"></image>正在加载中</view>
+<view>
+  <view class="gym-wrapper">
+    <view class="jump-bar whitebg col3 fz22 bold flexrcc">郑州市全城</view>
+    <view class="gym-card margintop10" wx:for="{{gym}}" wx:key="id" bindtap="actionBtn" data-action="store" data-value="{{item.id}}">
+      <image class="gymimg" mode="aspectFill" src="{{item.cover_imgs}}"></image>
+      <view class="flexrbc margintop7">
+        <view class="fz17 col3  marginleft10">{{item.name}}</view>
+        <view class="fx15 yellow marginright10">{{item.distance}}</view>
+      </view>
+      <view class="col6 fz15 marginleft10 margintop5 address">{{item.address}}</view>
+    </view>
+  </view>
+</view>

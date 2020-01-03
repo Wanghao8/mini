@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/manager/nav",
+    "pages/manager/index",
+    "pages/edit/AddLog",
+    "pages/salary/salaryList"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "nvueCompiler": "uni-app",
+  "renderer": "auto",
+  "splashscreen": {
+    "alwaysShowBeforeRender": true,
+    "autoclose": false
+  },
+  "appname": "PropertyCloud",
+  "compilerVersion": "2.3.7",
+  "usingComponents": {}
+}

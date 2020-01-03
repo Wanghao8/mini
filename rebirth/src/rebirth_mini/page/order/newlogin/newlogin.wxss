@@ -1,0 +1,28 @@
+.storeimg{float: left;width: 20%;}
+.storeimg image{width: 110rpx;height: 110rpx;margin-right: 20rpx;border-radius: 50%;}
+.storetitle{font-size: 32rpx;line-height: 60rpx;}
+.storeinfo{font-size: 30rpx;}
+.middletitle{color: #999;font-size: 32rpx;padding:20rpx 0;}
+.invapersontitle{font-size: 32rpx;padding:20rpx 30rpx;color: #999;background-color: #eee;}
+.invapersonimg{float: left;padding-left: 30rpx;}
+.invapersonimg image{width: 90rpx;height: 90rpx;border-radius: 50%;}
+.invapersoninfo{float: left;padding-left: 20rpx;padding-top: 6rpx;}
+.invapersoninfo>view{font-size: 32rpx;}
+.invapersonbtn{float: right;padding: 0 20rpx; font-size: 28rpx;line-height: 60rpx;margin-top: 10rpx;}
+.bottomfixed{position: fixed;bottom: 0;width: 100%;z-index: 98;background-color: #fff;}
+.userinfoimg{float: left;padding-right: 30rpx;}
+.tips{color: #999;font-size: 28rpx;text-align: center;margin-top: 100rpx;}
+.top{background-color: #2E2E2E; overflow: hidden;padding-bottom: 20rpx;}
+.title{float: left;color: #fff;width: 70%;}
+.invitePerson{overflow: hidden;padding-top: 30rpx;}
+.inviteCode{font-size: 30rpx;}
+.invapersonbtn{margin-top: 14rpx;}
+.getOpen{width: 92%; position: absolute;bottom: 30rpx;padding: 8rpx 0;}
+.userInfo-wrapper{padding: 40rpx 30rpx;}
+.userinfoimg image{width: 90rpx;height: 90rpx;}
+.welcome{line-height: 90rpx;}
+.tips1{font-size: 32rpx;padding: 30rpx;}
+.tips2{font-size: 30rpx;color: #999;padding: 0 30rpx;}
+.confirmBtn{margin: 80rpx 30rpx;}
+.getCode{font-size: 32rpx;padding: 30rpx;text-align: center;}
+.loginBtn{margin: 50rpx 30rpx;}

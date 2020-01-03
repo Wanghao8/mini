@@ -1,0 +1,118 @@
+<view catchtouchmove="ture" class="mask flexccc" wx:if="{{fullLoading}}">
+  <image class="loadinggif" src="../../../static/img/loading.gif"></image>正在加载中</view>
+
+<!-- 照片 -->
+<image class="gym-detail-img" mode="aspectFill" src="{{gym.cover_imgs}}"></image>
+<view class="page-wrapper">
+  <!-- <view class="navigator flexr">
+    <view class="fz20  bold marginright25 {{introIndex==1?'colf2':'col76'}}">课程介绍</view>
+    <view class="fz20  bold marginright25 {{introIndex==2?'colf2':'col76'}}">场地介绍</view>
+    <view class="fz20  bold marginright25 {{introIndex==3?'colf2':'col76'}}">注意事项</view>
+  </view> -->
+  <view class="flexrbc marginbottom10 margintop10">
+    <view class="fz18 col3 marginleft10">{{gym.name}} No.{{gym.no}} </view>
+    <view class="flexr0c">
+      <view class="iconfont icon-fenxiang"></view>
+      <view class="colc fz16 marginleft10">分享</view>
+      <button open-type="share"> </button>
+    </view>
+  </view>
+  <!-- 课程预留地 -->
+  <view>
+    <scroll-view scroll-x="true" enable-flex="true" class="flexra choose-date">
+      <view class="" data-current="0" data-date="{{date1}}" bindtap="swichNav">
+        <view class="fz14 {{currentTab==0?'bold':'col76'}}">{{day1}}</view>
+        <view class="date-circle jvzhong margintop10 {{currentTab==0?'yellowbg border':'whitebg '}}">{{weekday[week]}}</view>
+      </view>
+      <view class=" {{currentTab==1?'active':''}}" data-current="1" data-date="{{date2}}" bindtap="swichNav">
+        <view class="fz14 {{currentTab==1?'bold':'col76'}}">{{day2}}</view>
+        <view class="date-circle jvzhong margintop10 {{currentTab==1?'yellowbg border':'whitebg '}}">{{weekday[week+1]}}</view>
+      </view>
+      <view class=" {{currentTab==2?'active':''}}" data-current="2" data-date="{{date3}}" bindtap="swichNav">
+        <view class="fz14 {{currentTab==2?'bold':'col76'}}">{{day3}}</view>
+        <view class="date-circle jvzhong margintop10 {{currentTab==2?'yellowbg border':'whitebg '}}">{{weekday[week+2]}}</view>
+      </view>
+      <view class=" {{currentTab==3?'active':''}}" data-current="3" data-date="{{date4}}" bindtap="swichNav">
+        <view class="fz14 {{currentTab==3?'bold':'col76'}}">{{day4}}</view>
+        <view class="date-circle jvzhong margintop10 {{currentTab==3?'yellowbg border':'whitebg '}}">{{weekday[week+3]}}</view>
+      </view>
+      <view class=" {{currentTab==4?'active':''}}" data-current="4" data-date="{{date5}}" bindtap="swichNav">
+        <view class="fz14 {{currentTab==4?'bold':'col76'}}">{{day5}}</view>
+        <view class="date-circle jvzhong margintop10 {{currentTab==4?'yellowbg border':'whitebg '}}">{{weekday[week+4]}}</view>
+      </view>
+      <view class=" {{currentTab==5?'active':''}}" data-current="5" data-date="{{date6}}" bindtap="swichNav">
+        <view class="fz14 {{currentTab==5?'bold':'col76'}}">{{day6}}</view>
+        <view class="date-circle jvzhong margintop10 {{currentTab==5?'yellowbg border':'whitebg '}}">{{weekday[week+5]}}</view>
+      </view>
+    </scroll-view>
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+      <!-- 这一行循环的是左右列表 -->
+      <swiper-item wx:for="{{[0,1,2,3,4,5]}}" wx:key="id">
+        <scroll-view scroll-y="true" class="scoll-h">
+          <!-- 这一行循环的是上下列表 -->
+          <view class="card-wrapper margintop10">
+            <block wx:for="{{goodsList}}" wx:key="id">
+              <!-- <block wx:for="{{goodsList}}" wx:key="*this"> -->
+              <view class="card-list-item whitebg flexrbc" wx:if="{{goodsList.length!=0}}" bindtap="actionBtn" data-action="reserver" data-location="{{gym}}" data-id="{{item.id}}">
+                <!-- <view class="card-list-item libg flexrbc" wx:if="{{goodsList.length!=0}}" bindtap="actionBtn" data-action="reserver" data-location="{{gym}}" data-id="{{item.id}}" wx:if="{{item.status==2&&item.volume>item.appoint_total}}"> -->
+                <view class="marginleft10">
+                  <view class="flexrbc time-btn">
+                    <view>
+                      <view class="fz17 col3 ">{{item.name}}</view>
+                      <view class="col81 bold fz16 margintop5">{{item.begin_time}}-{{item.end_time}}</view>
+                    </view>
+                    <view class="little-btn fz16 jvzhong bold  bg76 col98" wx:if="{{item.status==1}}">结束</view>
+                    <view class="little-btn fz16 jvzhong bold  bg76 col98" wx:if="{{item.volume==item.appoint_total}}">已满</view>
+                    <view class="little-btn fz16 jvzhong bold" wx:if="{{item.volume>item.appoint_total&&item.status==2}}">预约</view>
+                  </view>
+                  <view class="flexrbc margintop5">
+                    <view class="fz15 col6">{{item.label}}</view>
+                    <view class="col9 fz15" wx:if="{{item.volume==item.appoint_total}}">报名已满</view>
+                    <view class="col9 fz15" wx:if="{{item.volume>item.appoint_total&&item.status!=1}}">剩余{{item.volume-item.appoint_total}}位</view>
+                  </view>
+                </view>
+              </view>
+            </block>
+            <view wx:if="{{goodsList.length==0}}" class="jvzhong">
+              <view class="iconfont icon-kong"></view>
+              <view class="fz20 marginbottom10 col6">暂无课程</view>
+            </view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 场地介绍 -->
+  <view class="card1 whitebg marginbottom10">
+    <view class="flexr0c">
+      <view class="iconfont icon-changdi1"></view>
+      <view class="fz16 col3 marginleft5">场地简介</view>
+    </view>
+    <view class="pad padding10">
+      <text class="fz16 col6 hang">{{gym.info}}</text>
+    </view>
+    <view class="flexrbc">
+      <view class="flexr0c">
+        <view class="iconfont icon-weizhi"></view>
+        <view class="fz16 col3 marginleft5">地址</view>
+      </view>
+      <view class="col9 fz16 marginright10" bindtap="actionBtn" data-action="openMap" data-location="{{gym}}">查看地图</view>
+    </view>
+    <view class="pad">
+      <view class="fz16 col6 marginleft10 hang marginright10">{{gym.address}}</view>
+    </view>
+  </view>
+  <!-- 注意事项 -->
+  <view class="card1 whitebg marginbottom10">
+    <view class="flexr0c">
+      <view class="iconfont icon-jinggao1"></view>
+      <view class="fz16 col3 marginleft5">注意事项</view>
+    </view>
+    <view class="pad hang padding10">
+      <!-- <view class="fz16 col6 marginleft10">1、舱内设高速Wifi，密码：rebirth；</view>
+      <view class="fz16 col6 marginleft10 marginright10">2、为保障健身体验，请按自行预约人数和时间进行健身；</view>
+      <view class="fz16 col6 marginleft10">3、为公共安全，内设闭路监控；</view> -->
+      <text class="fz16 col6">{{gym.note}}</text>
+    </view>
+  </view>
+</view>

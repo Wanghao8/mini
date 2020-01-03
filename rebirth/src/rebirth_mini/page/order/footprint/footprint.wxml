@@ -1,0 +1,9 @@
+<view wx:for="{{FootprintInfo}}" wx:key="{{item.index}}" class="footprint thinline" wx:if="{{havelist}}">
+  <view class="footprint-t">{{item.name}}
+    <span></span>
+  </view>
+  <view class="footprint-b">{{item.start_time}} · 开始</view>
+</view>
+<graceLoading loadingType="{{loadingType}}" wx:if="{{havelist}}"></graceLoading>
+<graceFullLoading graceFullLoading="{{graceFullLoading}}"></graceFullLoading>
+<view wx:if="{{havelist == false}}" class="vertcenter">您还没有任何足迹哦，快去健身吧!^_^</view>

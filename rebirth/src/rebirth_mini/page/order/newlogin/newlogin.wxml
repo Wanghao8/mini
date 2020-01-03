@@ -1,0 +1,57 @@
+<view class="padding top">
+  <view class="storeimg">
+    <image src="{{storeimage}}" mode="aspectFill"></image>
+  </view>
+  <view class="title">
+    <view class="storetitle ellipsis">{{storetitle}}</view>
+    <view class="storeinfo">{{storeinfo}}</view>
+  </view>
+</view>
+<view class="invapersontitle">我的邀请人(无邀请人时自动分配)</view>
+<view class="padding">
+  <view class="invitePerson" wx:if="{{getinvites}}">
+    <view class="invapersonimg">
+      <image src="{{pavatarUrl}}"></image>
+    </view>
+    <view class="invapersoninfo">
+      <view>{{pnickname}}</view>
+      <view class="inviteCode">邀请码:{{card_no}}</view>
+    </view>
+    <view class="relative">
+      <button class="invapersonbtn" type="primary" bindtap="phonetop">致电询问</button>
+    </view>
+  </view>
+  <view class="tips">温馨提示：首次在健身房扫码可获赠1天免费时长哦！</view>
+  <button class="getOpen" bindtap="toopendoor" data-sid="{{storeid}}" type="primary">获取开门码</button>
+</view>
+<!-- 弹出层 -->
+<view class='masklayer' wx:if="{{userinfobtn}}"></view>
+<view wx:if="{{userinfobtn}}">
+  <view class="bottomfixed">
+    <view class="userInfo-wrapper">
+      <view class="userinfoimg">
+        <image src="../../../static/img/vip.png"></image>
+      </view>
+      <view class="welcome">欢迎来到轮回搏击</view>
+    </view>
+    <view class="tips1">为提供优质的服务，轮回搏击需要获取以下信息</view>
+    <view class="tips2">·你的公开信息（昵称、头像等）</view>
+    <button class="confirmBtn" type="primary" open-type="getUserInfo" bindgetuserinfo="getUserinfo">确认微信授权</button>
+  </view>
+</view>
+<view class='masklayer' wx:if="{{userloginbtn}}"></view>
+<view wx:if="{{userloginbtn}}">
+  <view class="bottomfixed">
+    <view class="userInfo-wrapper">
+      <view class="userinfoimg">
+        <image src="../../../static/img/vip.png"></image>
+      </view>
+      <view class="welcome">欢迎来到轮回搏击</view>
+    </view>
+    <view class="getCode">登录获取开锁码</view>
+    <button class="loginBtn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" type="primary">微信登录</button>
+  </view>
+</view>
+<!-- <view class='masklayer' wx:if="{{getphonefalse}}"></view> -->
+<!-- <view  wx:if="{{getphonefalse}}" style="position: absolute;left: 50%;top: 50%;  transform: translate(-50%, -50%); background-color: #fff;padding: 40rpx 30rpx;z-index: 99;">您的微信没有绑定手机号,请致电15036095772</view> -->
+<graceFullLoading graceFullLoading="{{graceFullLoading}}"></graceFullLoading>

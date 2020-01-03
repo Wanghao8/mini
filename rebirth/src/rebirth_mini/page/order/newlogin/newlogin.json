@@ -1,0 +1,9 @@
+{
+	"navigationBarBackgroundColor":"#2e2e2e",
+	"disableScroll": true,
+  "usingComponents": {
+		"graceFullLoading":"../../../threeComponents/graceFullLoading"
+	},
+	"navigationBarTextStyle":"white",
+	"navigationBarTitleText":"激活轮回健身"
+}

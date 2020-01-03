@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "发起拍卖",
+  "usingComponents": {
+    
+    "image-cropper": "../components/cropper/image-cropper"
+  }
+}

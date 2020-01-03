@@ -1,0 +1,55 @@
+.circle {
+  font-size: 36rpx;
+  background-color: #26cd91;
+  border-radius: 50%;
+  width: 200rpx;
+  height: 200rpx;
+  line-height: 200rpx;
+  text-align: center;
+  color: #fff;
+  margin: 200rpx auto 0;
+}
+
+.renewal {
+  margin-top: 100rpx;
+  padding: 30rpx;
+}
+
+.renewal button {
+  background-color: #fff;
+  color: #26cd91;
+  font-size: 32rpx;
+}
+
+button::after {
+  border: 1rpx solid #26cd91;
+}
+
+.top {
+  padding: 30rpx;
+  overflow: hidden;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.icon {
+  float: left;
+  width: 15%;
+}
+
+.icon-chuwugui {
+  font-size: 85rpx;
+}
+
+.cabinetInfo-wrapper {
+  float: left;
+  width: 85%;
+}
+
+.ellipsis {
+  font-size: 34rpx;
+}
+
+.cabinetInfo {
+  color: #999;
+  font-size: 30rpx;
+}

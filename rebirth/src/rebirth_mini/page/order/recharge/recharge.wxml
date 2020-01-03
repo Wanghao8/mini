@@ -1,0 +1,256 @@
+<view data-price="120" data-id="5" data-type="1次卡" bindtap="ChoseMemcard" class="card_box {{id == 5?'newcard-sele':'newcard'}}">
+  <view class='clear'>
+    <view class='time_title'>次</view>
+    <view class='title'>
+      <view class="price-wrapper">单次应付</view>
+      <view class="price">￥120</view>
+    </view>
+  </view>
+  <view class='card_bottom'>
+    <view class="bottomLeft">
+      <!-- <view style="font-size: 28rpx;color: #eee;">价格</view> -->
+      <view class="bottomText">120元/次
+        <!-- <span style="text-decoration:line-through;"> 原价399元/月</span> -->
+      </view>
+    </view>
+    <view class="period-wrapper">
+      <view class="period">可使用 1次</view>
+    </view>
+  </view>
+</view>
+
+<view data-price="1200" data-id="4" data-type="10次卡" bindtap="ChoseMemcard" class="card_box {{id == 4?'newcard-sele':'newcard'}}">
+  <view class='clear'>
+    <view class='time_title'>次</view>
+    <view class='title'>
+      <view class="price-wrapper">十次应付</view>
+      <view class="price">￥1200</view>
+    </view>
+  </view>
+  <view class='card_bottom'>
+    <view class="bottomLeft">
+      <!-- <view style="font-size: 28rpx;color: #eee;">价格</view> -->
+      <view class="bottomText">100元/次 赠2次
+        <!-- <span style="text-decoration:line-through;"> 原价399元/月</span> -->
+      </view>
+    </view>
+    <view class="period-wrapper">
+      <view class="period">可使用 12次</view>
+    </view>
+  </view>
+</view>
+
+<view data-price="12000" data-id="3" data-type="100次卡" bindtap="ChoseMemcard" class="card_box {{id == 3?'newcard-sele':'newcard'}}">
+  <view class='clear'>
+    <view class='time_title'>次</view>
+    <view class='title'>
+      <view class="price-wrapper">百次应付</view>
+      <view class="price">￥12000</view>
+    </view>
+  </view>
+  <view class='card_bottom'>
+    <view class="bottomLeft">
+      <!-- <view style="font-size: 28rpx;color: #eee;">价格</view> -->
+      <view class="bottomText">80元/次 赠50次
+        <!-- <span style="text-decoration:line-through;"> 原价399元/月</span> -->
+      </view>
+    </view>
+    <view class="period-wrapper">
+      <view class="period">可使用 150次</view>
+    </view>
+  </view>
+</view>
+
+<view data-price="1200" data-id="2" data-type="月卡" bindtap="ChoseMemcard" class="card_box {{id == 2?'newcard-sele':'newcard'}}">
+  <view class='clear'>
+    <view class='time_title'>月</view>
+    <view class='title'>
+      <view class="price-wrapper">月卡应付</view>
+      <view class="price">￥1200</view>
+    </view>
+  </view>
+  <view class='card_bottom'>
+    <view class="bottomLeft">
+      <!-- <view style="font-size: 28rpx;color: #eee;">价格</view> -->
+      <view class="bottomText">1200元/月
+        <!-- <span style="text-decoration:line-through;"> 原价399元/月</span> -->
+      </view>
+    </view>
+    <view class="period-wrapper">
+      <view class="period">有效期 30天</view>
+    </view>
+  </view>
+</view>
+
+<view data-price="3168" data-id="1" data-type="季卡" bindtap="ChoseMemcard" class="card_box {{id == 1?'newcard-sele':'newcard'}}">
+  <view class='clear'>
+    <view class='time_title'>季</view>
+    <view class='title'>
+      <view class="price-wrapper">季卡应付</view>
+      <view class="price">￥3168</view>
+    </view>
+  </view>
+  <view class='card_bottom'>
+    <view class="bottomLeft">
+      <!-- <view style="font-size: 28rpx;color: #eee;">价格</view> -->
+      <view class="bottomText">1056元/月
+        <!-- <span style="text-decoration:line-through;"> 原价399元/月</span> -->
+      </view>
+    </view>
+    <view class="period-wrapper">
+      <view class="period">有效期 90天</view>
+    </view>
+  </view>
+</view>
+
+<view data-price="10080" data-id="0" data-type="年卡" bindtap="ChoseMemcard" class="card_box {{id == 0?'newcard-sele':'newcard'}}">
+  <view class='clear'>
+    <view class='time_title'>年</view>
+    <view class='title'>
+      <view class="price-wrapper">年卡应付</view>
+      <view class="price">￥10080</view>
+    </view>
+  </view>
+  <view class='card_bottom'>
+    <view class="bottomLeft">
+      <!-- <view style="font-size: 28rpx;color: #eee;">价格</view> -->
+      <view class="bottomText">840元/月
+        <!-- <span style="text-decoration:line-through;"> 原价399元/月</span> -->
+      </view>
+    </view>
+    <view class="period-wrapper">
+      <view class="period">有效期 360天</view>
+    </view>
+  </view>
+</view>
+
+
+
+<!-- 
+
+<view data-price="3588" data-id="0" data-type="课程年卡" bindtap="ChoseMemcard" class="card_box {{id == 0?'newcard-sele':'newcard'}}" style="background-image: url(https://xunchas.yuanfangyun.com/vip1.png);">
+  <view class='clear'>
+    <view class='time_title'>年</view>
+    <view class='title'>
+      <view>课程年卡</view>
+      <view style="text-align: right;font-size: 30rpx;">￥3588</view>
+    </view>
+  </view>
+  <view class='card_bottom'>
+    <view style="flex: 3.5;margin-left: 30rpx;">
+      <view style="font-size: 28rpx;color: #eee;">价格</view>
+      <view style="margin-top: 10rpx;">299/月
+        <span style="text-decoration:line-through;"> 原价399元/月</span>
+      </view>
+    </view>
+    <view style="flex: 1;">
+      <view style="font-size: 28rpx;color: #eee;">有效期</view>
+      <view style="margin-top: 10rpx;">360天</view>
+    </view>
+  </view>
+</view>
+
+<view data-price="999" data-id="1" data-type="季" bindtap="ChoseMemcard" class="card_box {{id == 1?'newcard-sele':'newcard'}}" style="background-image: url(https://xunchas.yuanfangyun.com/vip1.png);">
+  <view class='clear'>
+    <view  class='time_title'>季</view>
+    <view class='title'>
+      <view>课程季卡</view>
+      <view style="text-align: right;font-size: 30rpx;">￥999</view>
+    </view>
+  </view>
+  <view class='card_bottom'>
+    
+    <view style="flex: 3.5;margin-left: 30rpx;">
+      <view style="font-size: 28rpx;color: #eee;">价格</view>
+      <view style="margin-top: 10rpx;">333/月
+        <span style="text-decoration:line-through;"> 原价399元/月</span>
+      </view>
+    </view>
+    <view style="flex: 1;">
+      <view style="font-size: 28rpx;color: #eee;">有效期</view>
+      <view style="margin-top: 10rpx;">90天</view>
+    </view>
+  </view>
+</view>
+
+<view data-price="490" data-id="3" data-type="课程次卡10" bindtap="ChoseMemcard" class="card_box {{id == 3?'newcard-sele':'newcard'}}" 
+style="background-image: url(https://xunchas.yuanfangyun.com/vip1.png);">
+  <view class='clear'>
+    <view class='time_title'>次</view>
+    <view class='title'>
+      <view>课程次卡</view>
+      <view style="text-align: right;font-size: 30rpx;">￥490</view>
+    </view>
+  </view>
+  <view class='card_bottom'>
+    
+    <view style="flex: 3.5;margin-left: 30rpx;">
+      <view style="font-size: 28rpx;color: #eee;">价格</view>
+      <view>49/次 </view>
+    </view>
+    <view style="flex: 1;">
+      <view style="font-size: 28rpx;color: #eee;">有效期</view>
+      <view>10次</view>
+    </view>
+    
+  </view>
+</view>
+
+
+
+<view data-price="59" data-id="2" data-type="课程次卡" bindtap="ChoseMemcard" class="card_box {{id == 2?'newcard-sele':'newcard'}}" 
+style="background-image: url(https://xunchas.yuanfangyun.com/vip1.png);">
+  <view class='clear'>
+    <view class='time_title'>次</view>
+    <view class='title'>
+      <view>课程次卡</view>
+      <view style="text-align: right;font-size: 30rpx;">￥59</view>
+    </view>
+  </view>
+  <view class='card_bottom'>
+    
+    <view style="flex: 3.5;margin-left: 30rpx;">
+      <view style="font-size: 28rpx;color: #eee;">价格</view>
+      <view>59/次 </view>
+    </view>
+    <view style="flex: 1;">
+      <view style="font-size: 28rpx;color: #eee;">有效期</view>
+      <view>1次</view>
+    </view>
+    
+  </view>
+</view> -->
+
+
+
+<view class='clear'>
+  <!-- <view class='fl' bindtap='Torefund' style='color:#ce0000;'>
+    年卡随时退
+  </view> -->
+  <view class='fr' bindtap="ToRRecord">
+    时长记录
+  </view>
+</view>
+
+
+
+
+
+<!-- 底部按钮开始 -->
+<view class='bottom_hei'></view>
+<view class="bottombtn">
+  <!-- <view wx:if="{{id == 5}}" class="custom">
+			<view style="float: left;width: 50%;"><span class="custombtn" bindtap="numbersubtraction">-</span><span class="customnumber">{{customnumber}}</span> <span class="custombtn" bindtap="customnumber">+</span></view> 
+			<view class="customprice">共计<span>￥{{customprice}}</span> 元</view>
+		</view> -->
+  <view>
+    <button bindtap="payment" class="purchasebtn" disabled="{{btndisabled}}" loading="{{btnloading}}">立即支付{{price}}元</button>
+  </view>
+  <view class="state">
+    <view>
+      <radio class="agree" checked="{{statechecked}}" bindtap="stateradiocheck">我同意</radio>
+      <span class="treaty" bindtap="tostate">《Rebirth运动注意事项及免责声明》</span>
+    </view>
+  </view>
+  <view class="bottomLine"></view>
+</view>

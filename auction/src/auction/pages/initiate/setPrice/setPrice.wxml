@@ -1,0 +1,43 @@
+<view class="header margintop-10">
+  <view class="flexrbc baritem">
+    <label class="fz16 subcol">起拍价</label>
+    <input type="number" placeholder="输入起拍价" bindinput="bindKeyInput" data-index="1" maxlength="8" value="{{start_price}}" placeholder-class="fz13 e2col"></input>
+  </view>
+  <view class="flexrbc baritem">
+    <label class="fz16 subcol">加价幅度</label>
+    <input type="number" placeholder="输入加价幅度，不得为0" bindinput="bindKeyInput" data-index="2" maxlength="8" value="{{range_price}}" placeholder-class="fz13 e2col"></input>
+  </view>
+  <view class="flexrbc baritem last">
+    <label class="fz16 subcol">保证金</label>
+    <!-- <view class="flexr0c">
+      <picker class="bzj " value="{{bzjindex}}" range="{{bzj}}" bindchange="choosebzj">{{bzj[bzjindex]}}</picker>
+      <view class="iconfont iconyoujiantou"></view>
+    </view> -->
+    <input type="number" placeholder="输入保证金" bindinput="bindKeyInput" data-index="3" maxlength="8" value="{{bond_price}}" placeholder-class="fz13 e2col"></input>
+  </view>
+</view>
+<view class="tips">
+  <view class="exp fz13">经验：大多数设置低起拍价的拍卖（如￥1），能吸引到更多人围观出价，形成竞争，可能会有更高的成交价：）</view>
+  <!-- <view class="option fz14 thirdcol">选填项</view> -->
+</view>
+<!-- <view class="footer">
+  <view class="flexrbc baritem">
+    <label class="fz16 subcol">参考价</label>
+    <input type="digit" placeholder="选填" bindinput="bindKeyInput" data-index="3" value="{{inputValue3}}" maxlength="8" placeholder-class="fz13 e2col"></input>
+  </view>
+  <view class="flexrbc baritem {{baoliu?'':'last'}}">
+    <label class="fz16 subcol">设置保留项</label>
+    <switch bindchange="switchBaoliu" color="#F66F36"></switch>
+  </view>
+  <view class="flexrbc baritem last" wx:if="{{baoliu}}">
+    <label class="fz16 subcol">保留价金额</label>
+    <input type="digit" placeholder="输入金额" bindinput="bindKeyInput" data-index="4" value="{{inputValue4}}" maxlength="8" placeholder-class="fz13 e2col"></input>
+  </view>
+</view>
+<view class="" wx:if="{{baoliu}}">
+  <view class="tip fz12 thirdcol">保留价指您愿意成交的最低价格。拍卖结束时，如最高出价未达到保留价，此拍卖将会做流拍处理</view>
+  <view class="tip fz12 thirdcol">过高的保留价会增加拍品的流拍概率，请合理设置</view>
+</view> -->
+<view class="comfirm">
+  <view class="btn fz16 bold" bindtap="comfirm">确定</view>
+</view>

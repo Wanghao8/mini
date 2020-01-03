@@ -1,0 +1,19 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.text {
+  text-align: center;
+  margin: 30rpx 0;
+}
+
+.img {
+  text-align: center;
+}
+
+graceLoading {
+  margin: 20rpx 0;
+}

@@ -1,0 +1,26 @@
+.mycard{
+	position: relative;
+}
+.mycard-tltle{
+	margin-top: 20rpx;font-size: 32rpx;
+	line-height: 70rpx;
+}
+.mycard-tltle button{
+	display: inline-block;
+	font-size: 32rpx;
+line-height: 70rpx;
+float: right;
+background-color: #26CD91;
+color: #fff;
+}
+.state{
+position: absolute;
+right: 0;
+bottom: 50rpx;
+font-size: 30rpx;
+background-color:rgba(255,255,255,.6);
+padding: 4rpx 26rpx;
+border-top-left-radius: 20rpx;border-bottom-left-radius:20rpx ;
+color: #d59b5c;
+}
+.top{text-align: center;font-size: 32rpx;color: #999;}

@@ -1,0 +1,84 @@
+/* 字体大小 */
+.fz17 {font-size: 34rpx;}
+
+.fz16 {font-size: 32rpx;}
+
+.fz15 {font-size: 30rpx;}
+
+.fz14 {font-size: 28rpx;}
+
+.fz13 {font-size: 26rpx;}
+
+.fz12 {font-size: 24rpx;}
+
+/* 颜色 */
+.pageBackcol {background-color: #EFEFF4;}
+
+.barBackcol {background-color: #FFFFFF;}
+
+.subcol {color: #666666;}
+
+.thirdcol {color: #999999;}
+
+.green {color: #006633 !important;}
+
+/* 二级标题 */
+.subTitle {font-size: 28rpx;color: #666666;}
+
+/* flex布局 */
+
+.flexrsc {display: flex;flex-direction: row;justify-content: flex-start;align-items: center;}
+
+.flexrss {display: flex;flex-direction: row;justify-content: flex-start;align-items: flex-start;}
+
+.flexrbc {display: flex;flex-direction: row;justify-content: space-between;align-items: center;}
+
+.flexrac {display: flex;flex-direction: row;justify-content: space-around;align-items: center;}
+
+.flexc {display: flex;flex-direction: column;}
+
+.flexr0s {display: flex;flex-direction: row;align-items: flex-start;}
+
+.flexcac {display: flex;flex-direction: column;justify-content: space-around;align-items: center;}
+
+.flexr {display: flex;flex-direction: row;}
+
+.flexccc {display: flex;flex-direction: column;justify-content: center;align-items: center;}
+
+.flexras {display: flex;flex-direction: row;justify-content: space-around;align-items: flex-start;}
+
+.flexrsc {display: flex;flex-direction: row;justify-content: flex-start;align-items: center;}
+
+.flexc0c {display: flex;flex-direction: column;align-items: center;}
+
+.flexc0s {display: flex;flex-direction: column;align-items: flex-start;}
+
+.flexr0c {display: flex;flex-direction: row;align-items: center;}
+
+/* 间距 */
+.margin-col-10 {margin: 20rpx auto;}
+
+.margin-col-7 {margin: 14rpx auto;}
+
+.margin-row-10 {margin: auto 20rpx;}
+
+.margin-row-7 {margin: auto 14rpx;}
+
+/* 底部按钮 */
+.back {position: fixed;bottom: 0;width: 100%;}
+
+.backHome {height: 100rpx;line-height: 100rpx;width: 100%;font-size: 32rpx;border-radius: 0;text-align: center;}
+
+.backIcon {width: 100%;}
+
+.phoneBtn {height: 100rpx;line-height: 100rpx;width: 16%;background-color: #666666;}
+
+.phone {font-size: 50rpx;text-align: center;line-height: 100rpx;color: #CCCCCC;}
+
+/* 圆形 */
+.sub_circle {width: 92rpx;height: 92rpx;border-radius: 46rpx;background-color: #F5F5F5;margin: 20rpx;text-align: center;}
+
+/* 最外层容器 */
+.container {height: 100vh;background-color: #EBEBEB;}
+
+.fullWidth {width: 100%;}

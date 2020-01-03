@@ -1,0 +1,146 @@
+<!-- 顶部时间 -->
+<view>
+  <view class="header">
+    <view class="header-t">
+      <view class="header-t-l">
+        <view class='user_list'>
+          <view class='user_img'>
+            <image wx:if="{{avatarUrl}}" src="{{avatarUrl}}"></image>
+          </view>
+          <view class='user_name' bindtap="is_userinfobtn">
+            <view class='name'>{{nickName}}
+              <text class="iconfont iconsize icon-a536 iconstatus1"></text>
+            </view>
+            <view class='rebirth'>Rebirth my youth</view>
+          </view>
+        </view>
+      </view>
+      <view class="header-t-r" bindtap="{{appointtap}}">
+        <text class="iconfont iconsize icon-erweima {{is_appoint == 1?'header-t-r1':'header-t-r2'}}"></text>
+        <view class="{{is_appoint == 1?'header-t-r1':'header-t-r2'}}">{{appointstatus}}</view>
+      </view>
+    </view>
+    <view class='clear'>
+      <view class="header-m ellipsis" wx:if="{{residue_time1 > 0}}">我的时间 {{residue_time}}</view>
+      
+      <view class="header-m ellipsis" wx:if="{{once_card > 0}}">我的课程 {{once_card}}次</view>
+      
+      <view class="header-b-r" bindtap="ToRecharge">
+        <text class="iconfont icon-chongzhi1"></text> 时长充值
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 顶部导航 -->
+<view class="nav">
+  <view bindtap="{{appointtap}}">
+    <text class="iconfont iconsize icon-yuyue text"></text>
+    <view class="nav-con">预约健身</view>
+  </view>
+  <view bindtap="{{cabinets}}">
+    <text class="iconfont iconsize icon-chuwugui text"></text>
+    <view class="nav-con">我的储物</view>
+  </view>
+  <view bindtap="ToGymlocation">
+    <text class="iconfont iconsize icon-chaxun text"></text>
+    <view class="nav-con">查健身房</view>
+  </view>
+  <view bindtap="toappo">
+    <text class="iconfont iconsize icon-fangan text"></text>
+    <view class="nav-con">新人指南</view>
+  </view>
+</view>
+
+<view class="nav1">
+  <view bindtap="ToSM">
+    <text class="iconfont iconsize text times">{{invite_num}}个</text>
+    <view class="nav-con">运动伙伴</view>
+  </view>
+  <view bindtap="ToFootprint">
+    <text class="iconfont iconsize text times">{{visit_num}}次</text>
+    <view class="nav-con">健康历程</view>
+  </view>
+  <view bindtap="togiftview">
+    <text class="iconfont iconsize icon-lipin text"></text>
+    <view class="nav-con">送礼品卡</view>
+  </view>
+  <view bindtap="ToRecharge">
+    <text class="iconfont iconsize icon-chongzhi1 text"></text>
+    <view class="nav-con">时长充值</view>
+  </view>
+</view>
+
+<!-- 获取海报 -->
+<view class='regulation'></view>
+<view class='clear card2'>
+  <view class='fl text'>
+    <!-- <view class='first' bindtap="togiftview">伙伴关注 免费获得 <text>59</text> 元次卡</view>
+    <view class='two' bindtap="togiftview">同时自己 免费获得 <text>118</text> 元次卡</view> -->
+    <view class='first' bindtap="ToInvitationV">邀请伙伴到店
+      <text>免费</text> 体验</view>
+    <view class='two' bindtap="ToInvitationV">自己额外获赠
+      <text>240元</text> 课程</view>
+
+    <!-- <view class='three' bindtap="ToInvitationV">保存图片分享到朋友圈</view> -->
+    <view class='three' bindtap="ToInvitationV">2次课程 未激活</view>
+
+  </view>
+  <view class='fr img' bindtap="ToInvitationV">
+    <image src='../../../static/images/poster.png'></image>
+  </view>
+</view>
+<!-- <view class='shear' bindtap="ToInvitationV">点击分享至朋友圈</view> -->
+
+<!-- video -->
+<view class='regulation'></view>
+<view class="video">
+  <video wx:if="{{videoshow}}" src="https://rebirth.yuanfangyun.com/static/rebirth/rebirth.mp4" custom-cache="{{false}}" autoplay="true" style="height: {{height}}px;"></video>
+  <image bindtap="showvideostart" wx:else="{{videoshow}}" src="https://renlis.yuanfangyun.com/video3.png" style="height: {{height}}px;"></image>
+</view>
+<!-- video end -->
+
+
+<!-- 弹出层 -->
+<view class='masklayer' wx:if="{{userinfobtn}}"></view>
+<view wx:if="{{userinfobtn}}">
+  <view class="bottomfixed">
+    <view class="content-wrapper">
+      <view class="welcome">
+        <view class="userinfoimg">
+          <image src="https://xunchas.yuanfangyun.com/logo.png"></image>
+        </view>
+        <view class="welcomemsg">欢迎来到Rebirth</view>
+      </view>
+      <view class="tips1">为提供优质的服务，Rebirth需要获取以下信息</view>
+      <view class="tips2">·你的公开信息（昵称、头像等）</view>
+      <button class="authorization" type="primary" open-type="getUserInfo" bindgetuserinfo="getUserinfo">确认微信授权</button>
+    </view>
+  </view>
+</view>
+<view class='masklayer' wx:if="{{userloginbtn}}"></view>
+<view wx:if="{{userloginbtn}}">
+  <view class="bottomfixed">
+    <view class="login-wrapper">
+      <view class="userinfoimg">
+        <image src="https://xunchas.yuanfangyun.com/logo.png"></image>
+      </view>
+      <view class="tips3">欢迎来到Rebirth</view>
+    </view>
+    <view class="tips4">使用微信登录</view>
+    <button class="loginbtn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" type="primary">一键登录</button>
+  </view>
+</view>
+
+
+
+<!-- 海报 -->
+<view class="bg {{cavs == 1?' ':'active'}}" bindtap="bg"></view>
+<view class="cavs {{cavs == 1?' ':'active'}}">
+  <view class="cav">
+    <!-- bindtap="keepimg"  点击放大 -->
+    <canvas bindtap="keepimg" canvas-id='myCanvas' style='width:{{imgwidth}}px;height:{{imgheight}}px;margin: 0 auto;'></canvas>
+    <button type="primary" bindtap="saveimg">保存图片分享到朋友圈</button>
+  </view>
+</view>
+
+<!-- 海报结束 -->

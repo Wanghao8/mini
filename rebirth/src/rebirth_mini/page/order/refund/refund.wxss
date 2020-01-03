@@ -1,0 +1,145 @@
+/* page/order/refund/refund.wxss */
+
+.header {
+  background-color: #2e2e2e;
+  border-radius: 16rpx;
+  margin: 0 30rpx;
+}
+
+.header-t {
+  font-size: 32rpx;
+  overflow: hidden;
+  padding-top: 65rpx;
+}
+
+.header-t-l {
+  color: #fff;
+  float: left;
+}
+
+.header-t-r {
+  font-size: 30rpx;
+  color: #999;
+  float: right;
+  padding: 10rpx 56rpx 0 0;
+  text-align: center;
+}
+
+.header-b-r {
+  font-size: 32rpx;
+  color: #ccc;
+  float: right;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 6rpx 24rpx;
+  border-top-left-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
+}
+
+.header-m {
+  width: 56%;
+  color: #d59b5c;
+  font-size: 32rpx;
+  /* padding-left: 65rpx; *//* float: left; */
+  padding-right: 35px;
+  float: right;
+  text-align: right;
+}
+
+.header-b {
+  color: #999;
+  font-size: 30rpx;
+  padding-bottom: 65rpx;
+  padding-left: 65rpx;
+}
+
+.iconstatus1 {
+  color: #d59b5c;
+  font-size: 38rpx;
+}
+
+.list {
+  padding: 30rpx;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.list image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.list .remove {
+  width: 40rpx;
+  text-align: center;
+  font-size: 40rpx;
+  height: 40rpx;
+  line-height: 38rpx;
+}
+
+.list .add {
+  width: 40rpx;
+  text-align: center;
+  font-size: 40rpx;
+  height: 40rpx;
+  line-height: 38rpx;
+}
+
+.list input {
+  width: 80rpx;
+  text-align: center;
+}
+
+.purchasebtn_box {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid #f4f4f4;
+}
+
+.purchasebtn {
+  width: 92%;
+  background-color: #26cd91;
+  padding: 10rpx 0;
+  color: #fff;
+  margin: 20rpx auto;
+  line-height: 1.9;
+}
+
+.message {
+  padding: 30rpx;
+  color: #999;
+  font-size: 30rpx;
+}
+
+.top {
+  background-color: #fff;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.avatarimg {
+  padding: 0 16rpx 0 65rpx;
+}
+
+.avatarimg image {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+}
+
+.nickName {
+  font-size: 34rpx;
+}
+
+.sign {
+  font-size: 28rpx;
+  line-height: 50rpx;
+}
+
+.remainder {
+  overflow: hidden;
+  padding: 50rpx 0 65rpx 0;
+}

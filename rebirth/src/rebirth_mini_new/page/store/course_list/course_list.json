@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "Rebirth 轻健身",
+  "usingComponents": {
+    "step": "../../../component/step/step",
+    "notice": "../../../component/notice/notice",
+    "loading":"../../../component/loading/graceLoading"
+  }
+}

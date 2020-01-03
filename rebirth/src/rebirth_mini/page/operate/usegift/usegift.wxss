@@ -1,0 +1,16 @@
+.bottomfixed{position: fixed;bottom: 0;width: 100%;z-index: 98;background-color: #fff;}
+.userinfoimg{float: left;padding-right: 30rpx;}
+.card{margin: 30rpx;}
+.cardType{font-size: 32rpx;margin-top: 30rpx;text-align: center;}
+.activation{position: fixed;bottom: 30rpx;width: 92%;margin: 0 30rpx;}
+.activation button{background-color: #26CD91;color: #fff;}
+.userInfo-wrapper{padding: 40rpx 30rpx;}
+.userinfoimg image{width: 90rpx;height: 90rpx;border-radius: 50%;}
+.welcome{line-height: 90rpx;}
+.tips1{font-size: 32rpx;padding: 30rpx;}
+.tips2{font-size: 30rpx;color: #999;padding: 0 30rpx;}
+.tips2 button{margin: 80rpx 30rpx;}
+.login{padding: 40rpx 30rpx;}
+.userinfoimg image{width: 90rpx;height: 90rpx;border-radius: 50%}
+.textCenter{text-align: center}
+.loginBtn{margin: 50rpx 30rpx;}

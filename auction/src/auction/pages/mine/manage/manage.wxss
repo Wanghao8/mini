@@ -1,0 +1,19 @@
+page{background-color: #F1F1F1;margin-bottom: 300rpx;}
+.loadinggif{width: 80rpx;height: 80rpx;margin-bottom: 40rpx;color: #666666}
+.mask{position: absolute;z-index: 9;font-size: 32rpx;width: 100vw;height: 100vh;background-color: #F1F1F1;top:100rpx;color: #666666}
+.header{position: fixed;top:0;width: 100%;margin-bottom: 20rpx;padding: 40rpx 0;border: 1px solid #E6E6E6;z-index: 9;}
+.tabitem{width: 33.3%;text-align: center;color: #999}
+.actived{font-weight: 600;color: #000}
+.iconicon-test{font-size: 100rpx;color:#D8D8D8; }
+.content-wrapper{height: 80vh}
+.tip{margin-top: 40rpx;color:#D8D8D8;}
+.con-wrapper{margin-top: 140rpx;}
+.listtitle{padding: 40rpx 30rpx;border-bottom: 1px solid #E6E6E6;}
+.iconyoujiantou{font-size: 24rpx;color:#B6B6B6 }
+.price{color: #F15917;font-weight: 800;padding-bottom: 10rpx}
+.endlist-wrapper{margin: 0 20rpx;border-radius: 10rpx;overflow: hidden}
+.endlist{border-bottom: 1px solid #D9D9D9}
+.img2{height: 140rpx;width: 140rpx;margin: 30rpx}
+.endname{margin-bottom: 20rpx;overflow:hidden; text-overflow:ellipsis;display:-webkit-box; -webkit-box-orient:vertical;-webkit-line-clamp:2;}
+.liupai{background-color: #cccccc;color: #fff;width: 100rpx;height: 40rpx;line-height: 40rpx;text-align: center;border-radius: 10rpx;}
+.phone{color: #0066cc;font-size: 30rpx}

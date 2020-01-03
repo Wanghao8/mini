@@ -1,0 +1,9 @@
+page{background-color: #F1F1F1}
+.header{overflow: hidden;margin-top: 20rpx}
+.question{margin: 60rpx 40rpx 40rpx 40rpx}
+.answer{margin: 20rpx 40rpx 20rpx 40rpx}
+.share{margin: 0 0 40rpx 40rpx}
+.iconyoujiantou{font-size: 24rpx;color: #666666}
+button{display: inline; width: 200rpx;height: 40rpx;background-color: #ffffff;padding: 0!important;color: #333;margin: 0!important;margin-left: 40rpx}
+button::after { border: none; }
+

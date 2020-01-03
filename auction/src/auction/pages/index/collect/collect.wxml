@@ -1,0 +1,28 @@
+<!-- <view class="wrapper">
+  <view class="header">
+    <view class="title fz20 ">征集：读过的书，不如拿给我们拍卖吧</view>
+    <view class="detail fz15 thirdcol">小拍 拍东西 1周前</view>
+  </view>
+</view>
+<view class="flexc0c">
+  <view class="content fz16">小拍经常收到这样的反馈</view>
+  <view class="content fz16">我有个二手相机，可以上好物市集吗？</view>
+  <view class="content fz16">拍卖发到朋友圈，参与度不够耶？</view>
+  <view class="content fz16">首页的拍品我都没兴趣，去哪里能找到更多？</view>
+  <view class="img-wrapper">
+    <image class="img" src="../../../static/ha.png"></image>
+  </view>
+  <view class="content fz16">而以往小拍的回答是</view>
+  <view class="content fz16">不行（好物市集需要有稳定货品供应）</view>
+  <view class="content fz16">可以多分享分享</view>
+  <view class="content fz16">不好意思，私人拍卖暂时找不到哦</view>
+</view> -->
+
+<!-- <web-view src="{{httpUrl}}"></web-view> -->
+
+<view>111111111</view>
+<image mode='aspectFill' src='http://paimais.yuanfangyun.com/201912711856246.jpg' />
+<view>2222222222</view>
+<image mode='aspectFill' src='http://paimais.yuanfangyun.com/20191271197341.jpg' />
+<view>3333333333</view>
+<image mode='aspectFill' src='http://paimais.yuanfangyun.com/201912711918019.jpg' />

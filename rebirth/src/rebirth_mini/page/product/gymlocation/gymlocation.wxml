@@ -1,0 +1,18 @@
+<view bindtap="OpenMap" data-latlon="{{item}}"  wx:for="{{storelist}}" wx:key='index'>
+	<view class="footprint ">
+		<view class="footprint-l">	
+			<image src="{{item.image}}" mode="aspectFill"></image>
+		</view>
+		<view class="footprint-r">
+			<view class="footprint-l-t ellipsis">{{item.name}}</view>
+			<view class="footprint-l-b ellipsis-2">{{item.address}}</view>
+			<view>
+				<view class="footprint-r-t">{{item.distance}}</view>
+				<view class="footprint-r-b">现有{{item.member_count}}人</view>
+			</view>
+		</view>
+	</view>
+	<view class="relative thinline"><text space="emsp">本店店长:{{item.nickName}}  联系电话:{{item.phone}}</text></view>
+</view>
+<graceLoading loadingType="{{loadingType}}"></graceLoading>
+<graceFullLoading graceFullLoading="{{graceFullLoading}}"></graceFullLoading>

@@ -1,0 +1,65 @@
+{
+  "pages": [
+
+    
+    "page/store/course_list/course_list",
+    "page/store/course_show/course_show",
+    "page/store/store_list/store_list",
+    "page/store/store_show/store_show",
+    "page/order/appoint_list/appoint_list",
+    "page/order/appoint_show/appoint_show",
+    "page/order/consume_buy/consume_buy",
+    "page/order/consume_list/consume_list",
+    "page/manage/index/index",
+    "page/manage/base_info/base_info",
+    "page/manage/food_list/food_list",
+    "page/manage/food_show/food_show",
+    "page/report/store_report/store_report",
+    "page/report/goods_add/goods_add",
+    "page/manage/about/about"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示" 
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "wechat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#97DDD6",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "page/store/course_list/course_list",
+        "text": "课表",
+        "iconPath": "./static/img/class.png",
+        "selectedIconPath": "./static/img/class+.png"
+      },
+      {
+        "pagePath": "page/store/store_list/store_list",
+        "text": "门店",
+        "iconPath": "./static/img/gym.png",
+        "selectedIconPath": "./static/img/gym+.png"
+      },
+      {
+        "pagePath": "page/manage/food_list/food_list",
+        "text": "饮食",
+        "iconPath": "./static/img/promise.png",
+        "selectedIconPath": "./static/img/promise+.png"
+      },
+      {
+        "pagePath": "page/manage/index/index",
+        "text": "我的",
+        "iconPath": "./static/img/mine.png",
+        "selectedIconPath": "./static/img/mine+.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

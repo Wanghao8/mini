@@ -1,0 +1,273 @@
+<view catchtouchmove="ture" class="mask flexccc" wx:if="{{fullLoading}}">
+  <image class="loadinggif" src="../../../static/loading.gif"></image>正在加载中</view>
+<swiper indicator-dots="true" indicator-color="rgba(200,200,200,0.5)" indicator-active-color="#F66F36">
+  <swiper-item wx:for="{{goodsInfo1.cover_imgs}}" wx:key="id">
+    <image class="img" mode="aspectFill" src="{{item}}" bindtap="actionBtn" data-action="pre" data-value="{{item}}"></image>
+  </swiper-item>
+</swiper>
+<view class="header">
+  <view class="flexrbc">
+    <view class="flexr0c">
+      <view class="avatar-wrapper">
+        <image src="{{goodsInfo1.avatarUrl}}" class="avatar"></image>
+      </view>
+      <view class="nickname fz13 thirdcol">{{goodsInfo1.nickName}} 发起</view>
+      <view class="bluev marginleft-5">v</view>
+    </view>
+    <view class="tags fz12 subcol flexr0c">
+      <view class="tag">官方正品</view>
+      <view class="tag">全新</view>
+      <view class="tag">包邮</view>
+    </view>
+  </view>
+  <view class="name fz17">拍品：{{goodsInfo1.name}}</view>
+  <view class="time fz13 thirdcol">{{goodsInfo1.start_time1}} - {{goodsInfo1.end_time1}}</view>
+</view>
+<view class="options flexr0c">
+  <button hidden="{{reminded}}" class="remind barbackcol fz15 flexrcc subcol" bindtap="actionBtn" data-action="remind">
+    <view class="iconfont iconiconjia"></view>提醒我</button>
+  <button hidden="{{!reminded}}" class="remind barbackcol fz15 flexrcc subcol" bindtap="actionBtn" data-action="lookremind">
+    <view class="iconfont icontixing"></view>查看提醒</button>
+  <button open-type="share" class="share barbackcol fz15 flexrcc subcol">
+    <view class="iconfont iconshare"></view>去分享</button>
+</view>
+
+<view class="price-wrapper margintop-10 flexc0c">
+  <view class="content-wrapper">
+    <view class="flexr line">
+      <view class="left flexr">
+        <view class="label fz13">起拍价格</view>
+        <view class="price fz13 thirdcol marginleft-10">{{goodsInfo1.start_price}}元</view>
+      </view>
+      <view class="right flexr">
+        <view class="label fz13">加价幅度</view>
+        <view class="price fz13 thirdcol marginleft-10">{{goodsInfo1.range_price}}元</view>
+      </view>
+    </view>
+    <view class="flexr line">
+      <view class="right flexr">
+        <view class="label fz13">保证金额</view>
+        <view class="price fz13 thirdcol marginleft-10">{{goodsInfo1.bond_price}}元</view>
+      </view>
+      <view class="left flexr">
+        <view class="label fz13">延时时间</view>
+        <view class="price fz13 thirdcol marginleft-10">{{goodsInfo1.delay}}秒</view>
+      </view>
+    </view>
+    <!-- <view class="flexr line">
+      <view class="left flexr">
+        <view class="label fz13">保留价</view>
+        <view class="price fz13 thirdcol marginleft-10">￥50</view>
+      </view>
+    </view> -->
+  </view>
+</view>
+
+<view class="desc margintop-10">
+  <view class="flexr">
+    <view class="iconfont iconzhuangshiyongyinhao e2col"></view>
+    <view class="descinfo-wrapper">
+      <view class="fz13 descinfo">{{goodsInfo1.desc}}</view>
+    </view>
+  </view>
+</view>
+
+<!-- 出价列表 -->
+<view catchtouchmove="ture">
+  <view class="shadow" wx:if="{{!hideauction}}" bindtap="actionBtn" data-action="hideList"></view>
+  <view class="footer barbackcol">
+    <!-- 上拉时显示的出价人列表 -->
+    <view class="footertop flexrbc" hidden="{{hideauction}}" bindtap="actionBtn" data-action="showauc">
+      <view class="footerleft">
+        <view class="bold" wx:if="{{(goodsInfo1.status==1||startAuc)&&!endAuc}}">竞拍进行中</view>
+        <view class="bold" wx:if="{{(goodsInfo1.status==3||endAuc)&&userStatus.offer_status===0}}">竞拍已结束</view>
+        <view class="bold" wx:if="{{(goodsInfo1.status==3||endAuc)&&userStatus.offer_status===1&&goodsInfo1.win_acc_id!=acc_id}}">很遗憾，没能竞拍到</view>
+        <view class="bold gongxi" wx:if="{{(goodsInfo1.status==3||endAuc)&&userStatus.offer_status===1&&goodsInfo1.win_acc_id==acc_id}}">恭喜你，赢得拍卖，保持电话畅通，工作人员会及时跟你联系</view>
+        <view class="flexr margintop-10">
+          <view class="fz14 thirdcol" wx:if="{{(goodsInfo1.status==1||startAuc)&&!endAuc}}">距结束</view>
+          <!-- <view class="fz14 thirdcol" wx:if="{{dataList.status==0}}">共持续</view> -->
+          <!-- <view class="subcol fz15 endtime marginleft-5" wx:if="{{goodsInfo1.status==1}}">{{leftHour}}:{{leftMinutes}}:{{leftSeconds}}</view> -->
+          <view class="subcol fz15 marginleft-5 ctime" wx:if="{{(goodsInfo1.status==1||startAuc)&&!endAuc}}">{{leftHour}}:{{leftMinutes}}:{{leftSeconds}}</view>
+          <!-- <view class="subcol fz15 marginleft-5 ctime" wx:if="{{goodsInfo1.status==1}}">{{goodsInfo1.countdown_time}}</view> -->
+
+          <view class="fz14 thirdcol">共出价</view>
+          <view class="subcol fz15 marginleft-5" wx:if="{{!list&&!hignest}}">0次</view>
+          <view class="subcol fz15 marginleft-5" wx:if="{{list.length===0&&hignest}}">1次</view>
+          <view class="subcol fz15 marginleft-5" wx:if="{{list&&list.length!=0}}">{{list.length+1}}次</view>
+        </view>
+      </view>
+      <view class="circle" hidden="{{hideauction}}">
+        <view class="iconfont iconxiajiantou-" bindtap="actionBtn" data-action="showauc"></view>
+      </view>
+    </view>
+    <!-- 未上拉起的出价最高者显示区域 -->
+    <view class="footertop flexrbc" wx:if="{{hideauction&&(goodsInfo1.status!=2||startAuc)}}" bindtap="actionBtn" data-action="hideauc">
+    <!-- <view class="footertop flexrbc" wx:if="{{(hideauction&&goodsInfo1.status!=2)||startAuc}}" bindtap="actionBtn" data-action="hideauc"> -->
+      <view class="footerleft">
+        <view class="flexr0c">
+          <view class="fz14 subcol bold" wx:if="{{(goodsInfo1.status==1||startAuc)&&!endAuc}}">距结束</view>
+          <view class="subcol fz15 marginleft-5 bold" wx:if="{{(goodsInfo1.status==1||startAuc)&&!endAuc}}">{{leftHour}}:{{leftMinutes}}:{{leftSeconds}}</view>
+          <!-- <view class="subcol fz15 marginleft-5 bold" wx:if="{{goodsInfo1.status==1}}">{{goodsInfo1.countdown_time}}</view> -->
+          <!-- <view class="subcol fz15 marginleft-5 bold" wx:if="{{goodsInfo1.status==1}}">{{leftHour}}:{{leftMinutes}}:{{leftSeconds}}</view> -->
+          <view class="fz16 subcol bold" wx:if="{{(goodsInfo1.status==3||endAuc)&&userStatus.offer_status===0}}">竞拍已结束</view>
+          <view class="fz16 subcol bold" wx:if="{{(goodsInfo1.status==3||endAuc)&&userStatus.offer_status===1&&goodsInfo1.win_acc_id!=acc_id}}">很遗憾，没能竞拍到</view>
+          <view class="fz16 subcol bold" wx:if="{{(goodsInfo1.status==3||endAuc)&&userStatus.offer_status===1&&goodsInfo1.win_acc_id==acc_id}}">恭喜你，赢得拍卖</view>
+        </view>
+      </view>
+      <view class="footerright flexr0c" wx:if="{{hignest}}">
+        <view class="img-wrapper">
+          <image class="img4" src="{{hignest.avatarUrl}}"></image>
+        </view>
+        <view class="orange fz14 bold" wx:if="{{(goodsInfo1.status==1||startAuc)&&!endAuc}}">当前价￥{{hignest.money}}</view>
+        <view class="orange fz14 bold" wx:if="{{goodsInfo1.status==3||endAuc}}">成交价￥{{hignest.money}}</view>
+        <view class="circle marginleft-10" hidden="{{!hideauction}}">
+          <view class="iconfont iconshangjiantou-" bindtap="actionBtn" data-action="hideauc"></view>
+        </view>
+      </view>
+      <view class="footerright flexr0c" wx:if="{{!hignest&&((goodsInfo1.status==1||startAuc)&&!endAuc)}}">
+        <view class="fz14 thirdcol">等待出价...</view>
+        <view class="circle marginleft-10" hidden="{{!hideauction}}">
+          <view class="iconfont iconshangjiantou-" bindtap="actionBtn" data-action="hideauc"></view>
+        </view>
+      </view>
+      <view class="footerright flexr0c" wx:if="{{!hignest&&(goodsInfo1.status==3||endAuc)}}">
+        <view class="fz14 thirdcol">无人出价，已流拍</view>
+        <view class="circle marginleft-10" hidden="{{!hideauction}}">
+          <view class="iconfont iconshangjiantou-" bindtap="actionBtn" data-action="hideauc"></view>
+        </view>
+      </view>
+    </view>
+    <scroll-view scroll-y="true" class="footercontent barbackcol" hidden="{{hideauction}}">
+      <view class="hignest flexrbc" wx:if="{{hignest}}">
+        <view class="flexr">
+          <view class="img-wrapper">
+            <image class="img2" src="{{hignest.avatarUrl}}"></image>
+          </view>
+          <view class="flexr0c">
+            <view class="fz17 bold orange flexr0c">{{hignest.niming?firstniname+'***':hignest.nickName}}
+              <view class="marginleft-5 fz13 thirdcol" wx:if="{{hignest.niming}}">匿名</view>
+            </view>
+            <view class="iconfont iconyoujiantou"></view>
+          </view>
+        </view>
+        <view class="flexr0c">
+          <view class="time2 orange fz14" wx:if="{{goodsInfo1.status==3||endAuc}}">胜出</view>
+          <view class="time2 thirdcol fz14" wx:if="{{(goodsInfo1.status==1||startAuc)&&!endAuc}}">{{hignest.add_time}}</view>
+          <view class="price2 orange bold">￥{{hignest.money}}</view>
+        </view>
+      </view>
+      <view class="hignest flexrbc" wx:if="{{!hignest&&((goodsInfo1.status==1||startAuc)&&!endAuc)}}">
+        <view class="wait fz16 thirdcol">正在等待第一个出价者</view>
+      </view>
+      <view class="hignest flexrbc" wx:if="{{!hignest&&(goodsInfo1.status==3||endAuc)}}">
+        <view class="wait fz16 thirdcol">已经流拍啦</view>
+      </view>
+      <view class="list-wrapper" wx:for="{{list}}" wx:key="id">
+        <view class="list flexrbc">
+          <view class="flexr">
+            <view class="img-wrapper">
+              <image class="img3" src="{{item.avatarUrl}}"></image>
+            </view>
+            <view class="flexr0c">
+              <view class="fz15 flexr0c subcol">{{item.niming?niname[item.index]+'***':item.nickName}}
+                <view class="marginleft-5 fz12 thirdcol" wx:if="{{item.niming}}">匿名</view>
+              </view>
+              <view class="iconfont iconyoujiantou"></view>
+            </view>
+          </view>
+          <view class="flexr0c">
+            <view class="time2 thirdcol fz13">{{item.add_time}}</view>
+            <view class="price2 fz13 subcol">￥{{item.money}}</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+    <!-- 底部按钮 -->
+    <view class="footerbtn barbackcol flexrbc bold fz15" wx:if="{{userStatus.bond_status===0&&((goodsInfo1.status==1||startAuc)&&!endAuc)}}">
+      <view class="pay" bindtap="actionBtn" data-action="pay">交纳￥{{goodsInfo1.bond_price}}保证金后出价</view>
+    </view>
+    <!-- <view class="footerbtn barbackcol flexrbc bold fz15" wx:if="{{type==2}}">
+        <view class="focus">+ 关注</view>
+      </view> -->
+
+    <view class="footerbtn flexrac barbackcol fz15" wx:if="{{goodsInfo1.status==2&&!startAuc}}">
+      <view class="fz18"> 开拍倒计时</view>
+      <view class="bold djs fz20">{{leftHour}}:{{leftMinutes}}:{{leftSeconds}}</view>
+      <!-- <view class="bold djs fz20">{{goodsInfo1.countdown_time}}</view> -->
+    </view>
+
+    <view class="footerbtn barbackcol flexrbc bold fz15" wx:if="{{(goodsInfo1.status==3||goodsInfo1.status==0||endAuc)&&!startAuc}}">
+      <view class="home" bindtap="actionBtn" data-action="home">回首页参与更多</view>
+    </view>
+    <view class="footerbtn barbackcol flexrbc bold fz15" wx:if="{{userStatus.bond_status===1&&((goodsInfo1.status==1||startAuc)&&!endAuc)}}">
+      <numbox bindchange="changbtn" class="numbox" step="{{goodsInfo1.range_price}}" minNum="{{goodsInfo1.last_price<goodsInfo1.start_price?goodsInfo1.start_price:goodsInfo1.last_price}}" disabled="true" value="{{goodsInfo1.last_price}}"></numbox>
+      <!-- <numbox bindchange="changbtn" class="numbox" step="{{goodsInfo1.range_price}}" minNum="{{goodsInfo1.last_price<goodsInfo1.start_price?goodsInfo1.start_price:goodsInfo1.last_price}}" disabled="true" value="{{goodsInfo1.last_price<goodsInfo1.start_price?goodsInfo1.start_price:goodsInfo1.last_price}}"></numbox> -->
+      <view class="helpsell chujia" bindtap="actionBtn" data-action="paymoney">确认出价</view>
+    </view>
+  </view>
+</view>
+<!-- 图文详情 -->
+<!-- <view class="barbackcol margintop-10" wx:if="{{goodsInfo1.detail_imgs!='http://paimais.yuanfangyun.com/'}}">
+  <view class="fz16 detailtxt">{{goodsInfo1.detail_text}}</view>
+  <view class="images" wx:for="{{goodsInfo1.detail_imgs}}" wx:key="id">
+    <image mode="aspectFill" class="detailimage" src="{{item}}" bindtap="actionBtn" data-action="preDetail" data-value="{{item}}"></image>
+  </view>
+</view> -->
+<view class="tuwen" wx:if="{{goodsInfo1.imgtxt!='undefined'}}">
+  <parser html="{{nodes}}" tag-style="{{tagStyle}}" />
+  <!-- <rich-text nodes="{{nodes}}"></rich-text> -->
+</view>
+<!-- 规则说明 -->
+<view class="barbackcol margintop-10">
+  <view class="rule flexc0c">
+    <view>
+      <view class="ruletop flexr0c">———————
+        <text class="rulecol">规则说明</text> ———————</view>
+    </view>
+    <view>
+      <view class="flexr0c ruletitle">
+        <view class="dot"></view>
+        <view class=" fz15">延时读秒时长</view>
+      </view>
+      <view class="fz14 ruletxt">拍卖结束前{{goodsInfo1.delay}}秒，进入延时读秒，读秒过程中若有新的出价，拍卖将重新读秒，拍卖结束时间也将顺延{{goodsInfo1.delay}}秒。</view>
+      <view class="flexr0c ruletitle">
+        <view class="dot"></view>
+        <view class=" fz15">保证金制度
+        </view>
+      </view>
+      <view class="fz14 ruletxt">保证金额度由拍卖发起人设置，发起人与参与竞拍人都需交纳。未中拍者保证金在拍卖结束后自动退还。</view>
+      <view class="fz14 ruletxt">拍卖结束后，发起人与中拍人可主动要求退还保证金，或等待7天后自动退还保证金，若有任一方违约，请在系统内提交纠纷仲裁，核实后保证金将赔付另外一方。</view>
+      <view class="fz14 ruletxt">设置保证金可以有效保护买卖双方利益，对于在熟人社群内的拍卖活动，也可将保证金设置为0。</view>
+      <view class="flexr0c ruletitle">
+        <view class="dot"></view>
+        <view class=" fz15">交易安全</view>
+      </view>
+      <view class="fz14 ruletxt">拍卖结束后，请选择可靠的交易方式完成商品交易，避免纠纷。</view>
+    </view>
+  </view>
+</view>
+<view class="bottomtips fz18 thirdcol">
+<view>已经到最底下啦</view>
+</view>
+<view catchtouchmove="ture">
+  <view class="shadow2" wx:if="{{showremind}}"></view>
+  <view class="remindtips barbackcol" wx:if="{{showremind}}">
+    <view class="tipstop flexc0c">
+      <view hidden="{{!reminded}}" class="tipstitle bold fz18">设置提醒时机</view>
+      <view hidden="{{reminded}}" class="tipstitle bold fz18">已关注，在以下时刻提醒我</view>
+      <view class="subtitle fz13 thirdcol">勾选后，将会对你发送微信消息进行提醒</view>
+    </view>
+    <view class="radios">
+      <radio class="flexr0c radio" color="#F66F36" bindtap="actionBtn" data-action="changechecked1" checked="{{checked1}}">
+        <view class="fz14 marginleft-10">当有新出价时</view>
+      </radio>
+      <radio class="flexr0c radio" color="#F66F36" bindtap="actionBtn" data-action="changechecked2" checked="{{checked2}}">
+        <view class="fz14 marginleft-10">拍卖结束前十分钟</view>
+      </radio>
+      <radio class="flexr0c radio" color="#F66F36" bindtap="actionBtn" data-action="changechecked4" checked="{{checked4}}">
+        <view class="fz14 marginleft-10">拍卖结果产生时</view>
+      </radio>
+    </view>
+    <view class="comfirmbtn orange fz17 bold" bindtap="actionBtn" data-action="remindme">完成</view>
+  </view>
+</view>

@@ -1,0 +1,1 @@
+position: absolute;content: '';-webkit-transform-origin: 0 0;transform-origin: 0 0;-webkit-transform: scaleY(0.5);transform: scaleY(0.5);bottom: 0;right: 0;width: 100%;border-bottom: 1px solid #E6E6E6;

@@ -1,0 +1,28 @@
+<view class="overall">
+  <view class="cashtitle">
+    <view class="cashtitle-l">到零钱
+      <text class="iconfont iconsize icon-lingqian"></text>
+    </view>
+    <view class="cashtitle-m">
+      <view>微信零钱</view>
+      <view class="time">2小时到账</view>
+    </view>
+    <view class="cashtitle-r">
+      <text class="iconfont iconsize icon-you"></text>
+    </view>
+  </view>
+  <view class="cashbody">
+    <view class="cashbody-t">提现金额</view>
+    <view class="cashbody-m thinline">
+      <span class="yuan">￥</span>
+      <input type="number" maxlength="7" value="{{cashmoney}}" bindinput="inputcash" focus="true" />
+    </view>
+    <view class="cashbody-b" wx:if="{{balance}}">可提现金额￥{{money}},
+      <span bindtap="cashall">全部提现</span>
+    </view>
+    <view class="cashbody-b else" wx:else="{{balance}}">输入金额超过可提现金额</view>
+    <view>
+      <button type="primary" bindtap="CashBalance" disabled="{{cashBtn}}">提现</button>
+    </view>
+  </view>
+</view>

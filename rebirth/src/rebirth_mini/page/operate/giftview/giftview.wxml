@@ -1,0 +1,60 @@
+<view class='top' id="top">
+  <view class="tips" bindtap="showtips">查看详细流程
+    <text class="iconfont iconsize icon-you"></text>
+  </view>
+  <view>
+    <view class='masklayer' wx:if="{{showtips}}" catchtouchmove='true'>
+    </view>
+    <view class="tipsinfo" wx:if="{{showtips}}" catchtouchmove='true'>
+      <text bindtap="showtips" class="iconfont icon-guanbi"></text>
+      <view class="tipsTitle">流程攻略</view>
+      <scroll-view scroll-y="true">
+        <view>1.什么是礼品卡？</view>
+        <view class="tipsText">礼品卡是Rebirth运动的虚拟卡，领取时长后即可Rebirth运动任意店面使用。</view>
+        <view> 2.如何获得礼品卡？</view>
+        <view>通常，有以下几种途径获得：</view>
+        <view>1）自行购买：在礼品卡首页点击任意礼品卡，选定购买后即可获得。</view>
+        <view class="tipsText">2）好友赠送：领取微信好友给您的礼品卡。</view>
+        <view>3.如何将礼品啦赠送给好友？</view>
+        <view class="tipsText">在礼品卡首页点击“我的礼品卡”，进入后选择相应的礼品卡，分享给微信好友，即可完成赠送。</view>
+        <view>4.如何查询已购礼品卡？</view>
+        <view>在礼品卡首页点击“我的礼品卡”，可查看礼品卡的领取状态、相关领取人信息等，点击卡面可查询礼品卡详情。</view>
+      </scroll-view>
+      <button class="confirm" bindtap="showtips">我知道了</button>
+    </view>
+  </view>
+  <view class="step">
+    <view class="iconFloat">
+      <view class="iconfont iconsize icon-icon_lipinka"></view>
+      <view>选择礼品卡</view>
+    </view>
+    <view class="iconfont iconsize2 icon-buzhou"></view>
+    <view class="iconFloat">
+      <view class="iconfont iconsize icon-zhifu"></view>
+      <view>支付购买</view>
+    </view>
+    <view class="iconfont iconsize2 icon-buzhou"></view>
+    <view class="iconFloat">
+      <view class="iconfont iconsize icon-friend"></view>
+      <view>送微信好友</view>
+    </view>
+    <view class="iconfont iconsize2 icon-buzhou"></view>
+    <view class="iconFloat">
+      <view class="iconfont iconsize icon-jihuo"></view>
+      <view>好友激活</view>
+    </view>
+  </view>
+</view>
+<view style="overflow: hidden;margin-top: {{height}}px;">
+  <view class="giftcard" wx:for="{{giftlist}}" wx:key='index' data-model="{{item}}" bindtap="togiftpay">
+    <image src="{{item.image}}" style="width: {{imgwidth}}px;height: {{imgwidth * 0.6}}px;"></image>
+    <view>{{item.title}}</view>
+  </view>
+</view>
+<view class="mygiftcard" bindtap="tomygift">
+  <view class="vertcenter">
+    <view class="giftBtn textCenter">我的</view>
+    <view class="giftBtn">礼品卡</view>
+  </view>
+</view>
+<view class="bottom"></view>

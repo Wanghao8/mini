@@ -1,0 +1,29 @@
+
+.wrapper{padding:15px;display: none;}
+.wrapper h2{line-height: 80px;}
+.layui-layer-wrapper{top: 0px !important; bottom: 0; box-shadow: 1px 1px 10px rgba(0, 0, 0, .1); border-radius: 0; overflow: auto;background-color: #F1F1F1 !important;}
+.layui-anim-lr{-webkit-animation-name: layui-lr; animation-name: layui-lr;}
+.layui-anim-rl{-webkit-animation-name: layui-rl; animation-name: layui-rl;}
+.layui-anim-rl.layer-anim-close{-webkit-animation-name: layui-lr; animation-name: layui-lr;}
+
+/* 动画 */
+@-webkit-keyframes layui-rl{/* 从右往左滑入 */
+	from{-webkit-transform: translate3d(100%, 0, 0);}
+	to{-webkit-transform: translate3d(0, 0, 0);}
+	}
+@keyframes layui-rl{ from{transform: translate3d(100%, 0, 0);}
+	to{transform: translate3d(0, 0, 0);}
+	}
+@-webkit-keyframes layui-lr{/* 从右往左滑入 */
+	from{-webkit-transform: translate3d(0 0, 0); opacity: 1;}
+	to{-webkit-transform: translate3d(100%, 0, 0); opacity: 1;}
+	}
+@keyframes layui-lr{ from{transform: translate3d(0, 0, 0);}
+	to{transform: translate3d(100%, 0, 0);}
+	}
+/*重写box样式*/
+.wrapper .wheader h3{line-height:28px;}
+.wrapper .wheader h3 .layui-badge{ margin-left: 10px;}
+.wrapper .wheader p i{margin: 0px 6px;}
+.wrapper .ibox{margin-bottom: 15px;}
+.wrapper .ibox .ibox-content{padding:10px 15px;}

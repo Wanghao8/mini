@@ -1,0 +1,27 @@
+page{background-color: #F1F1F1;overflow: hidden}
+.header{background-color: #fff;margin: 20rpx 0}
+.login,.phone{margin: 0rpx;border: 1px solid #e6e6e6}
+.avatar{height: 92rpx;width: 92rpx;border-radius: 50%; margin: 40rpx 30rpx}
+.log{margin-right: 20rpx}
+.headtop{position: relative;height: 170rpx;}
+.headtop::after{position: absolute;content: '';-webkit-transform-origin: 0 0;transform-origin: 0 0;-webkit-transform: scaleY(0.5);transform: scaleY(0.5);bottom: 0;right: 0;width: 100%;border-bottom: 1px solid #E6E6E6;}
+.all-auction,.winbid{height: 100rpx; width: 374rpx;margin: 40rpx 0}
+.all-auction{position: relative}
+.all-auction::after{position: absolute;content: '';-webkit-transform-origin: 0 0;transform-origin: 0 0;-webkit-transform: scaleX(0.5);transform: scaleX(0.5);top: 0;right: 0;height: 100%;border-right: 1px solid #E6E6E6;}
+.num{font-size: 40rpx; font-weight: 700}
+.initiate{height: 120rpx}
+.iconicon-test{font-size: 60rpx;color: #B3B3B3;}
+.initiate_now{font-size: 40rpx}
+.list-wrapper{background-color: #fff}
+.listItem{height: 100rpx; position: relative}
+.listItem::after{position: absolute;content: '';-webkit-transform-origin: 0 0;transform-origin: 0 0;-webkit-transform: scaleY(0.5);transform: scaleY(0.5);bottom: 0;right: 0;width: 100%;border-bottom: 1px solid #E6E6E6;}
+.iconbaozheng1, .iconproblem, .iconxinxi-copy,.iconqian{font-size: 40rpx;color: #B3B3B3; margin:20rpx}
+.arrow{margin-right: 20rpx}
+.iconyoujiantou{font-size: 30rpx}
+button{height: 100rpx!important;padding: 0!important;font-weight: 200;background-color: #fff;border-radius: 0!important;border: 0!important;display: inline;font-weight: 400}
+button::after{border: none}
+.com{text-align: center;color: #808080;font-weight: 500;margin: 60rpx auto}
+.jian{margin: auto 1em}
+
+
+

@@ -1,0 +1,6 @@
+RewriteEngine on
+
+RewriteCond $1 !^(index\.php|static|downapp|favicon\.ico|robots\.txt|MP_verify_fi0FA129kmCfx40w\.txt|test\.php)
+
+RewriteRule ^(.*)$ index.php/$1 [L]
+

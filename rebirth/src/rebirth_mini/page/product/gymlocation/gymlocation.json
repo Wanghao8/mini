@@ -1,0 +1,6 @@
+{"navigationBarTitleText": "附近健身房",
+  "usingComponents": {
+		"graceLoading": "../../../threeComponents/graceLoading",
+		"graceFullLoading":"../../../threeComponents/graceFullLoading"
+	}
+}

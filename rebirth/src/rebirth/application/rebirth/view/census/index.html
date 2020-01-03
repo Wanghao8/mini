@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>rebirth数据统计</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="http://xueyuan.yuanfangyun.com/static/mob/css/mui.min.css">
+    <link rel="stylesheet" href="http://xueyuan.yuanfangyun.com/static/mob/css/wrapper.css">
+    <link rel="stylesheet" href="http://xueyuan.yuanfangyun.com/static/mob/css/common.css">
+    <style type="text/css">
+        .header{background-color: #FFFFFF;margin-bottom: 10px;}
+        .header img{width: 100%;height: auto;}
+        .header .title{padding: 8px 10px 10px 10px;}
+        .header .title h4{font-weight: normal;font-size: 17px;}
+        .header .title p{color: #777777;font-size: 15px;line-height: 26px;margin-bottom: 0px;}
+        .totalText{text-align: center; margin-bottom: 10px;padding: 10px 0px;}
+        .mui-btn-block{}
+        .container{
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            width: 100%;
+            height: 20rem;
+        }
+        .item{
+            display: -webkit-flex;
+            display: flex;
+            margin-top: 0.5rem;
+
+        }
+    </style>
+</head>
+
+<body>
+<div class="mui-content">
+    <!--选择区域-->
+    <div class="ibox">
+        <div class="ibox-content">
+            <h3>rebirth</h3>
+            <div >
+                <h1 class="price" id="totalMoney">{$count}<i>人</i></h1>
+                <p>健身房待消费会员卡人数（实时统计）</p>
+            </div>
+            <div class="mui-input-group" style="margin:15px 0px;">
+                <div class="mui-input-row">
+                    <label>开始时间</label>
+                    <input type="date" placeholder="请选择时间" value="{$start}" id="start">
+                </div>
+                <div class="mui-input-row">
+                    <label>结束时间</label>
+                    <input type="date" placeholder="请选择时间" value="{$end}" id="end">
+                </div>
+            </div>
+            <button type="button"  class="mui-btn mui-btn-block mui-btn-success actionBtn" data-type="payTotalBtn" data-loading-icon="mui-spinner mui-spinner-custom" data-loading-text="正在获取统计数据" id="payTotalBtn">获取当前时间消费统计</button>
+        </div>
+
+        <div class="container">
+            <div class="item" >
+                    <div class="border" style=" width: 50%;height: 2.5rem; border:1px dotted;margin: 1rem 1rem 1rem 1rem;">
+                        <div style="float: left;line-height: 2.5rem;margin-left: 0.5rem;">年卡</div>
+                        <div style="float: right;line-height: 2.5rem;margin-right: 0.5rem;">{$year}张</div>
+                    </div>
+
+                    <div class="border" style="width: 50%;height: 2.5rem;border:1px dotted;margin: 1rem 1rem 1rem 1rem;">
+                        <div style="float: left;line-height: 2.5rem;margin-left: 0.5rem;">季卡</div>
+                        <div style="float: right;line-height: 2.5rem;margin-right: 0.5rem;">{$season}张</div>
+                    </div>
+            </div>
+            <div class="item" >
+                <div class="border" style="width: 50%;height: 2.5rem;border:1px dotted;margin: 1rem 1rem 1rem 1rem;">
+                    <div style="float: left;line-height: 2.5rem;margin-left: 0.5rem;">次卡</div>
+                    <div style="float: right;line-height: 2.5rem;margin-right: 0.5rem;">{$time}张</div>
+                </div>
+
+                <div class="border" style="width: 50%;height: 2.5rem;border:1px dotted;margin: 1rem 1rem 1rem 1rem;">
+                    <div style="float: left;line-height: 2.5rem;margin-left: 0.5rem;">十次卡</div>
+                    <div style="float: right;line-height: 2.5rem;margin-right: 0.5rem;">{$xun}张</div>
+                </div>
+            </div>
+
+            <div class="item" >
+                <div class="border" style="width: 42%;height: 2.5rem;border:1px dotted;margin: 1rem 1rem 1rem 1rem;">
+                    <div style="float: left;line-height: 2.5rem;margin-left: 0.5rem;">礼品卡</div>
+                    <div style="float: right;line-height: 2.5rem;margin-right: 0.5rem;">{$gift}张</div>
+                </div>
+
+            </div>
+
+            <div class="item border" style="border:1px dotted;height: 2.5rem;">
+                <div style="float: left;width: 70%;line-height: 2.5rem;margin-left: 0.5rem;">总计营收金额</div>
+                <div style="float: right;width: 30%;line-height: 2.5rem;margin-left: 0.5rem;">￥ {$sum}</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+<script type="text/javascript" src="http://xueyuan.yuanfangyun.com/static/mob/js/mui.min.js"></script>
+<script type="text/javascript" src="http://xueyuan.yuanfangyun.com/static/mob/js/common.js"></script>
+<script type="text/javascript" src="/static/rebirth/laydate/laydate.js"></script>
+<script type="text/javascript" src="/static/rebirth/assets/js/jquery.min.js"></script>
+<script type="text/javascript">
+    //鉴权部分+路由跳转
+    //===============================================================================================
+    // laydate.render({
+    //     elem: '#start' //指定元素
+    //     ,value: '{$start}'
+    // });
+    // laydate.render({
+    //     elem: '#end' //指定元素
+    //     ,value: '{$end}'
+    // });
+
+    $('#payTotalBtn').click(function () {
+        var start=$('#start').val()
+        var end=$('#end').val()
+        window.location.href="/rebirth/census/index?start="+ start +"&end=" + end;
+    })
+
+</script>
+
+</html>

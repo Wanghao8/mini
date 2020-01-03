@@ -1,0 +1,53 @@
+vue
+	V-MODEL数字的坑：https://blog.csdn.net/cmchenmei/article/details/82423864
+
+app端
+	0.5px的分割线的做法：https://www.jianshu.com/p/16b186edd0c2
+
+css
+	容器里的第一个元素的上边距无效，容器会跟着第一个元素往下移
+	解决：https://blog.csdn.net/longgeaisisi/article/details/82814914
+	实测父元素设置OVERFLOW:HIDDEN最好用
+	设置的圆角border-radius被覆盖，
+	解决：在后面增加overflow:hidden就解决了
+	用户滑动页面时将跟随页面移动的导航栏固定在页面上方
+	解决：position:sticky
+	宽度随着文字长度而变化
+	解决：width：fit-content
+	超出部分显示省略号
+	解决：overflow: hidden;text-overflow:ellipsis;white-space: nowrap;
+	position:sticky失效
+	解决：1.父元素不能overflow:hidden或者overflow:auto属性
+	2.必须指定top、bottom、left、right4个值之一，否则只会处于相对定位
+	3.父元素的高度不能低于sticky元素的高度
+
+微信小程序
+
+	现在textarea只支持fontSize fontWeight 和 color 属性
+	textarea是native组件，受native实现限制，目前只支持少量css属性，margin现在暂无法支持
+	可以用padding让textarea左边上边留有空隙
+	setData的key可以使用变量，为变量的时候要用[ ]引起来 https://blog.csdn.net/namecz/article/details/79623550
+	微信页面的背景颜色不在JSON文件的backgroundColor中设置，而在wxss中设置page{background-color:#000000} https://www.jianshu.com/p/69407d413552
+
+	小程序页面间传值
+	https://www.jianshu.com/p/ef986baf9a62
+
+	自定义弹窗后禁止屏幕滚动（滚动穿透）
+	在外层容器里添加catchtouchmove="ture"属性
+
+	微信小程序页面跳转传参数如何传对象
+	let str=JSON.stringify(e.currentTarget.dataset.item);
+	wx.navigateTo({
+	url: '../toMybaby/babyDetail/babyDetail?jsonStr='+str,}）
+	
+	onLoad:function(options){
+    	// 生命周期函数--监听页面加载
+    	let item=JSON.parse(options.jsonStr);
+    	this.setData({ward:item});
+  	}
+
+	苹果和安卓的时间格式有区别
+	安卓2019-1-1 苹果2019/1/1
+
+	scroll-view作为父元素，其子元素的position：sticky会失效
+

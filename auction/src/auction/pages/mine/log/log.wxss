@@ -1,0 +1,16 @@
+page{background-color: #F1F1F1}
+.header{background-color: #ffffff;border: 1px solid #E6E6E6}
+.avatar{width: 130rpx;height: 130rpx;border-radius: 50%;margin: 40rpx}
+.tab{background-color: #ffffff;overflow: hidden;}
+.bar{padding: 24rpx 0;font-weight: 600;font-size: 30rpx;border-bottom: 6rpx solid #ffffff;}
+.actived{border-bottom: 6rpx solid #F66F36;color: #F66F36}
+.nickname{font-weight: 600}
+.share{margin-left: 260rpx;border-radius: 8rpx;width: 120rpx;height: 60rpx;line-height: 60rpx;text-align: center}
+.focus{margin-left: 40rpx}
+.iconicon-test{font-size: 80rpx;color: #D8D8D8;margin-top: 200rpx}
+.text{margin-top: 60rpx}
+.ranktitle{margin: 50rpx 40rpx 20rpx 40rpx}
+.rankmsg{margin-left: 40rpx}
+.thead{background-color: #ffffff;margin:  30rpx;border-radius: 10rpx}
+.username,.times{padding: 30rpx;font-size: 24rpx;color: #BBBBBB}
+

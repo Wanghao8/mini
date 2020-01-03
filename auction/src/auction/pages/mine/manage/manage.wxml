@@ -1,0 +1,57 @@
+<view catchtouchmove="ture" class="mask flexccc" wx:if="{{fullLoading}}">
+  <image class="loadinggif" src="../../../static/loading.gif"></image>正在加载中</view>
+<view class="header barbackcol flexr">
+  <view class="tabitem fz14 {{tabindex==='0'?'actived':''}}" data-index="0" bindtap="actionBtn" data-action="switchtab">我的发布</view>
+  <view class="tabitem fz14 {{tabindex==='1'?'actived':''}}" data-index="1" bindtap="actionBtn" data-action="switchtab">未结束</view>
+  <view class="tabitem fz14 {{tabindex==='2'?'actived':''}}" data-index="2" bindtap="actionBtn" data-action="switchtab">已结束</view>
+</view>
+
+<view class="con-wrapper">
+  <view class="endlist-wrapper" wx:if="{{tabindex==='1'||tabindex==='0'}}">
+    <view class="endlist barbackcol flexr" wx:for="{{goodsList}}" wx:key="id" bindtap="actionBtn" data-action="detail" data-value="{{item.id}}" data-end="{{item.delay_time}}">
+      <view class="img-wrapper">
+        <image mode="aspectFill" src="{{item.cover_imgs[0]}}" class="img2"></image>
+      </view>
+      <view class="flexcc0">
+        <view class="endname bold">拍品：{{item.name}}</view>
+        <view class="price flexr0c bold" wx:if="{{item.is_offer==1}}">￥{{item.last_price}}
+          <view class="fz12 marginleft-5 margintop-5" wx:if="{{item.is_offer==1}}"> 当前价</view>
+        </view>
+        <view class="price flexr0c bold" wx:if="{{item.status==2}}">￥{{item.last_price}}
+          <view class="fz12 marginleft-5 margintop-5" wx:if="{{item.status==2}}"> 起拍价</view>
+        </view>
+        <view class="fz12 liupai bold margintop-5" wx:if="{{item.is_offer==0&&item.status!=2}}"> 已流拍</view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="endlist-wrapper" wx:if="{{tabindex==='2'||tabindex==='0'}}">
+    <view class="endlist barbackcol flexr" wx:for="{{done}}" wx:key="id" bindtap="actionBtn" data-action="phone" data-value="{{item.bond_phone}}">
+      <view class="img-wrapper">
+        <image mode="aspectFill" src="{{item.cover_imgs[0]}}" class="img2"></image>
+      </view>
+      <view class="flexcc0">
+        <view class="endname bold">拍品：{{item.name}}</view>
+        <view class="price flexr0c bold" wx:if="{{item.is_offer==1}}">￥{{item.last_price}}
+          <view class="fz12 marginleft-5 margintop-5" wx:if="{{item.is_offer==1}}"> 成交价</view>
+        </view>
+        <view class="fz12 liupai bold margintop-5" wx:if="{{item.is_offer==0}}"> 已流拍</view>
+        <view class="flexr0c" wx:if="{{item.is_offer==1}}">
+          <view class="fz13">成交:{{item.nickName}}</view>
+          <view class="marginleft-10 phone">{{item.bond_phone}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="flexccc content-wrapper" wx:if="{{norecord}}">
+    <view class="iconfont iconicon-test"></view>
+    <view class="fz16 tip">暂无记录</view>
+  </view>
+  <loading loadingType="{{loadingType}}" wx:if="{{!norecord}}"></loading>
+  <!-- <loading loadingType="{{loadingType}}" wx:if="{{tabindex==='0'}}" hidden="{{norecord}}"></loading> -->
+  <!-- <loading loadingType="{{loadingType1}}" wx:if="{{tabindex==='1'}}" hidden="{{norecord}}"></loading>
+  <loading loadingType="{{loadingType2}}" wx:if="{{tabindex==='2'}}" hidden="{{norecord}}"></loading> -->
+
+  
+</view>

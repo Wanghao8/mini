@@ -1,0 +1,11 @@
+.section{font-size: 32rpx;background-color: #fff;overflow: hidden;}
+.section__title{font-size: 30rpx;color: #999;padding: 20rpx 30rpx;background-color: #eee;}
+.picker{padding-left: 30rpx; line-height: 90rpx;float: left;width: 68%;}
+.opacity{opacity:0.2;}
+.opacityshow{opacity:1;}
+.radio-group{font-size: 32rpx;display: flex;flex-direction: column;margin-top: 20rpx;}
+.radio{padding: 10rpx 30rpx;position: relative;}
+.circle{display: inline-block; width: 30rpx;height: 30rpx;border-radius: 50%;position: absolute;right: 50%;margin-top: 8rpx;}
+.bottombtn{position: absolute;bottom: 30rpx;margin: 0 30rpx;width: 92%;}
+.tips{color: #999;font-size: 30rpx;position: absolute;bottom: 180rpx;white-space:nowrap;left: 50%;transform: translate(-50%, 0)}
+.picker-r{float: right;font-size: 32rpx;color: #999;line-height: 90rpx;margin-right: 30rpx;width: 23%;text-align: right;}

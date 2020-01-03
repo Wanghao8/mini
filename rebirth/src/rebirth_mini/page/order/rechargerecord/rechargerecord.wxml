@@ -1,0 +1,17 @@
+<view wx:for="{{RechargeInfo}}" wx:key="{{item.index}}" class="info">
+  <view class="info-l">
+    <text class="iconfont iconsize icon-chongzhi"></text>
+  </view>
+  <view class="info-m thinline ">
+    <view class="info-m-t">
+      <view class="ellipsis">{{item.desc}}</view>
+    </view>
+    <view class="info-m-b">{{item.create_time}}</view>
+  </view>
+  <view class="info-r thinline">
+    <view class="content">{{item.value}}</view>
+  </view>
+</view>
+<graceLoading loadingType="{{loadingType}}" wx:if="{{havelist}}"></graceLoading>
+<graceFullLoading graceFullLoading="{{graceFullLoading}}"></graceFullLoading>
+<view wx:if="{{havelist == false}}" class="vertcenter">您还没有任何记录!^_^</view>

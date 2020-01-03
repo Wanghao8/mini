@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "退款记录",
+  "usingComponents": {
+    "graceLoading": "../../../threeComponents/graceLoading",
+    "graceFullLoading": "../../../threeComponents/graceFullLoading"
+  }
+}

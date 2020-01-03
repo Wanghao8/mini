@@ -1,0 +1,8 @@
+page{background-color: #ECF9F8}
+.loadinggif{width: 80rpx;height: 80rpx;margin-bottom: 40rpx;color: #666666}
+.mask{position: absolute;z-index: 1000;font-size: 32rpx;width: 100vw;height: 100vh;background-color: #fff;top:0rpx;color: #666666}
+.class-name{height: 180rpx;width: 650rpx;margin: 20rpx;border-bottom: 1px solid #ececec}
+.erweima{width: 500rpx;height: 500rpx;}
+.content{height: 640rpx;width: 690rpx;}
+.refresh{width: 500rpx;}
+.cancel-btn{width: 690rpx;background-color: #989898;height: 100rpx;line-height: 100rpx;border-radius: 10rpx;margin-left: 30rpx}

@@ -1,0 +1,13 @@
+<view class="page-wrapper">
+  <view class="exe-list" wx:for="{{list}}" wx:key="id">
+    <view class="flexrbc">
+      <view>
+        <view class="col3 fz18">{{item.name}}</view>
+        <view class="yellow fz16 margintop5" wx:if="{{item.ci}}">{{item.xvfei}}{{item.lave}}{{item.tianci}}</view>
+        <view class="yellow fz16 margintop5" wx:if="{{!item.ci}}">{{item.xvfei}}{{item.lave}}</view>
+      </view>
+      <view class="{{item.jiajian=='+'?'yellow':''}} bold fz22">{{item.jiajian}}{{item.value}}{{item.tianci}}</view>
+    </view>
+    <view class="fz15 col76 margintop5">{{item.add_time}}</view>
+  </view>
+</view>

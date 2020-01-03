@@ -1,0 +1,46 @@
+
+<!-- <view class="wrapper">
+  <view class='toWrite' bindtap='addImg' class="addimg flexrcc">
+    <image src='../../../static/addimg.png' class="img" />
+    <view class="marginleft-10">插入图片</view>
+  </view>
+  <view class="flexc0c">
+    <textarea class='input_view barbackcol' maxlength='-1' auto-height='true' bindinput='inputCon' style='width:{{width-20}}px;height:100px;' value='{{firstCon}}' placeholder='写点什么...' bindblur="outBlur" data-id='0' />
+    <view wx:for="{{dataList}}" wx:key="{{index}}" style='background-color:white;'>
+      <view class='img_view' style='width:{{width-28}}px;max-height:{{width-28}}px;'>
+        <image style='width:{{width-28}}px;max-height:{{width-28}}px;' src='{{item.src}}' mode='aspectFill' />
+        <view class="cancel flexr del" bindtap='deletedImg'>
+          <view class="q-image-remover" data-idx="{{index}}" >-</view>
+        </view>
+      </view>
+      <textarea class='input_view' maxlength='-1' auto-height='true' bindinput='inputCon'  style='width:{{width-20}}px;' value='{{item.info}}' placeholder='写点什么...' bindblur="outBlur" data-id='{{index+1}}' />
+    </view>
+    <view style='height:45px;width:100%;'></view>
+  </view>
+</view>
+<view class="bottombtn">
+  <view class="comfirm bold" bindtap="comfirm">完成</view>
+</view> -->
+
+<!-- <rich></rich> -->
+
+<view>
+  <textarea wx:if="{{isEdit}}" class='input_view' maxlength='-1' auto-height='true' bindinput='_inputCon' value='{{firstCon}}' placeholder='写点什么...' focus='{{focusList[0].focus}}' bindblur="_outBlur" style='width:{{width-20}}px;' data-index='0' />
+  <view wx:if="{{!isEdit}}" bindtap='_focusView' class='input_view2 text-gray' data-index='0'>{{firstCon||"写点什么..."}}</view>
+  <view wx:for="{{dataList}}" wx:key="{{index}}">
+    <view class='img_view' style='height:{{width/2}}px;'>
+      <image src='{{item.src}}' mode='aspectFill' />
+      <x-icon position='close_img' slot="leftIcon" color='danger' bind:click="_deletedImg" bindData="{{index}}" type='clear'></x-icon>
+    </view>
+    <textarea wx:if="{{isEdit}}" class='input_view' maxlength='-1' auto-height='true' bindinput='_inputCon' value='{{item.info}}' placeholder='写点什么...' focus='{{focusList[index+1].focus}}' bindblur="_outBlur" style='width:{{width-20}}px;' data-index='{{index+1}}'
+    />
+    <view wx:if="{{!isEdit}}" bindtap='_focusView' class='input_view2 text-gray' data-index='{{index+1}}'>{{item.info||'写点什么...'}}</view>
+  </view>
+</view>
+<view class='toWrite' bindtap='_addImg' class="addimg flexrcc">
+  <image src='/static/addimg.png' class="img" />
+  <view class="marginleft-10">插入图片</view>
+</view>
+<view class="bottombtn">
+  <view class="comfirm bold" bindtap="comfirm">完成</view>
+</view>

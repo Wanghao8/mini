@@ -1,0 +1,13 @@
+<view>
+  <view wx:for="{{newslist}}" wx:key="{{item.index}}" bindtap="toappointrecord" class="content">
+    <view class="img">
+      <image src="{{item.content.news_item[0].thumb_url}}"></image>
+    </view>
+    <view class="text">
+      <view>{{item.content.news_item[0].title}}</view>
+      <view>{{item.content.news_item[0].digest}}</view>
+    </view>
+  </view>
+</view>
+<graceLoading loadingType="{{loadingType}}" style="" wx:if="{{havelist}}"></graceLoading>
+<graceFullLoading graceFullLoading="{{graceFullLoading}}"></graceFullLoading>

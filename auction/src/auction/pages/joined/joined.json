@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "全部拍卖",
+  "usingComponents": {
+    "loading": "../components/loading/graceLoading"
+  }
+}

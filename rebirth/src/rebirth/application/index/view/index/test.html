@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html class="csstransforms csstransforms3d csstransitions" lang="zh_CN"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>一点付|微信支付|支付宝ISV开发|京东钱包|移动支付|无卡支付|微信服务商|支付宝服务商ISV</title>
+    <meta name="robots" content="all">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="一点付,微外卖,微点餐,微房产,微美容,美发,一点付商城,微信分销,微超市,微小区,智慧城市,微政务,微警方,微医疗,微医院,微信开发,河南一点付,免费微信开发,微应用,微视频,功能最多的微信平台">
+    <meta name="description" content="整合海量行业功能于一身，2016年V3.0系统推出热门应用：微外卖,微点餐,一点付房产,微美容,美发,一点付商城,微信分销,微超市,微小区,智慧城市,微政务,微警方,微医疗,微医院,微视频,微海报,微婚庆,码上来粉,吸粉平台,微信红包,微阅读,微旅游,微信支付等强大的微信开发功能管理系统,目前功能在行业上遥遥领先,在小的品牌也可以玩转微信。">
+    <link rel="shortcut icon" href="http://www.1dianfu.com/styles/default/img/wechat.jpg">
+    <meta name="author" content="一点付">
+    <link rel="shortcut icon" href="http://www.1dianfu.com/favicon.ico?t=1554342553">
+
+    <!--[if lt IE 9]>
+    <script src="styles/default/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- CSS Files
+    ================================================== -->
+    <link rel="stylesheet" href="/static/rebirth2/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="/static/rebirth2/jpreloader.css" type="text/css">
+    <link rel="stylesheet" href="/static/rebirth2/animate.css" type="text/css">
+    <link rel="stylesheet" href="/static/rebirth2/flexslider.css" type="text/css">
+    <link rel="stylesheet" href="/static/rebirth2/plugin.css" type="text/css">
+    <link rel="stylesheet" href="/static/rebirth2/prettyPhoto.css" type="text/css">
+    <link rel="stylesheet" href="/static/rebirth2/owl_002.css" type="text/css">
+    <link rel="stylesheet" href="/static/rebirth2/owl.css" type="text/css">
+    <link rel="stylesheet" href="/static/rebirth2/style11.css" type="text/css">
+
+    <!-- custom style css -->
+    <link rel="stylesheet" href="/static/rebirth2/custom-style.css" type="text/css">
+
+    <!-- color scheme -->
+    <link rel="stylesheet" href="/static/rebirth2/color.css" type="text/css">
+
+    <!-- revolution slider -->
+    <link rel="stylesheet" href="/static/rebirth2/settings.css" type="text/css">
+    <link rel="stylesheet" href="/static/rebirth2/rev-settings.css" type="text/css">
+
+    <!-- load fonts -->
+    <link rel="stylesheet" href="/static/rebirth2/font-awesome.css" type="text/css">
+    <link rel="stylesheet" href="/static/rebirth2/style12.css" type="text/css">
+    <link rel="stylesheet" href="/static/rebirth2/style13.css" type="text/css">
+    <style>
+        /*QQ客服*/
+        .side{position:fixed;width:54px;height:216px;right:10px;top:214px;z-index:100;bottom: 182px;background-color: rgba(0,0,0,.7);}
+        .side ul li{width:54px;height:54px;float:left;position:relative;right:40px;border-bottom:1px solid #000;margin:0;}
+        .side ul li .sidebox{position:absolute;width:54px;height:54px;top:0;right:0;transition:all 0.3s;background:#444;opacity:0.8;filter:Alpha(opacity=80);color:#fff;font:14px/54px "Microsoft YaHei",Arial, Helvetica, sans-serif;overflow:hidden;}
+        .side ul li .sidetop{width:54px;height:54px;line-height:54px;display:inline-block;
+            background:#000;opacity:0.8;filter:Alpha(opacity=80);transition:all 0.3s;}
+        .side ul li .sidetop:hover{background:#ae1c1c;opacity:1;filter:Alpha(opacity=100);}
+        .side ul li img{float:left;}
+    </style>
+</head>
+
+<body id="homepage" style="display: block;">
+<div id="wrapper">
+    <div class="page-overlay">
+    </div>
+
+    <!-- header begin -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- logo begin -->
+                    <h1 id="logo">
+                        <a href="http://www.1dianfu.com/index.html" target="_top">
+                            <img class="logo-1" src="/static/rebirth2/logo1.png" alt="一点付">
+                            <img class="logo-2" src="/static/rebirth2/logo2.png" alt="一点付">
+                        </a>
+                    </h1>
+                    <!-- logo close -->
+
+                    <!-- small button begin -->
+                    <span id="menu-btn"></span>
+                    <!-- small button close -->
+
+                    <!-- mainmenu begin -->
+                    <nav>
+                        <ul id="mainmenu">
+                            <li><a class="active" href="#wrapper">首页</a></li>
+                            <!--<li><a href="#section-system">申请服务商</a></li>-->
+                            <li><a href="#section-about">产品中心</a></li>
+                            <li><a href="#section-about-us-2">企业文化</a></li>
+                            <li><a href="#philosophy">公司理念</a></li>
+                            <li><a href="#section-blog">支付优势</a></li>
+                            <li><a href="#section-services">招商加盟</a></li>
+                            <li><a href="#section-skill-bar">我们的能力</a></li>
+                            <li><a href="#section-testimonial">OEM品牌朔造</a></li>
+                            <li><a href="#section-contact">联系我们</a></li>
+                            <!--
+                            <li><a href="/web/index.php?c=user&a=login">登录</a></li>
+                            <li><a href="/web/index.php?c=user&a=register">注册</a></li>
+                             -->
+                        </ul>
+                    </nav>
+
+                </div>
+                <!-- mainmenu close -->
+
+            </div>
+        </div>
+    </header>
+    <!-- header close -->
+
+
+    <!-- content begin -->
+    <div id="content" class="no-bottom no-top">
+
+        <!-- section begin -->
+        <section class="full-height dark no-padding dark" data-speed="5" data-type="background" style="height: 944px;">
+            <div class="de-video-container" style="height: 944px;">
+                <div class="de-video-content" style="margin-top: 364px;">
+                    <div class="text-center">
+                        微信支付／支付宝／QQ钱包／京东钱包／翼支付
+                        <div class="spacer-single"></div>
+                        <div class="text-slider border-deco owl-carousel owl-theme" style="opacity: 1; display: block;">
+                            <div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 19030px; left: 0px; display: block; transition: all 800ms ease 0s; transform: translate3d(-3806px, 0px, 0px);"><div class="owl-item" style="width: 1903px;"><div class="text-item"><span class="id-color">一点付</span>移动支付平台</div></div><div class="owl-item" style="width: 1903px;"><div class="text-item"><span class="id-color">多通道+</span>多终端收银</div></div><div class="owl-item" style="width: 1903px;"><div class="text-item"><span class="id-color">OEM</span>综合解决方案</div></div><div class="owl-item" style="width: 1903px;"><div class="text-item"><span class="id-color">云端大数据</span>轻松做分析</div></div><div class="owl-item" style="width: 1903px;"><div class="text-item"><span class="id-color">一站式</span>解决无卡支付</div></div></div></div>
+                            
+                            
+                            
+                            
+                        </div>
+                        <div class="spacer-single"></div>
+                        <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=549605514&amp;site=qq&amp;menu=yes" target="_blank" class="btn btn-border btn-big">立即咨询</a>
+                    </div>
+                </div>
+
+                <div class="de-video-overlay" style="height: 944px;"></div>
+                <!-- load your video here -->
+                <video autoplay="autoplay" loop="" muted="muted" poster="">
+                    <source src="/static/rebirth2/video-1.mp4" type="video/mp4">
+                </video>
+            </div>
+
+        </section>
+        <!-- section close -->
+
+        <!-- 系统section begin
+        <section id="section-system" class="login">
+            <div class="login_s">
+                <span><a href="http://wpa.qq.com/msgrd?v=3&uin=549605514&site=qq&menu=yes" class="title" target="_blank">申请移动支付服务商</a></span>
+                <div class="bt">
+                    <a href="/login.html" target="_blank" class="view btn">客户登录</a>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=549605514&site=qq&menu=yes" target="_blank" class="view btn">申请试用</a>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+        </section>
+         -->
+
+        <!-- 关于section begin -->
+        <section id="section-about">
+            <div class="container">
+                <div class="row">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3 text-center">
+                            <h1 class="animated" data-animation="fadeInUp" style="opacity: 0;">基于一个收款码，<span class="id-color">满足所有支付需求的商户</span>
+                                <span class="small-border animated" data-animation="fadeInUp" style="opacity: 0;"></span>
+                            </h1>
+                            <p class="lead animated" data-animation="fadeInUp" style="opacity: 0;">
+                                一点付是一款可根据应用场景选择的收款平台<br>目前支持微信支付，支付宝支付等主流支付方式<br>适用于各类商超、餐饮店、景区等消费区域
+                            </p>
+                            <div class="spacer-single"></div>
+                        </div>
+                    </div>
+                    <!-- featured box begin -->
+                    <div class="feature-box-small-icon box-fx center col-md-3 animated" data-animation="fadeInUp" data-delay="0" style="opacity: 0;">
+                        <div class="inner" style="background:url('/styles/default/img/ydf01.png');height:237px;margin:2px;">
+                            <div class="front">
+
+
+                            </div>
+                            <div class="info" style="height: 241px; width: 263px;">
+                                业务的信息化和数据化，效率的提高，都无法绕开IT技术开发的问题。在互联网＋时代，我们提供优质的核心技术是商业运营的基础保证。
+                                <br>
+                                <a href="javascript:void(0);" class="btn btn-border">手机端收款码</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- featured box close -->
+
+                    <!-- featured box begin -->
+                    <div class="feature-box-small-icon box-fx center col-md-3 animated" data-animation="fadeInUp" data-delay="200" style="opacity: 0;">
+                        <div class="inner" style="background:url('/styles/default/img/ydf02.png');height:237px;margin:2px;">
+                            <div class="front">
+
+
+
+                            </div>
+                            <div class="info" style="height: 241px; width: 263px;">
+                                赠给VIP客户,<br>彰显VIP尊贵地位,<br>买单付款无需排队<br>
+                                <br>
+                                <a href="javascript:void(0);" class="btn btn-border">VIP收款卡</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- featured box close -->
+
+                    <!-- featured box begin -->
+                    <div class="feature-box-small-icon box-fx center col-md-3 animated" data-animation="fadeInUp" data-delay="400" style="opacity: 0;">
+                        <div class="inner" style="background:url('/styles/default/img/ydf03.png');height:237px;margin:2px;">
+                            <div class="front">
+
+
+
+                            </div>
+                            <div class="info" style="height: 241px; width: 263px;">
+                                L桌卡<br>适合任何收银台面<br>方便、快捷、<br>
+                                <br>
+                                <a href="javascript:void(0);" class="btn btn-border">收款牌</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- featured box close -->
+
+                    <!-- featured box begin -->
+                    <div class="feature-box-small-icon box-fx center col-md-3 animated" data-animation="fadeInUp" data-delay="600" style="opacity: 0;">
+                        <div class="inner" style="background:url('/styles/default/img/ydf04.png');height:237px;margin:2px;">
+                            <div class="front">
+
+
+
+                            </div>
+                            <div class="info" style="height: 241px; width: 263px;">
+                                收银台系统对接<br>现有收银系统99%无缝对接<br>
+                                <br>
+                                <a href="javascript:void(0);" class="btn btn-border">收银系统对接 </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- featured box close -->
+
+                </div>
+            </div>
+        </section>
+        <!-- section close -->
+
+        <!-- 文化section begin -->
+        <section id="section-about-us-2" class="side-bg no-padding">
+            <div class="image-container col-md-5 pull-left animated" data-animation="fadeInLeft" data-delay="0" style="height: 530px; opacity: 0;"></div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="inner-padding">
+                        <div class="col-md-6 col-md-offset-6 animated" data-animation="fadeInRight" data-delay="200" style="opacity: 0;">
+                            <h2>一点付<a href="#" target="_blank">企业文化</a></h2>
+
+                            <p class="intro">一点付是河南分点网络科技有限公司针对线上、线下商户支付产品而开发的专属服务，专注于二维码支付产品、刷卡支付产品，为线下商户提供移动支付、各类卡券核销功能等解决方案，真正解决O2O闭环。产品不断更新！服务永无止境！
+                            </p>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h3>我们的愿景</h3>
+                                    <p>通过数据连接世界。</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h3>一点付人的使命</h3>
+                                    <p>让您用更低的成本、更好的服务<br>使您的消费者更满意</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="#" target="_blank" class="btn btn-big btn-border">一点付的企业文化</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section close -->
+
+        <!-- 理念section begin -->
+        <section id="philosophy" class="no-padding dark" data-speed="5" data-type="background">
+            <div class="de-video-container">
+                <div class="de-video-content" style="margin-top: 118px;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3 text-center">
+                                <h1 class="animated" data-animation="fadeInUp" style="opacity: 0;">线下商户<span class="id-color">零门槛玩转</span>互联网+
+                                    <span class="small-border animated" data-animation="fadeInUp" style="opacity: 0;"></span>
+                                </h1>
+                                <div class="animated" data-animation="fadeInUp" style="opacity: 0;">
+                                    移动支付｜会员体系｜社交营销<br>
+                                    一点付<br>连接消费者与商户的营销平台<br>
+                                    用简单的方式，做更多的生意<br>
+                                    让老顾客叫好，新客念念不忘
+                                    <div class="spacer-single"></div>
+                                    <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=549605514&amp;site=qq&amp;menu=yes" target="_blank" class="btn btn-border" data-animation="fadeIn">点击加入</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="de-video-overlay" style="height: 500px;"></div>
+                <!-- load your video here -->
+
+            </div>
+        </section>
+        <!-- section close -->
+
+        <!-- 观点section begin -->
+        <section id="section-blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="animated" data-animation="fadeInUp" style="opacity: 0;">我们的<span class="id-color">支付优势</span>
+                            <span class="small-border animated" data-animation="fadeInUp" style="opacity: 0;"></span>
+                        </h1>
+                        <div class="spacer-double"></div>
+                    </div>
+
+                    <div class="animated" data-animation="fadeInUp" data-delay="200" style="opacity: 0;">
+                        <div class="col-md-2 bloglist">
+                            <div class="post-content">
+                                <h3 style="text-align:center;font-weight: 400;">无需硬件设备</h3>
+                                <img src="/static/rebirth2/icon01.jpg" width="100%">
+                            </div>
+                        </div>
+                        <div class="col-md-2 bloglist">
+                            <div class="post-content">
+                                <h3 style="text-align:center;font-weight: 400;">信用卡付款</h3>
+                                <img src="/static/rebirth2/icon02.jpg" width="100%">
+                            </div>
+                        </div>
+                        <div class="col-md-2 bloglist">
+                            <div class="post-content">
+                                <h3 style="text-align:center;font-weight: 400;">商户即时到账</h3>
+                                <img src="/static/rebirth2/icon03.jpg" width="100%">
+                            </div>
+                        </div>
+                        <div class="col-md-2 bloglist">
+                            <div class="post-content">
+                                <h3 style="text-align:center;font-weight: 400;">银行自动结算</h3>
+                                <img src="/static/rebirth2/icon04.jpg" width="100%">
+                            </div>
+                        </div>
+                        <div class="col-md-2 bloglist">
+                            <div class="post-content">
+                                <h3 style="text-align:center;font-weight: 400;">多个付款通道</h3>
+                                <img src="/static/rebirth2/icon05.jpg" width="100%">
+                            </div>
+                        </div>
+                        <div class="col-md-2 bloglist">
+                            <div class="post-content">
+                                <h3 style="text-align:center;font-weight: 400;">快捷付款</h3>
+                                <img src="/static/rebirth2/icon06.jpg" width="100%">
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section close -->
+
+        <!-- 事实section begin -->
+        <section id="fun-facts" class="dark" data-speed="7" data-type="background">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-12 text-center">
+                        <h1 class="animated" data-animation="fadeInUp" style="opacity: 0;">有趣的<span class="id-color">事实</span></h1>
+                        <span class="small-border animated" data-animation="fadeInUp" style="opacity: 0;"></span>
+                        <div class="spacer-single"></div>
+                    </div>
+
+
+                    <div class="col-md-3 animated" data-animation="fadeInLeft" data-delay="100" style="opacity: 0;">
+                        <div class="de_count">
+                            <i class=" icon-aperture animated" data-animation="fadeInDown" data-delay="0" style="opacity: 0;"></i>
+                            <h3 class="timer" data-to="44" data-speed="1000">44</h3>
+                            <span>微信从每个用户身上赚到44元</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 animated" data-animation="fadeInLeft" data-delay="0" style="opacity: 0;">
+                        <div class="de_count">
+                            <i class="icon-tablet animated" data-animation="fadeInDown" data-delay="200" style="opacity: 0;"></i>
+                            <h3 class="timer" data-to="9" data-speed="1000">9</h3>
+                            <span>我国手机上网用户已突破9亿</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 animated" data-animation="fadeInRight" data-delay="0" style="opacity: 0;">
+                        <div class="de_count">
+                            <i class="icon-pictures
+                                 animated" data-animation="fadeInDown" data-delay="400" style="opacity: 0;"></i>
+                            <h3 class="timer" data-to="40" data-speed="2500">40</h3>
+                            <span>40%的发行商表示网络广告收入萎缩</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 animated" data-animation="fadeInRight" data-delay="100" style="opacity: 0;">
+                        <div class="de_count">
+                            <i class="icon-wine animated" data-animation="fadeInDown" data-delay="600" style="opacity: 0;"></i>
+                            <h3 class="timer" data-to="56" data-speed="2500">56</h3>
+                            <span>56%的人会在朋友圈假装自己生活精彩</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- section close -->
+
+        <!-- 服务section begin -->
+        <section id="section-services" class="no-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <h1 class="animated" data-animation="fadeInUp" style="opacity: 0;">招商<span class="id-color">加盟</span>
+                            <span class="small-border animated" data-animation="fadeInUp" style="opacity: 0;"></span>
+                        </h1>
+                        <p class="lead animated" data-animation="fadeInUp" style="opacity: 0;">
+                            欢迎您的加入，让一点付做您最值得信赖长期合作伙伴！
+                        </p>
+                        <div class="spacer-single"></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- feature box begin -->
+                    <div class="feature-box-small-icon col-md-4 animated" data-animation="fadeInUp" data-delay="0" style="opacity: 0;">
+                        <div class="inner">
+                            <i class="icon-tools"></i>
+                            <div class="text">
+                                <h3>合作优势</h3>
+                                收入不止于分润，更是开发与运营收益，让商户更懂营销，收入更快更多元！
+                            </div>
+                        </div>
+                    </div>
+                    <!-- feature box close -->
+
+                    <!-- feature box begin -->
+                    <div class="feature-box-small-icon col-md-4 animated" data-animation="fadeInUp" data-delay="200" style="opacity: 0;">
+                        <div class="inner">
+                            <i class="icon-global"></i>
+                            <div class="text">
+                                <h3>产品方案灵活</h3>
+                                让您走支付公司的路，挣招商的钱，掌握自己的命运，不受第三方公司影响。
+                            </div>
+                        </div>
+                    </div>
+                    <!-- feature box close -->
+
+                    <!-- feature box begin -->
+                    <div class="feature-box-small-icon col-md-4 animated" data-animation="fadeInUp" data-delay="400" style="opacity: 0;">
+                        <div class="inner">
+                            <i class="icon-megaphone"></i>
+                            <div class="text">
+                                <h3>告别代理</h3>
+                                提供收单平台做服务，你运作，让你真正意义做支付，从此告别代理，审核、下机、分润、购机全由你掌控。
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- feature box close -->
+
+                    <!-- feature box begin -->
+                    <div class="feature-box-small-icon col-md-4 animated" data-animation="fadeInUp" data-delay="600" style="opacity: 0;">
+                        <div class="inner">
+                            <i class="icon-phone"></i>
+                            <div class="text">
+                                <h3>轻松做支付</h3>
+                                无需软件、硬件投入，即可让您轻松做支付。
+                            </div>
+                        </div>
+                    </div>
+                    <!-- feature box close -->
+
+
+                    <!-- feature box begin -->
+                    <div class="feature-box-small-icon col-md-4 animated" data-animation="fadeInUp" data-delay="800" style="opacity: 0;">
+                        <div class="inner">
+                            <i class="icon-magnifying-glass"></i>
+                            <div class="text">
+                                <h3>分润政策自由</h3>
+                                灵活管理代理及商户，助您迎接百变的市场环境，抓住机会，告别代理拿不到分润的苦恼。
+                            </div>
+                        </div>
+                    </div>
+                    <!-- feature box close -->
+
+                    <!-- feature box begin -->
+                    <div class="feature-box-small-icon col-md-4 animated" data-animation="fadeInUp" data-delay="1000" style="opacity: 0;">
+                        <div class="inner">
+                            <i class="icon-pencil"></i>
+                            <div class="text">
+                                <h3>安全保障</h3>
+                                发现风险，自主马上控制,快速降低风险。
+                            </div>
+                        </div>
+                    </div>
+                    <!-- feature box close -->
+
+                    <div class="spacer-single"></div>
+
+                </div>
+            </div>
+        </section>
+        <!-- section close -->
+
+        <!-- 能力section begin -->
+        <section id="section-skill-bar" class="dark" data-speed="10" data-type="background">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 class="animated" data-animation="fadeInUp" style="opacity: 0;">我们的<span class="id-color">能力</span>
+                            <span class="small-border animated" data-animation="fadeInUp" style="opacity: 0;"></span>
+                        </h1>
+                        <div class="spacer-single"></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>市场调研与数据分析</h3>
+                        <div class="de-progress">
+                            <div class="progress-bar" data-value="82%">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h3>品牌重建</h3>
+                        <div class="de-progress">
+                            <div class="progress-bar" data-value="90%">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spacer-single"></div>
+
+                    <div class="col-md-6">
+                        <h3>传播与营销</h3>
+                        <div class="de-progress">
+                            <div class="progress-bar" data-value="83%">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <h3>移动互联网开发</h3>
+                        <div class="de-progress">
+                            <div class="progress-bar" data-value="95%">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="spacer-single"></div>
+
+                    <div class="col-md-6">
+                        <h3>策略定制咨询</h3>
+                        <div class="de-progress">
+                            <div class="progress-bar" data-value="75%">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h3>执行指导与监督</h3>
+                        <div class="de-progress">
+                            <div class="progress-bar" data-value="80%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 案例section begin
+        <section id="section-portfolio" class="no-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 class="animated" data-animation="fadeInUp">我们的<span class="id-color">案例</span>
+                            <span class="small-border animated" data-animation="fadeInUp"></span>
+                        </h1>
+                        <div class="spacer-single"></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <ul id="filters" class="animated" data-animation="fadeInUp" data-delay="200">
+                            <li><a href="#" data-filter="*" class="selected">所有</a></li>
+                            <li><a href="#" data-filter=".illustration">餐饮</a></li>
+                            <li><a href="#" data-filter=".mobile">娱乐</a></li>
+                            <li><a href="#" data-filter=".photography">商城</a></li>
+                            <li><a href="#" data-filter=".website">其他</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="gallery" class="gallery full-gallery de-gallery pf_full_width animated" data-animation="fadeInUp" data-delay="200">
+
+                <div class="item photography">
+                    <div class="picframe">
+                        <span class="overlay">
+                            <span class="icon">
+                                <a href="styles/default/img/screen15.jpg" data-type="prettyPhoto[gallery]"><i class="fa fa-search icon-view"></i></a>
+                            </span>
+                            <span class="icon">
+                                <i class="fa fa-align-justify fa-external-link icon-info"></i>
+                            </span>
+                            <span class="pf_text">
+                                <span class="project-name">Project Name #1</span>
+                                <span>illustration</span>
+                            </span>
+                        </span>
+
+                        <img src="styles/default/img/screen15.jpg" alt="" />
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div id="loader-area">
+                <div class="project-load"></div>
+            </div>
+        </section>
+        section close -->
+
+        <!-- 查看所有section begin
+        <section id="view-all-projects" class="call-to-action bg-color dark text-center" data-speed="5" data-type="background">
+            <a href="#" class="btn btn-border btn-big">查看所有</a>
+        </section>
+        section close -->
+
+
+        <!-- 声音section begin -->
+        <section id="section-testimonial" class="dark" style="background-position: -277px 0px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 class="animated" data-animation="fadeInUp" style="opacity: 0;">OEM<span class="id-color">品牌朔造</span></h1>
+                        <span class="small-border animated" data-animation="fadeInUp" style="opacity: 0;"></span>
+                        <div class="spacer-single"></div>
+                    </div>
+                </div>
+                <div id="testimonial-carousel" class="de_carousel row animated owl-carousel owl-theme" data-animation="fadeInUp" data-delay="200" style="opacity: 0; display: block;">
+
+                    <div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 2280px; left: 0px; display: block;"><div class="owl-item" style="width: 380px;"><div class="col-md-4 item">
+                        <div class="de_testi">
+                            <blockquote>
+                                <p>一点付拥有多条安全、稳定、合规、低成本的移动支付通道</p>
+                            </blockquote>
+                            <div class="de_testi_by">
+                                <div class="de_testi_pic">
+                                    <img src="/static/rebirth2/wbs_001.png" alt="" class="img-circle">
+                                </div>
+                                <div class="de_testi_company">
+                                    <strong>多通道与安全性</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div></div><div class="owl-item" style="width: 380px;"><div class="col-md-4 item">
+                        <div class="de_testi">
+                            <blockquote>
+                                <p>一点付拥有领先的清算系统，实现国内多家主流银行D + S全自动清算</p>
+                            </blockquote>
+                            <div class="de_testi_by">
+                                    <span class="de_testi_pic">
+                                        <img src="/static/rebirth2/wbs_002.png" alt="" class="img-circle"></span>
+                                <div class="de_testi_company">
+                                    <strong>全自动清算系统</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div></div><div class="owl-item" style="width: 380px;"><div class="col-md-4 item">
+                        <div class="de_testi">
+                            <blockquote>
+                                <p>一点付拥有强大的技术支持能力，支持按需二次开发，完全打造属于自己的品牌系统</p>
+                            </blockquote>
+                            <div class="de_testi_by">
+                                <div class="de_testi_pic">
+                                    <img src="/static/rebirth2/wbs_003.png" alt="" class="img-circle">
+                                </div>
+                                <div class="de_testi_company">
+                                    <strong>OEM解决方案</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div></div></div></div>
+
+                    
+
+                    
+
+
+
+
+
+                <div class="owl-controls clickable" style="display: none;"><div class="owl-pagination"><div class="owl-page active"><span class=""></span></div></div></div></div>
+
+            </div>
+        </section>
+        <!-- section close -->
+
+
+
+        <!-- 联系表单section begin -->
+        <section id="section-contact" class="dark" data-speed="5" data-type="background">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 class="animated" data-animation="fadeInUp" style="opacity: 0;"><span class="id-color">联系</span>我们
+                            <span class="small-border animated" data-animation="fadeInUp" style="opacity: 0;"></span>
+                        </h1>
+                        <p class="animated" data-animation="fadeIn" style="opacity: 0;">
+                            请写下您的需求
+                        </p>
+                        <div class="spacer-single"></div>
+                    </div>
+
+                    <div class="col-md-8 animated" data-animation="fadeInUp" data-delay="200" data-speed="5" style="opacity: 0;">
+
+                        <form name="contactForm" id="contact_form" method="post" action="#">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div id="name_error" class="error">姓名称谓</div>
+                                    <div>
+                                        <input type="text" name="name" id="name" class="form-control" placeholder="姓名称谓">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div id="email_error" class="error">手机号</div>
+                                    <div>
+                                        <input type="text" name="email" id="email" class="form-control" placeholder="手机号">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div id="message_error" class="error">您的需求</div>
+                                    <div>
+                                        <textarea name="message" id="message" class="form-control" placeholder="您的需求"></textarea>
+                                    </div>
+                                </div>
+                                <div id="mail_success" class="success">您的信息已成功发送</div>
+                                <div id="mail_fail" class="error">发送失败，请稍后再试</div>
+                                <div class="col-md-12">
+                                    <p id="submit">
+                                        <input type="submit" value="发送" class="btn btn-border">
+                                    </p>
+                                </div>
+                            </div>
+                        <input type="hidden" name="__hash__" value="6666cd76f96956469e7be39d750cc7d9_b1abc97ac12cd36410ac3cb5e3325ab5"></form>
+
+                    </div>
+
+                    <div class="col-md-4">
+                        <address>
+                                <span><i class="fa fa-map-marker fa-lg"></i><a href="http://l.map.qq.com/14023351092?m" target="_blank">
+                                河南郑州市郑东新区楷林IFC国际金融中心</a></span>
+                            <span><i class="fa fa-phone fa-lg"></i><a href="tel:13140083371">李经理：18837888823</a></span>
+                            <span><i class="fa fa-phone fa-lg"></i><a href="tel:18037186727">董经理：18037186727</a></span>
+                            <span><i class="fa fa-envelope-o fa-lg"></i><a href="mailto:sh@1dianfu.com"></a><a href="mailto:sh@1dianfu.com">sh@1dianfu.com</a></span>
+                            <span><i class="fa fa-globe fa-lg"></i><a href="http://www.1dianfu.com/" target="_top">www.1dianfu.com</a></span>
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section close -->
+
+        <!-- footer begin -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="spacer-single"></div>
+                        Copyright 2016 <a href="http://www.1dianfu.com/" target="_top">一点付移动支付平台版权所有</a>® ｜备案号：<a href="http://www.miitbeian.gov.cn/" target="_blank">豫ICP备15006797号-6</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer close -->
+
+        <!--
+        <div class="side" style="height:108px">
+            <ul>
+                <li>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=549605514&site=qq&menu=yes" target="_blank">
+                        <div class="sidebox"><img src="/styles/default/img/side_icon01.png">售前咨询</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=549605514&site=qq&menu=yes" target="_blank">
+                        <div class="sidebox"><img src="/styles/default/img/side_icon04.png">售后咨询</div>
+                    </a>
+                </li>
+
+            </ul>
+        </div>qq begin -->
+        <!-- qq close -->
+    </div>
+</div>
+
+
+<!-- Javascript Files
+================================================== -->
+<script src="/static/rebirth2/jquery_006.js"></script>
+<script src="/static/rebirth2/jpreLoader.js"></script>
+<script src="/static/rebirth2/bootstrap.js"></script>
+<script src="/static/rebirth2/jquery.js"></script>
+<script src="/static/rebirth2/jquery_008.js"></script>
+<script src="/static/rebirth2/easing.js"></script>
+<script src="/static/rebirth2/jquery_002.js"></script>
+<script src="/static/rebirth2/jquery_003.js"></script>
+<script src="/static/rebirth2/jquery_005.js"></script>
+<script src="/static/rebirth2/owl.js"></script>
+<script src="/static/rebirth2/jquery_004.js"></script>
+<script src="/static/rebirth2/classie.js"></script>
+<script src="/static/rebirth2/designesia.js"></script>
+<script src="/static/rebirth2/validation.js"></script>
+<script src="/static/rebirth2/jquery_007.js"></script>
+<script>
+    if($.isFunction($.fn.ajaxForm)){
+        $("form:not([noAjaxForm])").ajaxForm({
+            success: function(data, status, xhr, $form){
+                try{
+                    if(data.errcode === 0){
+                        $form.resetForm().addClass('s');
+                    }else{
+                        $form.resetForm().addClass('e');
+                    }
+                }catch(e){return false;};
+            }
+        }).find("[type='submit']").removeClass("disabled");
+    }
+
+    $(function(){
+        $(".side ul li").hover(function(){
+            $(this).find(".sidebox").stop().animate({"width":"124px"},200).css({"opacity":"1","filter":"Alpha(opacity=100)","background":"#000"})
+        },function(){
+            $(this).find(".sidebox").stop().animate({"width":"54px"},200).css({"opacity":"0.8","filter":"Alpha(opacity=80)","background":"#444"})
+        });
+    });
+</script>
+
+<a href="#" id="toTop" style="display: none;"><span id="toTopHover"></span>To Top</a></body></html>

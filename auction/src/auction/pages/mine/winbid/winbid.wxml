@@ -1,0 +1,4 @@
+<view class="flexccc content-wrapper" wx:if="{{norecord}}">
+  <view class="iconfont iconicon-test"></view>
+  <view class="fz16 tip">暂无记录</view>
+</view>

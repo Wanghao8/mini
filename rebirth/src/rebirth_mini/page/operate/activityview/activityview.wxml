@@ -1,0 +1,24 @@
+<view style="padding-bottom: 30rpx;">
+  <view class="activity">
+    <view class="activityimg">
+      <image src="https://renlis.yuanfangyun.com/yaoqingzhuce.png"></image>
+    </view>
+    <view class="activity-l">
+      <view class="activity-l-t ellipsis-2">寻找我的运动伙伴</view>
+      <view class="activity-l-b ">与伙伴一起健身！一起收益！</view>
+    </view>
+    <view class="activity-r">
+      <view style="padding-left: 30rpx;">
+        <button class="activitybtn" bindtap="doactivi">去完成</button>
+      </view>
+    </view>
+    <!-- <image src="{{item.image}}"></image> -->
+  </view>
+  <view wx:for="{{ActivityInfo}}" wx:key="{{item.index}}" class="activityInfo" style="display">
+    <view class="actTitle">{{item.name}}</view>
+    <view class="actDesc">{{item.desc}}</view>
+    <!-- <view>------------------------------------------</view> -->
+    <rich-text></rich-text>
+  </view>
+</view>
+<graceFullLoading graceFullLoading="{{graceFullLoading}}"></graceFullLoading>

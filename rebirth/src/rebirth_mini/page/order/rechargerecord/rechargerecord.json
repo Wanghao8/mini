@@ -1,0 +1,7 @@
+{
+	"navigationBarTitleText": "时长记录",
+  "usingComponents": {
+		"graceLoading": "../../../threeComponents/graceLoading",
+		"graceFullLoading":"../../../threeComponents/graceFullLoading"
+	}
+}

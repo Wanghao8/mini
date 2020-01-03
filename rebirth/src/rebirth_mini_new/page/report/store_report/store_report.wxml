@@ -1,0 +1,96 @@
+<view class="page-wrapper">
+  <view class="card-wrapper margintop10">
+    <view class="flexrbc marginleft10 marginright10 margintop10">
+      <picker class="colec fz22 bold" bindchange="bindPickerChange" value="{{index}}" range="{{store}}">{{store[index]}}</picker>
+      <!-- <view class="colec fz22" bindtap="actionBtn" data-action="switch">切换店面</view> -->
+    </view>
+    <view class="col76 fz16 marginleft10 margintop10 marginright10">{{gym.address}}</view>
+    <view class="flexrac margintop20">
+      <view class="flexc0c">
+        <view class="fz14 col6">次卡消费</view>
+        <view class="colec fz20">+20</view>
+      </view>
+      <view class="flexc0c">
+        <view class="fz14 col6">当日收入</view>
+        <view class="colec fz20">+2400</view>
+      </view>
+      <view class="flexc0c">
+        <view class="fz14 col6">当月收入</view>
+        <view class="colec fz20">+15000</view>
+      </view>
+    </view>
+    <view class="flexrac margintop10 marginbottom10">
+      <view class="flexc0c">
+        <view class="fz14 col6">时长用户</view>
+        <view class="colec fz20">+32</view>
+      </view>
+      <view class="flexc0c">
+        <view class="fz14 col6">当日收入</view>
+        <view class="colec fz20">+960</view>
+      </view>
+      <view class="flexc0c">
+        <view class="fz14 col6">当月收入</view>
+        <view class="colec fz20">+20000</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="margintop10">
+    <scroll-view scroll-x="true" enable-flex="true" class="flexra choose-date">
+      <view class="" data-current="0" data-date="{{date1}}" bindtap="swichNav">
+        <view class="fz14 {{currentTab==0?'colf2 bold':'col76'}}">{{day1}}</view>
+        <view class="date-circle jvzhong margintop10 {{currentTab==0?'bg24 colf2 border':'libg col76'}}">{{weekday[week]}}</view>
+      </view>
+      <view class=" {{currentTab==1?'active':''}}" data-current="1" data-date="{{date2}}" bindtap="swichNav">
+        <view class="fz14 {{currentTab==1?'colf2 bold':'col76'}}">{{day2}}</view>
+        <view class="date-circle jvzhong margintop10 {{currentTab==1?'bg24 colf2 border':'libg col76'}}">{{weekday[week+1]}}</view>
+      </view>
+      <view class=" {{currentTab==2?'active':''}}" data-current="2" data-date="{{date3}}" bindtap="swichNav">
+        <view class="fz14 {{currentTab==2?'colf2 bold':'col76'}}">{{day3}}</view>
+        <view class="date-circle jvzhong margintop10 {{currentTab==2?'bg24 colf2 border':'libg col76'}}">{{weekday[week+2]}}</view>
+      </view>
+      <view class=" {{currentTab==3?'active':''}}" data-current="3" data-date="{{date4}}" bindtap="swichNav">
+        <view class="fz14 {{currentTab==3?'colf2 bold':'col76'}}">{{day4}}</view>
+        <view class="date-circle jvzhong margintop10 {{currentTab==3?'bg24 colf2 border':'libg col76'}}">{{weekday[week+3]}}</view>
+      </view>
+      <view class=" {{currentTab==4?'active':''}}" data-current="4" data-date="{{date5}}" bindtap="swichNav">
+        <view class="fz14 {{currentTab==4?'colf2 bold':'col76'}}">{{day5}}</view>
+        <view class="date-circle jvzhong margintop10 {{currentTab==4?'bg24 colf2 border':'libg col76'}}">{{weekday[week+4]}}</view>
+      </view>
+      <view class=" {{currentTab==5?'active':''}}" data-current="5" data-date="{{date6}}" bindtap="swichNav">
+        <view class="fz14 {{currentTab==5?'colf2 bold':'col76'}}">{{day6}}</view>
+        <view class="date-circle jvzhong margintop10 {{currentTab==5?'bg24 colf2 border':'libg col76'}}">{{weekday[week+5]}}</view>
+      </view>
+    </scroll-view>
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+      <!-- 这一行循环的是左右列表 -->
+      <swiper-item wx:for="{{[0,1,2,3,4,5]}}" wx:key="id">
+        <scroll-view scroll-y="true" class="scoll-h">
+          <!-- 这一行循环的是上下列表 -->
+          <view class="card-wrapper margintop10" wx:for="{{classList}}" wx:key="id">
+            <block>
+              <view class="card-list-item1 libg flexrbc">
+                <view class="marginleft15 class-list">
+                  <view class="flexrbc marginright15">
+                    <view class="fz18 colf2">{{item.name}}</view>
+                    <view class="fz16 yellow">{{item.appoint_total}}人预约</view>
+                  </view>
+                  <view class="flexrbc marginright15">
+                    <view class="flexc">
+                      <view class="yellow bold fz16 margintop10">{{item.begin_time}}-{{item.end_time}}</view>
+                      <view class="fz15 col76 margintop10">{{item.label}}</view>
+                    </view>
+                    <view class="little-btn fz16 jvzhong bold small-btn libg col6" wx:if="{{item.appoint_total==0}}" bindtap="actionBtn" data-action="delete" data-id="{{item.id}}">删除</view>
+                    <view class="little-btn fz16 jvzhong bold small-btn yellowbg" wx:if="{{item.appoint_total!=0}}" bindtap="actionBtn" data-action="done" data-id="{{item.id}}">完成</view>
+                  </view>
+                </view>
+              </view>
+            </block>
+          </view>
+        </scroll-view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="bottom-btn-back"></view>
+  <view class="bottom-btn fz20 bold" bindtap="actionBtn" data-action="setClass">排课</view>
+</view>

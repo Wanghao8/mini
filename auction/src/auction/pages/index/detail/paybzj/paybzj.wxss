@@ -1,0 +1,16 @@
+page{background-color: #F4F6F7}
+.iconinformationicon{font-size: 30rpx;margin: 40rpx 0 0 640rpx;color: #333}
+.img{height: 200rpx;width: 200rpx;margin:0 0 20rpx 0}
+.title{margin-bottom: 40rpx}
+.tips{margin-bottom: 50rpx}
+.phone button{background-color: #fff;color: #333;flex: 1;margin: auto;width: 300rpx;text-align: right;}
+.phone button::after{border: none}
+.msg{margin: 40rpx 30rpx}
+.list{margin-bottom: 20rpx;overflow: hidden}
+.label{margin: 40rpx 30rpx}
+.iconyoujiantou,.switch{margin-right: 20rpx;color: #999;font-size: 24rpx}
+.niming{margin: 0 0 30rpx 30rpx}
+.toprotocol{text-decoration: underline}
+.protocol{margin: 40rpx 0 0 30rpx}
+.footer{position: fixed;bottom: 0; height: 110rpx;width: 100%}
+button{color: #fff;background-color:#F66F36;height: 90rpx;line-height: 90rpx;margin-top: 10rpx;width: 690rpx;margin-left: 30rpx;margin-right: 30rpx; font-size: 30rpx;font-weight: 700;border-radius: 0}

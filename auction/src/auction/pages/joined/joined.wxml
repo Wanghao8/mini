@@ -1,0 +1,45 @@
+<view catchtouchmove="ture" class="mask flexccc" wx:if="{{fullLoading}}">
+  <image class="loadinggif" src="../../static/loading.gif"></image>正在加载中</view>
+  <view wx:if="{{goodsList.length==0&&loadingType==2&&now.length==0}}">
+      <view class="flexccc">
+        <view class="iconfont iconkong"></view>
+        <view class="fz20 kong">暂无数据</view>
+      </view>
+    </view>
+<view class="header">
+  <view class="title fz17" wx:if="{{now.length!=0}}">进行中</view>
+</view>
+<view class="card" bindtap="actionBtn" data-action="detail" wx:for="{{now}}" wx:key="id" data-value="{{item.id}}" data-end="{{item.delay_time}}">
+  <view class="img-wrapper">
+    <image class="img" mode="aspectFill" src="{{item.cover_imgs}}"></image>
+  </view>
+  <view class="info">
+    <view class="price flexr0c fz16 bold">￥{{item.last_price}}
+      <view class="fz12 marginleft-5"> 当前价</view>
+    </view>
+    <view class="name margintop-5 fz17">拍品：{{item.name}}</view>
+    <view class="flexrbc margintop-5">
+      <view class="state fz13 thirdcol ">竞拍中，距结束 {{item.leftHour}}:{{item.leftMinutes}}:{{item.leftSeconds}}</view>
+      <!-- <view class="redu fz13 thirdcol">{{item.show_count}}热度</view> -->
+    </view>
+  </view>
+</view>
+
+<view class="footer">
+  <view class="endtitle fz17" wx:if="{{goodsList.length!=0}}">已结束</view>
+  <view class="endlist-wrapper">
+    <view class="endlist barbackcol flexr" wx:for="{{goodsList}}" wx:key="id" bindtap="actionBtn" data-action="detail" data-value="{{item.id}}">
+      <view class="img-wrapper">
+        <image mode="aspectFill" src="{{item.cover_imgs}}" class="img2"></image>
+      </view>
+      <view class="flexcc0">
+        <view class="endname bold">拍品：{{item.name}}</view>
+        <view class="price flexr0c bold" wx:if="{{item.is_offer==1}}">￥{{item.last_price}}
+          <view class="fz12 marginleft-5 margintop-5" wx:if="{{item.is_offer==1}}"> 成交价</view>
+        </view>
+        <view class="fz12 liupai bold margintop-5" wx:if="{{item.is_offer==0}}"> 已流拍</view>
+      </view>
+    </view>
+  </view>
+</view>
+<loading loadingType="{{loadingType}}" wx:if="{{!(goodsList.length==0&&loadingType==2&&now.length==0)}}"></loading>

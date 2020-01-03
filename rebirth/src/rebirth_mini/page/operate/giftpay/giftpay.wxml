@@ -1,0 +1,52 @@
+<view class='main'>
+  <view class='title' bindtap="showtips">
+    购买须知
+  </view>
+  <image class='card_img' src="{{model.image}}" style="width: {{imgwidth}}px;height: {{imgwidth * 0.6}}px;"></image>
+</view>
+<view>
+  <view class='masklayer' wx:if="{{showtips}}" catchtouchmove='true'>
+  </view>
+  <view class="tipsinfo" wx:if="{{showtips}}" catchtouchmove='true'>
+    <text bindtap="showtips" class="iconfont icon-guanbi icon"></text>
+    <view class='tan_title'>购买须知</view>
+    <view>1.点击喜欢的礼品卡，选择购买数量，支付成功后即可获得。</view>
+    <view>2.同一张礼品卡可同时分享给多个好友，但只有一个好友可以领取成功，若好友一直未领取，您可提醒好友领取，或到“我的礼品卡”页面中，选择该卡赠送给其他好友。</view>
+    <view>3.购买后可在“我的礼品卡”中查看礼品卡的购买、赠送与领取状态。</view>
+    <view>4.礼品卡是虚拟产品，提供虚拟内容服务，购买后不支持退换货。</view>
+    <button class='tan_btn' bindtap="showtips">我知道了</button>
+  </view>
+</view>
+
+<view class="number thinline">
+  <view class="number-l">{{model.title}}</view>
+  <view class="number-r">
+    <text class="iconfont icon-jian" bindtap="reduce"></text>
+    <span>{{quantity}}</span>
+    <text class="iconfont icon-jia" bindtap="increase"></text>
+  </view>
+</view>
+
+<view class="relative thinline">
+  <view class='list'>
+    <view class="type" bindtap="choosetype" data-id="0">
+      <span class="{{id == 0?'sele':'unsele'}}">年卡</span>
+      <view class='money'>￥10080</view>
+    </view>
+    <view class="type" bindtap="choosetype" data-id="1">
+      <span class="{{id == 1?'sele':'unsele'}}">季卡</span>
+      <view class='money'>￥3168</view>
+    </view>
+    <view class="type" bindtap="choosetype" data-id="3">
+      <span class="{{id == 3?'sele':'unsele'}}">次卡</span>
+      <view class='money'>￥120</view>
+    </view>
+  </view>
+</view>
+
+
+
+<view class='modelInfo'>{{model.info}}</view>
+<view class='btn_box'>
+  <button loading="{{btnloading}}" disabled="{{btndisabled}}" bindtap="paygiftcard">立即支付{{price * quantity}}元</button>
+</view>

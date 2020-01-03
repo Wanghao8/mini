@@ -1,0 +1,17 @@
+page{background-color: #eee;}
+.overall{padding: 30rpx;}
+.cashtitle{background-color: #fff;display: flex;flex-direction: row;font-size: 32rpx;padding: 40rpx 50rpx;}
+.cashtitle-l{flex: 2;}
+.cashtitle-m{flex: 2;}
+.cashtitle-r{flex: 1;text-align: right;}
+.cashbody{background-color: #fff;font-size: 32rpx;padding: 40rpx 50rpx;}
+.cashbody-t{padding-bottom: 50rpx;}
+.cashbody-m{overflow: hidden;display: flex;flex-direction: row;font-size: 80rpx;position: relative;}
+.cashbody-m input{height: 100%;}
+.cashbody-b{padding: 50rpx 0;}
+.cashbody-b span{color: #2f4185;}
+.icon-lingqian{color: #f8b83a;font-size: 34rpx;float: right;padding: 4rpx 14rpx 0 0;}
+.time{line-height: 60rpx;}
+.icon-you{color: #999;font-size: 32rpx;}
+.yuan{line-height: 94rpx;}
+.else{color: red;}

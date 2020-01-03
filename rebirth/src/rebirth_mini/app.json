@@ -1,0 +1,90 @@
+{
+  "pages": [
+    
+
+    "page/order/index/index",
+    "page/order/refundorder/refundorder",
+    "page/order/rechargerecord/rechargerecord",
+    "page/order/refund/refund",
+    "page/operate/activityview/activityview",
+    "page/order/recharge/recharge",
+    "page/order/footprint/footprint",
+    "page/product/gymlocation/gymlocation",
+    "page/order/cashwithdrawal/cashwithdrawal",
+    "page/product/opendoor/opendoor",
+    "page/order/incomerecord/incomerecord",
+    "page/order/appointment/appointment",
+    "page/order/appointrecord/appointrecord",
+    "page/order/newlogin/newlogin",
+    "page/order/cabinets/cabinets",
+    "page/order/statement/statement",
+    "page/order/opencabinets/opencabinets",
+    "page/order/public/public",
+    "page/operate/giftview/giftview",
+    "page/operate/mygift/mygift",
+    "page/operate/giftpay/giftpay",
+    "page/operate/usegift/usegift",
+    "page/user/subordinatemember/subordinatemember",
+    "page/user/invitationview/invitationview",
+    
+    "page/index/index",
+    "page/class/class",
+    "page/mine/mine",
+    "page/resever/resever",
+    "page/resever/openDoor /openDoor ",
+    "page/index/comfirmOrder/comfirmOrder",
+    "page/index/gymDetail /gymDetail ",
+    "page/index/gymClass /gymClass ",
+    "page/class/classDetail /classDetail ",
+    "page/class/giveClass /giveClass ",
+    "page/resever/reserveRecord /reserveRecord ",
+    "page/mine/bindPhone /bindPhone ",
+    "page/mine/invite /invite ",
+    "page/mine/myGive /myGive ",
+    "page/mine/appointRecord/appointRecord ",
+    "page/mine/buy/buy",
+    "page/mine/openDoor/openDoor"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#FCC800",
+    "borderStyle": "black",
+    "backgroundColor": "#171717",
+    "list": [
+      {
+        "pagePath": "page/index/index",
+        "text": "门店",
+        "iconPath": "./static/img/gym.png",
+        "selectedIconPath": "./static/img/gym+.png"
+      },
+      {
+        "pagePath": "page/class/class",
+        "text": "课表",
+        "iconPath": "./static/img/class.png",
+        "selectedIconPath": "./static/img/class+.png"
+      },
+      {
+        "pagePath": "page/resever/resever",
+        "text": "预约",
+        "iconPath": "./static/img/promise.png",
+        "selectedIconPath": "./static/img/promise+.png"
+      },
+      {
+        "pagePath": "page/mine/mine",
+        "text": "我的",
+        "iconPath": "./static/img/mine.png",
+        "selectedIconPath": "./static/img/mine+.png"
+      }
+    ]
+  },
+  "window": {
+    "navigationBarBackgroundColor": "#242424",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,29 @@
+page{background-color: #F1F1F1;margin-bottom: 400rpx}
+.loadinggif{width: 80rpx;height: 80rpx;margin-bottom: 40rpx;color: #666666}
+.mask{position: absolute;z-index: 9;font-size: 32rpx;width: 100vw;height: 100vh;background-color: #F1F1F1;top:100rpx;color: #666666}
+.header{position: fixed;top: 0;width: 100%; background-color: #ffffff;z-index: 2;box-shadow:  0 4rpx 4rpx #d9d9d9}
+.seletor{text-align: center;line-height: 80rpx;margin: 0 0rpx 4rpx 40rpx;font-size: 36rpx}
+.content{position: relative;top: 88rpx;}
+.actived{border-bottom: 4px solid #F66F36;font-weight: 700;font-size: 38rpx}
+.baritem{text-align: center; border-radius: 16rpx; background-color: #F1F1F1;color: #ffffff}
+.rank{background-color: #7F95AF;width: 345rpx;height: 140rpx;line-height: 140rpx;margin:20rpx 0 20rpx 20rpx;}
+.collect{background-color: #C0C458;width: 345rpx;height: 140rpx;line-height: 140rpx;margin:20rpx 20rpx 20rpx 0}
+.iconyoujiantou{font-size: 24rpx;margin-top: 2px}
+/* .redu{margin-left: 22rpx} */
+.zheng{margin-left: 94rpx}
+.iconkong{font-size: 200rpx;margin: 80rpx auto;color: #666666}
+.kong{margin-bottom: 20rpx;}
+.card1,.card2,.card3{background-color: #ffffff;border-radius: 10rpx;margin: 20rpx;overflow: hidden;border: 1px solid #D9D9D9; box-shadow: -10rpx 0 10rpx 4rpx #d9d9d9}
+.img1{width: 670rpx;height: 320rpx;border-radius: 10rpx;margin: 20rpx 20rpx 0 20rpx}
+.info{margin:0 40rpx 40rpx 40rpx}
+.title{font-weight: 700;overflow:hidden; text-overflow:ellipsis;display:-webkit-box; -webkit-box-orient:vertical;-webkit-line-clamp:2; }
+.title1{max-width:480rpx;white-space: nowrap; overflow:hidden;text-overflow:ellipsis;display:block;}
+.price{color: #F15917;font-weight: 700;}
+.liupai{background-color: #cccccc;color: #fff;width: 100rpx;height: 40rpx;line-height: 40rpx;text-align: center;border-radius: 10rpx;}
+.nowprice{text-align: right}
+.img2{width: 260rpx;height: 180rpx;margin: 40rpx;border-radius: 8rpx}
+.img3{width: 140rpx;height: 140rpx;margin: 40rpx;border-radius: 8rpx}
+.title3{margin-bottom: 40rpx}
+.com{position: relative; text-align: center;color: #808080;font-weight: 500;margin: 120rpx auto}
+.jian{margin: auto 1em}
+

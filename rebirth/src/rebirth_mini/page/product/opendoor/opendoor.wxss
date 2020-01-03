@@ -1,0 +1,18 @@
+page{background-color: #26cd91;}
+.qrshow{position: relative;background-color: #fff;padding: 30rpx;border-top-left-radius: 20rpx;border-top-right-radius: 20rpx;}
+.qrshow image{width: 530rpx;height: 530rpx;}
+.qrinfo{font-size: 32rpx; background-color: #fff;padding:0 30rpx; height: 90rpx; border-bottom-left-radius: 20rpx;border-bottom-right-radius: 20rpx;overflow: hidden;}
+.hqyzm {font-size: 32rpx;color: #26cd91;background-color: #fff;line-height: 90rpx;}
+.hqyzm::after{border: none;}
+.tips{font-size: 32rpx;color: #fff;text-align: center;margin-top: 30rpx;}
+.appoinfo{font-size: 32rpx;padding: 30rpx 0;}
+.content-wrapper{padding: 80rpx;}
+.relative{padding-bottom: 30rpx;}
+.ellipsis-2{line-height: 60rpx;}
+.time{line-height: 60rpx;}
+.msg{font-size: 30rpx;color: #999;margin-top: 30rpx;}
+.refresh{float: left;line-height: 90rpx;}
+.refreshmsg{float: left;font-size: 28rpx;padding: 10rpx 0;}
+.countdown{float: right;}
+.cancel{padding: 0 80rpx;}
+.backhome{padding: 0 80rpx;margin-top: 40rpx;}

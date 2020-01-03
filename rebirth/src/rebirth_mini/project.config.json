@@ -1,0 +1,66 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": false,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"checkSiteMap": false,
+		"checkInvalidKey": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.9.4",
+	"appid": "wxfd9d19ecda4a0e3f",
+	"projectname": "Rebirth",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 2,
+			"list": [
+				{
+					"id": 0,
+					"name": "login",
+					"pathName": "page/order/newlogin/newlogin",
+					"query": "scene=pid%3D14",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "柜子",
+					"pathName": "page/order/cabinets/cabinets",
+					"query": "scene=pid%3D14",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "usegift",
+					"pathName": "page/operate/usegift/usegift",
+					"query": "giftinfo={\"id\":4,\"imgurl\":\"https://xunchas.yuanfangyun.com/depbluecard.jpg\",\"title\":\"男神卡(0)\",\"pid\":14}",
+					"scene": null
+				}
+			]
+		}
+	}
+}

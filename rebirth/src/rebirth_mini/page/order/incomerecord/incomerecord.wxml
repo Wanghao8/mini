@@ -1,0 +1,18 @@
+<view wx:for="{{ProfitInfo}}" class="info">
+  <view class="info-l">
+    <!-- <text class="iconfont iconsize icon-tixian" style="font-size: 90rpx;color: #D59B5C;"></text> -->
+    <image src="{{item.avatarUrl}}"></image>
+  </view>
+  <view class="info-m thinline">
+    <view class="info-m-t">
+      <view class="ellipsis">{{item.nickName}}　{{item.desc_type}}</view>
+    </view>
+    <view class="info-m-b">{{item.create_time}}</view>
+  </view>
+  <view class="info-r thinline">
+    <view class="rewardPoint">{{item.value}}积分</view>
+  </view>
+</view>
+<graceLoading loadingType="{{loadingType}}" wx:if="{{havelist}}"></graceLoading>
+<graceFullLoading graceFullLoading="{{graceFullLoading}}"></graceFullLoading>
+<view wx:if="{{havelist == false}}" class="vertcenter">您还没有任何分享奖励哦,快去邀请好友吧!^_^</view>

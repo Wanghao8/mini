@@ -1,0 +1,53 @@
+
+ 数据库账号密码：121.41.29.178    HouseCert  HouseCert
+ 
+ 短信验证账号密码 http://www.yuntongxun.com//user/login  
+
+ 两种签名方式交换：123456
+
+ RQA4AFUAdwA1AG8AUwB1AFcALwBJAD0A 
+
+ e10adc3949ba59abbe56e057f20f883e
+
+----------------------------------------------------------------------------------------------------------------
+ 
+ https://mp.weixin.qq.com
+
+ 微信公众号 3178880876@qq.com   zwzj890816
+
+ AppID(应用ID):wx3b54ec901b96d83a
+
+ AppSecret(应用密钥):233874d434a03dbd4e6879a6b0b357f1
+
+
+     "access_token": "f07OHl_MlFoRdeY5G8ShZarRFgAFuazAKFfGmOdtgkylQjsytWMuwChv0j4RCJBmmbMsH_nTEDEJWyfnimjAD8wMPnApeUGhaZFXu_2jVHXv7VgAHMYYaptQ6zkcG-MQWDDbAHAOVV", 
+    "expires_in": 7200
+
+
+ 微信支付商户号：1382025302
+
+ 商户平台登录帐号：1382025302@1382025302
+
+ 商户平台登录密码：519220
+
+ 商户平台API秘钥：xueronghuayunfuwu186137158018858
+
+ 支付授权目录：http://yun.xrhyun.com/Wechat/WFinance/
+
+ 申请对应的公众号：雪绒花云服务
+
+ 公众号APPID：wx3b54ec901b96d83a
+
+
+
+
+支付宝：
+商户账号：3178880876@qq.com 
+密码：Zwzj890816
+
+
+
+
+
+
+ 

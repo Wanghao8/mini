@@ -1,0 +1,4 @@
+<view>
+	<canvas canvas-id='myCanvas' style='width:{{imgwidth}}px;height:{{imgheight}}px;margin: 0 auto;' bindtap="keepimg"></canvas>
+</view>
+<button type="primary" bindtap="saveimg">保存图片分享到朋友圈</button>

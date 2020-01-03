@@ -1,0 +1,9 @@
+<view class="barbackcol header" wx:for="{{qa}}" wx:key="id">
+  <view class="question bold fz15">{{item.q}}</view>
+  <view class="answer fz14 thirdcol" wx:for="{{item.a}}" wx:key="id">{{item}}</view>
+  <button open-type="share">
+    <view class="flexr0c share fz14 subcol" bindtap="share">分享此问题
+      <view class="iconfont iconyoujiantou"></view>
+    </view>
+  </button>
+</view>

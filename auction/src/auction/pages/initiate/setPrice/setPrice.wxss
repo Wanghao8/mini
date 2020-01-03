@@ -1,0 +1,16 @@
+page{background-color: #F1F1F1;padding-bottom: 120rpx}
+.header,.footer{background-color: #ffffff;}
+.baritem{padding: 40rpx;position: relative}
+.baritem::after{position: absolute;content: '';-webkit-transform-origin: 0 0;transform-origin: 0 0;-webkit-transform: scaleY(0.5);transform: scaleY(0.5);bottom: 0;right: 0;width: 100%;border-bottom: 1px solid #E6E6E6;}
+input{text-align: right}
+.margin{margin-right: 10rpx}
+.last{border: none}
+.exp{margin: 20rpx;color: #F66F36;font-weight: 700}
+.option{margin: 40rpx 20rpx 20rpx 20rpx}
+.tip{margin: 40rpx}
+.comfirm{position: fixed;bottom: 0;width: 100%;background-color: #ffffff;overflow: hidden}
+.btn{width: 670rpx; line-height: 100rpx;background-color: #F66F36;margin: 20rpx 40rpx 20rpx 40rpx;text-align: center;color: #ffffff}
+.iconyoujiantou{font-size: 24rpx;color: #B5B5B5;line-height: 42rpx}
+
+
+

@@ -1,0 +1,101 @@
+<view class="info-card">
+  <view class="flexrbc">
+    <view class="flexr0c">
+      <image class="user-img" src="{{userInfo.avatarUrl}}"></image>
+      <view class="fz22 col3 bold" bindgetuserinfo="bindGetUserInfo">{{userInfo.nickName}}</view>
+    </view>
+    <view class="flexr0c marginright10">
+      <view class="iconfont icon-set" bindtap="actionBtn" data-action="info"></view>
+      <button open-type="contact"></button>
+      <view class="iconfont icon-kefu marginleft10"></view>
+    </view>
+  </view>
+  <view class="info-tap">
+    <view class="flexrbc fz17">
+      <view class="flexr0c">
+        <view class="col3 marginleft10">会员</view>
+        <view class=" marginleft10" wx:if="{{userInfo.timecard}}">{{userInfo.timecard1}}</view>
+        <view class=" marginleft10" wx:if="{{!userInfo.timecard&&userInfo.oncecard!=0}}">剩余{{userInfo.oncecard}}次</view>
+        <view class=" marginleft10" wx:if="{{!userInfo.timecard&&userInfo.oncecard==0}}">请充值</view>
+      </view>
+      <view class="small-btn jvzhong marginright10" bindtap="actionBtn" data-action="charge">续费</view>
+    </view>
+  </view>
+</view>
+<view class="card-wrapper card-margin">
+  <view class="flexrbc info-item" bindtap="actionBtn" data-action="exeRecord">
+    <view class="fz17 col6 marginleft10">训练记录</view>
+    <view class="flexr0c marginright10">
+      <view class="col3 fz17">累计已锻炼10次</view>
+      <view class="iconfont icon-iconfontjiantou3"></view>
+    </view>
+  </view>
+  <view class="flexrbc info-item" bindtap="actionBtn" data-action="history">
+    <view class="fz17 col6 marginleft10">消费记录</view>
+    <view class="flexr0c marginright10">
+      <view class="col3 fz17">money都去哪了</view>
+      <view class="iconfont icon-iconfontjiantou3"></view>
+    </view>
+  </view>
+  <view class="login-btn">
+    <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo"></button>
+  </view>
+  <view class="flexrbc info-item">
+    <view class="fz17 col6 marginleft10">微信绑定</view>
+    <view class="flexr0c marginright10">
+      <view class="col3 fz17">{{!userInfo.nickName?'获取微信昵称':userInfo.nickName}}</view>
+      <view class="iconfont icon-iconfontjiantou3"></view>
+    </view>
+  </view>
+  <view class="phone-btn">
+    <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"></button>
+  </view>
+  <view class="flexrbc info-item">
+    <view class="fz17 col6 marginleft10">手机号码</view>
+    <view class="flexr0c marginright10">
+      <view class="col3 fz17">{{!userInfo.phone?'绑定手机以免错过预约':userInfo.phone}}</view>
+      <view class="iconfont icon-iconfontjiantou3"></view>
+    </view>
+  </view>
+</view>
+
+<view class="card-wrapper card-margin2">
+  <view class="flexrbc info-item" bindtap="actionBtn" data-action="invite">
+    <view class="fz17 col6 marginleft10">邀请好友</view>
+    <view class="flexr0c marginright10">
+      <view class="col3 fz17">邀请好友赠送次卡</view>
+      <view class="iconfont icon-iconfontjiantou3"></view>
+    </view>
+  </view>
+  <!-- <view class="flexrbc info-item" bindtap="actionBtn" data-action="recommend">
+    <view class="fz17 col3 marginleft10">我的推荐</view>
+    <view class="flexr0c marginright10">
+      <view class="col6 fz17">23位用户</view>
+      <view class="iconfont icon-iconfontjiantou3"></view>
+    </view>
+  </view> -->
+  <view class="flexrbc info-item" bindtap="actionBtn" data-action="about">
+    <view class="fz17 col6 marginleft10">关于我们</view>
+    <view class="flexr0c marginright10">
+      <view class="col3 fz17">Rebirth</view>
+      <view class="iconfont icon-iconfontjiantou3"></view>
+    </view>
+  </view>
+  <view class="flexrbc info-item" bindtap="actionBtn" data-action="manage">
+    <view class="fz17 col6 marginleft10">管理门店</view>
+    <view class="flexr0c marginright10">
+      <view class="col3 fz17">管理门店</view>
+      <view class="iconfont icon-iconfontjiantou3"></view>
+    </view>
+  </view>
+</view>
+
+<!-- 海报 -->
+<view class="bg {{cavs == 1?' ':'active'}}" bindtap="bg"></view>
+<view class="cavs {{cavs == 1?' ':'active'}}">
+  <view class="cav">
+    <!-- bindtap="keepimg"  点击放大 -->
+    <canvas bindtap="keepimg" canvas-id='myCanvas' style='width:{{imgwidth}}px;height:{{imgheight}}px;margin: 0 auto;'></canvas>
+    <button type="primary" bindtap="saveimg">保存图片分享到朋友圈</button>
+  </view>
+</view>

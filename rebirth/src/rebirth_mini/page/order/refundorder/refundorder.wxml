@@ -1,0 +1,30 @@
+<view wx:for="{{RechargeInfo}}" wx:key='index'>
+  <view class='time'>退款时间:{{item.create_time}}</view>
+  <view class="info clear">
+    <view class="fl icon">
+      <text class="iconfont iconsize icon-chongzhi"></text>
+    </view>
+    <view class='fr text'>
+      <view class="clear first">
+        <view class="fl">昵称:{{item.nickName}}</view>
+        <view class="fr">电话:{{item.phone}}</view>
+      </view>
+      <view class="clear two">
+        <view class='fl'>退款天数:{{item.value}}</view>
+        <view class='fr'>金额:{{item.money}}元</view>
+      </view>
+    </view>
+  </view>
+</view>
+<graceLoading loadingType="{{loadingType}}" wx:if="{{havelist}}"></graceLoading>
+<graceFullLoading graceFullLoading="{{graceFullLoading}}"></graceFullLoading>
+<view wx:if="{{havelist == false}}" class="vertcenter">您还没有任何记录!^_^</view>
+
+<view class="purchasebtn" bindtap='go_index'>
+  <view>
+    返回
+  </view>
+  <view>
+    首页
+  </view>
+</view>

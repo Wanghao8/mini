@@ -1,0 +1,4 @@
+page{background-color: #F1F1F1;overflow: hidden}
+.iconicon-test{font-size: 100rpx;color:#D8D8D8; }
+.content-wrapper{height: 80vh}
+.tip{margin-top: 40rpx;color:#D8D8D8;}

@@ -1,0 +1,30 @@
+page{background-color: #F4F6F7;padding-bottom: 120rpx}
+.img{width: 160rpx;height: 160rpx;margin: 40rpx}
+.title-wrapper{margin: 0 0 40rpx 40rpx}
+.title{font-size: 42rpx;}
+.msg{margin-left: 40rpx}
+.detail{margin: 20rpx 0 0 40rpx;font-size: 28rpx;text-decoration: underline;color: #B3B4B5}
+.box{width: 670rpx;height: 400rpx;margin: 40rpx;border-radius: 10rpx;border: 1px solid #E6E6E6}
+.img2{width: 160rpx;height: 160rpx;margin-bottom: 20rpx}
+.footer{position: fixed;bottom: 0; height: 110rpx;width: 100%}
+button{color: #fff;background-color:#F66F36;height: 90rpx;line-height: 90rpx;margin-top: 10rpx;width: 720rpx;margin-left: 15rpx;font-size: 30rpx;font-weight: 700;border-radius: 0}
+.shadow{
+	position: absolute;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+  height: 100vh;
+	z-index: 1;
+	background: rgba(0,0,0,.5);
+}
+.rulebox{position: fixed;top: 20rpx;left:40rpx;width: 670rpx;z-index: 100;border-radius: 10rpx;}
+.box-wrapper{margin: 0 20rpx;width: 90%}
+.boxheader{border-bottom: 1px solid #E6E6E6}
+.close{margin-left: 600rpx}
+.boxtitle{margin-bottom: 50rpx}
+.box-content{height: 900rpx;margin-bottom: 40rpx}
+
+
+
+
+

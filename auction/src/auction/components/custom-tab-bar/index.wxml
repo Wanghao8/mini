@@ -1,0 +1,17 @@
+<!--miniprogram/custom-tab-bar/index.wxml-->
+<!-- <cover-view class="tab-bar">
+  <cover-view class="tab-bar-border"></cover-view>
+  <cover-view wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
+    <cover-image src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></cover-image>
+    <cover-view style="color: {{selected === index ? selectedColor : color}}">{{item.text}}</cover-view>
+  </cover-view>
+</cover-view> -->
+
+<cover-view class="container">
+  <van-tabbar active="{{ active }}" bind:change="onChange">
+    <van-tabbar-item name="index" icon="home-o">首页</van-tabbar-item>
+    <van-tabbar-item name="category" icon="label-o">分类</van-tabbar-item>
+    <van-tabbar-item name="msgs" icon="comment-o">留言</van-tabbar-item>
+    <van-tabbar-item name="my" icon="user-o">我的</van-tabbar-item>
+  </van-tabbar>
+</cover-view>

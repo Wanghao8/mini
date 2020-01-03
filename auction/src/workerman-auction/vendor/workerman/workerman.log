@@ -1,0 +1,1121 @@
+2019-11-30 17:16:19 pid:25698 Workerman[start.php] restart 
+2019-11-30 17:16:19 pid:25698 Workerman[start.php] is stopping ...
+2019-11-30 17:16:19 pid:25698 Workerman[start.php] stop success
+2019-11-30 17:16:19 pid:25699 Error: Class 'Workerman\MySQL\Connection' not found in /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php:35
+Stack trace:
+#0 [internal function]: Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#1 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(223): call_user_func('Events::onWorke...', Object(GatewayWorker\BusinessWorker))
+#2 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(2367): GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#4 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1490): GatewayWorker\BusinessWorker->run()
+#5 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1320): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#6 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker::forkWorkersForLinux()
+#7 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::forkWorkers()
+#8 /data/wwwroot/www.669407.com/workerman-auction/start.php(37): Workerman\Worker::runAll()
+#9 {main}
+2019-11-30 17:16:20 pid:25699 Worker[25699] process terminated
+2019-11-30 17:16:20 pid:25698 worker[AuctionBusinessWorker:25699] exit with status 64000
+2019-11-30 17:16:20 pid:25703 Error: Class 'Workerman\MySQL\Connection' not found in /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php:35
+Stack trace:
+#0 [internal function]: Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#1 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(223): call_user_func('Events::onWorke...', Object(GatewayWorker\BusinessWorker))
+#2 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(2367): GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#4 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1490): GatewayWorker\BusinessWorker->run()
+#5 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1320): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#6 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker::forkWorkersForLinux()
+#7 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1624): Workerman\Worker::forkWorkers()
+#8 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1573): Workerman\Worker::monitorWorkersForLinux()
+#9 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(511): Workerman\Worker::monitorWorkers()
+#10 /data/wwwroot/www.669407.com/workerman-auction/start.php(37): Workerman\Worker::runAll()
+#11 {main}
+2019-11-30 17:16:21 pid:25703 Worker[25703] process terminated
+2019-11-30 17:16:21 pid:25698 worker[AuctionBusinessWorker:25703] exit with status 64000
+2019-11-30 17:16:21 pid:25705 Error: Class 'Workerman\MySQL\Connection' not found in /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php:35
+Stack trace:
+#0 [internal function]: Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#1 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(223): call_user_func('Events::onWorke...', Object(GatewayWorker\BusinessWorker))
+#2 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(2367): GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#4 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1490): GatewayWorker\BusinessWorker->run()
+#5 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1320): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#6 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker::forkWorkersForLinux()
+#7 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1624): Workerman\Worker::forkWorkers()
+#8 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1573): Workerman\Worker::monitorWorkersForLinux()
+#9 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(511): Workerman\Worker::monitorWorkers()
+#10 /data/wwwroot/www.669407.com/workerman-auction/start.php(37): Workerman\Worker::runAll()
+#11 {main}
+2019-11-30 17:16:21 pid:25698 Workerman[start.php] stopping ...
+2019-11-30 17:16:21 pid:25705 Worker[25705] process terminated
+2019-11-30 17:16:21 pid:25698 worker[AuctionBusinessWorker:25705] exit with status 64000
+2019-11-30 17:16:21 pid:25698 Workerman[start.php] has been stopped
+2019-11-30 17:16:33 pid:25724 Workerman[start.php] restart 
+2019-11-30 17:16:33 pid:25724 Workerman[start.php] is stopping ...
+2019-11-30 17:16:33 pid:25724 Workerman[start.php] stop success
+2019-11-30 17:16:33 pid:25725 Error: Class 'Workerman\MySQL\Connection' not found in /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php:35
+Stack trace:
+#0 [internal function]: Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#1 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(223): call_user_func('Events::onWorke...', Object(GatewayWorker\BusinessWorker))
+#2 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(2367): GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#4 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1490): GatewayWorker\BusinessWorker->run()
+#5 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1320): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#6 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker::forkWorkersForLinux()
+#7 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::forkWorkers()
+#8 /data/wwwroot/www.669407.com/workerman-auction/start.php(37): Workerman\Worker::runAll()
+#9 {main}
+2019-11-30 17:16:34 pid:25725 Worker[25725] process terminated
+2019-11-30 17:16:34 pid:25724 worker[AuctionBusinessWorker:25725] exit with status 64000
+2019-11-30 17:16:34 pid:25729 Error: Class 'Workerman\MySQL\Connection' not found in /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php:35
+Stack trace:
+#0 [internal function]: Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#1 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(223): call_user_func('Events::onWorke...', Object(GatewayWorker\BusinessWorker))
+#2 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(2367): GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#4 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1490): GatewayWorker\BusinessWorker->run()
+#5 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1320): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#6 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker::forkWorkersForLinux()
+#7 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1624): Workerman\Worker::forkWorkers()
+#8 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1573): Workerman\Worker::monitorWorkersForLinux()
+#9 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(511): Workerman\Worker::monitorWorkers()
+#10 /data/wwwroot/www.669407.com/workerman-auction/start.php(37): Workerman\Worker::runAll()
+#11 {main}
+2019-11-30 17:16:34 pid:25724 Workerman[start.php] stopping ...
+2019-11-30 17:16:34 pid:25729 Worker[25729] process terminated
+2019-11-30 17:16:34 pid:25724 worker[AuctionBusinessWorker:25729] exit with status 64000
+2019-11-30 17:16:34 pid:25724 Workerman[start.php] has been stopped
+2019-11-30 17:17:19 pid:25833 Workerman[start.php] restart 
+2019-11-30 17:17:19 pid:25833 Workerman[start.php] is stopping ...
+2019-11-30 17:17:19 pid:25833 Workerman[start.php] stop success
+2019-11-30 17:17:19 pid:25834 Error: Class 'Workerman\MySQL\Connection' not found in /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php:35
+Stack trace:
+#0 [internal function]: Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#1 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(223): call_user_func('Events::onWorke...', Object(GatewayWorker\BusinessWorker))
+#2 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(2367): GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#4 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1490): GatewayWorker\BusinessWorker->run()
+#5 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1320): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#6 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker::forkWorkersForLinux()
+#7 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::forkWorkers()
+#8 /data/wwwroot/www.669407.com/workerman-auction/start.php(37): Workerman\Worker::runAll()
+#9 {main}
+2019-11-30 17:17:20 pid:25834 Worker[25834] process terminated
+2019-11-30 17:17:20 pid:25833 worker[AuctionBusinessWorker:25834] exit with status 64000
+2019-11-30 17:17:20 pid:25837 Error: Class 'Workerman\MySQL\Connection' not found in /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php:35
+Stack trace:
+#0 [internal function]: Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#1 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(223): call_user_func('Events::onWorke...', Object(GatewayWorker\BusinessWorker))
+#2 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(2367): GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#4 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1490): GatewayWorker\BusinessWorker->run()
+#5 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1320): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#6 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker::forkWorkersForLinux()
+#7 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1624): Workerman\Worker::forkWorkers()
+#8 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1573): Workerman\Worker::monitorWorkersForLinux()
+#9 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(511): Workerman\Worker::monitorWorkers()
+#10 /data/wwwroot/www.669407.com/workerman-auction/start.php(37): Workerman\Worker::runAll()
+#11 {main}
+2019-11-30 17:17:20 pid:25833 Workerman[start.php] stopping ...
+2019-11-30 17:17:20 pid:25837 Worker[25837] process terminated
+2019-11-30 17:17:20 pid:25833 worker[AuctionBusinessWorker:25837] exit with status 64000
+2019-11-30 17:17:20 pid:25833 Workerman[start.php] has been stopped
+2019-11-30 17:20:04 pid:26112 Workerman[start.php] restart 
+2019-11-30 17:20:04 pid:26112 Workerman[start.php] is stopping ...
+2019-11-30 17:20:04 pid:26112 Workerman[start.php] stop success
+2019-11-30 17:20:04 pid:26113 Error: Class 'Workerman\MySQL\Connection' not found in /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php:35
+Stack trace:
+#0 [internal function]: Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#1 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(223): call_user_func('Events::onWorke...', Object(GatewayWorker\BusinessWorker))
+#2 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(2367): GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#4 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1490): GatewayWorker\BusinessWorker->run()
+#5 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1320): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#6 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker::forkWorkersForLinux()
+#7 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::forkWorkers()
+#8 /data/wwwroot/www.669407.com/workerman-auction/start.php(37): Workerman\Worker::runAll()
+#9 {main}
+2019-11-30 17:20:05 pid:26113 Worker[26113] process terminated
+2019-11-30 17:20:05 pid:26112 worker[AuctionBusinessWorker:26113] exit with status 64000
+2019-11-30 17:20:05 pid:26117 Error: Class 'Workerman\MySQL\Connection' not found in /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php:35
+Stack trace:
+#0 [internal function]: Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#1 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(223): call_user_func('Events::onWorke...', Object(GatewayWorker\BusinessWorker))
+#2 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(2367): GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#4 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1490): GatewayWorker\BusinessWorker->run()
+#5 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1320): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#6 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker::forkWorkersForLinux()
+#7 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1624): Workerman\Worker::forkWorkers()
+#8 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1573): Workerman\Worker::monitorWorkersForLinux()
+#9 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(511): Workerman\Worker::monitorWorkers()
+#10 /data/wwwroot/www.669407.com/workerman-auction/start.php(37): Workerman\Worker::runAll()
+#11 {main}
+2019-11-30 17:20:06 pid:26117 Worker[26117] process terminated
+2019-11-30 17:20:06 pid:26112 worker[AuctionBusinessWorker:26117] exit with status 64000
+2019-11-30 17:20:06 pid:26119 Error: Class 'Workerman\MySQL\Connection' not found in /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php:35
+Stack trace:
+#0 [internal function]: Events::onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#1 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(223): call_user_func('Events::onWorke...', Object(GatewayWorker\BusinessWorker))
+#2 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(2367): GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#4 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1490): GatewayWorker\BusinessWorker->run()
+#5 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1320): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#6 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker::forkWorkersForLinux()
+#7 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1624): Workerman\Worker::forkWorkers()
+#8 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1573): Workerman\Worker::monitorWorkersForLinux()
+#9 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(511): Workerman\Worker::monitorWorkers()
+#10 /data/wwwroot/www.669407.com/workerman-auction/start.php(37): Workerman\Worker::runAll()
+#11 {main}
+2019-11-30 17:20:06 pid:26112 Workerman[start.php] stopping ...
+2019-11-30 17:20:06 pid:26119 Worker[26119] process terminated
+2019-11-30 17:20:06 pid:26112 worker[AuctionBusinessWorker:26119] exit with status 64000
+2019-11-30 17:20:06 pid:26112 Workerman[start.php] has been stopped
+2019-11-30 17:26:06 pid:26429 Workerman[start.php] restart 
+2019-11-30 17:26:06 pid:26429 Workerman[start.php] is stopping ...
+2019-11-30 17:26:06 pid:26429 Workerman[start.php] stop success
+2019-11-30 17:26:22 pid:26430 PDOException: SQL:SELECT * FROM `goods` WHERE id=1 LIMIT 2 OFFSET 5 SQLSTATE[42S02]: Base table or view not found: 1146 Table 'auctiontools.goods' doesn't exist in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT * FROM `...', Array)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(60): Workerman\MySQL\Connection->query()
+#2 [internal function]: Events::onMessage('7f0000010a8c000...', '1')
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f0000010a8c000...', '1')
+#4 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Connection/TcpConnection.php(658): GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#5 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Select.php(294): Workerman\Connection\TcpConnection->baseRead(Resource id #46)
+#6 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(2382): Workerman\Events\Select->loop()
+#7 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#8 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1490): GatewayWorker\BusinessWorker->run()
+#9 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1320): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#10 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker::forkWorkersForLinux()
+#11 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::forkWorkers()
+#12 /data/wwwroot/www.669407.com/workerman-auction/start.php(37): Workerman\Worker::runAll()
+#13 {main}
+2019-11-30 17:26:22 pid:26430 Worker[26430] process terminated
+2019-11-30 17:26:22 pid:26429 worker[AuctionBusinessWorker:26430] exit with status 64000
+2019-11-30 17:26:44 pid:26429 Workerman[start.php] stopping ...
+2019-11-30 17:26:44 pid:26429 Workerman[start.php] has been stopped
+2019-11-30 17:26:45 pid:26474 Workerman[start.php] restart 
+2019-11-30 17:26:45 pid:26474 Workerman[start.php] is stopping ...
+2019-11-30 17:26:45 pid:26474 Workerman[start.php] stop success
+2019-11-30 17:27:26 pid:26474 Workerman[start.php] stopping ...
+2019-11-30 17:27:26 pid:26474 Workerman[start.php] has been stopped
+2019-11-30 17:27:27 pid:26523 Workerman[start.php] restart 
+2019-11-30 17:27:27 pid:26523 Workerman[start.php] is stopping ...
+2019-11-30 17:27:27 pid:26523 Workerman[start.php] stop success
+2019-11-30 17:28:07 pid:26523 Workerman[start.php] stopping ...
+2019-11-30 17:28:07 pid:26523 Workerman[start.php] has been stopped
+2019-11-30 17:28:08 pid:26568 Workerman[start.php] restart 
+2019-11-30 17:28:08 pid:26568 Workerman[start.php] is stopping ...
+2019-11-30 17:28:08 pid:26568 Workerman[start.php] stop success
+2019-11-30 17:28:28 pid:26569 PDOException: SQL:SELECT * FROM `t_goodsa` WHERE id=1 LIMIT 2 SQLSTATE[42S02]: Base table or view not found: 1146 Table 'auctiontools.t_goodsa' doesn't exist in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT * FROM `...', Array)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(60): Workerman\MySQL\Connection->query()
+#2 [internal function]: Events::onMessage('7f0000010a8c000...', '1')
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f0000010a8c000...', '1')
+#4 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Connection/TcpConnection.php(658): GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#5 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Select.php(294): Workerman\Connection\TcpConnection->baseRead(Resource id #46)
+#6 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(2382): Workerman\Events\Select->loop()
+#7 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#8 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1490): GatewayWorker\BusinessWorker->run()
+#9 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1320): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#10 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker::forkWorkersForLinux()
+#11 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::forkWorkers()
+#12 /data/wwwroot/www.669407.com/workerman-auction/start.php(37): Workerman\Worker::runAll()
+#13 {main}
+2019-11-30 17:28:28 pid:26569 Worker[26569] process terminated
+2019-11-30 17:28:28 pid:26568 worker[AuctionBusinessWorker:26569] exit with status 64000
+2019-11-30 17:28:44 pid:26568 Workerman[start.php] stopping ...
+2019-11-30 17:28:44 pid:26568 Workerman[start.php] has been stopped
+2019-11-30 17:30:55 pid:26721 Workerman[start.php] restart 
+2019-11-30 17:30:55 pid:26721 Workerman[start.php] is stopping ...
+2019-11-30 17:30:55 pid:26721 Workerman[start.php] stop success
+2019-11-30 17:31:24 pid:26721 Workerman[start.php] stopping ...
+2019-11-30 17:31:24 pid:26721 Workerman[start.php] has been stopped
+2019-11-30 17:31:25 pid:26758 Workerman[start.php] restart 
+2019-11-30 17:31:25 pid:26758 Workerman[start.php] is stopping ...
+2019-11-30 17:31:25 pid:26758 Workerman[start.php] stop success
+2019-11-30 17:31:54 pid:26758 Workerman[start.php] stopping ...
+2019-11-30 17:31:54 pid:26758 Workerman[start.php] has been stopped
+2019-11-30 17:31:55 pid:26795 Workerman[start.php] restart 
+2019-11-30 17:31:55 pid:26795 Workerman[start.php] is stopping ...
+2019-11-30 17:31:55 pid:26795 Workerman[start.php] stop success
+2019-11-30 17:38:04 pid:26795 Workerman[start.php] stopping ...
+2019-11-30 17:38:04 pid:26795 Workerman[start.php] has been stopped
+2019-11-30 17:44:01 pid:27402 Workerman[start.php] restart 
+2019-11-30 17:44:01 pid:27402 Workerman[start.php] is stopping ...
+2019-11-30 17:44:01 pid:27402 Workerman[start.php] stop success
+2019-11-30 18:15:50 pid:27402 Workerman[start.php] stopping ...
+2019-11-30 18:15:50 pid:27402 Workerman[start.php] has been stopped
+2019-11-30 18:15:52 pid:28992 Workerman[start.php] restart 
+2019-11-30 18:15:52 pid:28992 Workerman[start.php] is stopping ...
+2019-11-30 18:15:52 pid:28992 Workerman[start.php] stop success
+2019-11-30 18:16:01 pid:28993 Worker[28993] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT a.*,`b`.`nickName`,`b`.`avatarUrl`,* FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id`,`t_goods` WHERE `a`.`goods_id` > :goods_id AND id= :id ORDER BY `a`.`id` DESC SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` =' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT a.*,`b`....', Array)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(125): Workerman\MySQL\Connection->query()
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(61): Events::select_good in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-11-30 18:16:01 pid:28992 worker[AuctionBusinessWorker:28993] exit with status 65280
+2019-11-30 18:17:21 pid:28992 Workerman[start.php] stopping ...
+2019-11-30 18:17:21 pid:28992 Workerman[start.php] has been stopped
+2019-11-30 18:17:22 pid:29077 Workerman[start.php] restart 
+2019-11-30 18:17:22 pid:29077 Workerman[start.php] is stopping ...
+2019-11-30 18:17:22 pid:29077 Workerman[start.php] stop success
+2019-11-30 18:17:30 pid:29078 Worker[29078] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT a.*,`b`.`nickName`,`b`.`avatarUrl`,* FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id`,`t_goods` WHERE `a`.`goods_id` = :goods_id AND id= :id ORDER BY `a`.`id` DESC SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` =' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT a.*,`b`....', Array)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(125): Workerman\MySQL\Connection->query()
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(61): Events::select_good in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-11-30 18:17:30 pid:29077 worker[AuctionBusinessWorker:29078] exit with status 65280
+2019-11-30 18:24:54 pid:29077 Workerman[start.php] stopping ...
+2019-11-30 18:24:54 pid:29077 Workerman[start.php] has been stopped
+2019-11-30 18:24:55 pid:29468 Workerman[start.php] restart 
+2019-11-30 18:24:55 pid:29468 Workerman[start.php] is stopping ...
+2019-11-30 18:24:55 pid:29468 Workerman[start.php] stop success
+2019-11-30 18:25:03 pid:29469 Worker[29469] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT `a`.`id`,`b`.`nickName`,`b`.`avatarUrl`,* FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id`,`t_goods` WHERE `a`.`goods_id` = :goods_id AND id= :id ORDER BY `a`.`id` DESC SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` =' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT `a`.`id`...', Array)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(125): Workerman\MySQL\Connection->query()
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(61): Events::select in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-11-30 18:25:03 pid:29468 worker[AuctionBusinessWorker:29469] exit with status 65280
+2019-11-30 18:27:29 pid:29468 Workerman[start.php] stopping ...
+2019-11-30 18:27:29 pid:29468 Workerman[start.php] has been stopped
+2019-11-30 18:27:30 pid:29608 Workerman[start.php] restart 
+2019-11-30 18:27:30 pid:29608 Workerman[start.php] is stopping ...
+2019-11-30 18:27:30 pid:29608 Workerman[start.php] stop success
+2019-11-30 18:27:41 pid:29610 Worker[29610] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT `a`.`id`,`b`.`nickName`,`b`.`avatarUrl`,* FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id`,`t_goods` WHERE goods_id = :goods_id AND id= :id ORDER BY `a`.`id` DESC SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` =' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT `a`.`id`...', Array)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(125): Workerman\MySQL\Connection->query()
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(61): Events::select_goods in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-11-30 18:27:41 pid:29608 worker[AuctionBusinessWorker:29610] exit with status 65280
+2019-11-30 18:30:15 pid:29608 Workerman[start.php] stopping ...
+2019-11-30 18:30:15 pid:29608 Workerman[start.php] has been stopped
+2019-11-30 18:30:17 pid:29761 Workerman[start.php] restart 
+2019-11-30 18:30:17 pid:29761 Workerman[start.php] is stopping ...
+2019-11-30 18:30:17 pid:29761 Workerman[start.php] stop success
+2019-11-30 18:30:26 pid:29762 Worker[29762] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT `a`.`id`,`b`.`nickName`,`b`.`avatarUrl`,* FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id`,`t_goods` WHERE goods_id= :goods_id AND id= :id ORDER BY `a`.`id` DESC SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` =' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT `a`.`id`...', Array)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(125): Workerman\MySQL\Connection->query()
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(61): Events::select_goods( in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-11-30 18:30:26 pid:29761 worker[AuctionBusinessWorker:29762] exit with status 65280
+2019-11-30 18:30:33 pid:29761 Workerman[start.php] stopping ...
+2019-11-30 18:30:33 pid:29761 Workerman[start.php] has been stopped
+2019-11-30 18:32:27 pid:29984 Workerman[start.php] restart 
+2019-11-30 18:32:27 pid:29984 Workerman[start.php] is stopping ...
+2019-11-30 18:32:27 pid:29984 Workerman[start.php] stop success
+2019-11-30 18:32:36 pid:29985 Worker[29985] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT `a`.`id`,`b`.`nickName`,`b`.`avatarUrl`,* FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id`,`t_goods` WHERE goods_id= :goods_id AND id= :id SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` =' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT `a`.`id`...', Array)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(125): Workerman\MySQL\Connection->query()
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(61): Events::select_goods('1')
+#3 /data/wwwroot/w in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-11-30 18:32:36 pid:29984 worker[AuctionBusinessWorker:29985] exit with status 65280
+2019-11-30 18:35:25 pid:29984 Workerman[start.php] stopping ...
+2019-11-30 18:35:25 pid:29984 Workerman[start.php] has been stopped
+2019-11-30 18:37:50 pid:30259 Workerman[start.php] restart 
+2019-11-30 18:37:50 pid:30259 Workerman[start.php] is stopping ...
+2019-11-30 18:37:50 pid:30259 Workerman[start.php] stop success
+2019-11-30 18:37:58 pid:30260 Worker[30260] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT
+	`a`.`*`,
+	`b`.`nickName`,
+	`b`.`avatarUrl` 
+FROM
+	`t_goods_offer` AS `a`
+	INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id`
+WHERE
+	goods_id = 1 SQLSTATE[42S22]: Column not found: 1054 Unknown column 'a.*' in 'field list' in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT\r\n\t`a`.`*...', NULL)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(151): Workerman\MySQL\Connection->query('SELECT\r\n\t`a`.`*...')
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(61): Events::select_goods('1')
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Select.php(239): Events::{closure}()
+#4 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Select.ph in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-11-30 18:37:58 pid:30259 worker[AuctionBusinessWorker:30260] exit with status 65280
+2019-11-30 18:40:49 pid:30259 Workerman[start.php] stopping ...
+2019-11-30 18:40:49 pid:30259 Workerman[start.php] has been stopped
+2019-11-30 18:40:50 pid:30426 Workerman[start.php] restart 
+2019-11-30 18:40:50 pid:30426 Workerman[start.php] is stopping ...
+2019-11-30 18:40:50 pid:30426 Workerman[start.php] stop success
+2019-11-30 18:41:08 pid:30426 Workerman[start.php] stopping ...
+2019-11-30 18:41:08 pid:30426 Workerman[start.php] has been stopped
+2019-11-30 18:42:14 pid:30516 Workerman[start.php] restart 
+2019-11-30 18:42:14 pid:30516 Workerman[start.php] is stopping ...
+2019-11-30 18:42:14 pid:30516 Workerman[start.php] stop success
+2019-11-30 18:42:22 pid:30517 Worker[30517] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT a.*,`b`.`nickName`,`b`.`avatarUrl`,* FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id`,`t_goods` WHERE goods_id= :goods_id AND id= :id SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` =' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT a.*,`b`....', Array)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(125): Workerman\MySQL\Connection->query()
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(61): Events::select_goods('1')
+#3 /data/wwwroot/www.66 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-11-30 18:42:22 pid:30516 worker[AuctionBusinessWorker:30517] exit with status 65280
+2019-11-30 18:43:24 pid:30516 Workerman[start.php] stopping ...
+2019-11-30 18:43:24 pid:30516 Workerman[start.php] has been stopped
+2019-11-30 18:43:25 pid:30588 Workerman[start.php] restart 
+2019-11-30 18:43:25 pid:30588 Workerman[start.php] is stopping ...
+2019-11-30 18:43:25 pid:30588 Workerman[start.php] stop success
+2019-11-30 18:43:33 pid:30589 Worker[30589] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT a.*,`b`.`nickName`,`b`.`avatarUrl`,* FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id`,`t_goods` WHERE goods_id= :goods_id AND id= :id SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` =' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT a.*,`b`....', Array)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(125): Workerman\MySQL\Connection->query()
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(61): Events::select_goods('1')
+#3 /data/wwwroot/www.66 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-11-30 18:43:33 pid:30588 worker[AuctionBusinessWorker:30589] exit with status 65280
+2019-11-30 18:44:57 pid:30588 Workerman[start.php] stopping ...
+2019-11-30 18:44:57 pid:30588 Workerman[start.php] has been stopped
+2019-11-30 18:44:57 pid:30675 Workerman[start.php] restart 
+2019-11-30 18:44:57 pid:30675 Workerman[start.php] is stopping ...
+2019-11-30 18:44:57 pid:30675 Workerman[start.php] stop success
+2019-11-30 18:45:05 pid:30676 Worker[30676] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT t_goods_offer.*,`t_manage_acc`.`nickName`,`t_manage_acc`.`avatarUrl`,* FROM `t_goods_offer` INNER JOIN `t_manage_acc` ON `t_goods_offer`.`acc_id` = `t_manage_acc`.`id`,`t_goods` WHERE `t_goods_offer`.`goods_id`= :goods_id AND id= :id SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* FROM `t_goods_offer` INNER JOIN `t_manage_acc` ON `t_goods_offer`.`acc_id` = `' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT t_goods_...', Array)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(125): Workerman\MySQL\Connection->query()
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Even in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-11-30 18:45:05 pid:30675 worker[AuctionBusinessWorker:30676] exit with status 65280
+2019-11-30 18:49:09 pid:30675 Workerman[start.php] stopping ...
+2019-11-30 18:49:09 pid:30675 Workerman[start.php] has been stopped
+2019-11-30 18:49:16 pid:30897 Workerman[start.php] restart 
+2019-11-30 18:49:16 pid:30897 Workerman[start.php] is stopping ...
+2019-11-30 18:49:16 pid:30897 Workerman[start.php] stop success
+2019-11-30 18:49:27 pid:30897 Workerman[start.php] stopping ...
+2019-11-30 18:49:27 pid:30897 Workerman[start.php] has been stopped
+2019-11-30 18:50:27 pid:30981 Workerman[start.php] restart 
+2019-11-30 18:50:27 pid:30981 Workerman[start.php] is stopping ...
+2019-11-30 18:50:27 pid:30981 Workerman[start.php] stop success
+2019-11-30 18:50:33 pid:30982 Worker[30982] process terminated with ERROR: E_ERROR "Uncaught Error: Call to a member function row() on array in /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php:125
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(61): Events::select_goods('1')
+#1 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Select.php(239): Events::{closure}()
+#2 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Select.php(282): Workerman\Events\Select->tick()
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(2382): Workerman\Events\Select->loop()
+#4 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#5 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1490): GatewayWorker\BusinessWorker->run()
+#6 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1320): Workerman\Wor in /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php on line 125"
+2019-11-30 18:50:33 pid:30981 worker[AuctionBusinessWorker:30982] exit with status 65280
+2019-11-30 18:50:38 pid:30981 Workerman[start.php] stopping ...
+2019-11-30 18:50:38 pid:30981 Workerman[start.php] has been stopped
+2019-11-30 18:50:58 pid:31021 Workerman[start.php] restart 
+2019-11-30 18:50:58 pid:31021 Workerman[start.php] is stopping ...
+2019-11-30 18:50:58 pid:31021 Workerman[start.php] stop success
+2019-11-30 18:51:10 pid:31021 Workerman[start.php] stopping ...
+2019-11-30 18:51:10 pid:31021 Workerman[start.php] has been stopped
+2019-11-30 18:52:18 pid:31107 Workerman[start.php] restart 
+2019-11-30 18:52:18 pid:31107 Workerman[start.php] is stopping ...
+2019-11-30 18:52:18 pid:31107 Workerman[start.php] stop success
+2019-11-30 18:54:15 pid:31107 Workerman[start.php] stopping ...
+2019-11-30 18:54:15 pid:31107 Workerman[start.php] has been stopped
+2019-11-30 18:54:16 pid:31234 Workerman[start.php] restart 
+2019-11-30 18:54:16 pid:31234 Workerman[start.php] is stopping ...
+2019-11-30 18:54:16 pid:31234 Workerman[start.php] stop success
+2019-11-30 18:58:39 pid:31234 Workerman[start.php] stopping ...
+2019-11-30 18:58:40 pid:31234 Workerman[start.php] has been stopped
+2019-11-30 18:58:40 pid:31460 Workerman[start.php] restart 
+2019-11-30 18:58:40 pid:31460 Workerman[start.php] is stopping ...
+2019-11-30 18:58:40 pid:31460 Workerman[start.php] stop success
+2019-11-30 19:00:08 pid:31460 Workerman[start.php] stopping ...
+2019-11-30 19:00:08 pid:31460 Workerman[start.php] has been stopped
+2019-11-30 19:00:09 pid:31553 Workerman[start.php] restart 
+2019-11-30 19:00:09 pid:31553 Workerman[start.php] is stopping ...
+2019-11-30 19:00:09 pid:31553 Workerman[start.php] stop success
+2019-11-30 19:00:52 pid:31553 Workerman[start.php] stopping ...
+2019-11-30 19:00:52 pid:31553 Workerman[start.php] has been stopped
+2019-11-30 19:00:53 pid:31601 Workerman[start.php] restart 
+2019-11-30 19:00:53 pid:31601 Workerman[start.php] is stopping ...
+2019-11-30 19:00:53 pid:31601 Workerman[start.php] stop success
+2019-11-30 19:01:14 pid:31601 Workerman[start.php] stopping ...
+2019-11-30 19:01:14 pid:31601 Workerman[start.php] has been stopped
+2019-11-30 19:01:42 pid:31665 Workerman[start.php] restart 
+2019-11-30 19:01:42 pid:31665 Workerman[start.php] is stopping ...
+2019-11-30 19:01:42 pid:31665 Workerman[start.php] stop success
+2019-11-30 19:02:36 pid:31665 Workerman[start.php] stopping ...
+2019-11-30 19:02:36 pid:31665 Workerman[start.php] has been stopped
+2019-11-30 19:02:37 pid:31723 Workerman[start.php] restart 
+2019-11-30 19:02:37 pid:31723 Workerman[start.php] is stopping ...
+2019-11-30 19:02:37 pid:31723 Workerman[start.php] stop success
+2019-11-30 19:07:07 pid:31723 Workerman[start.php] stopping ...
+2019-11-30 19:07:07 pid:31723 Workerman[start.php] has been stopped
+2019-11-30 19:12:57 pid:32245 Workerman[start.php] restart 
+2019-11-30 19:12:57 pid:32245 Workerman[start.php] is stopping ...
+2019-11-30 19:12:57 pid:32245 Workerman[start.php] stop success
+2019-11-30 19:17:56 pid:32245 Workerman[start.php] stopping ...
+2019-11-30 19:17:56 pid:32245 Workerman[start.php] has been stopped
+2019-11-30 20:05:48 pid:2523 Workerman[start.php] restart 
+2019-11-30 20:05:48 pid:2523 Workerman[start.php] is stopping ...
+2019-11-30 20:05:48 pid:2523 Workerman[start.php] stop success
+2019-11-30 20:14:59 pid:2523 Workerman[start.php] stopping ...
+2019-11-30 20:14:59 pid:2523 Workerman[start.php] has been stopped
+2019-11-30 20:15:00 pid:2989 Workerman[start.php] restart 
+2019-11-30 20:15:00 pid:2989 Workerman[start.php] is stopping ...
+2019-11-30 20:15:00 pid:2989 Workerman[start.php] stop success
+2019-11-30 20:15:43 pid:2989 Workerman[start.php] stopping ...
+2019-11-30 20:15:43 pid:2989 Workerman[start.php] has been stopped
+2019-11-30 20:15:44 pid:3038 Workerman[start.php] restart 
+2019-11-30 20:15:44 pid:3038 Workerman[start.php] is stopping ...
+2019-11-30 20:15:44 pid:3038 Workerman[start.php] stop success
+2019-11-30 20:16:28 pid:3038 Workerman[start.php] stopping ...
+2019-11-30 20:16:28 pid:3038 Workerman[start.php] has been stopped
+2019-11-30 20:18:48 pid:3199 Workerman[start.php] restart 
+2019-11-30 20:18:48 pid:3199 Workerman[start.php] is stopping ...
+2019-11-30 20:18:48 pid:3199 Workerman[start.php] stop success
+2019-11-30 20:21:05 pid:3199 Workerman[start.php] stopping ...
+2019-11-30 20:21:05 pid:3199 Workerman[start.php] has been stopped
+2019-11-30 20:26:49 pid:3609 Workerman[start.php] restart 
+2019-11-30 20:26:49 pid:3609 Workerman[start.php] is stopping ...
+2019-11-30 20:26:49 pid:3609 Workerman[start.php] stop success
+2019-11-30 20:29:54 pid:3610 Worker[3610] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:UPDATE `t_goods` SET `status` = :status WHERE id= SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('UPDATE `t_goods...', Array)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(149): Workerman\MySQL\Connection->query()
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(64): Events::select_goods(Array)
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Select.php(239): Events::{closure}()
+#4 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Select.php(282): Workerman in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-11-30 20:29:54 pid:3609 worker[AuctionBusinessWorker:3610] exit with status 65280
+2019-11-30 20:30:07 pid:3609 Workerman[start.php] stopping ...
+2019-11-30 20:30:07 pid:3609 Workerman[start.php] has been stopped
+2019-11-30 20:31:18 pid:3886 Workerman[start.php] restart 
+2019-11-30 20:31:18 pid:3886 Workerman[start.php] is stopping ...
+2019-11-30 20:31:18 pid:3886 Workerman[start.php] stop success
+2019-11-30 21:14:13 pid:3887 Worker[3887] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT a.*,b.nickName,b.avatarUrl FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id` WHERE goods_id =  ORDER BY a.id DESC SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY a.id DESC' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT a.*,b.ni...', NULL)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(151): Workerman\MySQL\Connection->query('SELECT a.*,b.ni...')
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(64): Events::select_goods(false)
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/S in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-11-30 21:14:13 pid:3886 worker[AuctionBusinessWorker:3887] exit with status 65280
+2019-11-30 21:16:26 pid:3886 Workerman[start.php] stopping ...
+2019-11-30 21:16:26 pid:3886 Workerman[start.php] has been stopped
+2019-11-30 21:16:28 pid:14241 Workerman[start.php] restart 
+2019-11-30 21:16:28 pid:14241 Workerman[start.php] is stopping ...
+2019-11-30 21:16:28 pid:14241 Workerman[start.php] stop success
+2019-11-30 21:17:50 pid:14241 Workerman[start.php] stopping ...
+2019-11-30 21:17:50 pid:14241 Workerman[start.php] has been stopped
+2019-11-30 21:17:51 pid:14854 Workerman[start.php] restart 
+2019-11-30 21:17:51 pid:14854 Workerman[start.php] is stopping ...
+2019-11-30 21:17:51 pid:14854 Workerman[start.php] stop success
+2019-11-30 22:31:27 pid:14854 Workerman[start.php] stopping ...
+2019-11-30 22:31:27 pid:14854 Workerman[start.php] has been stopped
+2019-11-30 22:31:28 pid:15544 Workerman[start.php] restart 
+2019-11-30 22:31:28 pid:15544 Workerman[start.php] is stopping ...
+2019-11-30 22:31:28 pid:15544 Workerman[start.php] stop success
+2019-11-30 22:35:07 pid:15544 Workerman[start.php] stopping ...
+2019-11-30 22:35:07 pid:15544 Workerman[start.php] has been stopped
+2019-11-30 22:35:09 pid:17197 Workerman[start.php] restart 
+2019-11-30 22:35:09 pid:17197 Workerman[start.php] is stopping ...
+2019-11-30 22:35:09 pid:17197 Workerman[start.php] stop success
+2019-11-30 22:39:37 pid:17197 Workerman[start.php] stopping ...
+2019-11-30 22:39:37 pid:17197 Workerman[start.php] has been stopped
+2019-11-30 22:39:38 pid:19163 Workerman[start.php] restart 
+2019-11-30 22:39:38 pid:19163 Workerman[start.php] is stopping ...
+2019-11-30 22:39:38 pid:19163 Workerman[start.php] stop success
+2019-11-30 22:45:58 pid:19163 Workerman[start.php] stopping ...
+2019-11-30 22:45:58 pid:19163 Workerman[start.php] has been stopped
+2019-11-30 22:45:59 pid:22067 Workerman[start.php] restart 
+2019-11-30 22:45:59 pid:22067 Workerman[start.php] is stopping ...
+2019-11-30 22:45:59 pid:22067 Workerman[start.php] stop success
+2019-11-30 23:01:01 pid:22067 Workerman[start.php] stopping ...
+2019-11-30 23:01:01 pid:22067 Workerman[start.php] has been stopped
+2019-11-30 23:01:02 pid:28859 Workerman[start.php] restart 
+2019-11-30 23:01:02 pid:28859 Workerman[start.php] is stopping ...
+2019-11-30 23:01:02 pid:28859 Workerman[start.php] stop success
+2019-11-30 23:03:02 pid:28859 Workerman[start.php] stopping ...
+2019-11-30 23:03:02 pid:28859 Workerman[start.php] has been stopped
+2019-11-30 23:03:03 pid:29776 Workerman[start.php] restart 
+2019-11-30 23:03:03 pid:29776 Workerman[start.php] is stopping ...
+2019-11-30 23:03:03 pid:29776 Workerman[start.php] stop success
+2019-11-30 23:05:42 pid:29776 Workerman[start.php] stopping ...
+2019-11-30 23:05:42 pid:29776 Workerman[start.php] has been stopped
+2019-11-30 23:05:43 pid:30915 Workerman[start.php] restart 
+2019-11-30 23:05:43 pid:30915 Workerman[start.php] is stopping ...
+2019-11-30 23:05:43 pid:30915 Workerman[start.php] stop success
+2019-11-30 23:06:57 pid:30915 Workerman[start.php] stopping ...
+2019-11-30 23:06:57 pid:30915 Workerman[start.php] has been stopped
+2019-11-30 23:06:58 pid:31528 Workerman[start.php] restart 
+2019-11-30 23:06:58 pid:31528 Workerman[start.php] is stopping ...
+2019-11-30 23:06:58 pid:31528 Workerman[start.php] stop success
+2019-11-30 23:07:39 pid:31528 Workerman[start.php] stopping ...
+2019-11-30 23:07:39 pid:31528 Workerman[start.php] has been stopped
+2019-11-30 23:07:40 pid:31841 Workerman[start.php] restart 
+2019-11-30 23:07:40 pid:31841 Workerman[start.php] is stopping ...
+2019-11-30 23:07:40 pid:31841 Workerman[start.php] stop success
+2019-11-30 23:09:42 pid:31841 Workerman[start.php] stopping ...
+2019-11-30 23:09:42 pid:31841 Workerman[start.php] has been stopped
+2019-11-30 23:09:44 pid:32756 Workerman[start.php] restart 
+2019-11-30 23:09:44 pid:32756 Workerman[start.php] is stopping ...
+2019-11-30 23:09:44 pid:32756 Workerman[start.php] stop success
+2019-11-30 23:12:18 pid:32756 Workerman[start.php] stopping ...
+2019-11-30 23:12:18 pid:32756 Workerman[start.php] has been stopped
+2019-11-30 23:12:19 pid:1578 Workerman[start.php] restart 
+2019-11-30 23:12:19 pid:1578 Workerman[start.php] is stopping ...
+2019-11-30 23:12:19 pid:1578 Workerman[start.php] stop success
+2019-11-30 23:14:18 pid:1578 Workerman[start.php] stopping ...
+2019-11-30 23:14:18 pid:1578 Workerman[start.php] has been stopped
+2019-11-30 23:14:19 pid:2522 Workerman[start.php] restart 
+2019-11-30 23:14:19 pid:2522 Workerman[start.php] is stopping ...
+2019-11-30 23:14:19 pid:2522 Workerman[start.php] stop success
+2019-11-30 23:14:27 pid:2524 Exception: You can't send(array) to client, you need to convert it to a string.  in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Protocols/Websocket.php:236
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Connection/TcpConnection.php(344): Workerman\Protocols\Websocket::encode(Array, Object(Workerman\Connection\TcpConnection))
+#1 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/Gateway.php(569): Workerman\Connection\TcpConnection->send(Array)
+#2 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Connection/TcpConnection.php(658): GatewayWorker\Gateway->onWorkerMessage(Object(Workerman\Connection\TcpConnection), Array)
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Select.php(294): Workerman\Connection\TcpConnection->baseRead(Resource id #47)
+#4 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(2382): Workerman\Events\Select->loop()
+#5 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/Gateway.php(276): Workerman\Worker->run()
+#6 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1490): GatewayWorker\Gateway->run()
+#7 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1320): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\Gateway))
+#8 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker::forkWorkersForLinux()
+#9 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::forkWorkers()
+#10 /data/wwwroot/www.669407.com/workerman-auction/start.php(37): Workerman\Worker::runAll()
+#11 {main}
+2019-11-30 23:14:27 pid:2524 Worker[2524] process terminated
+2019-11-30 23:14:27 pid:2522 worker[AuctionGateway:2524] exit with status 64000
+2019-11-30 23:15:26 pid:2522 Workerman[start.php] stopping ...
+2019-11-30 23:15:26 pid:2522 Workerman[start.php] has been stopped
+2019-11-30 23:15:27 pid:2986 Workerman[start.php] restart 
+2019-11-30 23:15:27 pid:2986 Workerman[start.php] is stopping ...
+2019-11-30 23:15:27 pid:2986 Workerman[start.php] stop success
+2019-11-30 23:20:41 pid:2986 Workerman[start.php] stopping ...
+2019-11-30 23:20:43 pid:2986 worker[AuctionBusinessWorker:2987] exit with status 9
+2019-11-30 23:20:43 pid:2986 Workerman[start.php] has been stopped
+2019-11-30 23:20:47 pid:5429 Workerman[start.php] restart 
+2019-11-30 23:20:47 pid:5429 Workerman[start.php] is stopping ...
+2019-11-30 23:20:47 pid:5429 Workerman[start.php] stop success
+2019-11-30 23:27:20 pid:5429 Workerman[start.php] stopping ...
+2019-11-30 23:27:22 pid:5429 worker[AuctionBusinessWorker:5430] exit with status 9
+2019-11-30 23:27:22 pid:5429 Workerman[start.php] has been stopped
+2019-11-30 23:28:04 pid:8636 Workerman[start.php] restart 
+2019-11-30 23:28:04 pid:8636 Workerman[start.php] is stopping ...
+2019-11-30 23:28:04 pid:8636 Workerman[start.php] stop success
+2019-11-30 23:53:59 pid:8636 Workerman[start.php] stopping ...
+2019-11-30 23:54:01 pid:8636 worker[AuctionBusinessWorker:8637] exit with status 9
+2019-11-30 23:54:01 pid:8636 Workerman[start.php] has been stopped
+2019-12-01 00:00:06 pid:22711 Workerman[start.php] restart 
+2019-12-01 00:00:06 pid:22711 Workerman[start.php] is stopping ...
+2019-12-01 00:00:06 pid:22711 Workerman[start.php] stop success
+2019-12-01 00:04:58 pid:22711 Workerman[start.php] stopping ...
+2019-12-01 00:05:00 pid:22711 Workerman[start.php] stopping ...
+2019-12-01 00:05:00 pid:22711 worker[AuctionBusinessWorker:22712] exit with status 9
+2019-12-01 00:05:00 pid:22711 Workerman[start.php] has been stopped
+2019-12-01 00:09:33 pid:26675 Workerman[start.php] restart 
+2019-12-01 00:09:33 pid:26675 Workerman[start.php] is stopping ...
+2019-12-01 00:09:33 pid:26675 Workerman[start.php] stop success
+2019-12-01 00:20:23 pid:26675 Workerman[start.php] stopping ...
+2019-12-01 00:20:24 pid:26675 Workerman[start.php] stopping ...
+2019-12-01 00:20:25 pid:26675 worker[AuctionBusinessWorker:26676] exit with status 9
+2019-12-01 00:20:25 pid:26675 Workerman[start.php] has been stopped
+2019-12-01 01:47:06 pid:32382 Workerman[start.php] restart 
+2019-12-01 01:47:06 pid:32382 Workerman[start.php] is stopping ...
+2019-12-01 01:47:06 pid:32382 Workerman[start.php] stop success
+2019-12-01 01:49:42 pid:32382 Workerman[start.php] stopping ...
+2019-12-01 01:49:44 pid:32382 Workerman[start.php] stopping ...
+2019-12-01 01:49:44 pid:32382 worker[AuctionBusinessWorker:32383] exit with status 9
+2019-12-01 01:49:45 pid:32382 Workerman[start.php] has been stopped
+2019-12-01 01:54:47 pid:3168 Workerman[start.php] restart 
+2019-12-01 01:54:47 pid:3168 Workerman[start.php] is stopping ...
+2019-12-01 01:54:47 pid:3168 Workerman[start.php] stop success
+2019-12-01 01:55:45 pid:3577 Workerman[start.php] status 
+2019-12-01 01:56:08 pid:3813 Workerman[start.php] status 
+2019-12-01 01:56:47 pid:4048 Workerman[start.php] status 
+2019-12-01 02:00:16 pid:5668 Workerman[start.php] status 
+2019-12-01 02:00:54 pid:5979 Workerman[start.php] status 
+2019-12-01 02:03:51 pid:3168 Workerman[start.php] stopping ...
+2019-12-01 02:03:51 pid:3168 Workerman[start.php] has been stopped
+2019-12-01 02:04:00 pid:7383 Workerman[start.php] restart 
+2019-12-01 02:04:00 pid:7383 Workerman[start.php] is stopping ...
+2019-12-01 02:04:00 pid:7383 Workerman[start.php] stop success
+2019-12-01 02:07:58 pid:7383 Workerman[start.php] stopping ...
+2019-12-01 02:07:59 pid:7383 Workerman[start.php] stopping ...
+2019-12-01 02:08:00 pid:7383 Workerman[start.php] stopping ...
+2019-12-01 02:08:00 pid:7383 worker[AuctionBusinessWorker:7384] exit with status 9
+2019-12-01 02:08:00 pid:7383 Workerman[start.php] has been stopped
+2019-12-01 02:08:15 pid:9345 Workerman[start.php] status 
+2019-12-01 02:08:15 pid:9345 Workerman[start.php] not run
+2019-12-01 02:15:34 pid:12096 Workerman[start.php] restart 
+2019-12-01 02:15:34 pid:12096 Workerman[start.php] is stopping ...
+2019-12-01 02:15:34 pid:12096 Workerman[start.php] stop success
+2019-12-01 02:23:00 pid:12096 Workerman[start.php] stopping ...
+2019-12-01 02:23:00 pid:12096 Workerman[start.php] has been stopped
+2019-12-01 02:23:10 pid:15507 Workerman[start.php] restart 
+2019-12-01 02:23:10 pid:15507 Workerman[start.php] is stopping ...
+2019-12-01 02:23:10 pid:15507 Workerman[start.php] stop success
+2019-12-01 02:38:59 pid:15507 Workerman[start.php] stopping ...
+2019-12-01 02:38:59 pid:15507 Workerman[start.php] has been stopped
+2019-12-01 02:39:03 pid:22694 Workerman[start.php] restart 
+2019-12-01 02:39:03 pid:22694 Workerman[start.php] is stopping ...
+2019-12-01 02:39:03 pid:22694 Workerman[start.php] stop success
+2019-12-01 20:24:36 pid:15342 Workerman[start.php] start in DEBUG mode
+2019-12-01 20:24:36 pid:15342 Workerman[start.php] already running
+2019-12-01 20:27:13 pid:22698 Worker[22698] process terminated with ERROR: E_ERROR "Uncaught Exception: can not connect to tcp://127.0.0.1:2700 Connection refused in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/Lib/Gateway.php:1143
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/Lib/Gateway.php(192): GatewayWorker\Lib\Gateway::sendAndRecv('127.0.0.1:2700', Array)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(66): GatewayWorker\Lib\Gateway::isOnline('7f0000010a8c000...')
+#2 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Select.php(239): Events::{closure}()
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Select.php(282): Workerman\Events\Select->tick()
+#4 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(2382): Workerman\Events\Select->loop()
+#5 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/Lib/Gateway.php on line 1143"
+2019-12-01 20:27:13 pid:22699 worker[22699] remains 2 connection(s)
+2019-12-01 20:27:13 pid:22696 worker[AuctionBusinessWorker:22698] exit with status 65280
+2019-12-01 20:27:17 pid:16572 Workerman[start.php] start in DEBUG mode
+2019-12-01 20:27:17 pid:16572 Workerman[start.php] already running
+2019-12-01 20:27:22 pid:16582 Workerman[start.php] start in DEBUG mode
+2019-12-01 20:27:22 pid:16582 Workerman[start.php] already running
+2019-12-01 20:27:38 pid:16761 Workerman[start.php] start in DEBUG mode
+2019-12-01 20:27:38 pid:16761 Workerman[start.php] already running
+2019-12-01 20:27:51 pid:16857 Workerman[start.php] restart 
+2019-12-01 20:27:51 pid:16857 Workerman[start.php] is stopping ...
+2019-12-01 20:27:51 pid:22696 Workerman[start.php] stopping ...
+2019-12-01 20:27:51 pid:22700 worker[22700] remains 1 connection(s)
+2019-12-01 20:27:51 pid:22700 worker[22700] remains 0 connection(s)
+2019-12-01 20:27:51 pid:22696 Workerman[start.php] has been stopped
+2019-12-01 20:27:51 pid:16857 Workerman[start.php] stop success
+2019-12-01 20:33:54 pid:16857 Workerman[start.php] stopping ...
+2019-12-01 20:33:54 pid:16857 Workerman[start.php] has been stopped
+2019-12-01 20:33:55 pid:19589 Workerman[start.php] restart 
+2019-12-01 20:33:55 pid:19589 Workerman[start.php] is stopping ...
+2019-12-01 20:33:55 pid:19589 Workerman[start.php] stop success
+2019-12-01 23:22:29 pid:28561 Workerman[start.php] start in DEBUG mode
+2019-12-02 11:27:09 pid:11638 Workerman[start.php] restart 
+2019-12-02 11:27:09 pid:11638 Workerman[start.php] is stopping ...
+2019-12-02 11:27:09 pid:11638 Workerman[start.php] stop success
+2019-12-02 11:27:45 pid:11638 Workerman[start.php] stopping ...
+2019-12-02 11:27:45 pid:11638 Workerman[start.php] has been stopped
+2019-12-02 11:28:36 pid:12191 Workerman[start.php] restart 
+2019-12-02 11:28:36 pid:12191 Workerman[start.php] is stopping ...
+2019-12-02 11:28:36 pid:12191 Workerman[start.php] stop success
+2019-12-02 11:45:07 pid:12191 Workerman[start.php] stopping ...
+2019-12-02 11:45:07 pid:12191 Workerman[start.php] has been stopped
+2019-12-02 11:45:08 pid:19698 Workerman[start.php] restart 
+2019-12-02 11:45:08 pid:19698 Workerman[start.php] is stopping ...
+2019-12-02 11:45:08 pid:19698 Workerman[start.php] stop success
+2019-12-02 11:46:17 pid:19698 Workerman[start.php] stopping ...
+2019-12-02 11:46:17 pid:19698 Workerman[start.php] has been stopped
+2019-12-02 11:46:18 pid:20229 Workerman[start.php] restart 
+2019-12-02 11:46:18 pid:20229 Workerman[start.php] is stopping ...
+2019-12-02 11:46:18 pid:20229 Workerman[start.php] stop success
+2019-12-02 11:47:21 pid:20229 Workerman[start.php] stopping ...
+2019-12-02 11:47:21 pid:20230 Worker[20230] process terminated with ERROR: E_ERROR "Uncaught Exception: can not connect to tcp://127.0.0.1:2700 Connection refused in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/Lib/Gateway.php:1143
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/Lib/Gateway.php(192): GatewayWorker\Lib\Gateway::sendAndRecv('127.0.0.1:2700', Array)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(66): GatewayWorker\Lib\Gateway::isOnline('7f0000010a8c000...')
+#2 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Select.php(239): Events::{closure}()
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Select.php(282): Workerman\Events\Select->tick()
+#4 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(2382): Workerman\Events\Select->loop()
+#5 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/Lib/Gateway.php on line 1143"
+2019-12-02 11:47:21 pid:20229 worker[AuctionBusinessWorker:20230] exit with status 65280
+2019-12-02 11:47:21 pid:20229 Workerman[start.php] has been stopped
+2019-12-02 11:47:22 pid:20693 Workerman[start.php] restart 
+2019-12-02 11:47:22 pid:20693 Workerman[start.php] is stopping ...
+2019-12-02 11:47:22 pid:20693 Workerman[start.php] stop success
+2019-12-02 14:26:41 pid:20693 Workerman[start.php] stopping ...
+2019-12-02 14:26:41 pid:20693 Workerman[start.php] has been stopped
+2019-12-02 14:26:42 pid:27409 Workerman[start.php] restart 
+2019-12-02 14:26:42 pid:27409 Workerman[start.php] is stopping ...
+2019-12-02 14:26:42 pid:27409 Workerman[start.php] stop success
+2019-12-02 15:06:49 pid:27410 Worker[27410] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT a.*,b.nickName,b.avatarUrl FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id` WHERE goods_id =  ORDER BY a.id DESC SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY a.id DESC' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT a.*,b.ni...', NULL)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(118): Workerman\MySQL\Connection->query('SELECT a.*,b.ni...')
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(61): Events::select_goods('')
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Sele in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-12-02 15:06:49 pid:27409 worker[AuctionBusinessWorker:27410] exit with status 65280
+2019-12-02 15:07:23 pid:27409 Workerman[start.php] stopping ...
+2019-12-02 15:07:23 pid:27409 Workerman[start.php] has been stopped
+2019-12-02 15:07:24 pid:13308 Workerman[start.php] restart 
+2019-12-02 15:07:24 pid:13308 Workerman[start.php] is stopping ...
+2019-12-02 15:07:24 pid:13308 Workerman[start.php] stop success
+2019-12-02 15:35:25 pid:13308 Workerman[start.php] stopping ...
+2019-12-02 15:35:25 pid:13308 Workerman[start.php] has been stopped
+2019-12-02 15:35:25 pid:25919 Workerman[start.php] restart 
+2019-12-02 15:35:25 pid:25919 Workerman[start.php] is stopping ...
+2019-12-02 15:35:25 pid:25919 Workerman[start.php] stop success
+2019-12-02 15:35:33 pid:25920 Worker[25920] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT a.*,b.nickName,b.avatarUrl FROM `t_goods` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id` WHERE id = 7 SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT a.*,b.ni...', NULL)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(92): Workerman\MySQL\Connection->query('SELECT a.*,b.ni...')
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(61): Events::select_goods('7')
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Select.php(239): Events::{closure}()
+#4 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Select.php(282): Workerman\Events\Selec in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-12-02 15:35:33 pid:25919 worker[AuctionBusinessWorker:25920] exit with status 65280
+2019-12-02 15:36:39 pid:25919 Workerman[start.php] stopping ...
+2019-12-02 15:36:39 pid:25919 Workerman[start.php] has been stopped
+2019-12-02 15:36:41 pid:26458 Workerman[start.php] restart 
+2019-12-02 15:36:41 pid:26458 Workerman[start.php] is stopping ...
+2019-12-02 15:36:41 pid:26458 Workerman[start.php] stop success
+2019-12-02 15:37:04 pid:26458 Workerman[start.php] stopping ...
+2019-12-02 15:37:04 pid:26458 Workerman[start.php] has been stopped
+2019-12-02 15:39:06 pid:27452 Workerman[start.php] restart 
+2019-12-02 15:39:06 pid:27452 Workerman[start.php] is stopping ...
+2019-12-02 15:39:06 pid:27452 Workerman[start.php] stop success
+2019-12-02 15:39:22 pid:27452 Workerman[start.php] stopping ...
+2019-12-02 15:39:22 pid:27453 Worker[27453] process terminated with ERROR: E_ERROR "Uncaught Exception: can not connect to tcp://127.0.0.1:2700 Connection refused in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/Lib/Gateway.php:1143
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/Lib/Gateway.php(192): GatewayWorker\Lib\Gateway::sendAndRecv('127.0.0.1:2700', Array)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(67): GatewayWorker\Lib\Gateway::isOnline('7f0000010a8c000...')
+#2 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Select.php(239): Events::{closure}()
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Select.php(282): Workerman\Events\Select->tick()
+#4 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(2382): Workerman\Events\Select->loop()
+#5 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/Lib/Gateway.php on line 1143"
+2019-12-02 15:39:22 pid:27452 worker[AuctionBusinessWorker:27453] exit with status 65280
+2019-12-02 15:39:22 pid:27452 Workerman[start.php] has been stopped
+2019-12-02 15:42:27 pid:28757 Workerman[start.php] restart 
+2019-12-02 15:42:27 pid:28757 Workerman[start.php] is stopping ...
+2019-12-02 15:42:27 pid:28757 Workerman[start.php] stop success
+2019-12-02 15:42:33 pid:28758 Worker[28758] process terminated with ERROR: E_ERROR "Uncaught Error: Call to a member function row() on array in /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php:92
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(61): Events::select_goods('7')
+#1 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Select.php(239): Events::{closure}()
+#2 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Select.php(282): Workerman\Events\Select->tick()
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(2382): Workerman\Events\Select->loop()
+#4 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#5 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1490): GatewayWorker\BusinessWorker->run()
+#6 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1320): Workerman\Work in /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php on line 92"
+2019-12-02 15:42:33 pid:28757 worker[AuctionBusinessWorker:28758] exit with status 65280
+2019-12-02 15:42:38 pid:28757 Workerman[start.php] stopping ...
+2019-12-02 15:42:38 pid:28757 Workerman[start.php] has been stopped
+2019-12-02 15:43:51 pid:29296 Workerman[start.php] restart 
+2019-12-02 15:43:51 pid:29296 Workerman[start.php] is stopping ...
+2019-12-02 15:43:51 pid:29296 Workerman[start.php] stop success
+2019-12-02 15:43:59 pid:29296 Workerman[start.php] stopping ...
+2019-12-02 15:43:59 pid:29296 Workerman[start.php] has been stopped
+2019-12-02 15:47:17 pid:30654 Workerman[start.php] restart 
+2019-12-02 15:47:17 pid:30654 Workerman[start.php] is stopping ...
+2019-12-02 15:47:17 pid:30654 Workerman[start.php] stop success
+2019-12-02 15:58:10 pid:30654 Workerman[start.php] stopping ...
+2019-12-02 15:58:10 pid:30654 Workerman[start.php] has been stopped
+2019-12-02 15:58:11 pid:3117 Workerman[start.php] restart 
+2019-12-02 15:58:11 pid:3117 Workerman[start.php] is stopping ...
+2019-12-02 15:58:11 pid:3117 Workerman[start.php] stop success
+2019-12-02 17:48:21 pid:3117 Workerman[start.php] stopping ...
+2019-12-02 17:48:21 pid:3117 Workerman[start.php] has been stopped
+2019-12-02 17:49:19 pid:20578 Workerman[start.php] restart 
+2019-12-02 17:49:19 pid:20578 Workerman[start.php] is stopping ...
+2019-12-02 17:49:19 pid:20578 Workerman[start.php] stop success
+2019-12-02 17:49:25 pid:20579 Worker[20579] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT a.*,b.nickName,b.avatarUrl FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id` WHERE goods_id = function (goods_id) {
+          return 7;
+        },function (acc_id) {
+          return 1;
+        } ORDER BY a.id DESC SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(goods_id) {
+          return 7;
+        },function (acc_id) {
+          return ' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT a.*,b.ni...', NULL)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(122): Workerman\MySQL\Connection->query('SELECT a.*,b.ni...')
+#2 /data/wwwroot/www.669407.com/worke in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-12-02 17:49:25 pid:20578 worker[AuctionBusinessWorker:20579] exit with status 65280
+2019-12-02 17:49:27 pid:20578 Workerman[start.php] stopping ...
+2019-12-02 17:49:27 pid:20578 Workerman[start.php] has been stopped
+2019-12-02 17:51:25 pid:21440 Workerman[start.php] restart 
+2019-12-02 17:51:25 pid:21440 Workerman[start.php] is stopping ...
+2019-12-02 17:51:25 pid:21440 Workerman[start.php] stop success
+2019-12-02 17:51:30 pid:21441 Worker[21441] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT a.*,b.nickName,b.avatarUrl FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id` WHERE goods_id =  ORDER BY a.id DESC SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY a.id DESC' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT a.*,b.ni...', NULL)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(124): Workerman\MySQL\Connection->query('SELECT a.*,b.ni...')
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(63): Events::select_goods(NULL)
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Se in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-12-02 17:51:30 pid:21440 worker[AuctionBusinessWorker:21441] exit with status 65280
+2019-12-02 17:51:31 pid:21440 Workerman[start.php] stopping ...
+2019-12-02 17:51:31 pid:21440 Workerman[start.php] has been stopped
+2019-12-02 17:53:23 pid:22157 Workerman[start.php] restart 
+2019-12-02 17:53:23 pid:22157 Workerman[start.php] is stopping ...
+2019-12-02 17:53:23 pid:22157 Workerman[start.php] stop success
+2019-12-02 17:53:29 pid:22158 Worker[22158] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT a.*,b.nickName,b.avatarUrl FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id` WHERE goods_id =  ORDER BY a.id DESC SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY a.id DESC' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT a.*,b.ni...', NULL)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(124): Workerman\MySQL\Connection->query('SELECT a.*,b.ni...')
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(63): Events::select_goods(NULL)
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Se in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-12-02 17:53:29 pid:22157 worker[AuctionBusinessWorker:22158] exit with status 65280
+2019-12-02 17:53:29 pid:22157 Workerman[start.php] stopping ...
+2019-12-02 17:53:29 pid:22157 Workerman[start.php] has been stopped
+2019-12-02 17:53:48 pid:22381 Workerman[start.php] restart 
+2019-12-02 17:53:48 pid:22381 Workerman[start.php] is stopping ...
+2019-12-02 17:53:48 pid:22381 Workerman[start.php] stop success
+2019-12-02 17:53:54 pid:22382 Worker[22382] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT a.*,b.nickName,b.avatarUrl FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id` WHERE goods_id =  ORDER BY a.id DESC SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY a.id DESC' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT a.*,b.ni...', NULL)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(124): Workerman\MySQL\Connection->query('SELECT a.*,b.ni...')
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(63): Events::select_goods(NULL)
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Se in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-12-02 17:53:54 pid:22381 worker[AuctionBusinessWorker:22382] exit with status 65280
+2019-12-02 17:53:56 pid:22381 Workerman[start.php] stopping ...
+2019-12-02 17:53:56 pid:22381 Workerman[start.php] has been stopped
+2019-12-02 17:54:39 pid:22722 Workerman[start.php] restart 
+2019-12-02 17:54:39 pid:22722 Workerman[start.php] is stopping ...
+2019-12-02 17:54:39 pid:22722 Workerman[start.php] stop success
+2019-12-02 17:54:45 pid:22723 Worker[22723] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT a.*,b.nickName,b.avatarUrl FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id` WHERE goods_id =  ORDER BY a.id DESC SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY a.id DESC' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT a.*,b.ni...', NULL)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(124): Workerman\MySQL\Connection->query('SELECT a.*,b.ni...')
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(63): Events::select_goods(NULL)
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Se in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-12-02 17:54:45 pid:22722 worker[AuctionBusinessWorker:22723] exit with status 65280
+2019-12-02 17:54:48 pid:22722 Workerman[start.php] stopping ...
+2019-12-02 17:54:48 pid:22722 Workerman[start.php] has been stopped
+2019-12-02 18:03:45 pid:26183 Workerman[start.php] restart 
+2019-12-02 18:03:45 pid:26183 Workerman[start.php] is stopping ...
+2019-12-02 18:03:45 pid:26183 Workerman[start.php] stop success
+2019-12-02 18:03:50 pid:26184 Worker[26184] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT a.*,b.nickName,b.avatarUrl FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id` WHERE goods_id =  ORDER BY a.id DESC SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY a.id DESC' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT a.*,b.ni...', NULL)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(124): Workerman\MySQL\Connection->query('SELECT a.*,b.ni...')
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(63): Events::select_goods(NULL)
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Se in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-12-02 18:03:50 pid:26183 worker[AuctionBusinessWorker:26184] exit with status 65280
+2019-12-02 18:03:50 pid:26183 Workerman[start.php] stopping ...
+2019-12-02 18:03:50 pid:26183 Workerman[start.php] has been stopped
+2019-12-02 18:04:41 pid:26596 Workerman[start.php] restart 
+2019-12-02 18:04:41 pid:26596 Workerman[start.php] is stopping ...
+2019-12-02 18:04:41 pid:26596 Workerman[start.php] stop success
+2019-12-02 18:04:45 pid:26596 Workerman[start.php] stopping ...
+2019-12-02 18:04:46 pid:26597 Worker[26597] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT a.*,b.nickName,b.avatarUrl FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id` WHERE goods_id =  ORDER BY a.id DESC SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY a.id DESC' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT a.*,b.ni...', NULL)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(124): Workerman\MySQL\Connection->query('SELECT a.*,b.ni...')
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(63): Events::select_goods(NULL)
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Se in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-12-02 18:04:46 pid:26596 worker[AuctionBusinessWorker:26597] exit with status 65280
+2019-12-02 18:04:46 pid:26596 Workerman[start.php] has been stopped
+2019-12-02 18:11:31 pid:29151 Workerman[start.php] restart 
+2019-12-02 18:11:31 pid:29151 Workerman[start.php] is stopping ...
+2019-12-02 18:11:31 pid:29151 Workerman[start.php] stop success
+2019-12-02 18:11:37 pid:29152 Worker[29152] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT a.*,b.nickName,b.avatarUrl FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id` WHERE goods_id =  ORDER BY a.id DESC SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY a.id DESC' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT a.*,b.ni...', NULL)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(124): Workerman\MySQL\Connection->query('SELECT a.*,b.ni...')
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(63): Events::select_goods(NULL)
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Se in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-12-02 18:11:37 pid:29151 worker[AuctionBusinessWorker:29152] exit with status 65280
+2019-12-02 18:11:37 pid:29151 Workerman[start.php] stopping ...
+2019-12-02 18:11:37 pid:29151 Workerman[start.php] has been stopped
+2019-12-02 18:13:04 pid:29754 Workerman[start.php] restart 
+2019-12-02 18:13:04 pid:29754 Workerman[start.php] is stopping ...
+2019-12-02 18:13:04 pid:29754 Workerman[start.php] stop success
+2019-12-02 18:13:09 pid:29754 Workerman[start.php] stopping ...
+2019-12-02 18:13:09 pid:29755 Worker[29755] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT a.*,b.nickName,b.avatarUrl FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id` WHERE goods_id =  ORDER BY a.id DESC SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY a.id DESC' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT a.*,b.ni...', NULL)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(124): Workerman\MySQL\Connection->query('SELECT a.*,b.ni...')
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(63): Events::select_goods(NULL)
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Se in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-12-02 18:13:09 pid:29754 worker[AuctionBusinessWorker:29755] exit with status 65280
+2019-12-02 18:13:09 pid:29754 Workerman[start.php] has been stopped
+2019-12-02 18:14:53 pid:30472 Workerman[start.php] restart 
+2019-12-02 18:14:53 pid:30472 Workerman[start.php] is stopping ...
+2019-12-02 18:14:53 pid:30472 Workerman[start.php] stop success
+2019-12-02 18:14:58 pid:30472 Workerman[start.php] stopping ...
+2019-12-02 18:14:58 pid:30472 Workerman[start.php] has been stopped
+2019-12-02 18:18:43 pid:31957 Workerman[start.php] restart 
+2019-12-02 18:18:43 pid:31957 Workerman[start.php] is stopping ...
+2019-12-02 18:18:43 pid:31957 Workerman[start.php] stop success
+2019-12-02 18:18:50 pid:31958 Worker[31958] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT a.*,b.nickName,b.avatarUrl FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id` WHERE goods_id =  ORDER BY a.id DESC SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY a.id DESC' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT a.*,b.ni...', NULL)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(124): Workerman\MySQL\Connection->query('SELECT a.*,b.ni...')
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(63): Events::select_goods(NULL)
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Se in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-12-02 18:18:50 pid:31957 worker[AuctionBusinessWorker:31958] exit with status 65280
+2019-12-02 18:18:50 pid:31957 Workerman[start.php] stopping ...
+2019-12-02 18:18:50 pid:31957 Workerman[start.php] has been stopped
+2019-12-02 18:19:13 pid:32181 Workerman[start.php] restart 
+2019-12-02 18:19:13 pid:32181 Workerman[start.php] is stopping ...
+2019-12-02 18:19:13 pid:32181 Workerman[start.php] stop success
+2019-12-02 18:19:20 pid:32182 Worker[32182] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT a.*,b.nickName,b.avatarUrl FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id` WHERE goods_id =  ORDER BY a.id DESC SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY a.id DESC' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT a.*,b.ni...', NULL)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(124): Workerman\MySQL\Connection->query('SELECT a.*,b.ni...')
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(63): Events::select_goods(NULL)
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Se in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-12-02 18:19:20 pid:32181 worker[AuctionBusinessWorker:32182] exit with status 65280
+2019-12-02 18:19:21 pid:32181 Workerman[start.php] stopping ...
+2019-12-02 18:19:21 pid:32181 Workerman[start.php] has been stopped
+2019-12-02 18:20:01 pid:32539 Workerman[start.php] restart 
+2019-12-02 18:20:01 pid:32539 Workerman[start.php] is stopping ...
+2019-12-02 18:20:01 pid:32539 Workerman[start.php] stop success
+2019-12-02 18:20:07 pid:32540 Error: Cannot use object of type stdClass as array in /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php:61
+Stack trace:
+#0 [internal function]: Events::onMessage('7f0000010a8c000...', Object(stdClass))
+#1 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(403): call_user_func('Events::onMessa...', '7f0000010a8c000...', '{"goods_id":7,"...')
+#2 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Connection/TcpConnection.php(658): GatewayWorker\BusinessWorker->onGatewayMessage(Object(Workerman\Connection\AsyncTcpConnection), Array)
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Select.php(294): Workerman\Connection\TcpConnection->baseRead(Resource id #46)
+#4 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(2382): Workerman\Events\Select->loop()
+#5 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#6 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1490): GatewayWorker\BusinessWorker->run()
+#7 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1320): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#8 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker::forkWorkersForLinux()
+#9 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::forkWorkers()
+#10 /data/wwwroot/www.669407.com/workerman-auction/start.php(37): Workerman\Worker::runAll()
+#11 {main}
+2019-12-02 18:20:07 pid:32540 Worker[32540] process terminated
+2019-12-02 18:20:07 pid:32539 worker[AuctionBusinessWorker:32540] exit with status 64000
+2019-12-02 18:20:10 pid:32539 Workerman[start.php] stopping ...
+2019-12-02 18:20:10 pid:32539 Workerman[start.php] has been stopped
+2019-12-02 18:23:02 pid:1308 Workerman[start.php] restart 
+2019-12-02 18:23:02 pid:1308 Workerman[start.php] is stopping ...
+2019-12-02 18:23:02 pid:1308 Workerman[start.php] stop success
+2019-12-02 18:23:08 pid:1308 Workerman[start.php] stopping ...
+2019-12-02 18:23:08 pid:1309 Worker[1309] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT a.*,b.nickName,b.avatarUrl FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id` WHERE goods_id =  ORDER BY a.id DESC SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY a.id DESC' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT a.*,b.ni...', NULL)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(127): Workerman\MySQL\Connection->query('SELECT a.*,b.ni...')
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(66): Events::select_goods(NULL)
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Se in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-12-02 18:23:08 pid:1308 worker[AuctionBusinessWorker:1309] exit with status 65280
+2019-12-02 18:23:08 pid:1308 Workerman[start.php] has been stopped
+2019-12-02 18:24:19 pid:1800 Workerman[start.php] restart 
+2019-12-02 18:24:19 pid:1800 Workerman[start.php] is stopping ...
+2019-12-02 18:24:19 pid:1800 Workerman[start.php] stop success
+2019-12-02 18:24:19 pid:1801 ParseError: syntax error, unexpected '[', expecting ',' or ')' in /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php:65
+Stack trace:
+#0 [internal function]: Workerman\Autoloader::loadByNamespace('Events')
+#1 [internal function]: spl_autoload_call('Events')
+#2 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(222): is_callable('Events::onWorke...')
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(2367): GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#4 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#5 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1490): GatewayWorker\BusinessWorker->run()
+#6 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1320): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#7 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker::forkWorkersForLinux()
+#8 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(509): Workerman\Worker::forkWorkers()
+#9 /data/wwwroot/www.669407.com/workerman-auction/start.php(37): Workerman\Worker::runAll()
+#10 {main}
+2019-12-02 18:24:20 pid:1801 Worker[1801] process terminated
+2019-12-02 18:24:20 pid:1800 worker[AuctionBusinessWorker:1801] exit with status 64000
+2019-12-02 18:24:20 pid:1886 ParseError: syntax error, unexpected '[', expecting ',' or ')' in /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php:65
+Stack trace:
+#0 [internal function]: Workerman\Autoloader::loadByNamespace('Events')
+#1 [internal function]: spl_autoload_call('Events')
+#2 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(222): is_callable('Events::onWorke...')
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(2367): GatewayWorker\BusinessWorker->onWorkerStart(Object(GatewayWorker\BusinessWorker))
+#4 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker->run()
+#5 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1490): GatewayWorker\BusinessWorker->run()
+#6 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1320): Workerman\Worker::forkOneWorkerForLinux(Object(GatewayWorker\BusinessWorker))
+#7 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1294): Workerman\Worker::forkWorkersForLinux()
+#8 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1624): Workerman\Worker::forkWorkers()
+#9 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(1573): Workerman\Worker::monitorWorkersForLinux()
+#10 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(511): Workerman\Worker::monitorWorkers()
+#11 /data/wwwroot/www.669407.com/workerman-auction/start.php(37): Workerman\Worker::runAll()
+#12 {main}
+2019-12-02 18:24:21 pid:1800 Workerman[start.php] stopping ...
+2019-12-02 18:24:21 pid:1886 Worker[1886] process terminated
+2019-12-02 18:24:21 pid:1800 worker[AuctionBusinessWorker:1886] exit with status 64000
+2019-12-02 18:24:21 pid:1800 Workerman[start.php] has been stopped
+2019-12-02 18:25:19 pid:2227 Workerman[start.php] restart 
+2019-12-02 18:25:19 pid:2227 Workerman[start.php] is stopping ...
+2019-12-02 18:25:19 pid:2227 Workerman[start.php] stop success
+2019-12-02 18:30:59 pid:2227 Workerman[start.php] stopping ...
+2019-12-02 18:30:59 pid:2227 Workerman[start.php] has been stopped
+2019-12-02 18:31:00 pid:4799 Workerman[start.php] restart 
+2019-12-02 18:31:00 pid:4799 Workerman[start.php] is stopping ...
+2019-12-02 18:31:00 pid:4799 Workerman[start.php] stop success
+2019-12-03 08:44:26 pid:3521 Workerman[start.php] restart 
+2019-12-03 08:44:26 pid:3521 Workerman[start.php] is stopping ...
+2019-12-03 08:44:26 pid:3521 Workerman[start.php] stop success
+2019-12-03 08:46:28 pid:3522 Worker[3522] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT a.*,b.nickName,b.avatarUrl FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id` WHERE goods_id =  ORDER BY a.id DESC SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY a.id DESC' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT a.*,b.ni...', NULL)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(135): Workerman\MySQL\Connection->query('SELECT a.*,b.ni...')
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(67): Events::select_goods(NULL, '1')
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Even in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-12-03 08:46:28 pid:3521 worker[AuctionBusinessWorker:3522] exit with status 65280
+2019-12-03 08:46:47 pid:3521 Workerman[start.php] stopping ...
+2019-12-03 08:46:47 pid:3521 Workerman[start.php] has been stopped
+2019-12-03 08:48:17 pid:5163 Workerman[start.php] restart 
+2019-12-03 08:48:17 pid:5163 Workerman[start.php] is stopping ...
+2019-12-03 08:48:17 pid:5163 Workerman[start.php] stop success
+2019-12-03 10:38:44 pid:22296 Workerman[start.php] restart 
+2019-12-03 10:38:44 pid:22296 Workerman[start.php] is stopping ...
+2019-12-03 10:38:44 pid:22296 Workerman[start.php] stop success
+2019-12-03 11:21:44 pid:22296 Workerman[start.php] stopping ...
+2019-12-03 11:21:44 pid:22296 Workerman[start.php] has been stopped
+2019-12-03 11:21:45 pid:9204 Workerman[start.php] restart 
+2019-12-03 11:21:45 pid:9204 Workerman[start.php] is stopping ...
+2019-12-03 11:21:45 pid:9204 Workerman[start.php] stop success
+2019-12-03 11:47:22 pid:9204 Workerman[start.php] stopping ...
+2019-12-03 11:47:22 pid:9204 Workerman[start.php] has been stopped
+2019-12-03 11:47:23 pid:20790 Workerman[start.php] restart 
+2019-12-03 11:47:23 pid:20790 Workerman[start.php] is stopping ...
+2019-12-03 11:47:23 pid:20790 Workerman[start.php] stop success
+2019-12-03 12:13:22 pid:20790 Workerman[start.php] stopping ...
+2019-12-03 12:13:23 pid:20790 Workerman[start.php] has been stopped
+2019-12-03 12:13:23 pid:32411 Workerman[start.php] restart 
+2019-12-03 12:13:23 pid:32411 Workerman[start.php] is stopping ...
+2019-12-03 12:13:23 pid:32411 Workerman[start.php] stop success
+2019-12-03 13:37:25 pid:32411 Workerman[start.php] stopping ...
+2019-12-03 13:37:25 pid:32411 Workerman[start.php] has been stopped
+2019-12-03 13:37:26 pid:5408 Workerman[start.php] restart 
+2019-12-03 13:37:26 pid:5408 Workerman[start.php] is stopping ...
+2019-12-03 13:37:26 pid:5408 Workerman[start.php] stop success
+2019-12-03 13:43:05 pid:5408 Workerman[start.php] stopping ...
+2019-12-03 13:43:05 pid:5408 Workerman[start.php] has been stopped
+2019-12-03 13:43:06 pid:7907 Workerman[start.php] restart 
+2019-12-03 13:43:06 pid:7907 Workerman[start.php] is stopping ...
+2019-12-03 13:43:06 pid:7907 Workerman[start.php] stop success
+2019-12-03 13:52:24 pid:7907 Workerman[start.php] stopping ...
+2019-12-03 13:52:24 pid:7908 Worker[7908] process terminated with ERROR: E_ERROR "Uncaught Exception: can not connect to tcp://127.0.0.1:2700 Connection refused in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/Lib/Gateway.php:1143
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/Lib/Gateway.php(192): GatewayWorker\Lib\Gateway::sendAndRecv('127.0.0.1:2700', Array)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(73): GatewayWorker\Lib\Gateway::isOnline('7f0000010a8c000...')
+#2 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Select.php(239): Events::{closure}()
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Select.php(282): Workerman\Events\Select->tick()
+#4 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(2382): Workerman\Events\Select->loop()
+#5 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/Lib/Gateway.php on line 1143"
+2019-12-03 13:52:24 pid:7907 worker[AuctionBusinessWorker:7908] exit with status 65280
+2019-12-03 13:52:24 pid:7907 Workerman[start.php] has been stopped
+2019-12-03 13:52:27 pid:12148 Workerman[start.php] restart 
+2019-12-03 13:52:27 pid:12148 Workerman[start.php] is stopping ...
+2019-12-03 13:52:27 pid:12148 Workerman[start.php] stop success
+2019-12-03 13:59:11 pid:12148 Workerman[start.php] stopping ...
+2019-12-03 13:59:11 pid:12149 Worker[12149] process terminated with ERROR: E_ERROR "Uncaught Exception: can not connect to tcp://127.0.0.1:2700 Connection refused in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/Lib/Gateway.php:1143
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/Lib/Gateway.php(192): GatewayWorker\Lib\Gateway::sendAndRecv('127.0.0.1:2700', Array)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(73): GatewayWorker\Lib\Gateway::isOnline('7f0000010a8c000...')
+#2 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Select.php(239): Events::{closure}()
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Select.php(282): Workerman\Events\Select->tick()
+#4 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(2382): Workerman\Events\Select->loop()
+#5 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/Lib/Gateway.php on line 1143"
+2019-12-03 13:59:11 pid:12148 worker[AuctionBusinessWorker:12149] exit with status 65280
+2019-12-03 13:59:11 pid:12148 Workerman[start.php] has been stopped
+2019-12-03 14:00:02 pid:15490 Workerman[start.php] restart 
+2019-12-03 14:00:02 pid:15490 Workerman[start.php] is stopping ...
+2019-12-03 14:00:02 pid:15490 Workerman[start.php] stop success
+2019-12-03 15:03:32 pid:15490 Workerman[start.php] stopping ...
+2019-12-03 15:03:32 pid:15491 Worker[15491] process terminated with ERROR: E_ERROR "Uncaught Exception: can not connect to tcp://127.0.0.1:2700 Connection refused in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/Lib/Gateway.php:1143
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/Lib/Gateway.php(192): GatewayWorker\Lib\Gateway::sendAndRecv('127.0.0.1:2700', Array)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(73): GatewayWorker\Lib\Gateway::isOnline('7f0000010a8c000...')
+#2 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Select.php(239): Events::{closure}()
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Events/Select.php(282): Workerman\Events\Select->tick()
+#4 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Worker.php(2382): Workerman\Events\Select->loop()
+#5 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/BusinessWorker.php(197): Workerman\Worker in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/gateway-worker/src/Lib/Gateway.php on line 1143"
+2019-12-03 15:03:32 pid:15490 worker[AuctionBusinessWorker:15491] exit with status 65280
+2019-12-03 15:03:32 pid:15490 Workerman[start.php] has been stopped
+2019-12-03 15:06:11 pid:12674 Workerman[start.php] restart 
+2019-12-03 15:06:11 pid:12674 Workerman[start.php] is stopping ...
+2019-12-03 15:06:11 pid:12674 Workerman[start.php] stop success
+2019-12-03 15:07:17 pid:12674 Workerman[start.php] stopping ...
+2019-12-03 15:07:17 pid:12674 Workerman[start.php] has been stopped
+2019-12-03 15:07:22 pid:13212 Workerman[start.php] restart 
+2019-12-03 15:07:22 pid:13212 Workerman[start.php] is stopping ...
+2019-12-03 15:07:22 pid:13212 Workerman[start.php] stop success
+2019-12-03 18:02:16 pid:25528 Workerman[start.php] start in DAEMON mode
+2019-12-04 15:24:43 pid:25532 Worker[25532] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT a.*,b.nickName,b.avatarUrl FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id` WHERE goods_id =  ORDER BY a.id DESC SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY a.id DESC' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT a.*,b.ni...', NULL)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(138): Workerman\MySQL\Connection->query('SELECT a.*,b.ni...')
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(67): Events::select_goods(NULL, NULL)
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Eve in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-12-04 15:24:43 pid:25530 worker[AuctionBusinessWorker:25532] exit with status 65280
+2019-12-04 15:24:53 pid:18054 Worker[18054] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT a.*,b.nickName,b.avatarUrl FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id` WHERE goods_id =  ORDER BY a.id DESC SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY a.id DESC' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT a.*,b.ni...', NULL)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(138): Workerman\MySQL\Connection->query('SELECT a.*,b.ni...')
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(67): Events::select_goods(NULL, NULL)
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Eve in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-12-04 15:24:53 pid:25530 worker[AuctionBusinessWorker:18054] exit with status 65280
+2019-12-04 15:25:02 pid:18130 Worker[18130] process terminated with ERROR: E_ERROR "Uncaught PDOException: SQL:SELECT a.*,b.nickName,b.avatarUrl FROM `t_goods_offer` AS `a` INNER JOIN `t_manage_acc` AS `b` ON `a`.`acc_id` = `b`.`id` WHERE goods_id =  ORDER BY a.id DESC SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY a.id DESC' at line 1 in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php:1770
+Stack trace:
+#0 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php(1828): Workerman\MySQL\Connection->execute('SELECT a.*,b.ni...', NULL)
+#1 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(138): Workerman\MySQL\Connection->query('SELECT a.*,b.ni...')
+#2 /data/wwwroot/www.669407.com/workerman-auction/Applications/Auction/Events.php(67): Events::select_goods(NULL, NULL)
+#3 /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/workerman/Eve in /data/wwwroot/www.669407.com/workerman-auction/vendor/workerman/mysql/src/Connection.php on line 1770"
+2019-12-04 15:25:02 pid:25530 worker[AuctionBusinessWorker:18130] exit with status 65280

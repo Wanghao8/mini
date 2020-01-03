@@ -1,0 +1,42 @@
+<view class="flexr header">
+  <view class="img-wrapper">
+    <image class="avatar" mode="aspectFill" src="https://y.gtimg.cn/music/photo_new/T002R300x300M000000J5X3Y1Bnm5s.jpg?max_age=2592000"></image>
+  </view>
+  <view class="flexcc0">
+    <view class="flexrbc nameshare">
+      <view class="nickname fz15">知行合一</view>
+      <button open-type="share" class="share fz14 subcol">分享</button>
+    </view>
+    <view class="flexr margintop-10">
+      <view class="flexr">
+        <view class="fz12 thirdcol">上架拍品</view>
+        <view class="fz12 marginleft-5">0</view>
+      </view>
+      <view class="flexr">
+        <view class="fz12 thirdcol focus">关注者</view>
+        <view class="fz12 marginleft-5">0</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="tab flexrac">
+  <view class="bar {{tabindex==='0'?'actived':''}}" data-index="0" bindtap="switchbar">上架拍品</view>
+  <view class="bar"></view>
+  <view class="bar {{tabindex==='1'?'actived':''}}" data-index="1" bindtap="switchbar">互动排行</view>
+</view>
+<view class="nocon flexc0c" hidden="{{tabindex!=='0'}}">
+  <view class="iconfont iconicon-test"></view>
+  <view class="thirdcol fz14 text">暂无新拍品上架</view>
+  <view class="thirdcol fz14">当上新时订阅用户会收到消息提醒</view>
+</view>
+<view class="rank" hidden="{{tabindex!=='1'}}">
+  <view class="ranktitle fz18">近一个月互动排行</view>
+  <view class="rankmsg thirdcol fz14">仅发起人自己可见，累计0人次曝光</view>
+  <view class="thead flexrbc">
+    <view class="username">用户昵称</view>
+    <view class="times-wrapper flexr">
+      <view class="times">中拍次数</view>
+      <view class="times">出价次数</view>
+    </view>
+  </view>
+</view>

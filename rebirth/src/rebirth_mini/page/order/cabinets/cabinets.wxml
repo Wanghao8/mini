@@ -1,0 +1,45 @@
+<view class="section">
+  <view class="section__title">请选择健身房专属柜</view>
+  <picker bindchange="storepickchange" value="{{storeindex}}" range="{{storearray}}" range-key="name">
+    <view class="picker">
+      已选健身房：{{storearray[storeindex].name}}
+    </view>
+  </picker>
+</view>
+<view class="padding">
+  <!-- <view class="{{index == id?'memcard-sele':'memcard'}}" wx:for="{{memcard}}" data-price="{{item.price}}" data-id="{{index}}" data-type="{{item.type}}"bindtap="ChoseMemcard">
+		<view style="float: left;">
+			<view class="memcard-t"> {{item.state}}天 </view>
+			<view class="memcard-m">￥{{item.price}} <span>{{item.monthlyprice}}元/月 </span></view>
+		</view>
+		<view style="font-size: 60rpx;float: right;margin-right: 30rpx;">{{item.type}}</view>
+	</view> -->
+  <view class="{{id == 5?'memcard-sele':'memcard'}}" data-id="5" bindtap="ChoseMemcard" data-price="{{customprice}}" data-type="month">
+    <view class="memcard-t">30天
+      <span style="">月</span>
+    </view>
+    <view class="memcard-m">1元/月
+      <span style="">￥30元/月</span>
+    </view>
+  </view>
+  <!-- <view style="font-size: 32rpx;">
+		<radio  checked="{{checked}}" bindtap="radiocheck">优先使用积分付款(1积分=1元)</radio>
+		</view>
+		<view class="balance">剩余 {{model.proceeds}} 积分</view> -->
+  <view class="bottombtn">
+    <!-- <view wx:if="{{id == 5}}" class="custom">
+			<view style="float: left;"><span class="custombtn" bindtap="numbersubtraction">-</span><span class="customnumber">{{customnumber}}</span> <span class="custombtn" bindtap="customnumber">+</span></view> 
+			<view class="customprice">共计<span>￥{{customprice}}</span> 元</view>
+		</view> -->
+    <view>
+      <button bindtap="payment" class="purchasebtn" disabled="{{btndisabled}}" loading="{{btnloading}}">立即支付{{price}}元</button>
+    </view>
+    <view class="state">
+      <view>
+        <radio style="" checked="{{statechecked}}" bindtap="stateradiocheck">我同意
+          <span style="" bindtap="tostate">《Rebirth运动注意事项及免责声明》</span>
+        </radio>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,82 @@
+<view catchtouchmove="ture" class="mask flexccc" wx:if="{{fullLoading}}">
+  <image class="loadinggif" src="../../../static/loading.gif"></image>正在加载中</view>
+<view class="header barbackcol flexr">
+  <view class="tabitem fz14 {{tabindex==='0'?'actived':''}}" data-index="0" bindtap="actionBtn" data-action="switchtab">全部状态</view>
+  <view class="tabitem fz14 {{tabindex==='1'?'actived':''}}" data-index="1" bindtap="actionBtn" data-action="switchtab">锁定中</view>
+  <view class="tabitem fz14 {{tabindex==='2'?'actived':''}}" data-index="2" bindtap="actionBtn" data-action="switchtab">已退还</view>
+  <view class="tabitem fz14 {{tabindex==='3'?'actived':''}}" data-index="3" bindtap="actionBtn" data-action="switchtab">已扣除</view>
+</view>
+
+<view class="flexccc content-wrapper" wx:if="{{norecord}}">
+  <view class="iconfont iconicon-test"></view>
+  <view class="fz16 tip">暂无记录</view>
+</view>
+
+<view class="con-wrapper">
+  <view class="list-wrapper barbackcol margintop-10" wx:if="{{showlocked}}" wx:for="{{lockedList}}" wx:key="id">
+    <view class="listtitle flexrbc" bindtap="actionBtn" data-action="detail" data-value="{{item.goods_id}}" data-end="{{item.delay_time}}">
+      <view class="fz15">拍品：{{item.goods_name}}</view>
+      <view class="iconfont iconyoujiantou"></view>
+    </view>
+    <view class="flexrbc pay-wrapper">
+      <view class="">
+        <view class="paytitle">缴纳</view>
+        <view class="paytime fz12 thirdcol">{{item.last_time}}</view>
+      </view>
+      <view class="pay">-{{item.money}}.00</view>
+    </view>
+    <view class="flexrbc refund-wrapper">
+      <view class="">
+        <view class="paytitle">退还</view>
+        <view class="paytime fz12 thirdcol">拍卖结束后，无纠纷将会退还</view>
+      </view>
+      <view class="refund locked">锁定中</view>
+    </view>
+  </view>
+
+  <view class="list-wrapper barbackcol margintop-10" wx:if="{{showrefund}}" wx:for="{{refundList}}" wx:key="id">
+    <view class="listtitle flexrbc" bindtap="actionBtn" data-action="detail" data-value="{{item.goods_id}}" data-end="{{item.delay_time}}">
+      <view class="fz15">拍品：{{item.goods_name}}</view>
+      <view class="iconfont iconyoujiantou"></view>
+    </view>
+    <view class="flexrbc pay-wrapper">
+      <view class="">
+        <view class="paytitle">缴纳</view>
+        <view class="paytime fz12 thirdcol">{{item.last_time}}</view>
+      </view>
+      <view class="pay">-{{item.money}}.00</view>
+    </view>
+    <view class="flexrbc refund-wrapper">
+      <view class="">.
+        <view class="paytitle">退还</view>
+        <view class="paytime fz12 thirdcol">{{item.refundTime}}</view>
+      </view>
+      <view class="refund">+{{item.money}}.00</view>
+    </view>
+  </view>
+
+  <view class="list-wrapper barbackcol margintop-10" wx:if="{{showdeduction}}" wx:for="{{deductionList}}" wx:key="id">
+    <view class="listtitle flexrbc" bindtap="actionBtn" data-action="detail" data-value="{{item.goods_id}}">
+      <view class="fz15">拍品：{{item.goods_name}}</view>
+      <view class="iconfont iconyoujiantou"></view>
+    </view>
+    <view class="flexrbc pay-wrapper">
+      <view class="">
+        <view class="paytitle">缴纳</view>
+        <view class="paytime fz12 thirdcol">{{item.last_time}}</view>
+      </view>
+      <view class="pay">-{{item.money}}.00</view>
+    </view>
+    <view class="flexrbc refund-wrapper">
+      <view class="">
+        <view class="paytitle">退还</view>
+        <view class="paytime fz12 thirdcol">{{item.end_time}}</view>
+      </view>
+      <view class="refund locked red">违约扣除</view>
+    </view>
+  </view>
+  <loading loadingType="{{loadingType}}" wx:if="{{!norecord}}"></loading>
+</view>
+<view class="bottomtips fz18 thirdcol">
+  <view>已经到最底下啦</view>
+</view>

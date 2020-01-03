@@ -1,0 +1,4 @@
+<?php
+//000000000300
+ exit();?>
+a:16:{s:5:"appid";s:18:"wxfd9d19ecda4a0e3f";s:9:"bank_type";s:3:"CFT";s:8:"cash_fee";s:4:"3000";s:8:"fee_type";s:3:"CNY";s:12:"is_subscribe";s:1:"N";s:6:"mch_id";s:10:"1531557871";s:9:"nonce_str";s:32:"635440afdfc39fe37995fed127d7df4f";s:6:"openid";s:28:"o_vEB5VttgaymOi106isFycrBJPE";s:12:"out_trade_no";s:16:"IA09228040007258";s:11:"result_code";s:7:"SUCCESS";s:11:"return_code";s:7:"SUCCESS";s:4:"sign";s:32:"2D236736CAD75CB3D5912047B7EFA279";s:8:"time_end";s:14:"20191009200653";s:9:"total_fee";s:4:"3000";s:10:"trade_type";s:5:"JSAPI";s:14:"transaction_id";s:28:"4200000446201910099527474694";}

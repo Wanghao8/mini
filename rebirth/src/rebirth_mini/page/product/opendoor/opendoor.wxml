@@ -1,0 +1,30 @@
+<view class="content-wrapper">
+  <view class="qrshow thinline">
+    <view class="center fontsize32 relative thinline">{{appointtitle}}</view>
+    <view class="appoinfo" wx:if="{{qrcodeshow}}">
+      <view class="ellipsis-2">预约店铺:{{appointinfo.store_name}}</view>
+      <view class="time">预约日期:{{appointinfo.year}}-{{appointinfo.month}}-{{appointinfo.day}}</view>
+      <view class="time">预约时间:{{appointinfo.section}}</view>
+      <view class="msg">
+        当前不是您预约的运动时间，到达预约时间会显示开门码，取消预约请点击下方取消按钮，临时取消或超时扣除八小时（2小时内取消为临时取消）
+      </view>
+    </view>
+    <image src="{{qrimgurl}}" wx:else="{{qrcodeshow}}"></image>
+  </view>
+  <view class="qrinfo">
+    <view wx:if="{{showqrcode}}" class="refresh">更新预约信息</view>
+    <view wx:else="{{showqrcode}}" class="refreshmsg">
+      <view>开门权限1小时内有效</view>
+      <view>开门码每分钟更新</view>
+    </view>
+    <view class="countdown">
+      <button class="hqyzm" bindtap="getmyappoint" disabled='{{disabled}}'>{{qrname}}</button>
+    </view>
+  </view>
+</view>
+<view class="cancel">
+  <button type="default" bindtap="cancelappo">取消预约</button>
+</view>
+<view class="backhome">
+  <button type="default" bindtap="toindex">返回首页</button>
+</view>

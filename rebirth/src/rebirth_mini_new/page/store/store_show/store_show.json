@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "门店详情",
+  "usingComponents": {
+    "step": "../../../component/step/step",
+    "notice": "../../../component/notice/notice"
+  }
+}

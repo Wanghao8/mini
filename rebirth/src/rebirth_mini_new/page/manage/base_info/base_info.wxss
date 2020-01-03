@@ -1,0 +1,9 @@
+page{background-color: #242424}
+.top{height: 200rpx;background-color: #333333;}
+.img{width: 120rpx;height: 120rpx;border-radius: 50%;margin: 40rpx;}
+.icon-iconfontjiantou3{font-size: 40rpx;color: #ececec}
+.name{width: 520rpx}
+.card-margin{margin: 25rpx 0 0 0;}
+.card-margin2{margin: 30rpx 20rpx 0 20rpx;}
+.info-item{height: 100rpx;line-height: 100rpx}
+input{text-align: right;color: #f2f2f2}

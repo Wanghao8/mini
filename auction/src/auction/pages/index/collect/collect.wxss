@@ -1,0 +1,4 @@
+.title{margin: 40rpx 0 }
+.wrapper{margin: 30rpx}
+.content{margin: 30rpx 0}
+.img{width: 360rpx;height: 360rpx}

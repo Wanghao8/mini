@@ -1,0 +1,9 @@
+.person{display: flex;flex-direction: row;}
+.headportrait{flex: 1;height: 100rpx;}
+.headportrait image {height: 100rpx; width: 100rpx;padding: 20rpx 30rpx;}
+.nickname{flex: 5; position: relative; font-size: 32rpx;padding: 10rpx 30rpx 20rpx 0;}
+.member{font-size: 30rpx;color: #999;}
+.overall{padding: 50rpx 0 30rpx 30rpx;overflow: hidden;}
+.list{float: left;margin-right: 30rpx;}
+.ellipsis{text-align: center; font-size: 28rpx;}
+graceLoading{margin:20rpx 0;}

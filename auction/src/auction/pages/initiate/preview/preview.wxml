@@ -1,0 +1,46 @@
+<image class="img" mode="aspectFill" src="http://img5.imgtn.bdimg.com/it/u=3285095979,3659367216&fm=26&gp=0.jpg"></image>
+<view class="header">
+  <view class="flexrbc">
+    <view class="flexr0c">
+      <view class="avatar-wrapper">
+        <image src="https://y.gtimg.cn/music/photo_new/T002R300x300M000000J5X3Y1Bnm5s.jpg?max_age=2592000" class="avatar"></image>
+      </view>
+      <view class="nickname fz13 thirdcol">知行合一 发起</view>
+    </view>
+    <!-- <view class="log fz13 subcol flexr0c" bindtap="log">个人动态
+      <view class="iconfont iconyoujiantou thirdcol"></view>
+    </view> -->
+  </view>
+  <view class="name fz17">拍品：{{}}</view>
+  <view class="time fz13 thirdcol">{{}} - {{}}</view>
+</view>
+
+<view class="price-wrapper margintop-10 flexc0c">
+  <view class="content-wrapper">
+    <view class="flexr line">
+      <view class="left flexr">
+        <view class="label fz13">起拍价格</view>
+        <view class="price fz13 thirdcol marginleft-10">{{}}元</view>
+      </view>
+      <view class="right flexr">
+        <view class="label fz13">加价幅度</view>
+        <view class="price fz13 thirdcol marginleft-10">{{}}元</view>
+      </view>
+    </view>
+    <view class="flexr line">
+      <view class="right flexr">
+        <view class="label fz13">保证金额</view>
+        <view class="price fz13 thirdcol marginleft-10 bzj">{{}}元</view>
+      </view>
+      <view class="left flexr">
+        <view class="label fz13">延迟时间</view>
+        <view class="price fz13 thirdcol marginleft-10">{{}}秒</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="desc margintop-10 flexr">
+  <view class="iconfont iconzhuangshiyongyinhao e2col"></view>
+  {{}}
+</view>

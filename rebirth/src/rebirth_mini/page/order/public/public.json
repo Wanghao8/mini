@@ -1,0 +1,6 @@
+{	"navigationBarTitleText": "健康方案",
+  "usingComponents": {
+		"graceLoading": "../../../threeComponents/graceLoading",
+		"graceFullLoading":"../../../threeComponents/graceFullLoading"
+	}
+}

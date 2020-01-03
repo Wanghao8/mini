@@ -1,0 +1,20 @@
+page{background-color: #F1F1F1;padding-bottom: 400rpx}
+.img{height: 500rpx;width: 100%}
+.header{background-color: #ffffff;overflow: hidden;margin-top: -7rpx}
+.avatar-wrapper{margin: 40rpx 0 20rpx 40rpx}
+.avatar{height: 50rpx;width: 50rpx;border-radius: 50%;}
+.nickname{margin: 8rpx 0 0 10rpx;}
+.log{margin-right: 40rpx}
+.iconyoujiantou{font-size: 22rpx}
+.name{font-weight: 600;margin: 0 0 20rpx 40rpx}
+.time{margin: 0 0 40rpx 40rpx}
+.price-wrapper{background-color: #ffffff}
+.content-wrapper{width: 670rpx}
+.left,.right{width: 50%}
+.line{margin: 40rpx}
+.bzj{padding-left: 1em}
+.desc{background-color: #FFF6E5;border: 1px solid #EBE3D3;height: 120rpx;line-height: 120rpx;}
+.iconzhuangshiyongyinhao{margin-top: -20rpx;margin-left: 20rpx;margin-right: 10rpx}
+
+
+

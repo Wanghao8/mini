@@ -1,0 +1,10 @@
+<view class="top">点击送给好友送出心意(只能发送给个人！)</view>
+<view wx:for="{{mycardlist}}" wx:key="{{item.index}}" style="width: {{imgwidth}}px;margin: 10rpx auto 50rpx;">
+  <view class="mycard">
+    <image src="{{item.gift_image}}" style="width: {{imgwidth}}px;height: {{imgwidth * 0.6}}px;border-radius: 30rpx;	box-shadow: 0 6px 12px 0 rgba(0,0,0,.15);"></image>
+    <view class="state" style="color:{{item.status == '已使用'?'red':'#d59b5c'}};">{{item.status}}</view>
+  </view>
+  <view class="mycard-tltle">{{item.gift_title}}({{item.value}})
+    <button wx:if="{{item.status == '可使用'}}" withShareTicket="true" open-type='share' data-id="{{item.id}}" data-title="{{item.gift_title}}({{item.value}})" data-imgurl="{{item.gift_image}}">送给好友</button>
+  </view>
+</view>

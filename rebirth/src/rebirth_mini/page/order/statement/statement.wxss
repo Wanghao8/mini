@@ -1,0 +1,11 @@
+page{
+	font-size: 32rpx;
+	padding: 0 30rpx;
+	width: 92%;
+}
+view{
+	margin-bottom: 30rpx;
+}
+.title{font-size: 34rpx;font-weight: 700;}
+.head{font-weight: 700;font-size: 40rpx;text-align: center;}
+.marginbot{margin-bottom: 30rpx;}

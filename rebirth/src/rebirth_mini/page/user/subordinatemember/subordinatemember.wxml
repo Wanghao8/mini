@@ -1,0 +1,21 @@
+<!-- <view class="person" wx:for="{{memberlist}}" wx:if="{{havelist}}">
+	<view class="headportrait">
+		<image mode="aspectFill" src="{{item.avatarUrl}}"></image>
+	</view>
+	<view class="nickname thinline">
+		<view >{{item.nickName}}</view>
+		<view style="font-size: 30rpx;color: #999;line-height: 40rpx;">{{item.end_time}}到期 <span style="float: right;">{{item.status}}</span></view>
+		<view class="member">分享收益:{{item.proceeds}}　推广收益:{{item.children_proceeds}}</view>
+	</view>
+</view> -->
+<view class="overall">
+  <view class="list" wx:for="{{memberlist}}" wx:key="{{item.index}}" wx:if="{{havelist}}">
+    <view style="width: {{imgwidth}}px;height: {{imgwidth + 30}}px;">
+      <image src="{{item.avatarUrl}}" style="border-radius: 8rpx; width: {{imgwidth}}px;height: {{imgwidth}}px ;"></image>
+      <view class="ellipsis">{{item.nickName}}</view>
+    </view>
+  </view>
+</view>
+<graceLoading loadingType="{{loadingType}}" wx:if="{{havelist}}"></graceLoading>
+<graceFullLoading graceFullLoading="{{graceFullLoading}}"></graceFullLoading>
+<view wx:if="{{havelist == false}}" class="vertcenter">您还没有任何伙伴哦，快去邀请好友吧!^_^</view>

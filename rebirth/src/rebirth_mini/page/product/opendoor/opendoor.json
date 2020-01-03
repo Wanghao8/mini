@@ -1,0 +1,8 @@
+{
+  "usingComponents": {},
+	"navigationBarBackgroundColor":"#26cd91",
+	"navigationBarTextStyle":"white",
+	"disableScroll": true,
+	"navigationBarTitleText":"我的预约"
+	
+}

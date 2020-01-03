@@ -1,0 +1,4 @@
+page{background-color: #ecf9f8}
+.icon-kong{font-size: 160rpx;color: #999;margin: 20rpx 0}
+.loadinggif{width: 80rpx;height: 80rpx;margin-bottom: 40rpx;color: #666666}
+.mask{position: absolute;z-index: 1000;font-size: 32rpx;width: 100vw;height: 100vh;background-color: #fff;top:0rpx;color: #666666}

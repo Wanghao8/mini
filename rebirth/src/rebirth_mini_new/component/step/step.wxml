@@ -1,0 +1,27 @@
+<view class="step-card libg">
+    <view class="flexr0c marginbottom10">
+      <view class="iconfont icon-buzhou"></view>
+      <view class="marginleft5 fz16 colf2">健身步骤</view>
+    </view>
+    <view class="flexc0c">
+      <view class="flexrcc bar">
+        <view class="yellow fz16 bold">step1</view>
+        <view class="fz16 colec marginleft10">预约课程成功</view>
+      </view>
+      <view class="iconfont icon-jiantou8"></view>
+      <view class="flexrcc bar">
+        <view class="yellow fz16 bold">step2</view>
+        <view class="fz16 colec marginleft10">获得入场二维码</view>
+      </view>
+      <view class="iconfont icon-jiantou8"></view>
+      <view class="flexrcc bar">
+        <view class="yellow fz16 bold">step3</view>
+        <view class="fz16 colec marginleft10">门禁扫描二维码</view>
+      </view>
+      <view class="iconfont icon-jiantou8"></view>
+      <view class="flexrcc bar">
+        <view class="yellow fz16 bold">step4</view>
+        <view class="fz16 colec marginleft10">成功入场上课</view>
+      </view>
+    </view>
+  </view>

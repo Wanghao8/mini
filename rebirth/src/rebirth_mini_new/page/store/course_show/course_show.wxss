@@ -1,0 +1,14 @@
+page{background-color: #ecf9f8;padding-bottom: 200rpx;}
+.icon-shijian,.icon-weizhi,.icon-kebiao,.icon-wentiquestions1,.icon-yuangongzhanghaoguanli,.icon-dkw_tisheng{font-size: 40rpx;color: #97DDD6;margin: 20rpx;}
+.icon-yuangongzhanghaoguanli,.icon-dkw_tisheng{margin-left: 0;}
+.loadinggif{width: 80rpx;height: 80rpx;margin-bottom: 40rpx;color: #666666}
+.mask{position: absolute;z-index: 1000;font-size: 32rpx;width: 100vw;height: 100vh;background-color: #fff;top:0rpx;color: #666666}
+button{background-color: #ecf9f8;border: none;color: #f2f2f2;font-size: 32rpx;margin-right: 0}
+button{position: absolute;height:60rpx;width: 120rpx;background-color: red;  border: none;color: #ccc;opacity: 0;z-index: 100}
+button::after{border: none}
+.map{text-decoration: underline}
+.card1{width: 710rpx;border-radius: 10rpx;overflow: hidden}
+.icon-jinggao1{margin: 20rpx;font-size: 44rpx;color: #97DDD6}
+.bar{width: 630rpx;height: 80rpx;background-color: #242424}
+.pad{padding-bottom: 20rpx}
+.icon-fenxiang{font-size: 40rpx;margin-right: -4rpx}

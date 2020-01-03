@@ -1,0 +1,63 @@
+<view class="header">
+  <view class="headtop flexrbc">
+    <view class="headleft flexrsc">
+      <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+      <button class="headleft login" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">{{userInfo.nickName}}</button>
+    </view>
+    <!-- <view class="log fz13 subcol" bindtap="log">个人动态></view> -->
+  </view>
+  <view class="btn-wrapper flexrac" bindtap="actionBtn" data-action="initiate">
+    <!-- <view class="all-auction flexccc" bindtap="actionBtn" data-action="all">
+      <view class="num">{{userInfo.goods_total}}</view>
+      <view class="txt">发布拍卖</view>
+    </view>
+    <view class="winbid flexccc" bindtap="actionBtn" data-action="bid">
+      <view class="num">{{userInfo.add_total}}</view>
+      <view class="txt">参与竞拍</view>
+    </view> -->
+      <!-- <view class="initiate flexr0c"> -->
+      <view class="initiate flexr0c" wx:if="{{userInfo.level==1}}">
+        <view class="iconfont iconicon-test"></view>
+        <view class="initiate_now subcol">发起拍卖</view>
+      </view>
+    </view>
+</view>
+<view class="list-wrapper">
+  <view class="listItem flexrbc" bindtap="actionBtn" data-action="recognizance">
+    <view class="listleft flexr0c">
+      <view class="iconfont iconbaozheng1"></view>
+      <view class="listtitle ">保证金管理</view>
+    </view>
+    <view class="iconfont iconyoujiantou arrow thirdcol"></view>
+  </view>
+  <view class="listItem flexrbc" bindtap="actionBtn" data-action="manage" wx:if="{{userInfo.level==1}}">
+    <view class="listleft flexr0c">
+      <view class="iconfont iconqian "></view>
+      <view class="listtitle ">发布管理</view>
+    </view>
+    <view class="iconfont iconyoujiantou arrow thirdcol"></view>
+  </view>
+  <view class="listItem flexrbc" bindtap="actionBtn" data-action="question">
+    <view class="listleft flexr0c">
+      <view class="iconfont iconproblem "></view>
+      <view class="listtitle ">常见问题</view>
+    </view>
+    <view class="iconfont iconyoujiantou arrow thirdcol"></view>
+  </view>
+  <button open-type="contact">
+    <view class="listItem flexrbc">
+      <view class="listleft flexr0c">
+        <view class="iconfont iconxinxi-copy "></view>
+        <view class="listtitle fz17">联系客服</view>
+      </view>
+      <view class="iconfont iconyoujiantou arrow thirdcol"></view>
+    </view>
+  </button>
+  <!-- <view class="listItem flexrbc" bindtap="actionBtn" data-action="initiate">
+    <view class="listleft flexr0c">
+      <view class="iconfont iconicon-test "></view>
+      <view class="listtitle">发起拍卖</view>
+    </view>
+    <view class="iconfont iconyoujiantou arrow thirdcol"></view>
+  </view> -->
+</view>

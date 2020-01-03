@@ -1,0 +1,12 @@
+<view class="card libg marginbottom10">
+  <view class="flexr0c">
+    <view class="iconfont icon-jinggao1"></view>
+    <view class="fz16 colf2 marginleft5">注意事项</view>
+  </view>
+  <view class="pad hang">
+  <view class="fz16 col6 marginleft10">1、配套：舱内设高速Wifi，密码：rebirth;</view>
+  <view class="fz16 col6 marginleft10 marginright10">2、预约：为保障健身体验，请按自行预约人数和时间进行健身；</view>
+  <view class="fz16 col6 marginleft10">3、安全：为公共安全，内设闭路监控；</view></view>
+  <view class="fz16 col6 marginleft10 marginright10">4、衣着：建议着透气、贴身的衣物和软薄底的运动鞋或五指鞋。</view>
+  <view class="fz16 col6 marginleft10 marginright10 marginbottom10">5、饮食：运动前1小时内不要进食，避免剧烈运动引起的恶心和胃肠道不适。运动过程适量饮水400-600ml，注意少量多次。</view>
+</view>

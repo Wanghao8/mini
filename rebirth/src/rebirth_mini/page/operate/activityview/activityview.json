@@ -1,0 +1,6 @@
+{
+	"navigationBarTitleText": "精选活动",
+  "usingComponents": {
+		"graceFullLoading":"../../../threeComponents/graceFullLoading"
+	}
+}

@@ -1,0 +1,54 @@
+<view class="img-wrapper">
+  <image class="img" src="../../../../static/ticket.png"></image>
+</view>
+<view class="title-wrapper">
+  <view class="title bold">邀请你的朋友参与此拍卖</view>
+  <view class="title bold">得成交价5%的佣金</view>
+</view>
+<view class="fz13 msg subcol">被邀请者在此拍卖中胜出并支付，你将获得佣金</view>
+<view class="detail bold" bindtap="showrule">查看详细规则</view>
+<view class="box barbackcol flexccc">
+  <view class="img-wrapper">
+    <image class="img2" src="../../../../static/clock.png"></image>
+  </view>
+  <view class="tips fz13 thirdcol">虚位以待，点击下方按钮邀请朋友</view>
+</view>
+<view class="footer barbackcol">
+  <button open-type="share">邀请朋友参与</button>
+</view>
+
+<view class="shadow" wx:if="{{showrule}}" bindtap="hiderule"></view>
+<view class="rulebox barbackcol flexc0c" wx:if="{{showrule}}">
+  <view class="close" bindtap="hiderule">X</view>
+  <view class="box-wrapper">
+    <view class="boxheader flexc0c">
+      <view class="boxtitle fz18">推广规则</view>
+    </view>
+    <scroll-view class="box-content" scroll-y="true">
+      <view class="fz14 margintop-10">
+        <view class="margintop-5">推广者定义：</view>
+        <view class="margintop-5">通过指定拍卖页面内的【帮卖赚佣金】按钮进入页面内【邀请朋友参与】，即为此拍卖的推广者</view>
+      </view>
+      <view class="fz14 margintop-10">
+        <view class="margintop-5">推广流程：</view>
+        <view class="margintop-5">推广者通过分享指定服务链接/小程序码图片等方式，邀请拍东西用户完成参与指定拍卖，竞拍胜出且完成支付的，将获得相应的推广收益。</view>
+      </view>
+      <view class="fz14 margintop-10">
+        <view class="margintop-5">推广者定义：</view>
+        <view class="margintop-5">通过指定拍卖页面内的【帮卖赚佣金】按钮进入页面内【邀请朋友参与】，即为此拍卖的推广者</view>
+      </view>
+      <view class="fz14 margintop-10">
+        <view class="margintop-5">推广流程：</view>
+        <view class="margintop-5">推广者通过分享指定服务链接/小程序码图片等方式，邀请拍东西用户完成参与指定拍卖，竞拍胜出且完成支付的，将获得相应的推广收益。</view>
+      </view>
+      <view class="fz14 margintop-10">
+        <view class="margintop-5">推广者定义：</view>
+        <view class="margintop-5">通过指定拍卖页面内的【帮卖赚佣金】按钮进入页面内【邀请朋友参与】，即为此拍卖的推广者</view>
+      </view>
+      <view class="fz14 margintop-10">
+        <view class="margintop-5">推广流程：</view>
+        <view class="margintop-5">推广者通过分享指定服务链接/小程序码图片等方式，邀请拍东西用户完成参与指定拍卖，竞拍胜出且完成支付的，将获得相应的推广收益。</view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,32 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/manager/nav",
+			"style": {
+				"navigationBarTitleText": "navigator"
+			}
+		},{
+			"path": "pages/manager/index",
+			"style": {
+				"navigationBarTitleText": "index"
+			}
+		},{
+			"path": "pages/edit/AddLog",
+			"style": {
+				"navigationBarTitleText": "添加日志"
+			}
+		},{
+			"path": "pages/salary/salaryList",
+			"style": {
+				"navigationBarTitleText": "我的工资管理"
+			}
+		}
+		
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+}

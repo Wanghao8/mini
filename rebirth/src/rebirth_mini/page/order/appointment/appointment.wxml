@@ -1,0 +1,35 @@
+	<view class="section">
+	  <view class="section__title">请选择要预约的健身房</view>
+	  <picker bindchange="storepickchange" value="{{storeindex}}" range="{{storearray}}" range-key="name" >
+	    <view class="picker ellipsis">
+	      健身房：{{storearray[storeindex].name}}
+	    </view>
+			<view class="picker-r" >可点击修改</view>
+	  </picker>
+	</view>
+	<view class="section {{dateshow == false?'opacityshow':'opacity'}}">
+	  <view class="section__title">请选择要预约的日期</view>
+	  <picker bindchange="datepickchange" value="{{dateindex}}" range="{{datearray}}" disabled="{{dateshow}}">
+	    <view class="picker">
+	      日期：{{datearray[dateindex]}}
+	    </view>
+			<view class="picker-r" >可点击修改</view>
+	  </picker>
+	</view>
+	<view class="section {{timeshow == false?'opacityshow':'opacity'}} relative">
+	  <view class="section__title">请选择要预约的时间段</view>
+	  <picker class="thinline" bindchange="timepickchange" value="{{timeindex}}" range="{{timearrays}}" range-key="time" disabled="{{timeshow}}">
+	    <view class="picker">
+	      时间段：{{timearrays[timeindex].time}}
+	    </view>
+			<view class="picker-r" >可点击修改</view>
+	  </picker>
+	</view>
+<radio-group class="radio-group" bindchange="radioChange" bindtap="checkedfalse">
+  <label class="radio" wx:for="{{appoarray}}" wx:key='index'>
+    <radio value="{{item.id}}" checked="{{item.checked}}" disabled="{{item.disabled}}" />
+    {{item.time}} <span class="circle" style="background-color: {{item.color}};"></span>
+  </label>
+</radio-group>
+<view class="tips">温馨提示：预约成功才能进入健身房哦！</view>
+<button type="primary" class="bottombtn" disabled="{{btndisabled}}" bindtap="addappoint">预约健身</button>

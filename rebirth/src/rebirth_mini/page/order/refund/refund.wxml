@@ -1,0 +1,72 @@
+<!--page/order/refund/refund.wxml-->
+
+
+<!-- 顶部时间 -->
+<view class="top">
+  <view class="header">
+    <view class="header-t">
+      <view class="header-t-l">
+        <view class="content-wrapper">
+          <view class="avatarimg">
+            <image src="{{model.avatarUrl}}"></image>
+          </view>
+          <view>
+            <view class="nickName">{{model.nickName}}
+              <text class="iconfont iconsize icon-a536 iconstatus1"></text>
+            </view>
+
+            <view class="sign">Rebirth my youth</view>
+          </view>
+        </view>
+      </view>
+      <!-- <view class="header-t-r" bindtap="{{appointtap}}">
+        <text class="iconfont iconsize icon-erweima {{is_appoint == 1?'header-t-r1':'header-t-r2'}}" style="font-size: 40rpx;"></text>
+        <view class="{{is_appoint == 1?'header-t-r1':'header-t-r2'}}">{{model.appointstatus}}</view>
+      </view> -->
+    </view>
+    <view class="remainder">
+      <view class="header-m ellipsis">剩余时间 {{model.residue_time}}</view>
+      <!-- <view class="header-b-r" bindtap="ToRecharge">
+        <span class="iconfont icon-chongzhi1" style="font-size: 36rpx; color:#d59b5c;"></span> 时长充值</view> -->
+      <!-- <view class="header-m ellipsis" wx:if="{{once_card > 0}}">我的课程 {{once_card}}次</view> -->
+
+    </view>
+  </view>
+</view>
+<!-- 顶部导航 -->
+
+
+
+
+
+<form bindsubmit='registerFormSubmit' report-submit='true'>
+  <view class='clear list'>
+    <view class='fl'>
+      退款的月数
+    </view>
+    <view class='fr clear'>
+      <view class='fl remove' bindtap='remove'>
+        <image src='../../../static/remove.png'></image>
+      </view>
+      <input class='fl' type='number' disabled='disabled' value='{{num}}' bindinput='monthNumber'></input>
+      <view class='fl add' bindtap='add'>
+        <image src='../../../static/add.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='message'>
+    <view>Rebirth 现可支持整月退款。</view>
+    <view>标准299/月 选择退款月数后，点击退款即可。</view>
+  </view>
+
+
+
+  <view class='purchasebtn_box'>
+    <button form-type='submit' class="purchasebtn">
+      退款
+    </button>
+    <button class="purchasebtn" bindtap='go_index'>
+      返回首页
+    </button>
+  </view>
+</form>

@@ -1,0 +1,68 @@
+.tips{font-size: 30rpx;color: #999;text-align: right;margin: 30rpx;}
+.tips text{color: #999;font-size: 30rpx;}
+.step{
+	font-size: 30rpx;
+	text-align: center;
+	white-space: nowrap;
+	margin: 0 auto 30rpx;
+	overflow: hidden;
+	width: 92%;
+}
+.iconsize{
+	font-size: 56rpx;
+	margin-bottom: 14rpx;
+	}
+.iconsize2{
+		font-size: 20rpx;
+		margin-top: 14rpx;
+		float: left;
+	}
+.icon-guanbi{color: #ccc;font-size: 36rpx; position: absolute;right: 0;top: -50rpx;}
+.giftcard{
+	float: left;
+	text-align: center;
+	margin: 0 0 30rpx  30rpx;
+	font-size: 30rpx;
+}
+.giftcard image{
+	box-shadow: 0 6px 12px 0 rgba(0,0,0,.15);
+border-radius: 14rpx;
+}
+.tipsinfo{
+	position: fixed;
+	top:50%;
+    left:50%;
+	width: 70%;
+    transform:translate(-50%,-50%);
+	background-color: #fff;
+	z-index: 99;
+	border-radius: 30rpx;
+	font-size: 32rpx;
+	padding: 30rpx;
+}
+.mygiftcard{
+	font-size: 32rpx;
+	position: fixed;
+	bottom: 40rpx;
+	right: 40rpx;
+	width: 120rpx;
+	height: 120rpx;
+	background-color: #26CD91;
+	color: #fff;
+	border: 8rpx solid #fff;
+	border-radius: 50%;
+	box-shadow: 0 6px 12px 0 rgba(0,0,0,.15);
+}
+
+
+.top{
+  position: fixed;top: 0;background-color: #fff;width: 100%;
+}
+.tipsText{margin-bottom: 20rpx;}
+.tipsTitle{text-align: center;font-size: 38rpx;margin-bottom: 40rpx;}
+.tipsTitle scroll-view{height: 400rpx;}
+.confirm{width: 80%;background-color: #26CD91;color: #fff;line-height: 80rpx;margin-top: 20rpx;}
+.iconFloat{float: left;}
+.bottom{height: 30rpx;}
+.giftBtn{white-space: nowrap;color: #fff;}
+.textCenter{text-align: center;}

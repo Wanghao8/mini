@@ -1,0 +1,107 @@
+<view class="header margintop-10">
+  <textarea class="name bold fz17" bindinput="setName" auto-height="true" placeholder="填写拍品名称" placeholder-class="bold fz17"></textarea>
+  <textarea class="descr subcol" bindinput="setDesc" auto-height="true" placeholder="添加关于此次拍卖的说明" placeholder-class="pad subcol"></textarea>
+  <view class="flexr0c imglist">
+    <view class="question-images flexr">
+      <block wx:for="{{images}}" wx:key="*this">
+        <view class="q-image-wrap flexc0c">
+          <!-- 移除图片的按钮  -->
+          <view class="q-image-remover" data-idx="{{index}}" bindtap="actionBtn" data-action="removeImage">-</view>
+          <!-- 图片缩略图  -->
+          <image class="q-image" src="{{item}}" mode="aspectFill" data-value="{{index}}" bindtap="actionBtn" data-action="handleImagePreview"></image>
+        </view>
+      </block>
+    </view>
+    <view class="addimg" bindtap="actionBtn" data-action="upimg" hidden="{{images.length>=3}}">
+      <view class="plus">+</view>
+    </view>
+  </view>
+  <view wx:if="{{showcj}}">
+    <image-cropper id="image-cropper" limit_move="{{true}}" disable_rotate="{{true}}" width="{{width}}" height="{{height}}" imgSrc="{{src}}" bindload="cropperload" bindimageload="loadimage" bindtapcut="actionBtn" data-action="clickcut"></image-cropper>
+    <view class="ccc barbackcol enter fz20" bindtap="actionBtn" data-action="caijian">确定</view>
+  </view>
+</view>
+<view class="middle margintop-10">
+  <view class="listItem flexrbc" bindtap="actionBtn" data-action="setprice">
+    <view class="listtitle marginleft-10 fz15 subcol">设置价格</view>
+    <view class="flexr0c">
+      <view class="fz12 thirdcol" wx:if="{{range_price}}">起{{start_price}},加{{range_price}},保{{bond_price}}</view>
+      <view class="iconfont iconyoujiantou arrow thirdcol"></view>
+    </view>
+  </view>
+  <view class="listItem flexrbc">
+    <view class="listtitle marginleft-10 fz15 subcol">开始时间</view>
+    <view class="flexr0c">
+      <input type="number" class="fz13 subcol start_time" placeholder="多少" maxlength="3" placeholder-class="fz13 e2col" bindblur="setStartHour"></input>
+      <view class="fz13 subcol subtxt">小时后开始</view>
+      <view class="iconfont iconyoujiantou arrow thirdcol"></view>
+    </view>
+  </view>
+  <view class="listItem flexrbc ">
+    <view class="listtitle marginleft-10 fz15 subcol">结束时间</view>
+    <view class="flexr0c">
+      <view class="fz13 subcol subtxt">开始后</view>
+      <input type="number" class="fz13 subcol end_time" placeholder="多少" maxlength="3" placeholder-class="fz13 e2col" bindblur="setEndMin"></input>
+      <view class="fz13 subcol subtxt">分钟结束</view>
+      <view class="iconfont iconyoujiantou arrow thirdcol"></view>
+    </view>
+  </view>
+  <view class="listItem flexrbc last">
+    <view class="listtitle marginleft-10 fz15 subcol">延迟时间</view>
+    <view class="flexr0c">
+      <!-- <picker range="{{delayList}}" value="{{delayIndex}}" bindchange="delay">
+        <view class="fz13 subcol">{{delayList[delayIndex]}}</view>
+      </picker> -->
+      <input type="number" class="delaytime fz13 subcol" bindblur="setDelay" maxlength="3" placeholder="多少" placeholder-class="fz13 e2col"></input>
+      <view class="fz13 subcol subtxt">秒</view>
+      <view class="iconfont iconyoujiantou arrow thirdcol"></view>
+    </view>
+  </view>
+</view>
+<view class="footer margintop-10">
+  <view class="listItem flexrbc" bindtap="actionBtn" data-action="desc">
+    <view class="listtitle marginleft-10 fz15 subcol">拍品图文介绍</view>
+    <view class="flexr0c">
+      <view class="fz12 e2col" wx:if="{{!detail_imgs}}">选填</view>
+      <view class="fz12 subcol" wx:if="{{detail_imgs}}">已填</view>
+      <view class="iconfont iconyoujiantou arrow thirdcol"></view>
+    </view>
+  </view>
+  <!-- <view class="listItem flexrbc last" bindtap="actionBtn" data-action="dealstyle">
+    <view class="listtitle marginleft-10 fz15 subcol">交易方式</view>
+    <view class="flexr0c">
+      <view class="fz12 subcol">{{deal[dealindex]}}</view>
+      <view class="iconfont iconyoujiantou arrow thirdcol"></view>
+    </view>
+  </view> -->
+</view>
+<view class="bottombtn flexr margintop-10">
+  <!-- <view class="pre fz14 bold" bindtap="preview">预览</view> -->
+  <view class="done bold " bindtap="actionBtn" data-action="goods_add">发起拍卖</view>
+</view>
+
+<view class="shadow" wx:if="{{showdeal}}" bindtap="actionBtn" data-action="hideDeal"></view>
+<view class="dealstyle" wx:if="{{showdeal}}">
+  <view class="top">交易方式</view>
+  <view class="style-wrapper flexrbc" data-index="0" bindtap="actionBtn" data-action="choosedeal">
+    <view>
+      <view class="dealtitle fz16 bold">双方自行交易</view>
+      <view class="dealcon fz13 thirdcol">双方自行联系后自行交易，适用于熟人圈</view>
+    </view>
+    <view class="iconfont iconduihao" wx:if="{{dealindex==='0'}}"></view>
+  </view>
+  <view class="style-wrapper flexrbc" data-index="1" bindtap="actionBtn" data-action="choosedeal">
+    <view>
+      <view class="flexr0c">
+        <view class="dealtitle fz16 bold">线上支付</view>
+        <view class="new fz15">NEW</view>
+      </view>
+      <view class="dealcon fz13 thirdcol">拍卖结束中拍者直接支付，减少双方后续沟通成本。平台将收取2%成交款作为手续费</view>
+    </view>
+    <view class="iconfont iconduihao" wx:if="{{dealindex==='1'}}"></view>
+  </view>
+
+</view>
+<view class="bottomtips fz18 thirdcol">
+  <view>已经到最底下啦</view>
+</view>

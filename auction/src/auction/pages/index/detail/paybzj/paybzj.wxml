@@ -1,0 +1,46 @@
+<view class="header barbackcol flexc0c">
+  <view class="iconfont iconinformationicon" bindtap="actionBtn" data-action="infotips"></view>
+  <view class="img-wrapper">
+    <image class="img" src="../../../../static/bzj.png"></image>
+  </view>
+  <view class="bold fz20 title">需交纳保证金￥{{bond_price}}</view>
+  <view class="orange fz13 tips">拍卖结束后，保证金将会立即退还</view>
+</view>
+<!-- <view class="flexr0c btn">
+  <button class="headleft login" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">登录</button>
+  <button class="getphone" bindgetphonenumber="getPhoneNumber" open-type="getPhoneNumber">获取手机号</button>
+</view> -->
+<view class="thirdcol fz13 msg">为确保竞拍成功后联系到您，需验证联系方式</view>
+<view class="list barbackcol flexrbc">
+  <view class="label">用户昵称</view>
+  <view class="flexr0c">
+    <view class="phone thirdcol">
+      <button class="headleft login" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">{{nickName}}</button>
+    </view>
+    <view class="iconfont iconyoujiantou"></view>
+  </view>
+</view>
+<view class="list barbackcol flexrbc">
+  <view class="label">手机号码</view>
+  <view class="flexr0c">
+    <view class="phone thirdcol">
+      <button class="getphone" bindgetphonenumber="getPhoneNumber" open-type="getPhoneNumber">{{phone}}</button>
+    </view>
+    <view class="iconfont iconyoujiantou"></view>
+  </view>
+</view>
+<!-- <view class="list barbackcol ">
+  <view class="flexrbc">
+    <view class="label">选择匿名出价</view>
+    <switch color="#F66F36" class="switch" bindchange="niming"></switch>
+  </view>
+  <view class="niming thirdcol fz13" wx:if="{{niming}}">个人信息仅发起者可见，对其他参与者匿名</view>
+</view> -->
+<view class="protocol flexr0c">
+  <radio color="#F66F36" checked="{{readed}}" bindtap="changeReaded"></radio>
+  <view class="fz13 subcol {{readed?'':'red'}}">我已阅读并同意 </view>
+  <view class="marginleft-5 fz13 subcol toprotocol" bindtap="actionBtn" data-action="xieyiTips">明智拍卖使用协议</view>
+</view>
+<view class="footer barbackcol">
+  <button bindtap="actionBtn" data-action="bondAddBtn">提交并支付 {{bond_price}}元</button>
+</view>

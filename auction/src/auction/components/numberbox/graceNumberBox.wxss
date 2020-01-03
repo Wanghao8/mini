@@ -1,0 +1,4 @@
+/* graceUI/components/graceNumberBox.wxss */
+.grace-number-box{width:400rpx; display:flex; flex-wrap:nowrap;}
+.grace-number-box .doBtn{width:112rpx; line-height:100rpx; background:#FFFFFF; color:#333; text-align:center; font-size:50rpx;}
+.grace-number-box input{width:112rpx; height:90rpx; line-height:50rpx; color:#333; padding:5rpx 0; background:#F6F6F6; text-align:center;font-size: 36rpx}

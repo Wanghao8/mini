@@ -1,0 +1,7 @@
+{
+	"navigationBarTitleText": "我的运动伙伴",
+  "usingComponents": {
+		"graceLoading": "../../../threeComponents/graceLoading",
+		"graceFullLoading":"../../../threeComponents/graceFullLoading"
+	}
+}

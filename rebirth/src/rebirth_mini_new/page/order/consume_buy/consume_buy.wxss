@@ -1,0 +1,6 @@
+page{background-color: #ecf9f8;}
+.page-wrapper{position: relative;top: -190rpx;z-index: 2}
+.detail{position: absolute;top: 300rpx;left: 30rpx;width: 690rpx;border-radius: 20rpx;background-color: #fff;z-index: 5}
+.icon-jinggao{color: #97DDD6;margin: 20rpx;font-size: 40rpx}
+.shadow{position: absolute;width: 100%;top: 0;	bottom: 0; height: 400%;z-index: 3;background: rgba(100,100,100,.5);}
+.history{margin: 0 20rpx 20rpx 440rpx}

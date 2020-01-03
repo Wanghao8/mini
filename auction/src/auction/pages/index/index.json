@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "mp-tabbar": "../components/tabbar/tabbar",
+    "loading":"../components/loading/graceLoading"
+  }
+}

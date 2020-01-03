@@ -1,0 +1,15 @@
+<view class="top">
+  <view class="icon">
+    <text class="iconfont iconsize icon-chuwugui "></text>
+  </view>
+  <view class="cabinetInfo-wrapper">
+    <view class="ellipsis">{{cabinetstitle}}{{lockerid}}</view>
+    <view class="cabinetInfo">{{cabinetsinfo}}</view>
+  </view>
+</view>
+<view class="circle" bindtap="openlocker">
+  打开柜门
+</view>
+<view class="renewal">
+  <button bindtap="tocabinets">我要续租</button>
+</view>

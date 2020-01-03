@@ -1,0 +1,4 @@
+page{background-color: #242424;}
+.list{height: 120rpx;}
+input{text-align: right}
+.ren{width: 40rpx;}

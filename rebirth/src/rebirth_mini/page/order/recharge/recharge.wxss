@@ -1,0 +1,190 @@
+page {
+  background-color: #fff;
+}
+
+.memcard {
+  border: 1rpx solid #999;
+  border-radius: 10rpx;
+  padding: 30rpx;
+  margin: 10rpx 0 20rpx 0;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  overflow: hidden;
+}
+
+.memcard-t {
+  font-size: 32rpx;
+  position: relative;
+  padding-bottom: 16rpx;
+}
+
+.memcard-m {
+  font-size: 34rpx;
+}
+
+.memcard-m span {
+  font-size: 30rpx;
+}
+
+.memcard-sele {
+  border-radius: 10rpx;
+  border: 1rpx solid #26cd91;
+  padding: 30rpx;
+  margin: 10rpx 0 20rpx 0;
+  box-sizing: border-box;
+  color: #26cd91;
+  font-size: 32rpx;
+  overflow: hidden;
+}
+
+.purchasebtn {
+  width: 87%;
+  height: 100rpx;
+  background-color: #26cd91;
+  padding: 10rpx 0;
+  color: #fff;
+  margin-top: 20rpx;
+}
+
+.tips {
+  background-color: #eca83b;
+  position: absolute;
+  right: -32rpx;
+  top: -34rpx;
+  border-bottom-left-radius: 10rpx;
+  font-size: 26rpx;
+  color: #fff;
+  padding: 2rpx 6rpx;
+}
+
+.bottombtn {
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  width: 100%;
+  /* height: 280rpx; */
+  border-top: 1px solid #f4f4f4;
+}
+
+.bottom_hei {
+  width: 100%;
+  height: 300rpx;
+}
+
+.custom {
+  font-size: 40rpx;
+  line-height: 80rpx;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.custombtn {
+  display: inline-block;
+  width: 80rpx;
+}
+
+.customnumber {
+  display: inline-block;
+  width: 80rpx;
+  background-color: #eee;
+}
+
+.customprice {
+  display: inline-block;
+  font-size: 34rpx;
+  width: 40%;
+}
+
+.balance {
+  font-size: 30rpx;
+  margin-left: 60rpx;
+}
+
+.state {
+  font-size: 28rpx;
+  text-align: center;
+  margin: 20rpx 0;
+}
+
+.newcard {
+  margin: 0rpx auto;
+  border-radius: 20rpx;
+  color: #fff;
+  border: 8rpx solid #fff;
+}
+
+.newcard-sele {
+  margin: 0 auto;
+  border: 8rpx solid #170d33;
+  border-radius: 20rpx;
+  color: #fff;
+}
+
+.card_box {
+  background-image: url(https://xunchas.yuanfangyun.com/vip1.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 90%;
+  height: 220rpx;
+  margin-top: 16rpx;
+}
+
+.time_title {
+  float: left;
+  width: 70rpx;
+  height: 70rpx;
+  text-align: center;
+  margin: 18rpx;
+  line-height: 70rpx;
+  font-size: 42rpx;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* .title {
+  float: right;
+  margin: 20rpx 30rpx 0 0;
+  font-size: 30rpx;
+} */
+
+.title {
+  display: absolute;
+  right: 0;
+  margin: 20rpx 30rpx 0 0;
+}
+
+.card_bottom {
+  display: flex;
+  flex-direction: row;
+  font-size: 32rpx;
+  margin-top: 24rpx;
+}
+
+.price {
+  text-align: right;
+  font-size: 36rpx;
+}
+
+.price-wrapper {
+  text-align: right;
+  font-size: 24rpx;
+}
+
+.period {
+  margin-top: 10rpx;
+  text-align: right;
+  padding-right: 30rpx;
+  color: #66ff66;
+}
+.period-wrapper{
+  flex: 3;
+  text-align: right
+}
+.bottomText{margin-top: 10rpx;}
+.bottomLeft{flex: 3.5;margin-left: 30rpx;}
+.clear{margin: 30rpx;}
+.fr{font-size: 32rpx;color: #999; float: right;}
+.agree{transform:scale(0.8);font-size: 32rpx;}
+.treaty{font-size: 28rpx; color: #26CD91;text-decoration:underline;}
+.bottomLine{height: 1rpx;}

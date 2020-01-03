@@ -1,0 +1,7 @@
+{
+	"navigationBarTitleText": "我的足迹",
+  "usingComponents": {
+		"graceLoading": "../../../threeComponents/graceLoading",
+		"graceFullLoading":"../../../threeComponents/graceFullLoading"
+	}
+}

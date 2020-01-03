@@ -1,0 +1,35 @@
+<view class="card">
+  <image src="{{model.imgurl}}" style="width: {{imgwidth}}px;height: {{imgwidth * 0.6}}px;border-radius: 30rpx;	box-shadow: 0 6px 12px 0 rgba(0,0,0,.15);"></image>
+</view>
+<view class="cardType">{{model.title}}</view>
+<view class="activation">
+  <button bindtap="activation">激活卡片</button>
+</view>
+<!-- 弹出层 -->
+<view class='masklayer' wx:if="{{userinfobtn}}"></view>
+<view wx:if="{{userinfobtn}}">
+  <view class="bottomfixed">
+    <view class="userInfo-wrapper">
+      <view class="userinfoimg">
+        <image src="https://renlis.yuanfangyun.com/newlogo.jpg"></image>
+      </view>
+      <view class="welcome">欢迎来到Rebirth</view>
+    </view>
+    <view class="tips1">为提供优质的服务，Rebirth需要获取以下信息</view>
+    <view class="tips2">·你的公开信息（昵称、头像等）</view>
+    <button class="confirmBtn" type="primary" open-type="getUserInfo" bindgetuserinfo="getUserinfo">确认微信授权</button>
+  </view>
+</view>
+<view class='masklayer' wx:if="{{userloginbtn}}"></view>
+<view wx:if="{{userloginbtn}}">
+  <view class="bottomfixed">
+    <view class="login">
+      <view class="userinfoimg">
+        <image src="https://renlis.yuanfangyun.com/newlogo.jpg"></image>
+      </view>
+      <view class="welcome">欢迎来到Rebirth</view>
+    </view>
+    <view class="tips1 textCenter">使用微信登录</view>
+    <button class="loginBtn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" type="primary">一键登录</button>
+  </view>
+</view>
