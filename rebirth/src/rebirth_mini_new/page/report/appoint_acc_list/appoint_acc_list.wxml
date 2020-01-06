@@ -7,9 +7,9 @@
   </view>
 </view> -->
 <view class="reserver" wx:for="{{list}}" wx:key="id">
-  <view class="flexrbc margintop10"  bindtap="detail" data-id="{{item.id}}" data-value="{{item.acc_id}}">
+  <view class="flexrbc margintop10" bindtap="detail" data-id="{{item.id}}" data-value="{{item.acc_id}}">
     <view class="flexr0c">
-      <image class="date-circle marginleft10" src="{{item.avatarUrl}}"></image>
+      <image class="date-circle marginleft10" src="{{item.avatarUrl!='http://rebirths.yuanfangyun.com/null'?item.avatarUrl:'../../../static/img/mine.png'}}"></image>
       <view class="marginleft10">
         <view class="fz17 col3 bold">{{item.nickName?item.nickName:'No.'+item.id}}</view>
         <view class="fz15 col6 margintop5">{{item.add_time}}</view>
@@ -23,8 +23,8 @@
 <view class="detail" wx:if="{{showDetail}}">
   <view class="flexrac">
     <view class="info-box flexccc">
-      <image class="img-item" src="{{info.avatarUrl}}"></image>
-      <view class="flexrcc margintop10">
+      <image class="img-item" src="{{info.avatarUrl!='http://rebirths.yuanfangyun.com/null'?info.avatarUrl:'../../../static/img/mine.png'}}"></image>
+      <view class="flexrcc name margintop10">
         <view class="fz20 bold">{{info.nickName}}</view>
         <view class="fz20 bold marginleft10">{{gender[info.gender]}}</view>
       </view>

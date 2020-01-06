@@ -158,6 +158,9 @@ Page({
         //wx.setStorageSync('acc', res.data.data);
         var model = res.data.data;
         model.avatarUrl = app.globalData.imgUrl + model.avatarUrl;
+        // if(!model.gender){
+        //   model.gender = 0
+        // }
         _self.setData({
           info: model,
           // date: model.birthday,

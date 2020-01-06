@@ -25,3 +25,4 @@ page>scroll-view{height: 1400rpx;}
 .phone{line-height: 100rpx}
 .login-btn button{position: fixed;width: 670rpx;height: 100rpx;bottom: 240rpx;left: 40rpx;z-index: 30;opacity: 0}
 .phone-btn button{position: fixed;width: 670rpx;height: 100rpx;bottom: 140rpx;left: 40rpx;z-index: 30;opacity: 0}
+.tag:first-child{margin-left: 0}

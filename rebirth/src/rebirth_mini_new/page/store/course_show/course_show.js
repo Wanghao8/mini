@@ -151,17 +151,7 @@ Page({
         _self.setData({
           sessionKey: model.session_key
         });
-        var dataParam = {
-          encryptedData: e.detail.encryptedData,
-          iv: e.detail.iv,
-          sessionKey: _self.data.sessionKey,
-          acc_id: wx.getStorageSync("acc").id
-        }
-        if (dataParam.sessionKey == "") {
-          common.showToast("返回重新打开当前页面");
-          return;
-        }
-        _self.acc_edit_phone(dataParam);
+        _self.acc_edit_phone();
       },
       fail(res) {
         common.requestFail('后台登录接口，执行失败');
@@ -277,6 +267,14 @@ Page({
    * 手机号码重新变更修改
    */
   getPhoneNumber: function(e) {
+    _self.setData({
+      encryptedData: e.detail.encryptedData,
+      iv: e.detail.iv,
+    })
+    if (e.detail.errMsg != "getPhoneNumber:ok") {
+      common.showToast('获取手机号失败');
+      return;
+    };
     wx.login({
       success(res) {
         _self.setData({
@@ -285,21 +283,23 @@ Page({
         _self.code2Session(res.code);
       }
     })
-    if (e.detail.errMsg != "getPhoneNumber:ok") {
-      common.showToast('获取手机号失败');
-      return;
-    };
+    
   },
   /**
    * 执行用户手机号修改 [acc_edit_phone]
    * 参数 acc_id
    * 返回实体信息
    */
-  acc_edit_phone: function(model) {
+  acc_edit_phone: function() {
     common.showLoading("正在修改");
     wx.request({
       url: app.globalData.url + 'mini/manageapi/acc_edit_phone',
-      data: model,
+      data: {
+        encryptedData: _self.data.encryptedData,
+        iv:_self.data.iv,
+        sessionKey: _self.data.sessionKey,
+        acc_id: wx.getStorageSync("acc").id
+      },
       method: 'post',
       header: common.headerForm,
       success(res) {
@@ -415,6 +415,10 @@ Page({
   //====================================================
   //获取用户信息保存到data里
   bindGetUserInfo(e) {
+    if (e.detail.errMsg != "getUserInfo:ok") {
+      common.showToast('登录失败');
+      return;
+    };
     var model = e.detail.userInfo;
     model.acc_id = wx.getStorageSync("acc").id;
     _self.acc_edit_info(model);

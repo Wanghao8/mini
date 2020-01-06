@@ -202,6 +202,7 @@ Page({
   actionBtn: function(e) {
     var type = e.currentTarget.dataset.action;
     var id = e.currentTarget.dataset.id;
+    var btn = e.currentTarget.dataset.btn;
     switch (type) {
       case 'switch':
         break;
@@ -211,9 +212,14 @@ Page({
         })
         break;
       case 'detail':
+      if(btn==1){
         wx.navigateTo({
           url: '../appoint_acc_list/appoint_acc_list?id=' + id,
         })
+      }else{
+        common.showToast("已结束的课程无法查看")
+      }
+        
         break;
       default:
         break;

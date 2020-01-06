@@ -67,7 +67,7 @@
           <!-- 这一行循环的是上下列表 -->
           <view class="card-wrapper margintop10">
             <block wx:for="{{goodsList}}" wx:key="id">
-              <view class="card-list-item1 whitebg flexrbc" wx:if="{{goodsList.length!=0}}" bindtap="actionBtn" data-action="detail" data-id="{{item.id}}">
+              <view class="card-list-item1 whitebg flexrbc" wx:if="{{goodsList.length!=0}}" bindtap="actionBtn" data-action="detail" data-id="{{item.id}}" data-btn="{{item.btn_status}}">
                 <view class="marginleft15 class-list">
                   <view class="flexrbc marginright15">
                     <view class="fz18 col3">{{item.name}}</view>

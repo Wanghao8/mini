@@ -1,9 +1,10 @@
 <view catchtouchmove="ture" class="mask flexccc" wx:if="{{fullLoading}}">
   <image class="loadinggif" src="../../../static/img/loading.gif"></image>正在加载中</view>
 
-<scroll-view scroll-y="{{true}}" scroll-into-view="{{toView}}" lower-threshold="480" bindscrolltolower="changegb" upper-threshold="100" bindscrolltoupper="changebg">
-
-  <navBar title='' background='{{navbg}}' color='#fff' back="{{true}}" iconTheme='white' bindback="handlerGobackClick"></navBar>
+<scroll-view scroll-y="{{true}}" scroll-into-view="{{toView}}" lower-threshold="340" bindscrolltolower="changegb" upper-threshold="140" bindscrolltoupper="changebg">
+  <view style="height:0">
+    <navBar title='' background='{{navbg}}' color='#fff' back="{{true}}" iconTheme='white' bindback="handlerGobackClick"></navBar>
+  </view>
   <view wx:for="{{course.course_cover_imgs}}" wx:key="id" id="intro">
     <image class="class-top-img" mode="aspectFill" src="{{item}}"></image>
   </view>
@@ -25,7 +26,7 @@
         {{course.course_info}}
       </view>
       <view class="flexr0c">
-        <view class="tag margintop10  fz14 col3" wx:for="{{course.lebel}}" wx:key="id">{{item}}</view>
+        <view class="tag margintop10 marginleft10 fz14 col3" wx:for="{{course.lebel}}" wx:key="id">{{item}}</view>
       </view>
       <view class="flexr0c margintop10">
         <view class="iconfont icon-shijian"></view>

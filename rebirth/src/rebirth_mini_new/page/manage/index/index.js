@@ -286,6 +286,10 @@ Page({
   },
   //获取用户信息保存到data里
   bindGetUserInfo(e) {
+    if (e.detail.errMsg != "getUserInfo:ok") {
+      common.showToast('登录失败');
+      return;
+    };
     var model = e.detail.userInfo;
     model.acc_id = wx.getStorageSync("acc").id;
     _self.acc_edit_info(model);
