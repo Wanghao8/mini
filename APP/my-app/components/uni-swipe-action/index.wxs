@@ -1,0 +1,134 @@
+function sizeReady(newValue, oldValue, ownerInstance, instance) {
+  var state = instance.getState()
+  state.position = JSON.parse(instance.getDataset().position)
+  if (state.position.length === 0) return
+  var show = state.position[0].show
+  state.left = state.left || state.position[0].left;
+  if (show) {
+    openState(true, instance, ownerInstance)
+  } else {
+    openState(false, instance, ownerInstance)
+  }
+}
+
+
+function touchstart(e, ins) {
+  var instance = e.instance;
+  var state = instance.getState();
+  var pageX = e.touches[0].pageX;
+
+  instance.removeClass('ani');
+  var owner = ins.selectAllComponents('.button-hock')
+  for (var i = 0; i < owner.length; i++) {
+    owner[i].removeClass('ani');
+  }
+  state.position = JSON.parse(instance.getDataset().position);
+  state.left = state.left || state.position[0].left;
+
+  state.width = pageX - state.left;
+  ins.callMethod('openSwipe')
+}
+
+
+function touchmove(e, ownerInstance) {
+  var instance = e.instance;
+  var disabled = instance.getDataset().disabled
+  var state = instance.getState()
+  if (disabled) return
+  var pageX = e.touches[0].pageX;
+  move(pageX - state.width, instance, ownerInstance)
+}
+
+
+function touchend(e, ownerInstance) {
+  var instance = e.instance;
+  var disabled = instance.getDataset().disabled
+  var state = instance.getState()
+  if (disabled) return
+  moveDirection(state.left, -40, instance, ownerInstance)
+}
+
+
+function move(value, instance, ownerInstance) {
+  var state = instance.getState()
+  var x = Math.max(-state.position[1].width, Math.min((value), 0));
+  state.left = x;
+  instance.setStyle({
+    transform: 'translateX(' + x + 'px)',
+    '-webkit-transform': 'translateX(' + x + 'px)'
+  })
+
+  buttonFold(x, instance, ownerInstance)
+}
+
+
+function moveDirection(left, value, ins, ownerInstance) {
+  var state = ins.getState()
+  var position = state.position
+  var isopen = state.isopen
+  if (!position[1].width) {
+    openState(false,ins, ownerInstance)
+    return
+  }
+  if (isopen) {
+    if (-left <= position[1].width) {
+      openState(false, ins, ownerInstance)
+    } else {
+      openState(true, ins, ownerInstance)
+    }
+    return
+  }
+  if (left <= value) {
+    openState(true, ins, ownerInstance)
+  } else {
+    openState(false, ins, ownerInstance)
+  }
+}
+
+
+function buttonFold(value, instance, ownerInstance) {
+  var ins = ownerInstance.selectAllComponents('.button-hock');
+  var state = instance.getState();
+  var position = state.position;
+  var arr = [];
+  var w = 0;
+  for (var i = 0; i < ins.length; i++) {
+    if (!ins[i].getDataset().button) return
+    var btnData = JSON.parse(ins[i].getDataset().button)
+    var button = btnData[i] && btnData[i].width || 0
+    w += button
+    arr.push(-w)
+    var distance  = arr[i - 1] + value * (arr[i - 1] / position[1].width)
+    if (i != 0) {
+      ins[i].setStyle({
+        transform: 'translateX(' + distance + 'px)',
+      })
+    }
+  }
+}
+
+
+function openState(type, ins, ownerInstance) {
+  var state = ins.getState()
+  var position = state.position
+  
+  state.isopen = type
+
+  ownerInstance.callMethod('change', {
+    open: type
+  })
+  ins.addClass('ani');
+  var owner = ownerInstance.selectAllComponents('.button-hock')
+  for (var i = 0; i < owner.length; i++) {
+    owner[i].addClass('ani');
+  }
+  move(type ? -position[1].width : 0, ins, ownerInstance)
+
+}
+
+module.exports = {
+  sizeReady: sizeReady,
+  touchstart: touchstart,
+  touchmove: touchmove,
+  touchend: touchend
+}

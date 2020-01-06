@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "管理的全部员工",
+  "usingComponents": {
+    "sl-filter": "/components/sl-filter/sl-filter",
+    "uni-swipe-action": "/components/uni-swipe-action/uni-swipe-action"
+  }
+}

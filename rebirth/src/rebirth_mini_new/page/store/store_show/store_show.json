@@ -1,7 +1,10 @@
 {
+  "navigationBarTextStyle": "white",
   "navigationBarTitleText": "门店详情",
+  "navigationStyle": "custom",
   "usingComponents": {
     "step": "../../../component/step/step",
-    "notice": "../../../component/notice/notice"
+    "notice": "../../../component/notice/notice",
+    "navBar": "../../../component/navBar/navBar"
   }
 }

@@ -8,9 +8,11 @@ Page({
    * 页面的初始数据
    */
   data: {
+    city: ['郑州市全城','未来新的城市暂未开启'],
+    cityIndex: 0,
     latitude: 34.75165,
     longitude: 113.783328,
-    fullLoading:true
+    fullLoading: true
   },
 
   /**
@@ -97,7 +99,8 @@ Page({
       data: {
         page: 1,
         limit: 10,
-        latlong: _self.data.latitude + ',' + _self.data.longitude
+        latlong: _self.data.latitude + ',' + _self.data.longitude,
+        acc_id: wx.getStorageSync('acc').id
       },
       method: 'post',
       header: common.headerForm,
@@ -117,7 +120,7 @@ Page({
         })
         _self.setData({
           gym: model,
-          fullLoading:false
+          fullLoading: false
         })
       },
       fail(res) {
@@ -125,7 +128,28 @@ Page({
       }
     })
   },
-
+  /**
+   * 后台接口[store_collection]收藏门店
+   * 参数：acc_id,store_id
+   * 返回:无
+   */
+  store_collection: function(store_id) {
+    wx.request({
+      url: app.globalData.url + 'mini/manageapi/store_collection',
+      data: {
+        store_id: store_id,
+        acc_id: wx.getStorageSync('acc').id
+      },
+      method: 'post',
+      header: common.headerForm,
+      success(res) {
+        console.log(res);
+      },
+      fail(res) {
+        console.log(res);
+      },
+    })
+  },
 
   //界面组件部分
   //====================================================
@@ -137,7 +161,21 @@ Page({
       case 'store':
         wx.navigateTo({
           url: '../store_show/store_show?id=' + value,
-        })
+        });
+        break;
+
+      default:
+        break;
     }
+  },
+  favorite: function(e) {
+    var store_id = e.currentTarget.dataset.id;
+    _self.store_collection(store_id);
+    _self.store_list();
+  },
+  chooseCity: function() {
+    _self.setData({
+      cityIndex: e.detail.value
+    })
   }
 })

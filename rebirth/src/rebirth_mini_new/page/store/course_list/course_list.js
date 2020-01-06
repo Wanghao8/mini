@@ -14,7 +14,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-
     fullLoading: true,
     accAddData: {
       code: '',
@@ -27,7 +26,8 @@ Page({
     introIndex: 1,
     currentTab: 0,
     weekday: ['日', '一', '二', '三', '四', '五', '六', '日', '一', '二', '三', '四', '五', '六'],
-    goodsList: []
+    goodsList: [],
+    navbg: 'rgba(0,0,0,0)'
   },
 
   /**
@@ -41,14 +41,14 @@ Page({
         'accAddData.p_acc_id': options.p_acc_id
       })
     }
+    //课程切换高度计算
+    _self.getDate();
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-    //课程切换高度计算
-    _self.getDate();
     _self.setHeight();
   },
 
@@ -87,7 +87,6 @@ Page({
    * 微信内部授权
    */
   getLocation: function() {
-    console.log(111)
     wx.getLocation({
       type: 'wgs84',
       success(res) {
@@ -97,7 +96,6 @@ Page({
         _self.setData({
           'accAddData.latlong': latlong
         });
-        console.log(999)
         _self.wxlogin();
       },
       fail() {
@@ -179,7 +177,10 @@ Page({
         };
         var model = res.data.data;
         model.no = parseInt(model.id) + 1000;
-        model.cover_imgs = app.globalData.imgUrl + model.cover_imgs;
+        model.cover_imgs = model.cover_imgs.split(",");
+        for (var i = 0; i < model.cover_imgs.length; i++) {
+          model.cover_imgs[i] = app.globalData.imgUrl + model.cover_imgs[i]
+        }
         model.latlong = model.latlong.split(',');
         model.lat = model.latlong[0];
         model.lon = model.latlong[1];
@@ -191,6 +192,9 @@ Page({
         //同步执行课程列表
         _self.goods_list();
         _self.appoint_show_exist();
+        _self.setData({
+          fullLoading: false
+        });
       },
       fail(res) {
         console.log(res)
@@ -229,9 +233,6 @@ Page({
           goodsList: model
         })
         _self.setHeight();
-        _self.setData({
-          fullLoading: false
-        })
       },
       fail(res) {
         common.requestFail('请求接口失败，未能获取门店信息');
@@ -288,17 +289,24 @@ Page({
     var type = e.currentTarget.dataset.action;
     var location = e.currentTarget.dataset.location;
     var id = e.currentTarget.dataset.id;
+    var btn = e.currentTarget.dataset.btn;
     switch (type) {
       case 'reserver':
-        wx.navigateTo({
-          url: '../course_show/course_show?id=' + id + '&location=' + JSON.stringify(location),
-        });
+        if (btn == 1) {
+          wx.navigateTo({
+            url: '../course_show/course_show?id=' + id + '&location=' + JSON.stringify(location),
+          });
+        } else {
+          common.showToast("结束或已满不可预约")
+        }
         break;
       case 'reservered':
         if (id != 0) {
           wx.navigateTo({
             url: '../../order/appoint_show/appoint_show?id=' + _self.data.appointData.id,
           });
+        } else {
+          common.showToast("您暂无预约")
         }
         break;
       case 'openMap':
@@ -420,7 +428,6 @@ Page({
       _self.setData({
         currentTab: cur
       })
-      _self.goods_list();
     }
   },
   //判断当前滚动超过一屏时，设置tab标题滚动条。
@@ -438,5 +445,15 @@ Page({
   footerTap: app.footerTap,
   isEmptyObject: function(obj) {
     return JSON.stringify(obj) === '{}';
-  }
+  },
+  changebg(){
+    _self.setData({
+      navbg: 'rgba(236,249,248, 0)'
+    })
+  },
+  changegb(){
+    _self.setData({
+      navbg: 'rgba(236,249,248, 1)'
+    })
+  },
 })

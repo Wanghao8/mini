@@ -1,5 +1,6 @@
 const app = getApp();
 var common = require('../../../static/js/common.js');
+var utils = require('../../../utils/util.js');
 var _self;
 Page({
   //路由数据部分
@@ -91,8 +92,10 @@ Page({
           return;
         };
         var model = res.data.data;
-        model.leftTime = model.start_time - model.current_time
-        model.url = app.globalData.url + model.url
+        // model.leftTime = model.start_time - model.current_time
+        model.leftTime = utils.formatTime(new Date(model.start_time*1000));
+        model.leftTime = model.leftTime.substr(11,5);
+        model.url = app.globalData.url + model.url;
         model.begin_time = model.begin_time.substr(5, 11);
         model.begin_time = model.begin_time.replace(/-/,'月');
         model.begin_time = model.begin_time.replace(/ /,'日 ');
@@ -127,8 +130,8 @@ Page({
           return;
         };
         wx.showModal({
-          title: '提示',
-          content: '取消预约成功,是否返回首页',
+          title: '取消预约成功',
+          content: '您已成功取消预约,现在是否返回首页',
           success(res) {
             if (res.confirm) {
               wx.switchTab({
@@ -141,7 +144,7 @@ Page({
         })
       },
       fail(){
-        console.log(res)
+        console.log(res);
       }
     })
   },
@@ -154,15 +157,15 @@ Page({
     switch (type) {
       case 'look':
         wx.showModal({
-          title: '提示',
+          title: '二维码使用说明',
           content: '请将二维码对准健身房门口的门禁读码器，听到滴一声即可推门进入！',
           showCancel: false
         })
         break;
       case 'cancel':
       wx.showModal({
-        title: '警告',
-        content: '确认取消课程？',
+        title: '确认取消课程？',
+        content: '取消课程后，会失去健身机会。确定吗？',
         success(res){
           if (res.confirm) {
             console.log('用户点击确定')
@@ -173,10 +176,9 @@ Page({
         }
       })
         break;
-      case 'back':
-        wx.switchTab({
-          url: '../../store/course_list/course_list',
-        });
+      case 'refresh':
+        _self.appoint_show();
+        common.showToast("已刷新二维码");
         break;
       default:
         break;

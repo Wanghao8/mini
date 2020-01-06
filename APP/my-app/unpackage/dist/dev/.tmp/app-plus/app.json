@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/navigate",
+    "pages/edit/AddLog",
+    "pages/manage/Index1",
+    "pages/manage/DepView",
+    "pages/manage/ComView",
+    "pages/manage/InfoView",
+    "pages/manage/Index",
+    "pages/manage/Login",
+    "pages/Employee/Emplist",
+    "pages/Employee/addEmp",
+    "pages/Employee/test",
+    "pages/manage/SignIn"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#333333",
+    "backgroundColor": "#EFEFF4"
+  },
+  "nvueCompiler": "uni-app",
+  "renderer": "auto",
+  "splashscreen": {
+    "alwaysShowBeforeRender": true,
+    "autoclose": false
+  },
+  "appname": "my-app",
+  "compilerVersion": "2.3.7",
+  "usingComponents": {}
+}

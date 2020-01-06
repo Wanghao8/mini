@@ -1,4 +1,9 @@
-page{background-color: #ecf9f8}
+page{background-color: #ecf9f8;margin-bottom: 80rpx;}
 .icon-kong{font-size: 160rpx;color: #999;margin: 20rpx 0}
 .loadinggif{width: 80rpx;height: 80rpx;margin-bottom: 40rpx;color: #666666}
 .mask{position: absolute;z-index: 1000;font-size: 32rpx;width: 100vw;height: 100vh;background-color: #fff;top:0rpx;color: #666666}
+.icon-icon-test{position: absolute;top: 20rpx;font-size: 40rpx}
+.father{position: relative;}
+.icon-icon-test{position: absolute;color: #fff;font-size: 90rpx;right: 20rpx;}
+.icon-xin{position: absolute;color: #ff0000;font-size: 90rpx;right: 20rpx;top: 20rpx}
+.info-box{padding: 15rpx 20rpx}

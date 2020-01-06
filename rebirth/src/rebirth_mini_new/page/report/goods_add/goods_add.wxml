@@ -2,22 +2,28 @@
   <view class="card-wrapper margintop10">
     <view class="flexrbc list marginright10 marginleft10">
       <view class="col6 fz18">日期</view>
-      <picker class="colf2 fz20 bold" mode="date" value="{{date}}" start="2019-01-01" end="2021-01-01" bindchange="bindDateChange">{{date}}</picker>
+      <picker class="col3 fz20 bold" mode="date" value="{{date}}" start="2019-01-01" end="2021-01-01" bindchange="bindDateChange">{{date}}</picker>
     </view>
     <view class="flexrbc list marginright10 marginleft10">
       <view class="col6 fz18">课程名称</view>
-      <!-- <input class="colf2 fz20 bold" placeholder="输入课程名" placeholder-class="col76 fz20" bindblur="name"></input> -->
-      <picker class="fz20 colf2 bold" bindchange="setClass" value="{{index}}" range="{{classes}}">{{classes[index]}}</picker>
+      <!-- <input class="col3 fz20 bold" placeholder="输入课程名" placeholder-class="col76 fz20" bindblur="name"></input> -->
+      <picker class="fz20 col3 bold" bindchange="setClass" value="{{index}}" range="{{classes}}">{{classes[index]}}</picker>
     </view>
     <view class="flexrbc list marginright10 marginleft10">
       <view class="col6 fz18">开始时间</view>
-      <picker class="colf2 fz20 bold" mode="time" value="{{start_time}}" start="06:01" end="22:01" bindchange="bindTimeChange1">{{start_time}}</picker>
+      <picker class="col3 fz20 bold" mode="time" value="{{start_time}}" start="06:01" end="22:01" bindchange="bindTimeChange1">{{start_time}}</picker>
     </view>
-    
+    <view class="flexrbc list marginright10 marginleft10">
+      <view class="col6 fz18">结束时间</view>
+      <view class="red fz20 bold">{{end_time}}</view>
+    </view>
+
     <view class="flexrbc list marginright10 marginleft10">
       <view class="col6 fz18">人数</view>
-      <input class="fz20 colf2 bold" value="{{classInfo[index].volume}}" placeholder="输入课程人数" placeholder-class="col76 fz16" bindblur="num"></input>
-      <view class="fz20 colf2 bold ren">人</view>
+      <view class="flexr0c">
+        <input class="fz20 col3 bold" value="{{classInfo[index].volume}}" maxlength="2" type="number" placeholder="输入课程人数" placeholder-class="col76 fz16" bindblur="num"></input>
+        <view class="fz20 col3 bold ren">人</view>
+      </view>
     </view>
     <view class="bottom-btn-back"></view>
     <view class="bottom-btn fz20 bold" bindtap="actionBtn" data-action="comfirm">确认排课</view>

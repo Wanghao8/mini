@@ -15,7 +15,8 @@ Page({
     height: [],
     weight: [],
     cmIndex: 35,
-    kgIndex: 40
+    kgIndex: 40,
+    genderIndex: 0
 
   },
 
@@ -153,40 +154,7 @@ Page({
     model.moving_target = _self.data.times[_self.data.index];
     _self.acc_edit_info(model);
   },
-  // resetCm(e) {
-  //   _self.setData({
-  //     cm: e.detail.value
-  //   });
-  //   if (_self.data.cm < 50 || _self.data.cm > 250 || !_self.data.cm) {
-  //     wx.showModal({
-  //       title: '警告',
-  //       content: '请输入真实的身高值',
-  //     })
-  //   } else {
-  //     var model = {
-  //       acc_id: wx.getStorageSync('acc').id
-  //     };
-  //     model.height = _self.data.cm;
-  //     _self.acc_edit_info(model);
-  //   }
-  // },
-  // resetKg(e) {
-  //   _self.setData({
-  //     kg: e.detail.value
-  //   });
-  //   if (_self.data.kg < 30 || _self.data.kg > 250 || !_self.data.kg) {
-  //     wx.showModal({
-  //       title: '警告',
-  //       content: '请输入真实的体重值',
-  //     })
-  //   } else {
-  //     var model = {
-  //       acc_id: wx.getStorageSync('acc').id
-  //     };
-  //     model.weight = _self.data.kg;
-  //     _self.acc_edit_info(model);
-  //   }
-  // },
+  // 修改身高
   bindCmChange(e) {
     _self.setData({
       cmIndex: e.detail.value,
@@ -197,6 +165,7 @@ Page({
     model.height = _self.data.height[_self.data.cmIndex];
     _self.acc_edit_info(model);
   },
+  // 修改体重
   bindKgChange(e) {
     _self.setData({
       kgIndex: e.detail.value
@@ -207,7 +176,18 @@ Page({
     model.weight = _self.data.weight[_self.data.kgIndex];
     _self.acc_edit_info(model);
   },
-
+  // 修改性别
+  bindGenderChange: function(e) {
+    _self.setData({
+      genderIndex: e.detail.value
+    });
+    var model = {
+      acc_id: wx.getStorageSync('acc').id
+    };
+    model.gender = parseInt(_self.data.genderIndex);
+    _self.acc_edit_info(model);
+  },
+  // 为身高range填充数据
   setHeight() {
     for (var i = 140; i < 220; i++) {
       _self.data.height.push(i)
@@ -216,6 +196,7 @@ Page({
       height: _self.data.height
     })
   },
+  // 为体重range填充数据
   setWeight() {
     console.log(12223)
     for (var i = 30; i < 200; i++) {
@@ -225,19 +206,35 @@ Page({
       weight: _self.data.weight
     })
   },
+  //确认修改昵称
+  comfirmEdit: function(e) {
+    _self.setData({
+      nickName:e.detail.value
+    });
+    var model = {
+      acc_id: wx.getStorageSync('acc').id
+    };
+    model.nickName = _self.data.nickName;
+    _self.acc_edit_info(model);
+  },
   // 点击事件汇总
   actionBtn: function(e) {
     var type = e.currentTarget.dataset.action;
     switch (type) {
-      case 'cm':
-        _self.setData({
-          setCm: true
-        });
-        break;
-      case 'kg':
-        _self.setData({
-          setKg: true
-        });
+      case 'comfirm':
+        wx.showModal({
+          title: '确认修改信息',
+          content: '修改信息成功，并返回我的页面',
+          success(res){
+            if (res.confirm) {
+              wx.switchTab({
+                url: '../index/index',
+              })
+            } else if (res.cancel) {
+              console.log('用户点击取消')
+            }
+          }
+        })
         break;
 
       default:
@@ -245,3 +242,38 @@ Page({
     }
   },
 })
+
+// resetCm(e) {
+//   _self.setData({
+//     cm: e.detail.value
+//   });
+//   if (_self.data.cm < 50 || _self.data.cm > 250 || !_self.data.cm) {
+//     wx.showModal({
+//       title: '警告',
+//       content: '请输入真实的身高值',
+//     })
+//   } else {
+//     var model = {
+//       acc_id: wx.getStorageSync('acc').id
+//     };
+//     model.height = _self.data.cm;
+//     _self.acc_edit_info(model);
+//   }
+// },
+// resetKg(e) {
+//   _self.setData({
+//     kg: e.detail.value
+//   });
+//   if (_self.data.kg < 30 || _self.data.kg > 250 || !_self.data.kg) {
+//     wx.showModal({
+//       title: '警告',
+//       content: '请输入真实的体重值',
+//     })
+//   } else {
+//     var model = {
+//       acc_id: wx.getStorageSync('acc').id
+//     };
+//     model.weight = _self.data.kg;
+//     _self.acc_edit_info(model);
+//   }
+// },

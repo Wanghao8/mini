@@ -85,8 +85,8 @@ Page({
         var model = res.data.data;
         model.timecard1 = model.timecard.replace(/-/, '年');
         model.timecard1 = model.timecard1.replace(/-/, '月');
-        model.timecard1 = model.timecard1 + '日 到期';
-        model.uid = parseInt(model.id) + 1000000
+        model.timecard1 = model.timecard1 + '日 ';
+        model.uid = parseInt(model.id) + 1000000;
         _self.setData({
           info: model
         })
@@ -114,11 +114,42 @@ Page({
       method: 'post',
       header: common.headerForm,
       success(res) {
-        console.log(res);
-        wx.showToast({
-          title: '充值成功',
-        })
-        _self.acc_show();
+        if (!res.data.res) {
+          common.apiFalse("微信支付失败", '错误代码' + res.data.code + res.data.msg);
+          return;
+        };
+        var model = res.data.data;
+        wx.requestPayment({
+          'timeStamp': model.timeStamp,
+          'nonceStr': model.nonceStr,
+          'package': model.package,
+          'signType': model.signType,
+          'paySign': model.paySign,
+          'success': function (res) {
+            if (res.errMsg == "requestPayment:ok") {
+              wx.showModal({
+                title: '恭喜你，会员卡充值成功！',
+                content: '去首页预约课程吧',
+                showCancel: false,
+                success(res) {
+                  if (res.confirm) {
+                    // wx.switchTab({
+                    //   url: '../../store/course_list/course_list',
+                    // })
+                    wx.navigateBack({});
+                  };
+                }
+              });
+            }
+          },
+          'fail': function (res) {
+            wx.showToast({
+              title: '充值失败',
+              icon: 'none',
+              duration: 1500
+            });
+          }
+        });
       },
       fail(res) {
         console.log(res);
@@ -137,13 +168,11 @@ Page({
     switch (action) {
       case 'buy':
         wx.showModal({
-          title: '提示',
-          content: '确认' + name + '?',
+          title: '确认支付'+ money+'元吗？',
+          content: '支付成功后，将为你增加' + value + (type == 'income_times' ? '次' : '天')+' 会员卡',
           success(res) {
             if (res.confirm) {
-              _self.consume_pay(type, name, money, value)
-            } else if (res.cancel) {
-              console.log('用户点击取消')
+              _self.consume_pay(type, name, money, value);
             }
           }
         })

@@ -5,4 +5,4 @@ page{background-color: #ECF9F8}
 .erweima{width: 500rpx;height: 500rpx;}
 .content{height: 640rpx;width: 690rpx;}
 .refresh{width: 500rpx;}
-.cancel-btn{width: 690rpx;background-color: #989898;height: 100rpx;line-height: 100rpx;border-radius: 10rpx;margin-left: 30rpx}
+.cancel-btn{width: 690rpx;background-color: #97DDD6;height: 100rpx;line-height: 100rpx;border-radius: 10rpx;margin-left: 30rpx}

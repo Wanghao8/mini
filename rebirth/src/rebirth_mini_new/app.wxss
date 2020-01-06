@@ -22,14 +22,15 @@
 .jump-bar{width: 630rpx;height: 120rpx;line-height: 120rpx; border-radius: 8rpx;padding: 0 30rpx;}
 .gym-card{height: 400rpx;width: 690rpx;border-radius: 8rpx;margin-bottom: 30rpx;background-color: #fff}
 .gym-card:last-child{margin-bottom: 0}
-.page-wrapper{width: 710rpx;padding: 0 20rpx;}
+.page-wrapper{padding: 0 20rpx;}
 .gymimg{width: 100%;height: 260rpx;border-top-left-radius: 10rpx;border-top-right-radius: 10rpx;}
-.address{width: 560rpx;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;margin-top: 8rpx}
-.erweima-box{width: 710rpx;height: 140rpx;margin: 0 20rpx;position: absolute;top: 280rpx;z-index: 200;background-color: #fff;border-radius: 8rpx}
+.address{width: 560rpx;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;}
+.erweima-box{width: 560rpx;height: 140rpx;margin: 0 95rpx;position: absolute;top: 330rpx;z-index: 200;background-color: #fff;border-radius: 8rpx}
 .food-img{width: 160rpx;height: 110rpx;margin: 20rpx}
 
 .card-wrapper{background-color: #fff;border-radius: 8rpx;overflow: hidden}
-.card-list-item{width: 710rpx;height: 200rpx;position: relative}
+.cards-wrapper{background-color: #fff;border-radius: 8rpx;overflow: hidden;padding: 20rpx}
+.card-list-item{width: 710rpx;height: 200rpx;position: relative;padding:0 20rpx}
 .card-list-item1{width: 710rpx;height: 200rpx;position: relative;overflow: hidden}
 /* .card-list-item::after{position: absolute;content: '';-webkit-transform-origin: 0 0;transform-origin: 0 0;-webkit-transform: scaleY(0.5);transform: scaleY(0.5);bottom: 0;right: 0;width: 100%;border-bottom: 1px solid #767676;} */
 .card-list-item:first-child{border-top-left-radius: 10rpx;border-top-right-radius: 10rpx}
@@ -37,7 +38,7 @@
 .card-list-item:last-child .card-list-item::after{border:none}
 .bottom-btn{position: fixed;bottom: 20rpx;height:100rpx;width:710rpx;text-align: center; line-height: 100rpx;border-radius: 8rpx;  background-color: #97DDD6;color: #333;font-weight: 700;font-size: 36rpx;z-index: 10;}
 .bottom-btn-back{position: fixed;bottom: 0;height: 140rpx;width: 750rpx;background-color: #ecf9f8;z-index: 9}
-.navigator{position: sticky;top: 0; height: 100rpx;line-height: 100rpx;background-color: #ecf9f8;z-index: 20}
+.navigator{position: sticky;top: 140rpx; height: 120rpx;line-height: 120rpx;background-color: #ecf9f8;z-index: 20}
 .little-btn{width: 120rpx;height: 60rpx;line-height: 60rpx;background-color: #97DDD6;border-radius: 8rpx;color: #333}
 .avatar-wrapper{height: 200rpx;width: 200rpx;border-radius: 50%;margin-top: 140rpx;margin-left: 22rpx}
 .card{height: 250rpx;border-radius: 8rpx;}
@@ -46,19 +47,19 @@
 .date-circle{width: 80rpx;height: 80rpx;border-radius: 50%;line-height: 80rpx}
 .date-circle-active{border: 1px solid #97DDD6;background-color: #242424;color: #fff;}
 .gym-intro{width: 100%;height: 100rpx;}
-.class-top-img{width: 100%;height: 360rpx;}
+.class-top-img{width: 100%;height: 400rpx;margin-top: -136rpx}
 
 .list-wrapper{background-color: #fff;border-radius: 8rpx;overflow: hidden}
 .list-item{position: relative;height: 200rpx;}
 .list-item::after,.options::after{position: absolute;content: '';-webkit-transform-origin: 0 0;transform-origin: 0 0;-webkit-transform: scaleY(0.5);transform: scaleY(0.5);bottom: 0;right: 0;width: 100%;border-bottom: 1px solid #39393A;}
 .coach-img{height: 140rpx;width: 140rpx;border-radius: 50%;margin: 30rpx}
 .intro-txt{width: 480rpx;}
-.tag{height: 60rpx;width:fit-content;line-height: 60rpx; padding:0 20rpx;border-radius: 60rpx;background-color: #ccc;color: #000}
+.tag{height: 60rpx;width:fit-content;line-height: 60rpx; padding:0 20rpx;border-radius: 60rpx;background-color: #ececec;color: #000}
 .class-img{width: 340rpx;height: 160rpx;border-radius: 8rpx;}
 .resever-top{height: 400rpx;width: 100%;box-shadow: 0 -20rpx 20rpx 20rpx #333}
 .options{position: relative;height: 120rpx;width: 100%;line-height: 120rpx}
 .mine-card{height: 400rpx;border: 1px solid #797979;width: 100%}
-.user-card{height: 400rpx;width: 750rpx;background-color: #ecf9f8;overflow: hidden}
+.user-card{height: 380rpx;width: 750rpx;background-color: #ecf9f8;overflow: hidden}
 .buy-btn{width: 200rpx;height: 80rpx;line-height: 80rpx;background-color: #97DDD6;margin-right: 30rpx;border-radius: 8rpx}
 .buy-box{width: 100%;background-color: #fff;border-radius: 8rpx;overflow: hidden;}
 .buy-type{width: 60rpx;height: 60rpx;border-radius: 50%;font-size: 30rpx;background-color: #fff;line-height: 60rpx}
@@ -69,6 +70,7 @@
 .exe-list::after{position: absolute;content: '';-webkit-transform-origin: 0 0;transform-origin: 0 0;-webkit-transform: scaleY(0.5);transform: scaleY(0.5);bottom: 0;right: 0;width: 100%;border-bottom: 1px solid #999999;}
 .info-card{width: 100%;height: 200rpx;position: relative;background-color: #fff;z-index: 1}
 .info-tap{width: 710rpx;height: 90rpx;background-color: #97DDD6;position: relative;top: 0rpx;z-index: 3;margin-left: 20rpx;line-height: 90rpx;border-radius: 8rpx}
+.txt{word-break: break-all}
 
 
 /* 颜色 */
@@ -92,8 +94,10 @@
 .orange{color: #97DDD6}
 .yellow{color: #97DDD6}
 .col81{color: #81d8cf}
+.green{color: #009688}
 .yellowbg{background-color: #97DDD6}
 .redbg{background-color: #990000}
+.red{color: #ff0000}
 
 /* 间距 */
 .margin-row-15{margin: 0 30rpx;}
@@ -116,8 +120,12 @@
 .marginright25{margin-right: 50rpx}
 .marginright15{margin-right: 30rpx}
 .marginbottom10{margin-bottom: 20rpx}
+.marginbottom15{margin-bottom: 30rpx}
 .marginbottom20{margin-bottom: 40rpx}
-.padding10{padding: 20rpx;padding-top: 0}
+.marginbottom100{margin-bottom: 200rpx}
+.marginbottom200{margin-bottom: 400rpx}
+.padding10{padding: 20rpx}
+.paddingtop10{padding-top: 20rpx}
 
 /* 字体大小 */
 .fz32{font-size: 64rpx}
@@ -137,7 +145,7 @@
 
 
 .jvzhong{text-align: center}
-.hang{line-height: 1.5em}
+.hang{line-height: 1.25rem}
 
 
 @font-face {font-family: "iconfont";

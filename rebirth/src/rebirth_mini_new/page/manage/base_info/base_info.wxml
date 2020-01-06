@@ -1,61 +1,73 @@
 <view class="flexr">
   <image class="img" src="{{info.avatarUrl}}"></image>
   <view class="flexrbc name">
-    <view class="fz20 bold colec">{{info.nickName}}</view>
+    <view class="fz20 bold col3">{{info.nickName}}</view>
   </view>
 </view>
 <view class="card-wrapper card-margin">
   <view class="flexrbc info-item">
-    <view class="fz17 col6 marginleft10">昵称</view>
-    <view class="flexr0c marginright10">
-      <view class="colf2 fz17">{{info.nickName}}</view>
+    <view class="fz17 col6 ">昵称</view>
+    <view class="flexr0c ">
+      <input class="col3 fz17" value="{{info.nickName}}" bindblur="comfirmEdit"></input>
+      <view class="iconfont icon-iconfontjiantou3"></view>
     </view>
   </view>
-  <view class="flexrbc info-item">
-    <view class="fz17 col6 marginleft10">性别</view>
-    <view class="flexr0c marginright10">
-      <view class="colf2 fz17">{{gender[info.gender]}}</view>
+  <picker value="{{genderIndex}}" bindchange="bindGenderChange" range="{{gender}}">
+    <view class="flexrbc info-item">
+      <view class="fz17 col6">性别</view>
+      <view class="flexr0c">
+        <view class="col3 fz17">{{gender[info.gender]}}</view>
+        <view class="iconfont icon-iconfontjiantou3"></view>
+      </view>
     </view>
-  </view>
+  </picker>
 </view>
 <view class="fz16 col76 margintop10 marginleft10">隐私数据（非公开）</view>
 <view class="card-wrapper card-margin">
-  <view class="flexrbc info-item">
-    <view class="fz17 col6 marginleft10">生日</view>
-    <view class="flexr0c marginright10">
-      <picker class="colf2 fz17" mode="date" value="{{date}}" start="1970-01-01" end="2020-01-01" bindchange="bindDateChange">{{date}}</picker>
-      <view class="iconfont icon-iconfontjiantou3"></view>
+  <picker class=" info-item" mode="date" value="{{date}}" start="1970-01-01" end="2020-01-01" bindchange="bindDateChange">
+    <view class="flexrbc">
+      <view class="fz17 col6">生日</view>
+      <view class="flexr0c">
+        <view class="col3 fz17">{{info.birthday?info.birthday:date}}</view>
+        <view class="iconfont icon-iconfontjiantou3"></view>
+      </view>
     </view>
-  </view>
-  <view class="flexrbc info-item">
-    <view class="fz17 col6 marginleft10">身高</view>
-    <view class="flexr0c marginright10" bindtap="actionBtn" data-action="cm">
-      <!-- <view class="colf2 fz17" wx:if="{{!setCm}}">{{cm}}</view> -->
-      <picker class="colf2 fz17" value="{{cmIndex}}" bindchange="bindCmChange" range="{{height}}">{{height[cmIndex]}}</picker>
-      <!-- <input type="number" maxlength="3" wx:if="{{setCm}}" bindblur="resetCm"></input> -->
-      <view class="colf2 fz17">cm</view>
-      <view class="iconfont icon-iconfontjiantou3"></view>
+  </picker>
+  <picker value="{{cmIndex}}" bindchange="bindCmChange" range="{{height}}">
+    <view class="flexrbc info-item">
+      <view class="fz17 col6">身高</view>
+      <view class="flexr0c" bindtap="actionBtn" data-action="cm">
+        <!-- <view class="col3 fz17" wx:if="{{!setCm}}">{{cm}}</view> -->
+        <view class="col3 fz17">{{info.height?info.height:height[cmIndex]}}</view>
+        <!-- <input type="number" maxlength="3" wx:if="{{setCm}}" bindblur="resetCm"></input> -->
+        <view class="col3 fz17">cm</view>
+        <view class="iconfont icon-iconfontjiantou3"></view>
+      </view>
     </view>
-  </view>
-  <view class="flexrbc info-item">
-    <view class="fz17 col6 marginleft10">体重</view>
-    <view class="flexr0c marginright10" bindtap="actionBtn" data-action="kg">
-      <!-- <view class="colf2 fz17" wx:if="{{!setKg}}">{{kg}}</view> -->
-      <!-- <input type="number" maxlength="3" wx:if="{{setKg}}" bindblur="resetKg"></input> -->
-      <picker class="colf2 fz17" value="{{kgIndex}}" bindchange="bindKgChange" range="{{weight}}">{{weight[kgIndex]}}</picker>
-      <view class="colf2 fz17">kg</view>
-      <view class="iconfont icon-iconfontjiantou3"></view>
+  </picker>
+  <picker value="{{kgIndex}}" bindchange="bindKgChange" range="{{weight}}">
+    <view class="flexrbc info-item">
+      <view class="fz17 col6">体重</view>
+      <view class="flexr0c" bindtap="actionBtn" data-action="kg">
+        <!-- <view class="col3 fz17" wx:if="{{!setKg}}">{{kg}}</view> -->
+        <!-- <input type="number" maxlength="3" wx:if="{{setKg}}" bindblur="resetKg"></input> -->
+        <view class="col3 fz17">{{info.weight?info.weight:weight[kgIndex]}}</view>
+        <view class="col3 fz17">kg</view>
+        <view class="iconfont icon-iconfontjiantou3"></view>
+      </view>
     </view>
-  </view>
-  <view class="flexrbc info-item">
-    <view class="fz17 col6 marginleft10">运动目标（周）</view>
-    <view class="flexr0c marginright10">
-      <!-- <view class="colf2 fz17">3次</view> -->
-      <picker class="colf2 fz17" bindchange="bindPickerChange" value="{{index}}" range="{{times}}">{{times[index]}}</picker>
-      <view class="colf2 fz17">次</view>
-      <view class="iconfont icon-iconfontjiantou3"></view>
+  </picker>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{times}}">
+    <view class="flexrbc info-item">
+      <view class="fz17 col6">运动目标（周）</view>
+      <view class="flexr0c">
+        <!-- <view class="col3 fz17">3次</view> -->
+        <view class="col3 fz17">{{times[index]}}</view>
+        <view class="col3 fz17">次</view>
+        <view class="iconfont icon-iconfontjiantou3"></view>
+      </view>
     </view>
-  </view>
+  </picker>
   <view class="bottom-btn-back"></view>
-  <view class="bottom-btn fz20 col24 marginleft15" >确定修改</view>
+  <view class="bottom-btn fz20 col24 marginleft10" bindtap="actionBtn" data-action="comfirm">确定修改</view>
 </view>

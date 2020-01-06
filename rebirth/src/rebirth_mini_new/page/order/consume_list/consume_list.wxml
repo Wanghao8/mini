@@ -1,10 +1,10 @@
 <view class="page-wrapper">
-  <view class="exe-list" wx:for="{{list}}" wx:key="id">
+  <view class="exe-list" wx:for="{{list}}" wx:key="id" wx:if="{{item.nature=='income'}}">
     <view class="flexrbc">
       <view>
         <view class="col3 fz18">{{item.name}}</view>
-        <view class="yellow fz16 margintop5" wx:if="{{item.ci}}">{{item.xvfei}}{{item.lave}}{{item.tianci}}</view>
-        <view class="yellow fz16 margintop5" wx:if="{{!item.ci}}">{{item.xvfei}}{{item.lave}}</view>
+        <view class="col6 fz16 margintop5" wx:if="{{item.ci}}">{{item.xvfei}}{{item.lave}}{{item.tianci}}</view>
+        <view class="col6 fz16 margintop5" wx:if="{{!item.ci}}">{{item.xvfei}}{{item.lave}}</view>
       </view>
       <view class="{{item.jiajian=='+'?'yellow':''}} bold fz22">{{item.jiajian}}{{item.value}}{{item.tianci}}</view>
     </view>

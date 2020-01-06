@@ -23,49 +23,13 @@ Page({
    */
   onReady: function() {
     _self.wxlogin();
-    _self.acc_show();
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function() {
-
+    _self.acc_show();
   },
   //后台接口部分
   //=======================================================
@@ -181,16 +145,23 @@ Page({
       method: 'get',
       header: common.headerForm,
       success(res) {
-        if (!res.data) {
+        if (!res.data.res) {
           common.apiFalse("接口请求未完成", '错误代码' + res.data.code + res.data.msg);
           return;
         };
-        var model = res.data.data;
-        model.nickName = model.nickName == "" ? '点击微信登录' : model.nickName;
-        model.avatarUrl = model.avatarUrl == "" ? "../../../static/img/mine.png" : app.globalData.imgUrl + model.avatarUrl;
-        model.timecard1 = model.timecard.replace(/-/, '年');
-        model.timecard1 = model.timecard1.replace(/-/, '月');
-        model.timecard1 = model.timecard1 + '日 到期';
+        if (!res.data.data) {
+          var model = res.data;
+        } else {
+          var model = res.data.data;
+        }
+
+        model.nickName = model.nickName == "" ? 'rebirth新用户' : model.nickName;
+        model.avatarUrl = model.avatarUrl == "http://rebirths.yuanfangyun.com/null" ? "../../../static/img/mine.png" : app.globalData.imgUrl + model.avatarUrl;
+        if (model.timecard) {
+          model.timecard1 = model.timecard.replace(/-/, '年');
+          model.timecard1 = model.timecard1.replace(/-/, '月');
+          model.timecard1 = model.timecard1 + '天 ';
+        }
         _self.setData({
           userInfo: model
         });
@@ -256,6 +227,10 @@ Page({
     var type = e.currentTarget.dataset.action;
     switch (type) {
       case 'info':
+        if (_self.data.userInfo.nickName =='rebirth新用户') {
+          common.showToast('请先登录');
+          return;
+        }
         wx.navigateTo({
           url: '../base_info/base_info',
         });
@@ -289,15 +264,20 @@ Page({
 
         break;
       case 'about':
-      common.showToast('暂未开启')
-      return;
+        // common.showToast('暂未开启');
+        // return;
         wx.navigateTo({
           url: '../food_show/food_show?url=https://mp.weixin.qq.com/s/6AT7wqRslDFKW9TqGX3kQA',
         })
         break;
       case 'manage':
+        var manage_store_id = _self.data.userInfo.manage_store_id;
+        if (!(manage_store_id > 0)){
+          common.showToast('无管理门店');
+          return;
+        }
         wx.navigateTo({
-          url: '../../report/store_report/store_report',
+          url: '../../report/store_report/store_report?manage_store_id=' + manage_store_id,
         })
         break;
       default:
@@ -456,5 +436,5 @@ Page({
     _self.setData({
       cavs: 1
     });
-  },
+  }
 })

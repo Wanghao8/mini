@@ -8,13 +8,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-    resever: 0,
+    manage_store_id:0,
+    storeData:{
+      name:'正在获取',
+      address:'门店地址信息'
+    },
+    incomeData:{
+
+    },
     introIndex: 1,
     currentTab: 0,
     weekday: ['日', '一', '二', '三', '四', '五', '六', '日', '一', '二', '三', '四', '五', '六'],
-    classList: [],
-    store: ['楷林IFC店', '楷林国际店', '人保大厦店', '金地铂悦店'],
-    index: 0
+    goodsList: []
   },
 
   /**
@@ -23,61 +28,28 @@ Page({
   onLoad: function(options) {
     _self = this;
     _self.getDate();
-    _self.store_show();
-    _self.setHeight();
     _self.setData({
-      chooseDate: _self.data.date1
-    })
+      chooseDate: _self.data.date1,
+      manage_store_id: options.manage_store_id
+    });
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-
+    _self.store_show();
+    _self.order_report();
+    _self.setHeight();
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-    _self.goods_list()
+    _self.goods_list();
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function() {
-
-  },
   //后台接口部分
   //=======================================================
   /**
@@ -86,27 +58,52 @@ Page({
    * 返回:门店信息
    */
   store_show: function(e) {
-    console.log(23)
     wx.request({
       url: app.globalData.url + 'mini/storeapi/store_show',
       data: {
-        id: parseInt(_self.data.index) + 1
+        id:_self.data.manage_store_id
       },
       method: 'get',
       header: common.headerForm,
       success(res) {
+        if (!res.data.res) {
+          common.apiFalse("门店信息不存在", '错误代码' + res.data.code + res.data.msg);
+          return;
+        };
         var model = res.data.data;
-        model.no = parseInt(model.id) + 1000;
-        model.cover_imgs = app.globalData.imgUrl + model.cover_imgs;
-        model.latlong = model.latlong.split(',');
-        model.lat = model.latlong[0];
-        model.lon = model.latlong[1];
         _self.setData({
-          gym: model
+          storeData: model
         })
       },
       fail(res) {
-        console.log(res)
+        console.log(res);
+      }
+    })
+  },
+  /**
+   * 获取门店收入信息 [order_report]
+   * 参数：store_id
+   * 返回:门店信息
+   */
+  order_report: function(e) {
+    wx.request({
+      url: app.globalData.url + 'mini/orderapi/order_report',
+      data: {
+        store_id: _self.data.manage_store_id
+      },
+      method: 'post',
+      header: common.headerForm,
+      success(res) {
+        if (!res.data.res) {
+          common.apiFalse("报告信息错误", '错误代码' + res.data.code + res.data.msg);
+          return;
+        };
+        _self.setData({
+          incomeData: res.data.data
+        })
+      },
+      fail(res) {
+        console.log(res);
       }
     })
   },
@@ -119,16 +116,20 @@ Page({
     wx.request({
       url: app.globalData.url + 'mini/storeapi/goods_list',
       data: {
-        page: 1,
-        limit: 10,
-        store_id: parseInt(_self.data.index) + 1,
+        page: 0,
+        limit: 0,
+        store_id: _self.data.manage_store_id,
         dayn: _self.data.chooseDate
       },
       method: 'post',
       header: common.headerForm,
       success(res) {
-        var model = res.data.data;
-        model.forEach(function(item) {
+        if (!res.data.res) {
+          common.apiFalse("商品信息列表", '错误代码' + res.data.code + res.data.msg);
+          return;
+        };
+        var goodsListData = res.data.data;
+        goodsListData.forEach(function(item) {
           item.begin_time = item.begin_time.substr(11, 5);
           item.end_time = item.end_time.substr(11, 5);
           item.label = item.label.replace(/ /g, ' · ');
@@ -136,7 +137,7 @@ Page({
           item.appoint_total = parseInt(item.appoint_total);
         })
         _self.setData({
-          classList: model
+          goodsList: goodsListData
         })
         _self.setHeight();
       },
@@ -159,7 +160,11 @@ Page({
       method: 'post',
       header: common.headerForm,
       success(res) {
-        console.log(res);
+        if (!res.data.res) {
+          common.apiFalse("删除信息成功", '错误代码' + res.data.code + res.data.msg);
+          return;
+        };
+        _self.goods_list();
       },
       fail(res) {
         console.log(res);
@@ -180,7 +185,11 @@ Page({
       method: 'post',
       header: common.headerForm,
       success(res) {
-        console.log(res);
+        if (!res.data.res) {
+          common.apiFalse("删除信息成功", '错误代码' + res.data.code + res.data.msg);
+          return;
+        };
+        _self.goods_list();
       },
       fail(res) {
         console.log(res);
@@ -195,23 +204,49 @@ Page({
     var id = e.currentTarget.dataset.id;
     switch (type) {
       case 'switch':
-
-        break;
-      case 'delete':
-        _self.goods_delete(id);
-        _self.goods_list();
         break;
       case 'setClass':
         wx.navigateTo({
-          url: '../goods_add/goods_add?store_id=' + _self.data.gym.id,
+          url: '../goods_add/goods_add?store_id=' + _self.data.manage_store_id,
         })
         break;
-      case 'done':
-        _self.goods_done();
+      case 'detail':
+        wx.navigateTo({
+          url: '../appoint_acc_list/appoint_acc_list?id=' + id,
+        })
         break;
       default:
         break;
     }
+  },
+  done(e) {
+    var id = e.currentTarget.dataset.id;
+    wx.showModal({
+      title: '确认完成该课程吗？',
+      content: '确认后，课程将直接结束，不可再次预约，不可撤回，请谨慎操作？',
+      success(res) {
+        if (res.confirm) {
+          _self.goods_done();
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+
+  },
+  deleteClass(e) {
+    var id = e.currentTarget.dataset.id;
+    wx.showModal({
+      title: '确认删除课程？',
+      content: '确认后，课程将消失，请谨慎操作？',
+      success(res) {
+        if (res.confirm) {
+          _self.goods_delete(id);
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
   },
   // 获取日期
   getDate() {
@@ -255,7 +290,10 @@ Page({
   },
   //设置swiper高度
   setHeight() {
-    var winHeight = 210 * _self.data.classList.length + 40;
+    var winHeight = 210 * _self.data.goodsList.length + 40;
+    if (_self.data.goodsList.length == 0) {
+      winHeight = 328
+    }
     _self.setData({
       winHeight
     })
@@ -263,9 +301,44 @@ Page({
   // 滚动切换标签样式
   switchTab: function(e) {
     _self.setData({
-      currentTab: e.detail.current
+      currentTab: e.detail.current,
     });
+    switch (_self.data.currentTab) {
+      case 0:
+        _self.setData({
+          chooseDate: _self.data.date1
+        });
+        break;
+      case 1:
+        _self.setData({
+          chooseDate: _self.data.date2
+        });
+        break;
+      case 2:
+        _self.setData({
+          chooseDate: _self.data.date3
+        });
+        break;
+      case 3:
+        _self.setData({
+          chooseDate: _self.data.date4
+        });
+        break;
+      case 4:
+        _self.setData({
+          chooseDate: _self.data.date5
+        });
+        break;
+      case 5:
+        _self.setData({
+          chooseDate: _self.data.date6
+        });
+        break;
+      default:
+        break;
+    };
     _self.checkCor();
+    _self.goods_list();
   },
   // 点击标题切换当前页时改变样式
   swichNav: function(e) {
@@ -280,7 +353,7 @@ Page({
       _self.setData({
         currentTab: cur
       })
-      _self.goods_list();
+      //_self.goods_list();
     }
   },
   //判断当前滚动超过一屏时，设置tab标题滚动条。
@@ -295,13 +368,5 @@ Page({
       })
     }
   },
-  footerTap: app.footerTap,
-  //切换店面的picker
-  bindPickerChange: function(e) {
-    _self.setData({
-      index: e.detail.value
-    })
-    _self.store_show();
-    _self.goods_list();
-  }
+  footerTap: app.footerTap
 })

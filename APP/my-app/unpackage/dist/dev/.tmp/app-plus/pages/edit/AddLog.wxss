@@ -1,0 +1,72 @@
+/* 字体大小 */
+.fz16 {font-size: 34rpx;}
+.fz15 {font-size: 32rpx;}
+.fz14 {font-size: 30rpx;}
+.fz13 {font-size: 28rpx;}
+.fz12 {font-size: 26rpx;}
+/* 颜色 */
+.pageBackcol {background-color: #EFEFF4;}
+.barBackcol {background-color: #FFFFFF;}
+.subcol {color: #666666;}
+.thirdcol {color: #999999;}
+.green {color: #006633 !important;}
+/* 二级标题 */
+.subTitle {font-size: 28rpx;color: #666666;}
+/* flex布局 */
+.flexrsc {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-box-pack: start;-webkit-justify-content: flex-start;-ms-flex-pack: start;justify-content: flex-start;-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;}
+.flexrbc {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-box-pack: justify;-webkit-justify-content: space-between;-ms-flex-pack: justify;justify-content: space-between;-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;}
+.flexrac {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-justify-content: space-around;-ms-flex-pack: distribute;justify-content: space-around;-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;}
+.flexc {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;-ms-flex-direction: column;flex-direction: column;}
+.flexr0s {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-box-align: start;-webkit-align-items: flex-start;-ms-flex-align: start;align-items: flex-start;}
+.flexcac {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;-ms-flex-direction: column;flex-direction: column;-webkit-justify-content: space-around;-ms-flex-pack: distribute;justify-content: space-around;-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;}
+.flexr {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;}
+.flexccc {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;-ms-flex-direction: column;flex-direction: column;-webkit-box-pack: center;-webkit-justify-content: center;-ms-flex-pack: center;justify-content: center;-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;}
+.flexras {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-justify-content: space-around;-ms-flex-pack: distribute;justify-content: space-around;-webkit-box-align: start;-webkit-align-items: flex-start;-ms-flex-align: start;align-items: flex-start;}
+.flexrsc {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-box-pack: start;-webkit-justify-content: flex-start;-ms-flex-pack: start;justify-content: flex-start;-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;}
+.flexc0c {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;-ms-flex-direction: column;flex-direction: column;-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;}
+.flexc0s {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;-ms-flex-direction: column;flex-direction: column;-webkit-box-align: start;-webkit-align-items: flex-start;-ms-flex-align: start;align-items: flex-start;}
+.flexr0c {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;}
+/* 间距 */
+.margin-col-10 {margin: 20rpx auto;}
+.margin-col-7 {margin: 14rpx auto;}
+.margin-row-10 {margin: auto 20rpx;}
+.margin-row-7 {margin: auto 14rpx;}
+/* 底部按钮 */
+.back {position: fixed;bottom: 0;width: 100%;}
+.backHome {height: 100rpx;line-height: 100rpx;width: 100%;font-size: 32rpx;border-radius: 0;text-align: center;}
+.backIcon{width: 100%;}
+.phoneBtn {height: 100rpx;line-height: 100rpx;width: 16%;background-color: #666666;}
+.phone {font-size: 50rpx;text-align: center;line-height: 100rpx;color: #CCCCCC;}
+/* 导航栏 */
+.nav {background-color: #333333;width: 100vw;height: 96rpx;line-height: 96rpx;}
+.close {font-size: 40rpx;margin: 24rpx;color: #e4e4e4;}
+.content {font-size: 34rpx;color: #CCCCCC;}
+.option {font-size: 48rpx;color: #E4E4E4;float: right;margin-right: 30rpx;}
+/* 圆形 */
+.sub_circle {width: 92rpx;height: 92rpx;border-radius: 46rpx;background-color: #E4E4E4;margin: 14rpx;}
+/* 最外层容器 */
+.container{height: 100vh; background-color: #EFEFF4;}
+.fullWidth{width: 100%;}
+
+
+
+
+uni-page-body{background-color: #E7E8ED;}
+.splitLine{height: 20rpx;background-color: #E7E8ED ;}
+.container{margin:auto 20rpx;background-color: #E7E8ED;}
+.header{height: 200rpx;width: 100%;margin-bottom: 20rpx;background-color: #FFFFFF;}
+.project,.publishSty{height: 100rpx;width: 100%;border-bottom: 2rpx solid #EDECEC;}
+.pro-left{color:#ff7777 ;font-size:28rpx ;line-height: 100rpx;margin-left:20rpx;}
+.pro-right{color:#868686 ;font-size:30rpx;line-height: 100rpx;margin-right: 20rpx;}
+.pub-left{color: #3D4145; font-size: 28rpx;margin-left:20rpx;}
+.pub-right{color: #868686;font-size: 30rpx;margin-right: 20rpx;}
+.footer{height: 580rpx;width: 100%; background-color: #FFFFFF;}
+.split{height: 24rpx;color:#FFFFFF ;}
+.content{margin-bottom: 24rpx;margin-left: 24rpx;border: 2rpx solid #F1F1F1;width: 660rpx;height: 300rpx; hefont-size: 30rpx;}
+.upPhoto{width: 200rpx;height: 200rpx;border: 2rpx solid #D6D6D6;margin-left: 24rpx;border-radius: 20rpx;}
+.plus{font-size: 160rpx;line-height: 200rpx;text-align: center;color: #D6D6D6;}
+.pub-btn{margin-top: 20rpx;}
+.close {width: 80rpx;height: 80rpx;background-color: #EA8F05;color: #FDF7EC;font-size: 40rpx;text-align: center;line-height: 80rpx;margin: 0;}
+.confirm {width: 630rpx;height: 80rpx;background-color: #DD524D;color: #FFFFFF;font-size: 28rpx;text-align: center;line-height: 80rpx;border-radius: 0;}
+button:after {border: none;}
+

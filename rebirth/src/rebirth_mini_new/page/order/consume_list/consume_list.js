@@ -101,12 +101,12 @@ Page({
           }
           if (item.type =='income_days'){
             item.tianci = '天';
-            item.xvfei = '续费至'
+            item.xvfei = '续费'
           }else{
             item.tianci = '次';
             item.xvfei = '次卡剩余'
           }
-          if(item.timecard){
+          if(item.timecard!='0'){
             item.lave = item.timecard.replace(/-/,'年');
             item.lave = item.lave.replace(/-/,'月');
             item.lave = item.lave+'日'

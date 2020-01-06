@@ -1,0 +1,38 @@
+<view class="fz20 bold margintop10 marginleft10">预约人员</view>
+<!-- <view class="flexr list-wrapper">
+  <view class="img-wrapper avatar margintop10" wx:for="{{list}}" wx:key="id" bindtap="detail" data-id="{{item.id}}" data-value="{{item.acc_id}}">
+    <view class="box">
+      <image class="date-circle " src="{{item.avatarUrl}}"></image>
+    </view>
+  </view>
+</view> -->
+<view class="reserver" wx:for="{{list}}" wx:key="id">
+  <view class="flexrbc margintop10"  bindtap="detail" data-id="{{item.id}}" data-value="{{item.acc_id}}">
+    <view class="flexr0c">
+      <image class="date-circle marginleft10" src="{{item.avatarUrl}}"></image>
+      <view class="marginleft10">
+        <view class="fz17 col3 bold">{{item.nickName?item.nickName:'No.'+item.id}}</view>
+        <view class="fz15 col6 margintop5">{{item.add_time}}</view>
+      </view>
+    </view>
+    <view class="little-btn fz16 bold jvzhong marginright10">查看</view>
+  </view>
+</view>
+
+<view class="shadow" wx:if="{{showDetail}}" bindtap="cancel_detail"></view>
+<view class="detail" wx:if="{{showDetail}}">
+  <view class="flexrac">
+    <view class="info-box flexccc">
+      <image class="img-item" src="{{info.avatarUrl}}"></image>
+      <view class="flexrcc margintop10">
+        <view class="fz20 bold">{{info.nickName}}</view>
+        <view class="fz20 bold marginleft10">{{gender[info.gender]}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{list.length==0}}" class="jvzhong">
+  <view class="iconfont icon-kong"></view>
+  <view class="fz20 marginbottom10 col6">暂无预约</view>
+</view>

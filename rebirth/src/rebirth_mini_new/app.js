@@ -57,7 +57,9 @@ App({
   globalData: {
     // url: 'https://rebirth.yuanfangyun.com/'
     // url: 'http://192.168.0.91:86/index.php/',
+    // url: 'http://pinzhi.yuanfangyun.com/index.php/',
     url: 'https://pinzhi.yuanfangyun.com/index.php/',
-    imgUrl:'http://rebirths.yuanfangyun.com/'
+    imgUrl:'http://rebirths.yuanfangyun.com/',
+
   }
 })

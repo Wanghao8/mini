@@ -1,17 +1,17 @@
 <view class="page-wrapper">
-  <view class="card-wrapper margintop10" wx:for="{{list}}" wx:key="id" bindtap="openDoor" data-id="{{item.id}}" data-value="{{item}}">
-    <view class="flexrbc marginleft10 marginright10 ">
+  <view class="cards-wrapper margintop10" wx:for="{{list}}" wx:key="id" bindtap="openDoor" data-id="{{item.id}}" data-value="{{item}}">
+    <view class="flexrbc   ">
       <view class="flexrbc">
-        <view class="col3 fz18 margintop10">{{item.course_name}}</view>
+        <view class="col3 fz18 ">{{item.course_name}}</view>
         <view class="col6 fz15"></view>
       </view>
-      <view class="fz15 yellow margintop10" wx:if="{{item.status==2}}">暂未开始</view>
-      <view class="fz15 col6 margintop10" wx:if="{{item.status==1}}">运动结束</view>
+      <view class="fz15 yellow " wx:if="{{item.status==2}}">暂未开始</view>
+      <view class="fz15 col6 " wx:if="{{item.status==1}}">运动结束</view>
     </view>
-    <view class="fz16 yellow bold marginleft10 margintop10">{{item.begin_time}}-{{item.end_time}}</view>
-    <view class="flexrbc fz15  marginleft10 marginright10 margintop10 ">
-      <view class="col76 marginbottom10">{{item.add_time}}分预约</view>
-      <view class="col6 marginbottom10">{{item.store_name}}</view>
+    <view class="fz16 yellow bold  margintop10">{{item.begin_time}}-{{item.end_time}}</view>
+    <view class="flexrbc fz15    margintop10 ">
+      <view class="col76 ">{{item.add_time}}分预约</view>
+      <view class="col6 ">{{item.store_name}}</view>
     </view>
   </view>
 </view>

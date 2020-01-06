@@ -26,33 +26,43 @@
   <view class="fz16 col6 marginleft10 marginbottom10">平均每月1次 每次价值66</view>
 </view>
 
-<view class="user-card">
-  <view class="fz20 margintop15 marginleft15">No.{{info.uid}}</view>
-  <view class="fz16  margintop5 marginleft15">时间卡：{{info.timecard? info.timecard1 :'无'}}</view>
-  <view class="fz16  margintop5 marginleft15">次数卡：当前剩余 {{info.oncecard}} 次</view>
+<view class="user-card flexrb">
+  <view class="flec0c">
+    <view class="fz20 margintop15 marginleft15">No.{{info.uid}}</view>
+    <view class="fz16  margintop5 marginleft15">时长卡：{{info.timecard!=0?'剩余'+info.timecard1+"到期":"无卡会员"}}</view>
+    <view class="fz16  margintop5 marginleft15">次数卡：当前剩余 {{info.oncecard}} 次</view>
+  </view>
+  <view class="fz14 col9 margintop20 marginright10" bindtap="actionBtn" data-action="history">历史充值记录</view>
 </view>
 <view class="page-wrapper margintop10">
+  <view class="flexrbc banner margintop15">
+    <view class="">
+      <view class="fz16 bold">预计每年节省￥46300</view>
+      <view class="fz13 col9 margintop10" bindtap="detail">点击查看节省详情></view>
+    </view>
+    <view class="iconfont icon-youjiantou"></view>
+  </view>
   <view class="buy-box">
-    <view class="flexrbc margintop15">
+    <!-- <view class="flexrbc margintop15">
       <view class="fz16 col9 marginleft15">预计每年节省￥46300</view>
       <view class="fz15 col6 marginright15" bindtap="detail">详情></view>
-    </view>
+    </view> -->
     <view class="flexrbc margintop15">
       <view class="fz16 col6 marginleft15 bold">购买次数卡</view>
       <view class="fz15 col9 marginright15">预约一次扣除一次</view>
     </view>
     <view class="margintop10 flexr marginleft15">
       <view class="buy-options flexccc" bindtap="actionBtn" data-action="buy" data-value="1" data-money="120" data-type="income_times" data-name="购买1次卡*120元">
-        <view class="fz16 col6 margintop5 orange">可用1次</view>
-        <view class="fz20 white margintop5 yellow">￥120</view>
+        <view class="fz14 col6 margintop5 orange">可用1次</view>
+        <view class="fz18 white margintop5 green bold">￥120</view>
       </view>
-      <view class="buy-options marginleft15 flexccc" bindtap="actionBtn" data-action="buy" data-value="12" data-money="1200" data-type="income_times" data-name="购买12次卡*1200元">
-        <view class="fz16 col6 margintop5 orange">可用12次</view>
-        <view class="fz20 white margintop5 yellow">￥1200</view>
+      <view class="buy-options marginleft20 flexccc" bindtap="actionBtn" data-action="buy" data-value="12" data-money="1200" data-type="income_times" data-name="购买12次卡*1200元">
+        <view class="fz14 col6 margintop5 orange">可用12次</view>
+        <view class="fz18 white margintop5 green bold">￥1200</view>
       </view>
-      <view class="buy-options marginleft15 flexccc" bindtap="actionBtn" data-action="buy" data-value="150" data-money="12000" data-type="income_times" data-name="购买150次卡*12000元">
-        <view class="fz16 col6 margintop5 orange">可用150次</view>
-        <view class="fz20 white margintop5 yellow">￥12000</view>
+      <view class="buy-options marginleft20 flexccc" bindtap="actionBtn" data-action="buy" data-value="150" data-money="12000" data-type="income_times" data-name="购买150次卡*12000元">
+        <view class="fz14 col6 margintop5 orange">可用150次</view>
+        <view class="fz18 white margintop5 green bold">￥12000</view>
       </view>
     </view>
     <view class="flexrbc margintop15">
@@ -61,22 +71,21 @@
     </view>
     <view class="margintop10 flexr marginleft15">
       <view class="buy-options flexccc" bindtap="actionBtn" data-action="buy" data-value="30" data-money="1200" data-type="income_days" data-name="购买月卡*1200元">
-        <view class="fz16 col6 margintop5 orange">30天月卡</view>
-        <view class="fz20 white margintop5 yellow">￥1200</view>
+        <view class="fz14 col6 margintop5 orange">30天月卡</view>
+        <view class="fz18 white margintop5 green bold">￥1200</view>
       </view>
-      <view class="buy-options marginleft15 flexccc" bindtap="actionBtn" data-action="buy" data-value="90" data-money="3168" data-type="income_days" data-name="购买季卡*3168元">
-        <view class="fz16 col6 margintop5 orange">90天季卡</view>
-        <view class="fz20 white margintop5 yellow">￥3168</view>
+      <view class="buy-options marginleft20 flexccc" bindtap="actionBtn" data-action="buy" data-value="90" data-money="3168" data-type="income_days" data-name="购买季卡*3168元">
+        <view class="fz14 col6 margintop5 orange">90天季卡</view>
+        <view class="fz18 white margintop5 green bold">￥3168</view>
       </view>
-      <view class="buy-options marginleft15 flexccc" bindtap="actionBtn" data-action="buy" data-value="360" data-money="10080" data-type="income_days" data-name="购买年卡*10080元">
-        <view class="fz16 col6 margintop5 orange">360天年卡</view>
-        <view class="fz20 white margintop5 yellow">￥10080</view>
+      <view class="buy-options marginleft20 flexccc" bindtap="actionBtn" data-action="buy" data-value="360" data-money="10080" data-type="income_days" data-name="购买年卡*10080元">
+        <view class="fz14 col6 margintop5 orange">360天年卡</view>
+        <view class="fz18 white margintop5 green bold">￥10080</view>
       </view>
     </view>
     <view class="fz14 col98 margintop10 hang marginleft15">购卡须知:</view>
     <view class="fz14 col98 hang marginleft15">1.时长卡在有效期内可支付所有类型课程；</view>
     <view class="fz14 col98 hang marginleft15">2.次数卡亦可支付所有课程；</view>
-    <view class="fz14 col98 marginbottom10 hang marginleft15">3.同时持有时长卡和次数卡，预约课程优先使用时长卡。</view>
-    <view class="col3 fz18 history" bindtap="actionBtn" data-action="history">历史充值记录</view>
+    <view class="fz14 col98 marginbottom15 hang marginleft15">3.同时持有时长卡和次数卡，预约课程优先使用时长卡。</view>
   </view>
 </view>

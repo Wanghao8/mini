@@ -49,5 +49,17 @@ css
 	苹果和安卓的时间格式有区别
 	安卓2019-1-1 苹果2019/1/1
 
+	position：sticky特性
 	scroll-view作为父元素，其子元素的position：sticky会失效
+	特性（坑）：
+1.sticky不会触发BFC，
+2.z-index无效，
+3.当父元素的height：100%时，页面滑动到一定高度之后sticky属性会失效。
+4.父元素不能有overflow:hidden或者overflow:auto属性。
+5.父元素高度不能低于sticky高度，必须指定top、bottom、left、right4个值之一。
+
+作者：fuheideMayuyu
+链接：https://www.jianshu.com/p/e217905e8b87
+来源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 

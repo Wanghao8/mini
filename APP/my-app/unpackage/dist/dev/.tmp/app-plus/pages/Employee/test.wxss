@@ -1,0 +1,83 @@
+/* 字体大小 */
+.fz16 {font-size: 34rpx;}
+.fz15 {font-size: 32rpx;}
+.fz14 {font-size: 30rpx;}
+.fz13 {font-size: 28rpx;}
+.fz12 {font-size: 26rpx;}
+/* 颜色 */
+.pageBackcol {background-color: #EFEFF4;}
+.barBackcol {background-color: #FFFFFF;}
+.subcol {color: #666666;}
+.thirdcol {color: #999999;}
+.green {color: #006633 !important;}
+/* 二级标题 */
+.subTitle {font-size: 28rpx;color: #666666;}
+/* flex布局 */
+.flexrsc {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-box-pack: start;-webkit-justify-content: flex-start;-ms-flex-pack: start;justify-content: flex-start;-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;}
+.flexrbc {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-box-pack: justify;-webkit-justify-content: space-between;-ms-flex-pack: justify;justify-content: space-between;-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;}
+.flexrac {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-justify-content: space-around;-ms-flex-pack: distribute;justify-content: space-around;-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;}
+.flexc {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;-ms-flex-direction: column;flex-direction: column;}
+.flexr0s {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-box-align: start;-webkit-align-items: flex-start;-ms-flex-align: start;align-items: flex-start;}
+.flexcac {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;-ms-flex-direction: column;flex-direction: column;-webkit-justify-content: space-around;-ms-flex-pack: distribute;justify-content: space-around;-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;}
+.flexr {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;}
+.flexccc {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;-ms-flex-direction: column;flex-direction: column;-webkit-box-pack: center;-webkit-justify-content: center;-ms-flex-pack: center;justify-content: center;-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;}
+.flexras {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-justify-content: space-around;-ms-flex-pack: distribute;justify-content: space-around;-webkit-box-align: start;-webkit-align-items: flex-start;-ms-flex-align: start;align-items: flex-start;}
+.flexrsc {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-box-pack: start;-webkit-justify-content: flex-start;-ms-flex-pack: start;justify-content: flex-start;-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;}
+.flexc0c {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;-ms-flex-direction: column;flex-direction: column;-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;}
+.flexc0s {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-webkit-flex-direction: column;-ms-flex-direction: column;flex-direction: column;-webkit-box-align: start;-webkit-align-items: flex-start;-ms-flex-align: start;align-items: flex-start;}
+.flexr0c {display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-webkit-flex-direction: row;-ms-flex-direction: row;flex-direction: row;-webkit-box-align: center;-webkit-align-items: center;-ms-flex-align: center;align-items: center;}
+/* 间距 */
+.margin-col-10 {margin: 20rpx auto;}
+.margin-col-7 {margin: 14rpx auto;}
+.margin-row-10 {margin: auto 20rpx;}
+.margin-row-7 {margin: auto 14rpx;}
+/* 底部按钮 */
+.back {position: fixed;bottom: 0;width: 100%;}
+.backHome {height: 100rpx;line-height: 100rpx;width: 100%;font-size: 32rpx;border-radius: 0;text-align: center;}
+.backIcon{width: 100%;}
+.phoneBtn {height: 100rpx;line-height: 100rpx;width: 16%;background-color: #666666;}
+.phone {font-size: 50rpx;text-align: center;line-height: 100rpx;color: #CCCCCC;}
+/* 导航栏 */
+.nav {background-color: #333333;width: 100vw;height: 96rpx;line-height: 96rpx;}
+.close {font-size: 40rpx;margin: 24rpx;color: #e4e4e4;}
+.content {font-size: 34rpx;color: #CCCCCC;}
+.option {font-size: 48rpx;color: #E4E4E4;float: right;margin-right: 30rpx;}
+/* 圆形 */
+.sub_circle {width: 92rpx;height: 92rpx;border-radius: 46rpx;background-color: #E4E4E4;margin: 14rpx;}
+/* 最外层容器 */
+.container{height: 100vh; background-color: #EFEFF4;}
+.fullWidth{width: 100%;}
+
+
+
+
+.container {background-color: #FFFFFF;margin: auto 22rpx;margin-bottom: 100rpx;}
+.msgBox {border: 2rpx solid #ffd599;height: 110rpx;width: 702rpx;background-color: #FDF4E7;margin-top: 20rpx;}
+.msgBox ._p {color: #ea8f05;font-size: 28rpx;text-align: left;line-height: 55rpx;margin-left: 16rpx;}
+.upPhoto {position: relative;height: 156rpx;}
+.upPhoto::after {position: absolute;content: '';-webkit-transform-origin: 0 0;-ms-transform-origin: 0 0;transform-origin: 0 0;-webkit-transform: scaleY(0.5);-ms-transform: scaleY(0.5);transform: scaleY(0.5);bottom: 0;left: 0;width: 100%;border-bottom: 1px solid #F2F2F2;z-index: 10;border-radius: 0;}
+.textBox {height: 68rpx;width: 120rpx;margin: 0 24rpx;}
+.upBox {height: 112rpx;width: 184rpx;border: 2rpx solid #E4E4E4;}
+.plus {font-size: 44rpx;line-height: 112rpx;text-align: center;color: #CCCCCC;}
+.idNumber,
+.nameSex {height: 120rpx;position: relative;}
+.idNumber::after,
+.nameSex::after {position: absolute;content: '';-webkit-transform-origin: 0 0;-ms-transform-origin: 0 0;transform-origin: 0 0;-webkit-transform: scaleY(0.5);-ms-transform: scaleY(0.5);transform: scaleY(0.5);bottom: 0;left: 0;width: 100%;border-bottom: 1px solid #F2F2F2;z-index: 10;border-radius: 0;}
+label {margin: 0 24rpx;}
+.shortLeft {width: 353rpx;}
+.inputBegin {height: 120rpx;line-height: 120rpx;margin-left: 30rpx;}
+.sleep {font-size: 40rpx;line-height: 120rpx;}
+.actived {font-size: 22rpx;margin-top: -40rpx;color: #007AFF;}
+.blurColor {font-size: 22rpx;margin-top: -40rpx;color: #B6B8B9;}
+.noDisplay {color: transparent;display: none;}
+.littleLabel {margin-left: 30rpx;margin-right: 0;}
+.longInput {width: 500rpx;height: 80rpx;margin-left: 30rpx;line-height: 80rpx;}
+.shortInput {width: 200rpx;height: 80rpx;margin-left: 30rpx;line-height: 80rpx;}
+.introBox {height: 360rpx;}
+.textBegin {height: 360rpx;margin-left: 30rpx;margin-top: 20rpx;}
+.textEnd {height: 360rpx;margin-left: 30rpx;margin-top: 20rpx;}
+.footer {position: fixed;bottom: 0;height: 100rpx;width: 706rpx;}
+.close {width: 100rpx;height: 100rpx;background-color: #EA8F05;color: #FDF7EC;font-size: 40rpx;text-align: center;line-height: 100rpx;margin: 0;}
+.confirm {width: 626rpx;height: 100rpx;background-color: #009900;color: #FFFFFF;font-size: 34rpx;text-align: center;line-height: 100rpx;border-radius: 0;}
+button:after {border: none;}
+

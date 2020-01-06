@@ -12,6 +12,7 @@ Page({
     index: 0,
     date: util.formatTime3(new Date()),
     start_time: '08:00',
+    end_time: '08:42',
     classes: []
   },
 
@@ -21,58 +22,17 @@ Page({
   onLoad: function(options) {
     _self = this;
     _self.setData({
-      store_id:options.store_id
+      store_id: options.store_id
     })
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
-
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onReady: function() {
     _self.course_list();
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function() {
-
-  },
   //后台接口部分
   //=======================================================
   /**
@@ -84,17 +44,20 @@ Page({
     wx.request({
       url: app.globalData.url + 'mini/storeapi/course_list',
       data: {
-        page: 1,
-        limit: 10
+        page: 0,
+        limit: 0
       },
       method: 'post',
       header: common.headerForm,
       success(res) {
-        console.log(res)
+        if (!res.data.res) {
+          common.apiFalse("获取课程信息失败", '错误代码' + res.data.code + res.data.msg);
+          return;
+        };
         var model = res.data.data;
         var model1 = [];
         model.forEach(function(item) {
-          model1.push(item.name)
+          model1.push(item.name + " （" + item.duration +"分钟）");
         })
         _self.setData({
           classes: model1,
@@ -113,11 +76,11 @@ Page({
    */
   goods_edit: function(e) {
     var end_time = _self.data.date + ' ' + _self.data.start_time;
-    end_time= Date.parse(end_time);
-    end_time = end_time + _self.data.classInfo[_self.data.index].duration*60000;
+    end_time = Date.parse(end_time);
+    end_time = end_time + _self.data.classInfo[_self.data.index].duration * 60000;
     end_time = new Date(end_time);
-    end_time=util.formatTime2(end_time);
-    if(!_self.data.setNumed){
+    end_time = util.formatTime2(end_time);
+    if (!_self.data.setNumed) {
       _self.setData({
         classNum: _self.data.classInfo[_self.data.index].volume
       })
@@ -136,10 +99,16 @@ Page({
       method: 'post',
       header: common.headerForm,
       success(res) {
-        console.log(res)
+        if (!res.data.res) {
+          common.apiFalse("课程添加失败", '错误代码' + res.data.code + res.data.msg);
+          return;
+        };
+        wx.navigateBack({
+          delta: 1
+        });
       },
       fail(res) {
-        console.log(res)
+        console.log(res);
       }
     })
   },
@@ -152,42 +121,61 @@ Page({
     var type = e.currentTarget.dataset.action;
     switch (type) {
       case 'comfirm':
-        _self.goods_edit();
+        wx.showModal({
+          title: '确认在 ' + _self.data.date + _self.data.start_time + '添加' + _self.data.classes[_self.data.index],
+          content: '添加后将按照对应时间自动开课，不可重复',
+          success(res) {
+            if (res.confirm) {
+              _self.goods_edit();
+              return;
+            }
+            common.showToast('用户点击取消');
+          }
+        })
         break;
       default:
         break;
     }
   },
   setClass(e) {
-    this.setData({
+    _self.setData({
       index: e.detail.value
     })
   },
   bindDateChange(e) {
-    this.setData({
+    _self.setData({
       date: e.detail.value
     })
   },
   bindTimeChange1(e) {
-    this.setData({
+    _self.setData({
       start_time: e.detail.value
+    })
+    var end_time = _self.data.date + ' ' + _self.data.start_time;
+    end_time = Date.parse(end_time);
+    end_time = end_time + _self.data.classInfo[_self.data.index].duration * 60000;
+    end_time = new Date(end_time);
+    end_time = util.formatTime2(end_time);
+    end_time = end_time.substr(11, 5);
+    _self.setData({
+      end_time
     })
   },
   bindTimeChange2(e) {
-    this.setData({
+    _self.setData({
       end_time: e.detail.value
     })
   },
   name(e) {
     _self.setData({
-      className: e.detail.value
+      index: e.detail.value
     })
   },
   num(e) {
     _self.setData({
       classNum: e.detail.value,
-      setNumed:true
+      setNumed: true
     })
   },
-  
+
 })

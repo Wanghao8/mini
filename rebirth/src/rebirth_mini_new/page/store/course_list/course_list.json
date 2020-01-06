@@ -1,8 +1,11 @@
 {
+  "navigationBarTextStyle": "white",
   "navigationBarTitleText": "Rebirth 轻健身",
+  "navigationStyle": "custom",
   "usingComponents": {
     "step": "../../../component/step/step",
     "notice": "../../../component/notice/notice",
-    "loading":"../../../component/loading/graceLoading"
+    "loading":"../../../component/loading/graceLoading",
+    "navBar":"../../../component/navBar/navBar"
   }
 }

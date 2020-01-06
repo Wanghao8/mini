@@ -9,7 +9,13 @@ Page({
    */
   data: {
     introIndex: 1,
-    fullLoading: true
+    fullLoading: true,
+    navbg: 'rgba(0,0,0,0)',
+    accAddData: {
+      code: '',
+      p_acc_id: 0, //分享上级id
+      latlong: '0,0'
+    },
   },
 
   /**
@@ -21,21 +27,25 @@ Page({
       id: options.id,
       location: JSON.parse(options.location)
     })
-    _self.goods_show();
+    if (!wx.getStorageSync("acc")) {
+      _self.wxlogin();
+      return;
+    }
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-
+    _self.getLocation();
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    _self.goods_show();
+    _self.acc_show();
   },
 
   /**
@@ -82,12 +92,232 @@ Page({
     }
     return {
       title: _self.data.course.course_name,
-      path: '/page/store/course_show/course_show',
+      path: '/page/store/course_show/course_show?id=' + _self.data.id + '&location=' + JSON.stringify(_self.data.location),
       imageUrl: _self.data.course.course_cover_imgs[0]
     }
   },
   //后台接口部分
   //=======================================================
+  /**
+   * 微信-获取当前位置
+   * 微信内部授权
+   */
+  getLocation: function() {
+    wx.getLocation({
+      type: 'wgs84',
+      success(res) {
+        var latitude = res.latitude;
+        var longitude = res.longitude;
+        var latlong = latitude + "," + longitude;
+        _self.setData({
+          'accAddData.latlong': latlong
+        });
+        _self.wxlogin();
+      },
+      fail() {
+        _self.wxlogin();
+      }
+    })
+  },
+  /**
+   * 微信登录code [wxlogin] 
+   * 小程序直接请求code
+   * 返回code
+   */
+  wxlogin: function() {
+    wx.login({
+      success(res) {
+        _self.setData({
+          'accAddData.code': res.code
+        });
+        _self.acc_login_code();
+      }
+    });
+  },
+  /**
+   * 获得sessionKey值 [code2Session]
+   * 参数 code
+   * 返回用户实体信息
+   */
+  code2Session: function(code) {
+    wx.request({
+      url: app.globalData.url + 'mini/manageapi/code2Session?code=' + _self.data.accAddData.code,
+      success(res) {
+        if (!res.data.res) {
+          common.apiFalse("获取code失败", '错误代码' + res.data.code + res.data.msg);
+          return;
+        };
+        var model = res.data.data;
+        _self.setData({
+          sessionKey: model.session_key
+        });
+        var dataParam = {
+          encryptedData: e.detail.encryptedData,
+          iv: e.detail.iv,
+          sessionKey: _self.data.sessionKey,
+          acc_id: wx.getStorageSync("acc").id
+        }
+        if (dataParam.sessionKey == "") {
+          common.showToast("返回重新打开当前页面");
+          return;
+        }
+        _self.acc_edit_phone(dataParam);
+      },
+      fail(res) {
+        common.requestFail('后台登录接口，执行失败');
+        return;
+      }
+    });
+  },
+  /**
+   * 后台自动登录 [acc_login_code]
+   * 参数 code,p_acc_id
+   * 返回用户实体信息
+   */
+  acc_login_code() {
+    var dataParam = _self.data.accAddData;
+    if (!(dataParam.code != '')) {
+      common.showToast("未获取到有效code");
+      return;
+    }
+    wx.request({
+      url: app.globalData.url + 'mini/manageapi/acc_login_code',
+      data: _self.data.accAddData,
+      method: 'get',
+      header: common.headerForm,
+      success(res) {
+        if (!res.data.res) {
+          common.apiFalse("后台自动登录失败", '错误代码' + res.data.code + res.data.msg);
+          return;
+        };
+        var model = res.data.data;
+        var accModel = {
+          id: model.id,
+          store_id: model.store_id
+        }
+        wx.setStorageSync('acc', accModel);
+        _self.goods_show();
+      },
+      fail(res) {
+        common.requestFail('后台登录接口，执行失败');
+        return;
+      }
+    });
+  },
+  /**
+   * 执行用户信息修改 [acc_edit_info]
+   * 参数 acc_id
+   * 返回实体信息
+   */
+  acc_edit_info: function(model) {
+    common.showLoading("正在登陆");
+    wx.request({
+      url: app.globalData.url + 'mini/manageapi/acc_edit_info',
+      data: model,
+      method: 'post',
+      header: common.headerForm,
+      success(res) {
+        common.hideLoading();
+        if (!res.data.res) {
+          common.apiFalse("接口请求未完成", '错误代码' + res.data.code + res.data.msg);
+          return;
+        };
+        _self.acc_show();
+      },
+      fail(res) {
+        common.requestFail('用户信息修改失败');
+        common.hideLoading();
+        return;
+      }
+    });
+  },
+  /**
+   * 获取用户信息 [acc_show]
+   * 参数 acc_id
+   * 返回实体信息
+   */
+  acc_show: function() {
+    wx.request({
+      url: app.globalData.url + 'mini/manageapi/acc_show',
+      data: {
+        acc_id: wx.getStorageSync("acc").id
+      },
+      method: 'get',
+      header: common.headerForm,
+      success(res) {
+        if (!res.data.res) {
+          common.apiFalse("接口请求未完成", '错误代码' + res.data.code + res.data.msg);
+          return;
+        };
+        if (!res.data.data) {
+          var model = res.data;
+        } else {
+          var model = res.data.data;
+        }
+
+
+        model.nickName = model.nickName == "" ? 'rebirth新用户' : model.nickName;
+        model.avatarUrl = model.avatarUrl == "http://rebirths.yuanfangyun.com/null" ? "../../../static/img/mine.png" : app.globalData.imgUrl + model.avatarUrl;
+        if (model.timecard) {
+          model.timecard1 = model.timecard.replace(/-/, '年');
+          model.timecard1 = model.timecard1.replace(/-/, '月');
+          model.timecard1 = model.timecard1 + '天 ';
+        }
+        _self.setData({
+          userInfo: model
+        });
+      },
+      fail(res) {
+        common.requestFail('用户信息获取失败');
+        return;
+      }
+    });
+  },
+  /**
+   * 手机号码重新变更修改
+   */
+  getPhoneNumber: function(e) {
+    wx.login({
+      success(res) {
+        _self.setData({
+          'accAddData.code': res.code
+        });
+        _self.code2Session(res.code);
+      }
+    })
+    if (e.detail.errMsg != "getPhoneNumber:ok") {
+      common.showToast('获取手机号失败');
+      return;
+    };
+  },
+  /**
+   * 执行用户手机号修改 [acc_edit_phone]
+   * 参数 acc_id
+   * 返回实体信息
+   */
+  acc_edit_phone: function(model) {
+    common.showLoading("正在修改");
+    wx.request({
+      url: app.globalData.url + 'mini/manageapi/acc_edit_phone',
+      data: model,
+      method: 'post',
+      header: common.headerForm,
+      success(res) {
+        common.hideLoading();
+        if (!res.data.res) {
+          common.apiFalse("接口请求未完成", '错误代码' + res.data.code + res.data.msg);
+          return;
+        };
+        _self.acc_show();
+
+      },
+      fail(res) {
+        common.hideLoading();
+        common.requestFail('用户信息修改失败');
+        return;
+      }
+    });
+  },
   /**
    * 获取课程信息 [goods_show]
    * 参数 id,acc_id
@@ -117,6 +347,9 @@ Page({
         model.start_time1 = model.start_time1[0] + '日' + model.start_time1[1];
         model.course_effect = model.course_effect.replace(/\r\n/g, "\n");
         model.course_note = model.course_note.replace(/\r\n/g, "\n");
+        model.acc_list.forEach(function(item) {
+          item.avatarUrl = app.globalData.imgUrl + item.avatarUrl
+        })
         _self.setData({
           course: model,
           fullLoading: false
@@ -143,19 +376,21 @@ Page({
       method: 'post',
       header: common.headerForm,
       success(res) {
-        console.log(res);
         if (res.data.msg == '预约成功') {
           console.log(165)
           wx.showModal({
-            title: '提示',
-            content: '预约成功，是否返回首页',
+            title: '预约成功',
+            content: '请按时达到上课。现在是否返回首页',
             success(res) {
+              var huancunData = {
+                id: wx.getStorageSync('acc').id,
+                store_id: _self.data.course.store_id
+              };
+              wx.setStorageSync("acc", huancunData);
               if (res.confirm) {
                 wx.switchTab({
-                  url: '../course_list/course_list?reserver=' + JSON.stringify(_self.data.course),
+                  url: '../course_list/course_list',
                 })
-              } else if (res.cancel) {
-                console.log('用户点击取消')
               }
             }
           })
@@ -178,23 +413,35 @@ Page({
 
   //界面组件部分
   //====================================================
+  //获取用户信息保存到data里
+  bindGetUserInfo(e) {
+    var model = e.detail.userInfo;
+    model.acc_id = wx.getStorageSync("acc").id;
+    _self.acc_edit_info(model);
+  },
   actionBtn: function(e) {
     var id = e.currentTarget.dataset.id;
     var type = e.currentTarget.dataset.action;
     var location = e.currentTarget.dataset.location;
     switch (type) {
       case 'intro':
-        wx.pageScrollTo({
-          scrollTop: 190,
-        });
+        _self.setData({
+          toView: 'intro'
+        })
+        // wx.pageScrollTo({
+        //   selector: '#intro'
+        // });
         _self.setData({
           introIndex: 1
         });
         break;
       case 'caution':
-        wx.pageScrollTo({
-          scrollTop: 1000,
-        });
+        _self.setData({
+          toView: 'baoming'
+        })
+        // wx.pageScrollTo({
+        //   selector:'#baoming'
+        // });
         _self.setData({
           introIndex: 2
         });
@@ -208,8 +455,8 @@ Page({
         break;
       case 'resever':
         wx.showModal({
-          title: '提示',
-          content: '确定约课' + _self.data.course.start_time1 + _self.data.course.course_name + '?',
+          title: '确定预约' + _self.data.course.start_time1 + _self.data.course.course_name + '?',
+          content: '预约后，请按时到达门店上课',
           success(res) {
             if (res.confirm) {
               console.log('用户点击确定')
@@ -227,5 +474,21 @@ Page({
       default:
         break;
     }
-  }
+  },
+  handlerGobackClick() {
+    wx.navigateBack({
+      delta: 1
+    })
+  },
+  changebg() {
+    _self.setData({
+      navbg: 'rgba(236,249,248, 0)'
+    })
+  },
+  changegb() {
+    _self.setData({
+      navbg: 'rgba(236,249,248, 1)'
+    })
+  },
+
 })

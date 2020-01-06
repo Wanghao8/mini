@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "添加新员工",
+  "usingComponents": {
+    "uni-notice-bar": "/components/uni-notice-bar/uni-notice-bar"
+  }
+}

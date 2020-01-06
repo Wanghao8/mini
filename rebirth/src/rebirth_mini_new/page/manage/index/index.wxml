@@ -1,23 +1,25 @@
 <view class="info-card">
   <view class="flexrbc">
     <view class="flexr0c">
-      <image class="user-img" src="{{userInfo.avatarUrl}}"></image>
-      <view class="fz22 col3 bold" bindgetuserinfo="bindGetUserInfo">{{userInfo.nickName}}</view>
+      <image class="user-img" src="{{userInfo.avatarUrl=='http://rebirths.yuanfangyun.com/null'?'../../../static/img/mine.png':userInfo.avatarUrl}}"></image>
+      <view class="fz22 col3 bold" bindgetuserinfo="bindGetUserInfo" wx:if="{{userInfo.nickName}}">{{userInfo.nickName}}</view>
+      <!-- <view class="fz22 col3 bold" bindgetuserinfo="bindGetUserInfo" wx:if="{{!userInfo.nickName}}">rebirth用户昵称</view> -->
     </view>
     <view class="flexr0c marginright10">
       <view class="iconfont icon-set" bindtap="actionBtn" data-action="info"></view>
-      <button open-type="contact"></button>
-      <view class="iconfont icon-kefu marginleft10"></view>
+      <!-- <button open-type="contact"></button> -->
+      <!-- <view class="iconfont icon-kefu marginleft10"></view> -->
     </view>
   </view>
   <view class="info-tap">
     <view class="flexrbc fz17">
       <view class="flexr0c">
-        <view class="col3 marginleft10">会员</view>
-        <view class=" marginleft10" wx:if="{{userInfo.timecard}}">{{userInfo.timecard1}}</view>
-        <view class=" marginleft10" wx:if="{{!userInfo.timecard&&userInfo.oncecard!=0}}">剩余{{userInfo.oncecard}}次</view>
-        <view class=" marginleft10" wx:if="{{!userInfo.timecard&&userInfo.oncecard==0}}">请充值</view>
-      </view>
+        <!-- <view class="col3 marginleft10">{{!userInfo.timecard&&userInfo.oncecard==0?"无卡会员":"体验会员"}}</view> -->
+        <view class="col3 marginleft10">{{userInfo.timecard==0&&userInfo.oncecard==0?"无卡会员":"VIP会员"}}</view>
+        <view class=" marginleft10" wx:if="{{userInfo.timecard==0&&userInfo.oncecard==0}}">请续费办理会员卡</view>
+        <view class=" marginleft10" wx:if="{{userInfo.timecard!=0}}">剩余{{userInfo.timecard1+"到期"}}</view>
+        <view class=" marginleft10" wx:if="{{userInfo.timecard==0&&userInfo.oncecard>0}}">剩余{{userInfo.oncecard}}次</view>
+      </view> 
       <view class="small-btn jvzhong marginright10" bindtap="actionBtn" data-action="charge">续费</view>
     </view>
   </view>
@@ -26,17 +28,17 @@
   <view class="flexrbc info-item" bindtap="actionBtn" data-action="exeRecord">
     <view class="fz17 col6 marginleft10">训练记录</view>
     <view class="flexr0c marginright10">
-      <view class="col3 fz17">累计已锻炼10次</view>
+      <view class="col3 fz17">累计已锻炼{{userInfo.appoint_total}}次</view>
       <view class="iconfont icon-iconfontjiantou3"></view>
     </view>
   </view>
-  <view class="flexrbc info-item" bindtap="actionBtn" data-action="history">
+  <!-- <view class="flexrbc info-item" bindtap="actionBtn" data-action="history">
     <view class="fz17 col6 marginleft10">消费记录</view>
     <view class="flexr0c marginright10">
       <view class="col3 fz17">money都去哪了</view>
       <view class="iconfont icon-iconfontjiantou3"></view>
     </view>
-  </view>
+  </view> -->
   <view class="login-btn">
     <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo"></button>
   </view>
@@ -89,6 +91,7 @@
     </view>
   </view>
 </view>
+<view class="flexrac margintop10 col9">客服电话：15538013183</view>
 
 <!-- 海报 -->
 <view class="bg {{cavs == 1?' ':'active'}}" bindtap="bg"></view>

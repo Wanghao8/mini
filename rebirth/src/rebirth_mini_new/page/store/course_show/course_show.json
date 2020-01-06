@@ -1,6 +1,9 @@
 {
+  "navigationBarTextStyle": "white",
   "navigationBarTitleText": "课程详情",
+  "navigationStyle": "custom",
   "usingComponents": {
-    "notice": "../../../component/notice/notice"
+    "notice": "../../../component/notice/notice",
+    "navBar": "../../../component/navBar/navBar"
   }
 }

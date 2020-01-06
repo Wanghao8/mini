@@ -14,7 +14,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-
     fullLoading: true,
     accAddData: {
       code: '',
@@ -27,40 +26,43 @@ Page({
     introIndex: 1,
     currentTab: 0,
     weekday: ['日', '一', '二', '三', '四', '五', '六', '日', '一', '二', '三', '四', '五', '六'],
-    goodsList: []
+    goodsList: [],
+    navbg: 'rgba(0,0,0,0)'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     _self = this;
+    console.log(options.id)
     //是否存在父级id
-    if(options.id){
-      _self.setData({
-        id:options.id
-      })
-    }
     if (options.p_acc_id) {
       _self.setData({
-        'accAddData.p_acc_id': options.p_acc_id
+        'accAddData.p_acc_id': options.p_acc_id,
       })
     }
+    _self.setData({
+      id: options.id
+    })
+    //课程切换高度计算
+    _self.getDate();
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-    //课程切换高度计算
-    _self.getDate();
+  onReady: function() {
     _self.setHeight();
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
+    wx.pageScrollTo({
+      scrollTop: 0,
+    });
     _self.store_show();
   },
 
@@ -68,7 +70,7 @@ Page({
   /**
    * 分享的处理函数
    */
-  onShareAppMessage: function (res) {
+  onShareAppMessage: function(res) {
     if (res.from === 'button') {
       // 来自页面内转发按钮
       console.log(res.target)
@@ -88,7 +90,7 @@ Page({
    * 微信-获取当前位置
    * 微信内部授权
    */
-  getLocation: function () {
+  getLocation: function() {
     wx.getLocation({
       type: 'wgs84',
       success(res) {
@@ -110,7 +112,7 @@ Page({
    * 小程序直接请求code
    * 返回code
    */
-  wxlogin: function () {
+  wxlogin: function() {
     wx.login({
       success(res) {
         _self.setData({
@@ -160,7 +162,7 @@ Page({
    * 参数：id
    * 返回:门店信息
    */
-  store_show: function (e) {
+  store_show: function(e) {
     if (!wx.getStorageSync("acc")) {
       _self.getLocation();
       return;
@@ -179,7 +181,11 @@ Page({
         };
         var model = res.data.data;
         model.no = parseInt(model.id) + 1000;
-        model.cover_imgs = app.globalData.imgUrl + model.cover_imgs;
+        // model.cover_imgs = app.globalData.imgUrl + model.cover_imgs;
+        model.cover_imgs = model.cover_imgs.split(",");
+        for (var i = 0; i < model.cover_imgs.length;i++){
+          model.cover_imgs[i] = app.globalData.imgUrl + model.cover_imgs[i]
+        }
         model.latlong = model.latlong.split(',');
         model.lat = model.latlong[0];
         model.lon = model.latlong[1];
@@ -191,6 +197,9 @@ Page({
         //同步执行课程列表
         _self.goods_list();
         _self.appoint_show_exist();
+        _self.setData({
+          fullLoading: false
+        });
       },
       fail(res) {
         console.log(res)
@@ -207,7 +216,7 @@ Page({
     wx.request({
       url: app.globalData.url + 'mini/storeapi/goods_list',
       data: {
-        store_id: _self.data.id,
+        store_id: wx.getStorageSync("acc").store_id,
         dayn: _self.data.chooseDate
       },
       method: 'post',
@@ -218,7 +227,7 @@ Page({
           return;
         };
         var model = res.data.data;
-        model.forEach(function (item) {
+        model.forEach(function(item) {
           item.begin_time = item.begin_time.substr(11, 5);
           item.end_time = item.end_time.substr(11, 5);
           item.label = item.label.replace(/ /g, ' · ');
@@ -240,7 +249,7 @@ Page({
    * 参数：id
    * 返回:预约信息
    */
-  appoint_show_exist: function (e) {
+  appoint_show_exist: function(e) {
     wx.request({
       url: app.globalData.url + 'mini/orderapi/appoint_show_exist',
       data: {
@@ -259,6 +268,9 @@ Page({
         }
         if (model.length != 0) {
           model.begin_time = model.begin_time.substr(5, 11);
+          model.begin_time = model.begin_time.replace(/-/, '月')
+          model.begin_time = model.begin_time.replace(/ /, '日 ')
+          console.log(model.begin_time)
           _self.setData({
             appointData: model
           })
@@ -269,32 +281,37 @@ Page({
             }
           })
         }
-        _self.setData({
-          fullLoading: false
-        })
       }
     })
   },
 
 
+
   //界面组件部分
   //====================================================
   // 点击事件汇总
-  actionBtn: function (e) {
+  actionBtn: function(e) {
     var type = e.currentTarget.dataset.action;
     var location = e.currentTarget.dataset.location;
     var id = e.currentTarget.dataset.id;
+    var btn = e.currentTarget.dataset.btn;
     switch (type) {
       case 'reserver':
-        wx.navigateTo({
-          url: '../course_show/course_show?id=' + id + '&location=' + JSON.stringify(location),
-        });
+        if (btn == 1) {
+          wx.navigateTo({
+            url: '../course_show/course_show?id=' + id + '&location=' + JSON.stringify(location),
+          });
+        } else {
+          common.showToast("结束或已满不可预约")
+        }
         break;
       case 'reservered':
         if (id != 0) {
           wx.navigateTo({
             url: '../../order/appoint_show/appoint_show?id=' + _self.data.appointData.id,
           });
+        } else {
+          common.showToast("您暂无预约")
         }
         break;
       case 'openMap':
@@ -355,14 +372,14 @@ Page({
   setHeight() {
     var winHeight = 200 * _self.data.goodsList.length + 40;
     if (_self.data.goodsList.length == 0) {
-      winHeight = 320
+      winHeight = 328
     }
     _self.setData({
       winHeight: winHeight
     })
   },
   // 滚动切换标签样式
-  switchTab: function (e) {
+  switchTab: function(e) {
     _self.setData({
       currentTab: e.detail.current,
     });
@@ -404,7 +421,7 @@ Page({
     _self.goods_list();
   },
   // 点击标题切换当前页时改变样式
-  swichNav: function (e) {
+  swichNav: function(e) {
     var cur = e.currentTarget.dataset.current;
     var date = e.currentTarget.dataset.date;
     _self.setData({
@@ -416,11 +433,10 @@ Page({
       _self.setData({
         currentTab: cur
       })
-      _self.goods_list();
     }
   },
   //判断当前滚动超过一屏时，设置tab标题滚动条。
-  checkCor: function () {
+  checkCor: function() {
     if (_self.data.currentTab > 4) {
       _self.setData({
         scrollLeft: 300
@@ -432,7 +448,22 @@ Page({
     }
   },
   footerTap: app.footerTap,
-  isEmptyObject: function (obj) {
+  isEmptyObject: function(obj) {
     return JSON.stringify(obj) === '{}';
-  }
+  },
+  handlerGobackClick() {
+    wx.navigateBack({
+      delta: 1
+    })
+  },
+  changebg() {
+    _self.setData({
+      navbg: 'rgba(236,249,248, 0)'
+    })
+  },
+  changegb() {
+    _self.setData({
+      navbg: 'rgba(236,249,248, 1)'
+    })
+  },
 })

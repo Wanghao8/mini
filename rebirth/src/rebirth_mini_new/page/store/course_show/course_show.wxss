@@ -1,6 +1,8 @@
-page{background-color: #ecf9f8;padding-bottom: 200rpx;}
+page{background-color: #ecf9f8;}
 .icon-shijian,.icon-weizhi,.icon-kebiao,.icon-wentiquestions1,.icon-yuangongzhanghaoguanli,.icon-dkw_tisheng{font-size: 40rpx;color: #97DDD6;margin: 20rpx;}
+.icon-shijian,.icon-weizhi{margin-left: 0}
 .icon-yuangongzhanghaoguanli,.icon-dkw_tisheng{margin-left: 0;}
+.icon-dkw_tisheng{margin-top: 0;margin-bottom: 0}
 .loadinggif{width: 80rpx;height: 80rpx;margin-bottom: 40rpx;color: #666666}
 .mask{position: absolute;z-index: 1000;font-size: 32rpx;width: 100vw;height: 100vh;background-color: #fff;top:0rpx;color: #666666}
 button{background-color: #ecf9f8;border: none;color: #f2f2f2;font-size: 32rpx;margin-right: 0}
@@ -11,4 +13,15 @@ button::after{border: none}
 .icon-jinggao1{margin: 20rpx;font-size: 44rpx;color: #97DDD6}
 .bar{width: 630rpx;height: 80rpx;background-color: #242424}
 .pad{padding-bottom: 20rpx}
-.icon-fenxiang{font-size: 40rpx;margin-right: -4rpx}
+.icon-fenxiang{font-size: 40rpx;margin-right: -4rpx;color: #333;}
+.img-list{ margin-left: -50rpx;}
+.img-list::after{clear: both;}
+.img-list image{float: left;width: 100rpx;height: 100rpx;margin-left:20rpx;margin-bottom: 20rpx;border-radius: 50%}
+.img-list image:first-child{margin-left:30rpx}
+page>scroll-view{height: 1400rpx;}
+.login-box{position: fixed;bottom: 140rpx;width: 720rpx;height: 220rpx;background-color: #ecf9f8;padding: 20rpx}
+.avatar-img{width: 90rpx;height: 90rpx;border-radius: 50%;}
+.line{position: relative;height: 1px;background-color: #ececec}
+.phone{line-height: 100rpx}
+.login-btn button{position: fixed;width: 670rpx;height: 100rpx;bottom: 240rpx;left: 40rpx;z-index: 30;opacity: 0}
+.phone-btn button{position: fixed;width: 670rpx;height: 100rpx;bottom: 140rpx;left: 40rpx;z-index: 30;opacity: 0}

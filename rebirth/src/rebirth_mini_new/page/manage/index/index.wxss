@@ -1,6 +1,6 @@
 page{background-color: #ecf9f8}
 .icon-kefu{font-size: 80rpx;color: #666}
-.icon-set{font-size: 60rpx;margin-left: 100rpx;color: #666}
+.icon-set{font-size: 60rpx;margin-right: 30rpx;color: #666}
 .small-btn{width: 130rpx;height: 60rpx;line-height: 60rpx;background-color: #97DDD6;border-radius: 8rpx;border: 1px solid #333}
 .icon-iconfontjiantou3{color: #999}
 .card-margin{margin: 75rpx 20rpx 0 20rpx;}
@@ -11,5 +11,5 @@ page{background-color: #ecf9f8}
 .cav{display: flex;flex-direction: column;justify-content: space-around; align-items: center;height: 100%;}
 .cavs.active,.bg.active{display: block;}
 .info-card button{position: absolute;width: 80rpx;height: 80rpx;left: 650rpx;opacity: 0}
-.login-btn button{position: absolute;width: 710rpx;height: 90rpx;top: 454rpx;left: 20rpx;z-index: 30;opacity: 0}
-.phone-btn button{position: absolute;width: 710rpx;height: 90rpx;top: 544rpx;left: 20rpx;z-index: 30;opacity: 0}
+.login-btn button{position: absolute;width: 710rpx;height: 90rpx;top: 364rpx;left: 20rpx;z-index: 30;opacity: 0}
+.phone-btn button{position: absolute;width: 710rpx;height: 90rpx;top: 454rpx;left: 20rpx;z-index: 30;opacity: 0}

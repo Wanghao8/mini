@@ -1,7 +1,8 @@
 {
   "pages": [
 
-    
+
+
     "page/store/course_list/course_list",
     "page/store/course_show/course_show",
     "page/store/store_list/store_list",
@@ -16,11 +17,12 @@
     "page/manage/food_show/food_show",
     "page/report/store_report/store_report",
     "page/report/goods_add/goods_add",
+    "page/report/appoint_acc_list/appoint_acc_list",
     "page/manage/about/about"
   ],
   "permission": {
     "scope.userLocation": {
-      "desc": "你的位置信息将用于小程序位置接口的效果展示" 
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
     }
   },
   "window": {

@@ -1,4 +1,4 @@
-page{background-color: #242424;}
+page{background-color: #ecf9f8;}
 .list{height: 120rpx;}
-input{text-align: right}
-.ren{width: 40rpx;}
+input{text-align: right;}
+/* .ren{width: 40rpx;} */
