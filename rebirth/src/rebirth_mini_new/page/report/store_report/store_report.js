@@ -8,12 +8,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    manage_store_id:0,
-    storeData:{
-      name:'正在获取',
-      address:'门店地址信息'
+    manage_store_id: 0,
+    storeData: {
+      name: '正在获取',
+      address: '门店地址信息'
     },
-    incomeData:{
+    incomeData: {
 
     },
     introIndex: 1,
@@ -61,7 +61,7 @@ Page({
     wx.request({
       url: app.globalData.url + 'mini/storeapi/store_show',
       data: {
-        id:_self.data.manage_store_id
+        id: _self.data.manage_store_id
       },
       method: 'get',
       header: common.headerForm,
@@ -76,7 +76,7 @@ Page({
         })
       },
       fail(res) {
-        console.log(res);
+        common.apiFalse("请求接口失败，未能获取门店信息")
       }
     })
   },
@@ -103,7 +103,7 @@ Page({
         })
       },
       fail(res) {
-        console.log(res);
+        common.apiFalse("请求接口失败，未能获取门店收入信息")
       }
     })
   },
@@ -142,7 +142,7 @@ Page({
         _self.setHeight();
       },
       fail(res) {
-        console.log(res);
+        common.apiFalse("请求接口失败，未能获取课表信息")
       }
     })
   },
@@ -167,7 +167,7 @@ Page({
         _self.goods_list();
       },
       fail(res) {
-        console.log(res);
+        common.apiFalse("请求接口失败，未能成功删除课程")
       }
     })
   },
@@ -192,7 +192,7 @@ Page({
         _self.goods_list();
       },
       fail(res) {
-        console.log(res);
+        common.apiFalse("请求接口失败，未能成功结束课程")
       }
     })
   },
@@ -212,14 +212,14 @@ Page({
         })
         break;
       case 'detail':
-      if(btn==1){
-        wx.navigateTo({
-          url: '../appoint_acc_list/appoint_acc_list?id=' + id,
-        })
-      }else{
-        common.showToast("已结束的课程无法查看")
-      }
-        
+        if (btn == 1) {
+          wx.navigateTo({
+            url: '../appoint_acc_list/appoint_acc_list?id=' + id,
+          })
+        } else {
+          common.showToast("已结束的课程无法查看")
+        }
+
         break;
       default:
         break;

@@ -8,44 +8,7 @@ Page({
    */
   data: {
     gender:['未设置','男','女'],
-    list: [
-      //   {
-      //   avatarUrl: 'http://rebirths.yuanfangyun.com/201912315e0b0e1259ff3145.jpg',
-      //   nickName: '知行合一'
-      // }, 
-      //   {
-      //   avatarUrl: 'http://rebirths.yuanfangyun.com/201912315e0b0e1259ff3145.jpg',
-      //   nickName: '知行合一'
-      // }, 
-      //   {
-      //   avatarUrl: 'http://rebirths.yuanfangyun.com/201912315e0b0e1259ff3145.jpg',
-      //   nickName: '知行合一'
-      // }, 
-      //   {
-      //   avatarUrl: 'http://rebirths.yuanfangyun.com/201912315e0b0e1259ff3145.jpg',
-      //   nickName: '知行合一'
-      // }, 
-      //   {
-      //   avatarUrl: 'http://rebirths.yuanfangyun.com/201912315e0b0e1259ff3145.jpg',
-      //   nickName: '知行合一'
-      // }, 
-      //   {
-      //   avatarUrl: 'http://rebirths.yuanfangyun.com/201912315e0b0e1259ff3145.jpg',
-      //   nickName: '知行合一'
-      // }, 
-      //   {
-      //   avatarUrl: 'http://rebirths.yuanfangyun.com/201912315e0b0e1259ff3145.jpg',
-      //   nickName: '知行合一'
-      // }, 
-      //   {
-      //   avatarUrl: 'http://rebirths.yuanfangyun.com/201912315e0b0e1259ff3145.jpg',
-      //   nickName: '知行合一'
-      // }, 
-      //   {
-      //   avatarUrl: 'http://rebirths.yuanfangyun.com/201912315e0b0e1259ff3145.jpg',
-      //   nickName: '知行合一'
-      // }, 
-    ]
+    list: []
   },
 
   /**
@@ -127,6 +90,10 @@ Page({
         if (res.data.data.acc_list.length == 0) {
           return
         }
+        if (!res.data.res) {
+          common.apiFalse("接口请求未完成", '错误代码' + res.data.code + res.data.msg);
+          return;
+        };
         var model = res.data.data.acc_list;
         model.forEach(function(item) {
           item.avatarUrl = app.globalData.imgUrl + item.avatarUrl;
@@ -140,7 +107,7 @@ Page({
         })
       },
       fail(res) {
-        console.log(res)
+        common.apiFalse("请求接口失败，未能获取预约信息")
       }
     })
   },
@@ -167,7 +134,7 @@ Page({
         })
       },
       fail(res) {
-        console.log(res)
+        common.apiFalse("请求接口失败，未能用户信息")
       }
     })
   },

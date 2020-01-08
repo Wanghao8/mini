@@ -1,12 +1,12 @@
 <view catchtouchmove="ture" class="mask flexccc" wx:if="{{fullLoading}}">
   <image class="loadinggif" src="../../../static/img/loading.gif"></image>正在加载中</view>
 
-<scroll-view scroll-y="{{true}}" lower-threshold="440" bindscrolltolower="changegb" upper-threshold="140" bindscrolltoupper="changebg" >
+<scroll-view scroll-y="{{true}}" lower-threshold="440" bindscrolltolower="changegb" upper-threshold="140" bindscrolltoupper="changebg">
   <view style="height:0">
     <navBar title='' background='{{navbg}}' color='#fff' iconTheme='white' bindback="handlerGobackClick"></navBar>
   </view>
   <!-- 照片 -->
-  <swiper indicator-dots="true" indicator-color="rgba(200,200,200,0.5)" indicator-active-color="#F66F36">
+  <swiper indicator-dots="true" autoplay="{{true}}" duration='2000' indicator-color="rgba(200,200,200,0.5)" indicator-active-color="#F66F36">
     <swiper-item wx:for="{{gym.cover_imgs}}" wx:key="id">
       <image class="gym-detail-img" mode="aspectFill" src="{{item}}"></image>
     </swiper-item>

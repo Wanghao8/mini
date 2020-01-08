@@ -35,7 +35,6 @@ Page({
    */
   onLoad: function(options) {
     _self = this;
-    console.log(options.id)
     //是否存在父级id
     if (options.p_acc_id) {
       _self.setData({
@@ -78,7 +77,7 @@ Page({
     return {
       title: _self.data.gym.name,
       path: '/page/store/course_list/course_list',
-      imageUrl: _self.data.gym.cover_imgs
+      imageUrl: _self.data.gym.cover_imgs[0]
     }
   },
 
@@ -196,13 +195,12 @@ Page({
         });
         //同步执行课程列表
         _self.goods_list();
-        _self.appoint_show_exist();
         _self.setData({
           fullLoading: false
         });
       },
       fail(res) {
-        console.log(res)
+        common.requestFail('请求接口失败，未能获取门店信息');
       }
     })
   },
@@ -216,7 +214,7 @@ Page({
     wx.request({
       url: app.globalData.url + 'mini/storeapi/goods_list',
       data: {
-        store_id: wx.getStorageSync("acc").store_id,
+        store_id: _self.data.id,
         dayn: _self.data.chooseDate
       },
       method: 'post',
@@ -244,48 +242,6 @@ Page({
       }
     })
   },
-  /**
-   * 获取预约信息 [appoint_show_exist]
-   * 参数：id
-   * 返回:预约信息
-   */
-  appoint_show_exist: function(e) {
-    wx.request({
-      url: app.globalData.url + 'mini/orderapi/appoint_show_exist',
-      data: {
-        acc_id: wx.getStorageSync("acc").id
-      },
-      method: 'get',
-      header: common.headerForm,
-      success(res) {
-        if (!res.data.res) {
-          common.apiFalse("预约信息错误", '错误代码' + res.data.code + res.data.msg);
-          return;
-        };
-        var model = res.data.data;
-        if (!model) {
-          return;
-        }
-        if (model.length != 0) {
-          model.begin_time = model.begin_time.substr(5, 11);
-          model.begin_time = model.begin_time.replace(/-/, '月')
-          model.begin_time = model.begin_time.replace(/ /, '日 ')
-          console.log(model.begin_time)
-          _self.setData({
-            appointData: model
-          })
-        } else {
-          _self.setData({
-            appointData: {
-              id: 0
-            }
-          })
-        }
-      }
-    })
-  },
-
-
 
   //界面组件部分
   //====================================================
@@ -458,12 +414,12 @@ Page({
   },
   changebg() {
     _self.setData({
-      navbg: 'rgba(236,249,248, 0)'
+      navbg: 'rgba(255,255,255, 0)'
     })
   },
   changegb() {
     _self.setData({
-      navbg: 'rgba(236,249,248, 1)'
+      navbg: 'rgba(255,255,255, 1)'
     })
-  },
+  }
 })

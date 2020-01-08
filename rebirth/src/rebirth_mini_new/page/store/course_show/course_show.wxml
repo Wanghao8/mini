@@ -1,69 +1,70 @@
 <view catchtouchmove="ture" class="mask flexccc" wx:if="{{fullLoading}}">
   <image class="loadinggif" src="../../../static/img/loading.gif"></image>正在加载中</view>
 
-<scroll-view scroll-y="{{true}}" scroll-into-view="{{toView}}" lower-threshold="340" bindscrolltolower="changegb" upper-threshold="140" bindscrolltoupper="changebg">
+<scroll-view scroll-y="{{true}}" lower-threshold="440" bindscrolltolower="changegb" upper-threshold="140" bindscrolltoupper="changebg">
   <view style="height:0">
     <navBar title='' background='{{navbg}}' color='#fff' back="{{true}}" iconTheme='white' bindback="handlerGobackClick"></navBar>
   </view>
-  <view wx:for="{{course.course_cover_imgs}}" wx:key="id" id="intro">
-    <image class="class-top-img" mode="aspectFill" src="{{item}}"></image>
+
+<view wx:for="{{course.course_cover_imgs}}" wx:key="id">
+  <image class="class-top-img" mode="aspectFill" src="{{item}}"></image>
+</view>
+<view class="page-wrapper">
+  <view class="navigator flexrbc">
+    <view class="flexr">
+      <view class="fz17 marginleft10 marginright25 {{introIndex==1?'col3 bold':'col76'}}" bindtap="actionBtn" data-action="intro" data-id="intro">课程介绍</view>
+      <view class="fz17 marginright25 {{introIndex==2?'col3 bold':'col76'}}" bindtap="actionBtn" data-action="caution" data-id="caution">已报名{{course.appoint_total}}人</view>
+    </view>
+     <view class="flexr0c">
+      <view class="iconfont icon-fenxiang"></view>
+      <view class="col3 fz16 marginleft10 marginright10">分享</view>
+      <button class="buttonShare marginright10" open-type="share"></button>
+    </view>
   </view>
-  <view class="page-wrapper marginbottom200">
-    <view class="navigator flexrbc">
-      <view class="flexr">
-        <view class="fz17 marginleft10 marginright25 {{introIndex==1?'col3 bold':'col76'}}" bindtap="actionBtn" data-action="intro" data-id="intro">课程介绍</view>
-        <view class="fz17 marginright25 {{introIndex==2?'col3 bold':'col76'}}" bindtap="actionBtn" data-action="caution" data-id="caution">已报名{{course.appoint_total}}人</view>
-      </view>
-      <view class="flexr0c">
-        <view class="iconfont icon-fenxiang"></view>
-        <view class="col3 fz16 marginleft10 marginright10">分享</view>
-        <button class="marginright10" open-type="share"></button>
+  <view class="list-wrapper marginbottom10 paddingtop10" id="intro">
+    <text class="fz20 bold yellow margintop10 marginleft10">{{course.course_name}}</text>
+    <view class="fz14 col6 txt marginleft10 margintop10 hang">
+      {{course.course_info}}
+    </view>
+    <view class="flexr0c">
+      <view class="tag margintop10 marginleft10 fz14 col3" wx:for="{{course.lebel}}" wx:key="id">{{item}}</view>
+    </view>
+    <view class="flexr0c margintop10">
+      <view class="iconfont icon-shijian"></view>
+      <view class="fz14 col6 marginright10">时间:{{course.start_time1}} ~ {{course.end_time1}}</view>
+      <!-- <view class="fz16 colec marginright10">时间:2019年12月19日 星期四 20:40 ~ 21:40</view> -->
+    </view>
+    <view class="flexr0c margintop10">
+      <view class="iconfont icon-weizhi "></view>
+      <view class="fz14 col6 marginright10 marginbottom10">地点:{{course.store_address}}
+        <text class="map" bindtap="actionBtn" data-action="openMap" data-location="{{location}}">查看地图</text>
       </view>
     </view>
-    <view class="list-wrapper padding10 marginbottom10">
-      <text class="fz20 bold yellow margintop10 ">{{course.course_name}}</text>
-      <view class="fz14 col6 txt margintop10 hang">
-        {{course.course_info}}
-      </view>
-      <view class="flexr0c">
-        <view class="tag margintop10 marginleft10 fz14 col3" wx:for="{{course.lebel}}" wx:key="id">{{item}}</view>
-      </view>
-      <view class="flexr0c margintop10">
-        <view class="iconfont icon-shijian"></view>
-        <view class="fz14 col6 marginright10">时间:{{course.start_time1}} ~ {{course.end_time1}}</view>
-        <!-- <view class="fz16 colec marginright10">时间:2019年12月19日 星期四 20:40 ~ 21:40</view> -->
-      </view>
-      <view class="flexr0c margintop10">
-        <view class="iconfont icon-weizhi "></view>
-        <view class="fz14 col6 marginright10">地点:{{location.address}}
-          <text class="map" bindtap="actionBtn" data-action="openMap" data-location="{{location}}">查看地图</text>
-        </view>
-      </view>
-    </view>
+  </view>
 
-    <view class="list-wrapper padding10 marginbottom10" id="baoming">
-      <view class="fz16 col6">预约人员</view>
-      <view class="flexccc bold" wx:if="{{course.acc_list.length==0}}">暂无人员报名</view>
-      <view class="img-list padding10" wx:if="{{course.acc_list.length!=0}}">
-        <image wx:for="{{course.acc_list}}" wx:key="id" src="{{item.avatarUrl=='http://rebirths.yuanfangyun.com/null'?'../../../static/img/mine.png':item.avatarUrl}}"></image>
-      </view>
-      <view style="clear:both;"></view>
+  <view class="list-wrapper padding10 marginbottom10">
+    <view class="fz16 col6">预约人员</view>
+    <view class="flexccc bold" wx:if="{{course.acc_list.length==0}}">暂无人员报名</view>
+    <view class="img-list padding10" wx:if="{{course.acc_list.length!=0}}">
+      <image wx:for="{{course.acc_list}}" wx:key="id" src="{{item.avatarUrl}}"></image>
     </view>
+    <view style="clear:both;"></view>
+  </view>
 
-    <view class="list-wrapper marginbottom10 padding10">
-      <view class="flexr0c marginbottom10">
-        <view class="iconfont icon-dkw_tisheng"></view>
-        <view class="fz16 col3">训练效果</view>
-      </view>
-      <text class="fz14 col6 txt hang">{{course.course_effect}}</text>
-      <view class="flexr0c">
-        <view class="iconfont icon-yuangongzhanghaoguanli"></view>
-        <view class="fz16 col3">适合人群</view>
-      </view>
-      <text class="fz14 col6 txt marginright10 hang marginbottom10">{{course.course_crowd}}</text>
+  <view class="list-wrapper marginbottom10 padding10">
+    <view class="flexr0c marginbottom10">
+      <view class="iconfont icon-dkw_tisheng"></view>
+      <view class="fz16 col3">训练效果</view>
     </view>
+    <text class="fz14 col6 txt hang">{{course.course_effect}}</text>
+    <view class="flexr0c">
+      <view class="iconfont icon-yuangongzhanghaoguanli"></view>
+      <view class="fz16 col3">适合人群</view>
+    </view>
+    <text class="fz14 col6 txt marginright10 hang marginbottom10">{{course.course_crowd}}</text>
+  </view>
 
-    <!-- <view class="card1 whitebg marginbottom10" id="caution">
+  <!-- <view class="card1 whitebg marginbottom10" id="caution">
     <view class="flexr0c">
       <view class="iconfont icon-jinggao1"></view>
       <view class="fz16 col3 marginleft5">注意事项</view>
@@ -72,28 +73,12 @@
       <text class="fz14 col6 txt">{{course.course_note}}</text>
     </view>
   </view> -->
-    <view class="login-btn">
-      <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo"></button>
-    </view>
-    <view class="phone-btn">
-      <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"></button>
-    </view>
-    <view class="login-box">
-      <view class="flexrbc phone">
-        <image class="avatar-img" src="{{userInfo.avatarUrl?userInfo.avatarUrl:'../../../static/img/mine.png'}}"></image>
-        <view class="fz18 bold" wx:if="{{userInfo.nickName}}">{{userInfo.nickName}}</view>
-        <view class="fz18 bold" wx:if="{{!userInfo.nickName}}">点击登录</view>
-      </view>
-      <view class="line"></view>
-      <view class="flexrbc phone">
-        <view class="fz16">手机号码</view>
-        <view class="fz18 bold" wx:if="{{userInfo.phone}}">{{userInfo.phone}}</view>
-        <view class="fz18 bold" wx:if="{{!userInfo.phone}}">点击获取手机号</view>
-      </view>
-    </view>
-    <view class="bottom-btn-back"></view>
-    <view class="bottom-btn fz20 col24" wx:if="{{course.appoint_status==0&&course.card_status==1}}" bindtap="actionBtn" data-action="resever">立即约课</view>
-    <view class="bottom-btn fz20 col24" wx:if="{{course.appoint_status==0&&course.card_status==0}}" bindtap="actionBtn" data-action="charge">充值开卡，即可预约</view>
-    <view class="bottom-btn fz20 col24 bg9" wx:if="{{course.appoint_status==1}}">您已预约，不可重复</view>
-  </view>
+
+  <view class="bottom-btn-back"></view>
+  <view class="bottom-btn fz20 col24 bg9" wx:if="{{course.appoint_status==1}}">您已预约，不可重复</view>
+  <view class="bottom-btn fz20 col24" wx:if="{{course.appoint_status==0&&course.card_status==1}}" bindtap="actionBtn" data-action="resever">预约该课程</view>
+  <view class="bottom-btn fz20 col24" wx:if="{{course.appoint_status==0&&course.card_status==0}}" bindtap="actionBtn" data-action="charge">充值开卡 即可预约</view>
+ <view class="bottom-btn fz20 col24" wx:if="{{course.appoint_status==0&&course.card_status==-1}}" bindtap="actionBtn" data-action="charge">卡已暂停 开启后预约</view>
+<button class="bottom-btn fz20 col24" wx:if="{{course.appoint_status==0&&course.card_status==-2}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">微信登录 预约课程</button>
+</view> 
 </scroll-view>

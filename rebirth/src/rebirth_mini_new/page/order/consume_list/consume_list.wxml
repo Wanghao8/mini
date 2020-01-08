@@ -10,4 +10,8 @@
     </view>
     <view class="fz15 col76 margintop5">{{item.add_time}}</view>
   </view>
+  <view class="flexccc none" wx:if="{{list.length==0}}">
+    <view class="iconfont icon-kong"></view>
+    <view class="fz20 bold margintop10">暂无记录</view>
+  </view>
 </view>

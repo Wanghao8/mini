@@ -85,14 +85,14 @@ Page({
         var model = res.data.data;
         model.timecard1 = model.timecard.replace(/-/, '年');
         model.timecard1 = model.timecard1.replace(/-/, '月');
-        model.timecard1 = model.timecard1 + '日 ';
-        model.uid = parseInt(model.id) + 1000000;
+        model.timecard1 = model.timecard1 + '天 ';
+        model.uid = parseInt(model.id) + 100000;
         _self.setData({
           info: model
         })
       },
       fail(res) {
-        console.log(res)
+        common.apiFalse("请求接口失败，未能获取用户信息")
       }
     })
   },
@@ -152,7 +152,7 @@ Page({
         });
       },
       fail(res) {
-        console.log(res);
+        common.apiFalse("请求接口失败，充值失败")
       }
     })
   },

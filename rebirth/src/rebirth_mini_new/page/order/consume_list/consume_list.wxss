@@ -1,1 +1,3 @@
 page{background-color: #ecf9f8}
+.icon-kong{font-size: 200rpx;color: #333}
+.none{position: absolute;top: 400rpx;left: 300rpx}

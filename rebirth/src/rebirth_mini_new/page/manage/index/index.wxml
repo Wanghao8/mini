@@ -2,7 +2,7 @@
   <view class="flexrbc">
     <view class="flexr0c">
       <image class="user-img" src="{{userInfo.avatarUrl=='http://rebirths.yuanfangyun.com/null'?'../../../static/img/mine.png':userInfo.avatarUrl}}"></image>
-      <view class="fz22 col3 bold" bindgetuserinfo="bindGetUserInfo" wx:if="{{userInfo.nickName}}">{{userInfo.nickName}}</view>
+      <view class="fz22 col3 bold" bindgetuserinfo="bindGetUserInfo" wx:if="{{userInfo.nickName}}">No.{{userInfo.id}} {{userInfo.nickName}}</view>
       <!-- <view class="fz22 col3 bold" bindgetuserinfo="bindGetUserInfo" wx:if="{{!userInfo.nickName}}">rebirth用户昵称</view> -->
     </view>
     <view class="flexr0c marginright10">

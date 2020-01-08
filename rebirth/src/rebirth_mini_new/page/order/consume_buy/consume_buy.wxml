@@ -35,10 +35,10 @@
   <view class="fz14 col9 margintop20 marginright10" bindtap="actionBtn" data-action="history">历史充值记录</view>
 </view>
 <view class="page-wrapper margintop10">
-  <view class="flexrbc banner margintop15">
+  <view class="flexrbc banner margintop15" bindtap="detail">
     <view class="">
       <view class="fz16 bold">预计每年节省￥46300</view>
-      <view class="fz13 col9 margintop10" bindtap="detail">点击查看节省详情></view>
+      <view class="fz13 col9 margintop10" >点击查看节省详情></view>
     </view>
     <view class="iconfont icon-youjiantou"></view>
   </view>

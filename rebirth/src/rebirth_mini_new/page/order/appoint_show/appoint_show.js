@@ -107,7 +107,7 @@ Page({
         })
       },
       fail(res) {
-        console.log(res)
+        common.apiFalse("请求接口失败，未能获取预约信息")
       }
     })
   },
@@ -144,7 +144,7 @@ Page({
         })
       },
       fail(){
-        console.log(res);
+        common.apiFalse("请求接口失败，未能取消预约")
       }
     })
   },

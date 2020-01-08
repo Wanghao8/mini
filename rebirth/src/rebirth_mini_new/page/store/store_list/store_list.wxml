@@ -2,7 +2,6 @@
   <image class="loadinggif" src="../../../static/img/loading.gif"></image>正在加载中</view>
 <view>
   <view class="gym-wrapper">
-    <!-- <view class="jump-bar whitebg col3 fz22 bold flexrcc">郑州市全城</view> -->
     <picker class="fz16" range="{{city}}" bindchange="chooseCity">郑州市全城</picker>
     <view class="gym-card father margintop10" wx:for="{{gym}}" wx:key="id" bindtap="actionBtn" data-action="store" data-value="{{item.id}}">
       <view class="iconfont icon-icon-test" catchtap="favorite" data-id="{{item.id}}" wx:if="{{item.collection_status==0}}"></view>

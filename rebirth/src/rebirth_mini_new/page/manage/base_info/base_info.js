@@ -91,6 +91,10 @@ Page({
       url: app.globalData.url + 'mini/manageapi/acc_show?acc_id=' + wx.getStorageSync('acc').id,
       method: 'post',
       success(res) {
+        if (!res.data.res) {
+          common.apiFalse("接口请求未完成", '错误代码' + res.data.code + res.data.msg);
+          return;
+        };
         //wx.setStorageSync('acc', res.data.data);
         var model = res.data.data;
         model.avatarUrl = app.globalData.imgUrl + model.avatarUrl;
@@ -100,7 +104,7 @@ Page({
         })
       },
       fail(res) {
-        console.log(res)
+        common.apiFalse("请求接口失败，未能用户信息")
       }
     })
   },

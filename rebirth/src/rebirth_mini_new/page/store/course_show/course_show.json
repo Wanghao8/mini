@@ -1,8 +1,9 @@
 {
-  "navigationBarTextStyle": "white",
+  "navigationBarTextStyle": "black",
   "navigationBarTitleText": "课程详情",
   "navigationStyle": "custom",
   "usingComponents": {
+    "step": "../../../component/step/step",
     "notice": "../../../component/notice/notice",
     "navBar": "../../../component/navBar/navBar"
   }

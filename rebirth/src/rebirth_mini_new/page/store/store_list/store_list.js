@@ -30,12 +30,13 @@ Page({
           latitude,
           longitude
         })
-        console.log(_self.data.latitude)
-        // if(_self.data.latitude)
         _self.store_list();
       },
+      fail(res){
+        _self.store_list();
+      }
     })
-    _self.store_list();
+    
   },
 
   /**

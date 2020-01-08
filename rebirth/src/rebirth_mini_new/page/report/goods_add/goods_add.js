@@ -65,7 +65,7 @@ Page({
         })
       },
       fail(res) {
-        console.log(res)
+        common.apiFalse("请求接口失败，未能获取排课信息")
       }
     })
   },
@@ -108,7 +108,7 @@ Page({
         });
       },
       fail(res) {
-        console.log(res);
+        common.apiFalse("请求接口失败，未能成功排课")
       }
     })
   },

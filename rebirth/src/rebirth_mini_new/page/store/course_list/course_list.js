@@ -74,7 +74,7 @@ Page({
     return {
       title: _self.data.gym.name,
       path: '/page/store/course_list/course_list',
-      imageUrl: _self.data.gym.cover_imgs
+      imageUrl: _self.data.gym.cover_imgs[0]
     }
   },
 
@@ -294,7 +294,7 @@ Page({
       case 'reserver':
         if (btn == 1) {
           wx.navigateTo({
-            url: '../course_show/course_show?id=' + id + '&location=' + JSON.stringify(location),
+            url: '../course_show/course_show?id=' + id + '&lat=' + parseFloat(location.lat) + '&long=' + parseFloat(location.lon) + '&address=' + location.address,
           });
         } else {
           common.showToast("结束或已满不可预约")
@@ -446,14 +446,14 @@ Page({
   isEmptyObject: function(obj) {
     return JSON.stringify(obj) === '{}';
   },
-  changebg(){
+  changebg() {
     _self.setData({
-      navbg: 'rgba(236,249,248, 0)'
+      navbg: 'rgba(255,255,255, 0)'
     })
   },
-  changegb(){
+  changegb() {
     _self.setData({
-      navbg: 'rgba(236,249,248, 1)'
+      navbg: 'rgba(255,255,255, 1)'
     })
   },
 })
